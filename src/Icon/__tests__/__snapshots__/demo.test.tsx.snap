@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Icon correctly 1`] = `
+<div>
+  <div
+    style="background:gainsboro"
+  >
+    <svg
+      aria-hidden="true"
+      class="edm-icon edm-icon-middle"
+      fill="red"
+    >
+      <use
+        href="#addcart"
+      />
+    </svg>
+    <svg
+      aria-hidden="true"
+      class="edm-icon edm-icon-middle"
+      fill="blue"
+    >
+      <use
+        href="#addcart"
+      />
+    </svg>
+    <svg
+      aria-hidden="true"
+      class="edm-icon edm-icon-middle"
+      fill="green"
+    >
+      <use
+        href="#addcart"
+      />
+    </svg>
+    <svg
+      aria-hidden="true"
+      class="edm-icon edm-icon-middle"
+      fill="red"
+    >
+      <use
+        href="#close"
+      />
+    </svg>
+    <svg
+      aria-hidden="true"
+      class="edm-icon edm-icon-middle"
+      fill="blue"
+    >
+      <use
+        href="#remind"
+      />
+    </svg>
+    <svg
+      aria-hidden="true"
+      class="edm-icon edm-icon-middle"
+      fill="green"
+    >
+      <use
+        href="#selected"
+      />
+    </svg>
+  </div>
+</div>
+`;

@@ -1,0 +1,12 @@
+@import './common/normalize.scss';
+@import './document';
+@import './document/preface';
+@import './instance';
+
+a {
+    text-decoration: none;
+}
+
+.hide {
+    display: none;
+}

@@ -1,0 +1,34 @@
+@import '../../style/mixin';
+$icon-prefix: $preifx + '-icon';
+
+.#{$icon-prefix} {
+    vertical-align: middle;
+    background-size: cover;
+
+    // fill: currentColor;
+
+    &-xs {
+        width: $icon-size-xs;
+        height: $icon-size-xs;
+    }
+
+    &-s {
+        width: $icon-size-s;
+        height: $icon-size-s;
+    }
+
+    &-m {
+        width: $icon-size-m;
+        height: $icon-size-m;
+    }
+
+    &-l {
+        width: $icon-size-l;
+        height: $icon-size-l;
+    }
+
+    &-xl {
+        width: $icon-size-xl;
+        height: $icon-size-xl;
+    }
+}

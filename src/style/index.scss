@@ -1,0 +1,39 @@
+@import 'variables';
+// @import './animate';
+
+*,
+*:before,
+*:after {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+// body {
+// font-family: $font-family;
+// font-size: $font-size-base;
+// background-color: $fill-body;
+// }
+
+*[contenteditable] {
+    -webkit-user-select: auto !important;
+}
+
+input[readonly] {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    background: transparent;
+    outline: none;
+}
+
+.mask-open {
+    overflow: hidden;
+}

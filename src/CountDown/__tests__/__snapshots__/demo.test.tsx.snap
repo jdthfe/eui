@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders CountDown correctly 1`] = `
+<div>
+  <div>
+    <h5>
+      倒计时1天
+    </h5>
+    <div
+      class="edm-countdown"
+    >
+      <span>
+        01 天 
+      </span>
+      <span>
+        00 时 
+      </span>
+      <span>
+        00 分 
+      </span>
+      <span>
+        00 秒 
+      </span>
+    </div>
+    <h5>
+      倒计时180秒
+    </h5>
+    <div
+      class="edm-countdown"
+    >
+      <span>
+        00 : 
+      </span>
+      <span>
+        03 : 
+      </span>
+      <span>
+        00 
+      </span>
+    </div>
+    <h5>
+      倒计时307秒
+    </h5>
+    <div
+      class="edm-countdown"
+    >
+      <span>
+        00 : 
+      </span>
+      <span>
+        05 : 
+      </span>
+      <span>
+        07 
+      </span>
+    </div>
+    <h5>
+      倒计时120秒
+    </h5>
+    <div
+      class="edm-countdown"
+    >
+      <span>
+        120  
+      </span>
+    </div>
+    <h5>
+      倒计时5秒
+    </h5>
+    <div
+      class="edm-countdown"
+    >
+      <span>
+        05  
+      </span>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,69 @@
+@import './markdown.scss';
+
+.document {
+    &-nav {
+        line-height: 3;
+        color: #fff;
+        text-align: center;
+        background-image: linear-gradient(90deg, #ff7e0e, #f10000);
+        &-back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 0 20px;
+            color: #fff;
+        }
+    }
+    &-main {
+        display: flex;
+    }
+    &-aside {
+        width: 300px;
+        min-height: 100vh;
+        padding: 20px;
+        // background: #eee;
+        flex-shrink: 0;
+        box-shadow: 10px 0 10px -10px rgba(0, 0, 0, 0.2);
+
+        p:first-child {
+            display: none;
+        }
+        button {
+            text-align: left;
+            border: none;
+        }
+        button:hover {
+            border: 1px solid;
+        }
+    }
+    &-article {
+        display: flex;
+        padding: 30px;
+        flex-grow: 1;
+        pre {
+            max-width: 760px;
+            max-height: 50vh;
+            overflow: auto;
+        }
+        .markdown-body {
+            flex-grow: 1;
+            max-width: 760px;
+        }
+    }
+
+    &-iframe {
+        padding: 20px;
+        iframe {
+            border: none;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    &-footer {
+        width: 100%;
+        line-height: 10;
+        color: #eee;
+        text-align: center;
+        background: #333;
+    }
+}

@@ -1,0 +1,6 @@
+@import '../../style/mixin';
+$NAME-prefix: $preifx + '-NAME';
+
+.#{$NAME-prefix} {
+    text-decoration: underline;
+}

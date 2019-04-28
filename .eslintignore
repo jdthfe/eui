@@ -1,0 +1,8 @@
+# Valid
+scripts/**/*.js
+
+
+# dist
+compiled
+dist
+gulp

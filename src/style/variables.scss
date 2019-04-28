@@ -1,0 +1,64 @@
+/*
+ * 命名规范
+ * 最多使用五种尺寸缩写 [ xs, s, m, l, xl ] = [x small, small, middle, large, x large]
+ */
+
+$hd: 1px;
+$preifx: 'edm';
+// -------------------------------------------------
+$fontFamily: roboto, helvetica neue light, helvetica neue, helvetica, arial, lucida grande, sans-serif;
+
+// 主题色
+$dark: #2e2d2d;
+$light: #ffffff;
+$primary: hsl(10, 100%, 55%);
+$secondary: hsl(43, 100%, 65%);
+$customize: hsl(0, 1%, 18%);
+// font size
+$radius-l: 999px;
+$font-l: 16 * $hd;
+$font-m: 14 * $hd;
+$font-s: 12 * $hd;
+$font-xs: 12 * $hd;
+// 间距
+// ---
+// 水平间距
+$h-spacing-s: 5 * $hd;
+$h-spacing-m: 8 * $hd;
+$h-spacing-l: 15 * $hd;
+
+// 垂直间距
+$v-spacing-xs: 3 * $hd;
+$v-spacing-s: 6 * $hd;
+$v-spacing-m: 9 * $hd;
+$v-spacing-l: 15 * $hd;
+$v-spacing-xl: 21 * $hd;
+
+// Button
+// ---
+@function getGradientDark($color) {
+    @return darken(adjust-hue($color, -8deg), 8%);
+}
+@function getGradientLight($color) {
+    @return lighten(adjust-hue($color, 8deg), 8%);
+}
+@function getColorGradient($color, $direction: right) {
+    @return linear-gradient(to $direction, getGradientLight($color), getGradientDark($color));
+}
+$button-l: 44 * $hd;
+$button-m: 30 * $hd;
+$button-s: 25 * $hd;
+$button-radius: $radius-l;
+
+// ICON
+// ---
+$icon-size-xs: 15 * $hd;
+$icon-size-s: 18 * $hd;
+$icon-size-m: 20 * $hd;
+$icon-size-l: 22 * $hd; // 导航条上的图标、grid的图标大小
+$icon-size-xl: 36 * $hd;
+
+/* prettier-ignore */
+@function px($px) {
+  @return $px + PX;
+}

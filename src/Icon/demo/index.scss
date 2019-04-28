@@ -1,0 +1,21 @@
+.Icon {
+    &-value {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 100px 100px;
+        &-item {
+            text-align: center;
+        }
+    }
+    &-size {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        &-item {
+            text-align: center;
+        }
+    }
+}

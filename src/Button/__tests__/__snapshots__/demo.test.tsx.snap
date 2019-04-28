@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Button correctly 1`] = `
+<div
+  class="Button"
+>
+  <button
+    class="edm-button edm-button-large edm-button-primary edm-button-radius"
+    role="button"
+  >
+    <svg
+      aria-hidden="true"
+      class="edm-icon edm-icon-large"
+      fill="#fff"
+    >
+      <use
+        href="#alipay"
+      />
+    </svg>
+     primary
+  </button>
+  <br />
+  <button
+    aria-disabled="true"
+    class="edm-button edm-button-large edm-button-primary edm-button-radius edm-button-disabled"
+    disabled=""
+    role="button"
+  >
+    <svg
+      aria-hidden="true"
+      class="edm-icon edm-icon-large"
+      fill="#fff"
+    >
+      <use
+        href="#alipay"
+      />
+    </svg>
+    primary
+  </button>
+  <br />
+  <br />
+  <button
+    aria-disabled="true"
+    class="edm-button edm-button-large edm-button-default edm-button-radius edm-button-disabled"
+    disabled=""
+    role="button"
+  >
+    default
+  </button>
+  <br />
+  <div>
+    <button
+      class="edm-button edm-button-middle edm-button-default edm-button-radius edm-button-ghost edm-button-inline"
+      role="button"
+    >
+      default|ghost
+    </button>
+    <button
+      class="edm-button edm-button-middle edm-button-secondary edm-button-radius edm-button-inline"
+      role="button"
+    >
+      secondary
+      <svg
+        aria-hidden="true"
+        class="edm-icon edm-icon-middle"
+        fill="red"
+      >
+        <use
+          href="#alipay"
+        />
+      </svg>
+    </button>
+    <button
+      class="edm-button edm-button-large edm-button-secondary edm-button-inline"
+      role="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="edm-icon edm-icon-large"
+        fill="red"
+      >
+        <use
+          href="#alipay"
+        />
+      </svg>
+      secondary
+    </button>
+  </div>
+  <br />
+  <button
+    aria-disabled="true"
+    class="edm-button edm-button-middle edm-button-secondary edm-button-radius edm-button-disabled edm-button-ghost"
+    disabled=""
+    role="button"
+  >
+    secondary|ghost
+  </button>
+  <br />
+  <button
+    class="edm-button edm-button-middle edm-button-default edm-button-ghost"
+    role="button"
+    style="color:rgb(100,200,50);border-radius:10px"
+  >
+    default|ghost
+  </button>
+</div>
+`;

@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders TransitionWrap correctly 1`] = `
+<div
+  class="TransitionWrap"
+>
+  <button
+    class="edm-button edm-button-middle edm-button-default edm-button-radius"
+    role="button"
+  >
+    click to show text
+  </button>
+  <h1
+    class="world world-exit-done"
+  >
+    world
+  </h1>
+</div>
+`;
