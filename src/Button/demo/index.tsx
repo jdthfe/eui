@@ -3,7 +3,7 @@ import { Button, Icon, WingBlank, WhiteSpace } from '@src/index';
 const Demo = () => {
     return (
         <div className="Button">
-            <h4>类型</h4>
+            <h4>Theme</h4>
             <WingBlank>
                 <Button theme="primary">primary</Button>
                 <WhiteSpace />
@@ -23,7 +23,7 @@ const Demo = () => {
                 <WhiteSpace />
             </WingBlank>
 
-            <h4>尺寸</h4>
+            <h4>Size</h4>
             <WingBlank>
                 <Button theme="primary" size="m">
                     middle
@@ -47,7 +47,7 @@ const Demo = () => {
             </div>
             <WhiteSpace />
 
-            <h4>自定义</h4>
+            <h4>Customize</h4>
             <WingBlank>
                 <Button style={{ borderRadius: '10px', color: 'green' }} ghost>
                     <Icon fill="currentColor" value="selected" /> color | radius | ghost

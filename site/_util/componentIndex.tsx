@@ -11,5 +11,4 @@ export default [
     { name: 'Badge', type: 'Data Display', 'zh-CN': '微标徽' },
     { name: 'Tabs', type: 'Data Display', 'zh-CN': '标签页' },
     { name: 'WhiteSpace', type: 'Layout', 'zh-CN': '上下留白' },
-    { name: 'Test', type: 'Data Display', 'zh-CN': '待输入_中文名' },
 ];

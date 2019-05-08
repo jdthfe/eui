@@ -1,6 +1,0 @@
-@import '../../style/mixin';
-$test-prefix: $preifx + '-test';
-
-.#{$test-prefix} {
-    text-decoration: underline;
-}

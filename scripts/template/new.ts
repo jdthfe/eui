@@ -206,7 +206,14 @@ function addCptInSpecifiedFile() {
         await readTemplate();
         await writeTemplate();
         await addCptInSpecifiedFile();
-        colorLog('> Congratulations, create component success !!!', 'green');
+        colorLog(
+            `> Congratulations, create component success !!!\nYou can go ${getProjectUrl(
+                'site',
+                '_util',
+                'componentIndex.tsx',
+            )} to add other languages`,
+            'green',
+        );
     } catch (err) {
         console.log(err);
     }
