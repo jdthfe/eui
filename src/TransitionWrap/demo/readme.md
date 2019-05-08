@@ -1,6 +1,4 @@
-# TransitionWrap
-
-简易的动画组件
+Simple animation component
 
 ## Demo
 

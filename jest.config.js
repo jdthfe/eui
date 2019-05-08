@@ -3,8 +3,8 @@ var config = {
     collectCoverageFrom: [
         'src/*/*.tsx',
         'src/index.tsx',
+        'src/*/demo/index.tsx',
         '!src/style/*.tsx',
-        // 'src/**/*.tsx',
         // '!src/**/demo/index.tsx',
         // '!src/**/*.d.ts',
         // '!src/*/style/*.tsx',

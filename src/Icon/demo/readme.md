@@ -1,6 +1,4 @@
-# Icon
-
-这是一个图片组件，可以非常方便的被使用
+icon component
 
 ## Demo
 

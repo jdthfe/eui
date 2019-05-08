@@ -1,5 +1,5 @@
 import React from 'react';
-import { directoryStructure, sortStructure } from '../until/structure';
+import { componentIndex, sortComponentIndex } from '../_util';
 import { Route, RouteComponentProps } from 'react-router-dom';
 
 import Nav from './component/Nav';
@@ -19,9 +19,9 @@ const Document: React.SFC<RouteComponentProps> = props => {
      * @name 请创建 [name].md 在对应文件夹中 site\document\markdown
      * 在 site\document\markdown\index.ts 中创建对应的 import 和 export
      */
-    const markdownOnly: DirectoryStructureItem[] = [{ name: 'introduce', type: 'markdownOnly' }];
-    const newDirectoryStructure = markdownOnly.concat(directoryStructure);
-    function isMarkdownOnly(markdownOnly: DirectoryStructureItem[]) {
+    const markdownOnly: ComponentIndex[] = [{ name: 'introduce', type: 'markdownOnly', 'zh-CN': '介绍' }];
+    const newDirectoryStructure = markdownOnly.concat(componentIndex);
+    function isMarkdownOnly(markdownOnly: ComponentIndex[]) {
         const name = location.pathname.split('/').pop();
         return markdownOnly.find(item => item.name === name);
     }
@@ -37,7 +37,7 @@ const Document: React.SFC<RouteComponentProps> = props => {
                 <Preface />
             ) : (
                 <main className="document-main">
-                    <Aside structure={sortStructure(newDirectoryStructure)} onClick={onClick} />
+                    <Aside structure={sortComponentIndex(newDirectoryStructure)} onClick={onClick} />
                     {newDirectoryStructure.map(item => (
                         <Route
                             key={item.name}

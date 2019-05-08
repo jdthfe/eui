@@ -1,6 +1,4 @@
-# WhiteSpace
-
-description
+Layout controls
 
 ## Demo
 
@@ -8,6 +6,6 @@ description
 
 ## API
 
-| 属性 | 说明           | 类型                            | 默认值 | 必填    |
-| ---- | -------------- | ------------------------------- | ------ | ------- |
-| size | 上下留白的间距 | `'xs' | 's' | 'm' | 'l' | 'xl'` | `'m'`  | `false` |
+| Properties | Descrition     | Type                            | Default | Required |
+| ---------- | -------------- | ------------------------------- | ------- | -------- |
+| size       | 上下留白的间距 | `'xs' | 's' | 'm' | 'l' | 'xl'` | `'m'`   | `false`  |

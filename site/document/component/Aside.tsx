@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
 import { Button } from '@src/index';
 import { Link } from 'react-router-dom';
-
+import { getLanguage } from '../../_util/language';
 interface AsideProps {
-    structure: { [propName: string]: DirectoryStructureItem[] };
+    structure: { [propName: string]: ComponentIndex[] };
     onClick: (key: string) => void;
 }
 
@@ -23,7 +23,7 @@ const Aside = (props: AsideProps) => {
                                 ghost
                                 onClick={() => onClick(item.name)}
                             >
-                                {item.name}
+                                {item.name} {getLanguage() !== 'en-US' ? item[getLanguage() as keyof LanguageObj] : ''}
                             </Button>
                         </Link>
                     ))}

@@ -28,7 +28,7 @@ const config: webpack.Configuration = {
         // historyApiFallback: true
     },
     entry: {
-        example: getProjectUrl('site', 'index.tsx'),
+        index: getProjectUrl('site', 'index.tsx'),
     },
     // resolve: {
     //     plugins: [new TsconfigPathsPlugin({})],

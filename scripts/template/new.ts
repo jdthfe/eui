@@ -1,5 +1,5 @@
 import fs from 'fs';
-import components from '../../site/until/components';
+import componentIndex from '../../site/_util/componentIndex';
 /**
  * A collection of common interactive command line user interfaces.
  * @ref https://github.com/SBoudrias/Inquirer.js
@@ -7,42 +7,43 @@ import components from '../../site/until/components';
  */
 import inquirer from 'inquirer';
 
-import { getProjectUrl, EOL } from '../helpers';
+import { getProjectUrl, EOL, colorLog } from '../helpers';
 
-const cpInfo: CpInfo = { name: '', type: '' };
-const cp: CP = {
-    index: '',
-    PropsType: '',
-    styleScss: '',
-    styleTsx: '',
-    demoDemo: '',
-    demoIndex: '',
-    demoReadme: '',
-    testIndex: '',
-    testDemo: '',
-};
-
-interface CpInfo {
+const cpt: Cpt = { name: '', type: '' };
+interface Cpt {
     name: string;
     type: string;
 }
-interface CP {
-    index: string;
-    PropsType: string;
-    styleScss: string;
-    styleTsx: string;
-    demoDemo: string;
-    demoIndex: string;
-    demoReadme: string;
-    testIndex: string;
-    testDemo: string;
+interface CptDir {
+    'index.tsx': string;
+    'PropType.tsx': string;
+    'style_index.scss': string;
+    'style_index.tsx': string;
+    'demo_index.tsx': string;
+    'demo_readme.md': string;
+    // !tag new language
+    'demo_readme.zh-CN.md': string;
+    'tests_index.text.tsx': string;
+    'tests_demo.text.tsx': string;
 }
+const cptDir: CptDir = {
+    'index.tsx': '',
+    'PropType.tsx': '',
+    'style_index.scss': '',
+    'style_index.tsx': '',
+    'demo_index.tsx': '',
+    'demo_readme.md': '',
+    // !tag new language
+    'demo_readme.zh-CN.md': '',
+    'tests_index.text.tsx': '',
+    'tests_demo.text.tsx': '',
+};
 async function userInput() {
     // const typeList = JSON.parse(typeListSource);
     const typeObject: {
         [key: string]: boolean;
     } = {};
-    components.map((item: { name: string; type: string }) => (typeObject[item.type] = true));
+    componentIndex.map((item: { name: string; type: string }) => (typeObject[item.type] = true));
     // cnt: Create a new type
     const cnt = 'Create a new type';
     const typeList = [...Object.keys(typeObject), cnt];
@@ -61,52 +62,72 @@ async function userInput() {
                 choices: typeList,
                 default: 'type1',
             },
+
             {
-                when: ({ type }) => type === cnt,
+                when: answers => {
+                    const { type } = answers as Cpt;
+                    return type === cnt;
+                },
                 type: 'input',
                 name: 'type',
                 message: "Please input Type's name:",
                 default: 'NewType',
             },
         ])
-        .then(({ name, type }: CpInfo) => {
+        .then(obj => {
+            let { name, type } = obj as Cpt;
             if (fs.existsSync(getProjectUrl('src', name))) {
-                console.log('The src already exists. Please rename the src or delete the existing component.');
+                colorLog(
+                    'The component already exists. Please rename the component or use "yarn rm" to delete the previous.',
+                    'red',
+                );
                 throw 'fail !';
             }
             name = name[0].toUpperCase() + name.slice(1, 9999);
-            components.push({ name, type });
-            cpInfo.name = name;
-            cpInfo.type = type;
+            cpt.name = name;
+            cpt.type = type;
         });
 }
 
-function getTemplate() {
+function readTemplate() {
     return new Promise((res, rej) => {
         try {
-            const { name } = cpInfo;
+            const { name } = cpt;
 
             const cpUrl = ['scripts', 'template', 'NAME'];
-            cp.index = fs
+            cptDir['index.tsx'] = fs
                 .readFileSync(getProjectUrl(...cpUrl, 'index.tsx'), 'utf8')
                 .replace(/-NAME/g, `-${name.toLowerCase()}`)
                 .replace(/NAME/g, name);
-            cp.PropsType = fs.readFileSync(getProjectUrl(...cpUrl, 'PropsType.tsx'), 'utf8').replace(/NAME/g, name);
+            cptDir['PropType.tsx'] = fs
+                .readFileSync(getProjectUrl(...cpUrl, 'PropsType.tsx'), 'utf8')
+                .replace(/NAME/g, name);
 
-            const StyleUrl = ['scripts', 'template', 'NAME', 'style'];
-            cp.styleScss = fs
-                .readFileSync(getProjectUrl(...StyleUrl, 'index.scss'), 'utf8')
+            const styleUrl = ['scripts', 'template', 'NAME', 'style'];
+            cptDir['style_index.scss'] = fs
+                .readFileSync(getProjectUrl(...styleUrl, 'index.scss'), 'utf8')
                 .replace(/NAME/g, name.toLowerCase());
-            cp.styleTsx = fs.readFileSync(getProjectUrl(...StyleUrl, 'index.tsx'), 'utf8');
+            cptDir['style_index.tsx'] = fs.readFileSync(getProjectUrl(...styleUrl, 'index.tsx'), 'utf8');
 
-            const DemoUrl = ['scripts', 'template', 'NAME', 'demo'];
-            cp.demoDemo = fs.readFileSync(getProjectUrl(...DemoUrl, 'demo.tsx'), 'utf8').replace(/NAME/g, name);
-            cp.demoIndex = fs.readFileSync(getProjectUrl(...DemoUrl, 'index.tsx'), 'utf8').replace(/NAME/g, name);
-            cp.demoReadme = fs.readFileSync(getProjectUrl(...DemoUrl, 'readme.md'), 'utf8').replace(/NAME/g, name);
+            const demoUrl = ['scripts', 'template', 'NAME', 'demo'];
+            cptDir['demo_index.tsx'] = fs
+                .readFileSync(getProjectUrl(...demoUrl, 'index.tsx'), 'utf8')
+                .replace(/NAME/g, name);
+            cptDir['demo_readme.md'] = fs
+                .readFileSync(getProjectUrl(...demoUrl, 'readme.md'), 'utf8')
+                .replace(/NAME/g, name);
+            // !tag new language
+            cptDir['demo_readme.zh-CN.md'] = fs
+                .readFileSync(getProjectUrl(...demoUrl, 'readme.zh-CN.md'), 'utf8')
+                .replace(/NAME/g, name);
 
-            const TestUrl = ['scripts', 'template', 'NAME', '__tests__'];
-            cp.testDemo = fs.readFileSync(getProjectUrl(...TestUrl, 'demo.test.tsx'), 'utf8').replace(/NAME/g, name);
-            cp.testIndex = fs.readFileSync(getProjectUrl(...TestUrl, 'index.test.tsx'), 'utf8').replace(/NAME/g, name);
+            const testsUrl = ['scripts', 'template', 'NAME', '__tests__'];
+            cptDir['tests_demo.text.tsx'] = fs
+                .readFileSync(getProjectUrl(...testsUrl, 'demo.test.tsx'), 'utf8')
+                .replace(/NAME/g, name);
+            cptDir['tests_index.text.tsx'] = fs
+                .readFileSync(getProjectUrl(...testsUrl, 'index.test.tsx'), 'utf8')
+                .replace(/NAME/g, name);
             res();
         } catch (err) {
             rej(err);
@@ -114,55 +135,66 @@ function getTemplate() {
     });
 }
 
-function setTemplate() {
+function writeTemplate() {
     return new Promise((res, rej) => {
         try {
-            const { name } = cpInfo;
+            const { name } = cpt;
 
-            const NameUrl = ['src', name];
-            fs.mkdirSync(getProjectUrl(...NameUrl));
-            fs.writeFileSync(getProjectUrl(...NameUrl, 'index.tsx'), cp.index, 'utf8');
-            fs.writeFileSync(getProjectUrl(...NameUrl, 'PropsType.tsx'), cp.PropsType, 'utf8');
+            const nameUrl = ['src', name];
+            fs.mkdirSync(getProjectUrl(...nameUrl));
+            fs.writeFileSync(getProjectUrl(...nameUrl, 'index.tsx'), cptDir['index.tsx'], 'utf8');
+            fs.writeFileSync(getProjectUrl(...nameUrl, 'PropsType.tsx'), cptDir['PropType.tsx'], 'utf8');
 
-            const StyleUrl = ['src', name, 'style'];
-            fs.mkdirSync(getProjectUrl(...StyleUrl));
-            fs.writeFileSync(getProjectUrl(...StyleUrl, 'index.scss'), cp.styleScss, 'utf8');
-            fs.writeFileSync(getProjectUrl(...StyleUrl, 'index.tsx'), cp.styleTsx, 'utf8');
+            const styleUrl = [...nameUrl, 'style'];
+            fs.mkdirSync(getProjectUrl(...styleUrl));
+            fs.writeFileSync(getProjectUrl(...styleUrl, 'index.scss'), cptDir['style_index.scss'], 'utf8');
+            fs.writeFileSync(getProjectUrl(...styleUrl, 'index.tsx'), cptDir['style_index.tsx'], 'utf8');
 
-            const DemoUrl = ['src', name, 'demo'];
-            fs.mkdirSync(getProjectUrl(...DemoUrl));
-            fs.writeFileSync(getProjectUrl(...DemoUrl, 'demo.tsx'), cp.demoDemo, 'utf8');
-            fs.writeFileSync(getProjectUrl(...DemoUrl, 'index.tsx'), cp.demoIndex, 'utf8');
-            fs.writeFileSync(getProjectUrl(...DemoUrl, 'readme.md'), cp.demoReadme, 'utf8');
+            const demoUrl = [...nameUrl, 'demo'];
+            fs.mkdirSync(getProjectUrl(...demoUrl));
+            fs.writeFileSync(getProjectUrl(...demoUrl, 'index.tsx'), cptDir['demo_index.tsx'], 'utf8');
+            fs.writeFileSync(getProjectUrl(...demoUrl, 'readme.md'), cptDir['demo_readme.md'], 'utf8');
+            // !tag new language
+            fs.writeFileSync(getProjectUrl(...demoUrl, 'readme.zh-CN.md'), cptDir['demo_readme.zh-CN.md'], 'utf8');
 
-            const TestUrl = ['src', name, '__tests__'];
-            fs.mkdirSync(getProjectUrl(...TestUrl));
-            fs.writeFileSync(getProjectUrl(...TestUrl, 'demo.test.tsx'), cp.testDemo, 'utf8');
-            fs.writeFileSync(getProjectUrl(...TestUrl, 'index.test.tsx'), cp.testIndex, 'utf8');
+            const testsUrl = [...nameUrl, '__tests__'];
+            fs.mkdirSync(getProjectUrl(...testsUrl));
+            fs.writeFileSync(getProjectUrl(...testsUrl, 'demo.test.tsx'), cptDir['tests_demo.text.tsx'], 'utf8');
+            fs.writeFileSync(getProjectUrl(...testsUrl, 'index.test.tsx'), cptDir['tests_index.text.tsx'], 'utf8');
 
             res();
         } catch (err) {
-            console.log('setTemplate fail !');
+            colorLog('FetTemplate Failed !', 'red');
             rej(err);
         }
     });
 }
 
-function addTemplateInCode() {
-    const { name } = cpInfo;
+function addCptInSpecifiedFile() {
+    return new Promise((res, rej) => {
+        try {
+            const { name, type } = cpt;
 
-    const indexUrl = getProjectUrl('src', 'index.tsx');
-    const componentIndex = fs.readFileSync(indexUrl, 'utf8');
-    const newIndex = componentIndex + `export { default as ${name} } from './${name}';` + EOL;
-    fs.writeFileSync(indexUrl, newIndex, 'utf8');
+            const indexUrl = getProjectUrl('src', 'index.tsx');
+            const components = fs.readFileSync(indexUrl, 'utf8');
+            const newIndex = components + `export { default as ${name} } from './${name}';` + EOL;
+            fs.writeFileSync(indexUrl, newIndex, 'utf8');
 
-    const styleUrl = getProjectUrl('src', 'scss.tsx');
-    const componentStyle = fs.readFileSync(styleUrl, 'utf8');
-    const newStyle = componentStyle + `import './${name}/style';` + EOL;
-    fs.writeFileSync(styleUrl, newStyle, 'utf8');
+            const styleUrl = getProjectUrl('src', 'scss.tsx');
+            const componentStyle = fs.readFileSync(styleUrl, 'utf8');
+            const newStyle = componentStyle + `import './${name}/style';` + EOL;
+            fs.writeFileSync(styleUrl, newStyle, 'utf8');
 
-    const typeListUrl = getProjectUrl('site', 'until', 'components.tsx');
-    fs.writeFileSync(typeListUrl, `export default ${JSON.stringify(components)}`, 'utf8');
+            const typeListUrl = getProjectUrl('site', '_util', 'componentIndex.tsx');
+            // !tag new language
+            componentIndex.push({ name, type, 'zh-CN': '待输入_中文名' });
+            fs.writeFileSync(typeListUrl, `export default ${JSON.stringify(componentIndex)}`, 'utf8');
+            res();
+        } catch (err) {
+            colorLog('AddCptInTemplate Failed !', 'red');
+            rej(err);
+        }
+    });
 }
 
 /**
@@ -171,10 +203,10 @@ function addTemplateInCode() {
 (async () => {
     try {
         await userInput();
-        await getTemplate();
-        await setTemplate();
-        addTemplateInCode();
-        console.log('> Congratulations, create src success !!!');
+        await readTemplate();
+        await writeTemplate();
+        await addCptInSpecifiedFile();
+        colorLog('> Congratulations, create component success !!!', 'green');
     } catch (err) {
         console.log(err);
     }

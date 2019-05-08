@@ -1,8 +1,6 @@
-# TouchFeedback
-
 > reference: [m-feedback](https://github.com/react-component/m-feedback)
 
-用来模拟手机上的点击事件，解决 300ms 延迟问题
+Used to simulate click events on mobile phones to resolve 300ms latency issues
 
 ## Demo
 
@@ -12,7 +10,7 @@
 
 `_disabled` 为 `true` 时拦截点击事件
 
-只支持单个子元素
+Only support single child elements
 
 ## API
 

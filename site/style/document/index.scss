@@ -13,12 +13,18 @@
             margin: 0 20px;
             color: #fff;
         }
+
+        &-lang {
+            position: absolute;
+            top: 0;
+            right: 30px;
+        }
     }
     &-main {
         display: flex;
     }
     &-aside {
-        width: 300px;
+        width: 200px;
         min-height: 100vh;
         padding: 20px;
         // background: #eee;
@@ -41,7 +47,7 @@
         padding: 30px;
         flex-grow: 1;
         pre {
-            max-width: 760px;
+            max-width: 540px;
             max-height: 50vh;
             overflow: auto;
         }

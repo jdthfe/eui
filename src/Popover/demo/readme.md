@@ -1,6 +1,4 @@
-# Popover
-
-展示弹层的气泡
+After clicking on a control or an area, a Popover menu appears for doing more. If set mask prop, it is recommended to exit by clicking on any of the mask layers.
 
 ## Demo
 

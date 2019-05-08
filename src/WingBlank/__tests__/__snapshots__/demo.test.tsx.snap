@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders WingBlank correctly 1`] = `
+<div
+  class="WingBlank"
+>
+  <div
+    class="placeholder"
+  >
+    placeholder
+  </div>
+  <div
+    class="edm-whitespace edm-whitespace-m"
+  />
+  <div
+    class="edm-wingblank edm-wingblank-s"
+  >
+    <div
+      class="placeholder"
+    >
+      placeholder
+    </div>
+  </div>
+  <div
+    class="edm-whitespace edm-whitespace-m"
+  />
+  <div
+    class="edm-wingblank edm-wingblank-m"
+  >
+    <div
+      class="placeholder"
+    >
+      placeholder
+    </div>
+  </div>
+  <div
+    class="edm-whitespace edm-whitespace-m"
+  />
+  <div
+    class="edm-wingblank edm-wingblank-l"
+  >
+    <div
+      class="placeholder"
+    >
+      placeholder
+    </div>
+  </div>
+</div>
+`;

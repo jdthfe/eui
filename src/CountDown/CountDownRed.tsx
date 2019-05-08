@@ -49,7 +49,6 @@ export const CountDown = (props: CountDownProps) => {
     };
     const cls = classnames(prefixCls, className);
     const endDateConst: any = useRef();
-    const currentTime: any = Math.floor(new Date().getTime() / 1000);
 
     useEffect(() => {
         const currentTime: any = Math.floor(new Date().getTime() / 1000);
@@ -75,7 +74,6 @@ export const CountDown = (props: CountDownProps) => {
     }
 
     const [state, dispatch] = useReducer(reducer, initCounterState);
-    let id: any = '';
     // dispatch({ type: 'interval' });
 
     // if (state.leftTime > 0) {

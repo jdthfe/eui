@@ -1,6 +1,4 @@
-# WingBlank
-
-布局控件
+Layout controls
 
 ## Demo
 
@@ -8,6 +6,6 @@ other description
 
 ## API
 
-| 属性 | 说明           | 类型              | 默认值 | 必填    |
-| ---- | -------------- | ----------------- | ------ | ------- |
-| size | 两翼留白的间距 | `'s' | 'm' | 'l'` | `'m'`  | `false` |
+| Properties | Descrition     | Type              | Default | Required |
+| ---------- | -------------- | ----------------- | ------- | -------- |
+| size       | 两翼留白的间距 | `'s' | 'm' | 'l'` | `'m'`   | `false`  |

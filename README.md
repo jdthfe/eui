@@ -48,7 +48,7 @@ Project
 │   ├── document         //  文档页（用以电脑访问）
 │   ├── instance         //  实例（用以手机访问）
 │   ├── style            //  样式
-│   └── until            //  通用方法
+│   └── _util            //  通用方法
 │
 ├── script               //  脚本
 │   └── template         //  组件模板

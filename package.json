@@ -16,24 +16,24 @@
         "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./scripts/config/webpack.config.dev.ts",
         "build": "cross-env NODE_ENV=build webpack -p --config ./scripts/config/webpack.config.build.ts",
         "test": "cross-env NODE_ENV=test jest --config=./jest.config.js --runInBand",
-        "rm": "ts-node scripts/template/remove.js && eslint ./site/until/components.tsx --fix",
-        "api": "ts-node scripts/template/api.js",
-        "new": "ts-node scripts/template/new.js && eslint ./site/until/components.tsx --fix",
-        "svg": "ts-node scripts/template/svg.js && eslint ./src/Icon/svgs.tsx --fix",
+        "rm": "ts-node scripts/template/remove.ts && eslint ./site/_util/componentIndex.tsx --fix",
+        "api": "ts-node scripts/template/api.ts",
+        "new": "ts-node scripts/template/new.ts && eslint ./site/_util/componentIndex.tsx --fix",
+        "svg": "ts-node scripts/template/svg.ts && eslint ./src/Icon/svgs.tsx --fix",
         "dist": "cross-env NODE_ENV=dist webpack -p --config ./scripts/config/webpack.config.dist.ts",
         "compile": "gulp -f ./scripts/gulp/gulpfile.ts compile",
         "prod": "yarn dist && yarn compile"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/xiajunqcy/elephant-ui.git"
+        "url": "git+https://github.com/jdthfe/edm.git"
     },
     "author": "qqqqqcy",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/xiajunqcy/elephant-ui/issues"
+        "url": "https://github.com/jdthfe/edm/issues"
     },
-    "homepage": "https://github.com/xiajunqcy/elephant-ui#readme",
+    "homepage": "https://github.com/jdthfe/edm#readme",
     "dependencies": {
         "@babel/runtime": "^7.4.3",
         "classnames": "^2.2.6"

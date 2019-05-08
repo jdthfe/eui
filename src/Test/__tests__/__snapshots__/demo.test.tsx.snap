@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Test correctly 1`] = `
+<div
+  class="Test"
+>
+  <div
+    class="edm-test"
+  >
+    default | children
+  </div>
+  <div
+    class="edm-test"
+  >
+    Hello World | children
+  </div>
+</div>
+`;

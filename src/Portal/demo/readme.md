@@ -1,6 +1,4 @@
-# Portal
-
-Portal 提供了一种很好的将子节点渲染到父组件以外的 DOM 节点的方式。
+Portal provides a great way to render child nodes to DOM nodes outside of the parent component.
 
 ## Demo
 

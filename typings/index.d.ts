@@ -1,1 +1,1 @@
-// import './custom.d';
+// import './custom';

@@ -1,6 +1,6 @@
 import { Route, Link, RouteComponentProps } from 'react-router-dom';
 import React from 'react';
-import { directoryStructure, sortStructure } from '../until/structure';
+import { componentIndex, sortComponentIndex } from '../_util';
 import Home from './Home';
 import Demo from './Demo';
 
@@ -11,9 +11,9 @@ const Mobile: React.SFC<RouteComponentProps> = props => {
             <nav className="instance-nav">
                 <Link to="/instance">Back</Link> Header
             </nav>
-            {match.isExact ? <Home structure={sortStructure(directoryStructure)} /> : null}
+            {match.isExact ? <Home structure={sortComponentIndex(componentIndex)} /> : null}
 
-            {directoryStructure.map(item => (
+            {componentIndex.map(item => (
                 <Route key={item.name} path={`/instance/${item.name}`} component={() => <Demo item={item} />} />
             ))}
         </div>

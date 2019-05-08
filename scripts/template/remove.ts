@@ -1,19 +1,18 @@
-import components from '../../site/until/components';
+import componentIndex from '../../site/_util/componentIndex';
 import fs from 'fs';
 import inquirer from 'inquirer';
 
-import { getProjectUrl, EOL } from '../helpers';
+import { getProjectUrl, EOL, colorLog } from '../helpers';
 
-const cpInfo: Pick<CpInfo, 'name'> = { name: '' };
-interface CpInfo {
+const cpt: Pick<Cpt, 'name'> = { name: '' };
+interface Cpt {
     name: string;
     confirm: boolean;
 }
 
-async function userInput() {
+function userInput() {
     const cpList: string[] = [];
-    components.map(item => cpList.push(item.name));
-
+    componentIndex.map(item => cpList.push(item.name));
     return inquirer
         .prompt([
             {
@@ -29,14 +28,14 @@ async function userInput() {
                 default: false,
             },
         ])
-        .then(({ name, confirm }: CpInfo) => {
+        .then(obj => {
+            const { name, confirm } = obj as Cpt;
             if (confirm) {
-                console.log('...Removing');
-                console.log(name);
+                colorLog(`...${name} Removing`, 'yellow');
             } else {
                 throw '> Canceled';
             }
-            cpInfo.name = name;
+            cpt.name = name;
         });
 }
 
@@ -54,16 +53,15 @@ function deleteFolderRecursive(path: string) {
     }
 }
 
-function removeTemplate() {
+function deleteFile() {
     return new Promise((res, rej) => {
         try {
-            const { name } = cpInfo;
+            const { name } = cpt;
             const NameUrl = ['src', name];
             deleteFolderRecursive(getProjectUrl(...NameUrl));
             res();
         } catch (err) {
-            console.log('remove template fail !');
-            rej(err);
+            rej('remove template fail !');
         }
     });
 }
@@ -75,12 +73,12 @@ function deleteCode(reg: string, content: string): string {
         .join(EOL);
 }
 
-function removeTemplateInCode() {
-    const { name } = cpInfo;
+function removeCptCodeInSpecifiedFile() {
+    const { name } = cpt;
 
     const indexUrl = getProjectUrl('src', 'index.tsx');
-    const componentIndex = fs.readFileSync(indexUrl, 'utf8');
-    const newIndex = deleteCode(`'./${name}'`, componentIndex);
+    const components = fs.readFileSync(indexUrl, 'utf8');
+    const newIndex = deleteCode(`'./${name}'`, components);
     fs.writeFileSync(indexUrl, newIndex, 'utf8');
 
     const styleUrl = getProjectUrl('src', 'scss.tsx');
@@ -88,10 +86,10 @@ function removeTemplateInCode() {
     const newStyle = deleteCode(`'./${name}/style'`, componentStyle);
     fs.writeFileSync(styleUrl, newStyle, 'utf8');
 
-    const typeListUrl = getProjectUrl('site', 'until', 'components.tsx');
+    const typeListUrl = getProjectUrl('site', '_util', 'componentIndex.tsx');
     fs.writeFileSync(
         typeListUrl,
-        `export default ${JSON.stringify(components.filter(item => item.name !== name))}`,
+        `export default ${JSON.stringify(componentIndex.filter(item => item.name !== name))}`,
         'utf8',
     );
 }
@@ -102,10 +100,10 @@ function removeTemplateInCode() {
 (async () => {
     try {
         await userInput();
-        removeTemplateInCode();
-        removeTemplate();
-        console.log('> Congratulations, remove src success !!!');
+        removeCptCodeInSpecifiedFile();
+        deleteFile();
+        colorLog('> Congratulations, remove src success !!!', 'green');
     } catch (err) {
-        console.log(err);
+        colorLog(err, 'red');
     }
 })();

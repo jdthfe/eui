@@ -66,6 +66,7 @@ export const TabsGroup = (props: TabsGroupProps) => {
         transition: animated ? 'transform .3s cubic-bezier(0.35, 0, 0.25, 1)' : '',
     };
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => {
         setX(wrapper ? -(wrapper as any).offsetWidth * activeIndexCopy! : 0);
         setY(wrapper ? -(wrapper as any).offsetHeight * activeIndexCopy! : 0);

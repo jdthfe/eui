@@ -3,7 +3,7 @@ import { Button, WhiteSpace, WingBlank } from '@src/index';
 import { Link } from 'react-router-dom';
 
 interface HomeProps {
-    structure: { [propName: string]: DirectoryStructureItem[] };
+    structure: { [propName: string]: ComponentIndex[] };
 }
 
 const Home = (props: HomeProps) => {

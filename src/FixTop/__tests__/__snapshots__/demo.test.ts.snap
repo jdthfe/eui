@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders FixTop correctly 1`] = `
+Array [
+  <div
+    style="position:relative;margin:0 auto;width:100%;min-width:320PX;max-width:640PX"
+  >
+    <div
+      class="edm-fixtop"
+    >
+      <div
+        class="edm-fixtop-icon"
+      >
+        <svg
+          aria-hidden="true"
+          class="edm-icon edm-icon-l"
+          fill="666"
+        >
+          <use
+            href="#remind"
+          />
+        </svg>
+      </div>
+      <div>
+        Buy 199 get 20% off text text text text text text textfixTop1
+      </div>
+      <div
+        class="edm-fixtop-close"
+      >
+        <svg
+          aria-hidden="true"
+          class="edm-icon edm-icon-l"
+          fill="DE6A1C"
+        >
+          <use
+            href="#close"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      style="height:500px;background:#f1f1f1"
+    >
+      fixTop1
+    </div>
+  </div>,
+  <div
+    style="position:relative;margin:0 auto;width:100%;min-width:320PX;max-width:640PX"
+  >
+    <div
+      class="edm-fixtop"
+    >
+      <div
+        class="edm-fixtop-icon"
+      >
+        <svg
+          aria-hidden="true"
+          class="edm-icon edm-icon-l"
+          fill="#F00"
+        >
+          <use
+            href="#alipay"
+          />
+        </svg>
+      </div>
+      <div>
+        Buy 199 get 20% off text text text text text text textfixTop2
+      </div>
+      <div
+        class="edm-fixtop-close"
+      />
+    </div>
+    <div
+      style="height:500px;background:#f1f1f1"
+    >
+      fixTop2
+    </div>
+  </div>,
+  <div
+    style="position:relative;margin:0 auto;width:100%;min-width:320PX;max-width:640PX"
+  >
+    <div
+      class="edm-fixtop"
+    >
+      <div
+        class="edm-fixtop-icon"
+      />
+      <div>
+        Buy 199 get 20% off text text text text text text textfixTop3
+      </div>
+      <div
+        class="edm-fixtop-close"
+      >
+        <svg
+          aria-hidden="true"
+          class="edm-icon edm-icon-l"
+          fill="#F00"
+        >
+          <use
+            href="#selected"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      style="height:500px;background:#f1f1f1"
+    >
+      fixTop3
+    </div>
+  </div>,
+]
+`;

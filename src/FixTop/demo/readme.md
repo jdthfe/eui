@@ -1,6 +1,4 @@
-# FixTop
-
-一个置顶的提示栏 sticky
+a top sticky
 
 ## Demo
 

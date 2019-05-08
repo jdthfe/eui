@@ -1,26 +1,25 @@
-import components from '../../site/until/components';
+import componentIndex from '../../site/_util/componentIndex';
 import fs from 'fs';
 import inquirer from 'inquirer';
 
 import { getProjectUrl, EOL } from '../helpers';
-
-interface CpInfo {
+interface Cpt {
     name: string;
     confirm: boolean;
 }
-interface CP {
-    index: string;
-    PropsType: string;
+const cpt: Pick<Cpt, 'name'> = { name: '' };
+interface CptDir {
+    'index.tsx': string;
+    'PropsType.tsx': string;
 }
-const cp: CP = {
-    index: '',
-    PropsType: '',
+const cptDir: CptDir = {
+    'index.tsx': '',
+    'PropsType.tsx': '',
 };
-const cpInfo: Pick<CpInfo, 'name'> = { name: '' };
 
 async function userInput() {
     const cpList: string[] = [];
-    components.map(item => cpList.push(item.name));
+    componentIndex.map(item => cpList.push(item.name));
 
     return new Promise((res, rej) => {
         inquirer
@@ -38,13 +37,14 @@ async function userInput() {
                     default: false,
                 },
             ])
-            .then(({ name, confirm }: CpInfo) => {
+            .then(obj => {
+                const { name, confirm } = obj as Cpt;
                 if (confirm) {
                     console.log(`...${name}'s Api Generating`);
                 } else {
                     throw '> Loading';
                 }
-                cpInfo.name = name;
+                cpt.name = name;
                 res();
             })
             .catch(() => {
@@ -53,13 +53,15 @@ async function userInput() {
     });
 }
 
-function getTemplate() {
+function readCptFile() {
     return new Promise((res, rej) => {
         try {
-            const { name } = cpInfo;
+            const { name } = cpt;
             const cpUrl = ['src', name];
-            cp.index = fs.readFileSync(getProjectUrl(...cpUrl, 'index.tsx'), 'utf8');
-            cp.PropsType = fs.readFileSync(getProjectUrl(...cpUrl, 'PropsType.tsx'), 'utf8').replace(/NAME/g, name);
+            cptDir['index.tsx'] = fs.readFileSync(getProjectUrl(...cpUrl, 'index.tsx'), 'utf8');
+            cptDir['PropsType.tsx'] = fs
+                .readFileSync(getProjectUrl(...cpUrl, 'PropsType.tsx'), 'utf8')
+                .replace(/NAME/g, name);
             res();
         } catch (err) {
             rej(err);
@@ -93,7 +95,7 @@ function mapPropsToTable(propStr: string, indexStr: string) {
     const table: PorpItem[] = [];
     const exp = propStr.match(expReg) || [];
     const defaultSec = (indexStr.match(defaultSecReg) || [])[0];
-    const tableMd = [`|属性|说明|类型|默认值|必填|`, `| - | - | - | - | - |`];
+    const tableMd = [`|Properties|Descrition|Type|Default|Required|`, `| - | - | - | - | - |`];
     (propStr.match(Propsreg) || []).map((item, index) => {
         const [, r1 = 'find key fail', r2 = false, , r4 = 'find type fail'] = item.match(valReg) || [];
         const defaultReg = new RegExp(`(${r1}) = (.+?)(,| })`);
@@ -111,7 +113,7 @@ function mapPropsToTable(propStr: string, indexStr: string) {
             }\`|`,
         );
     });
-    const readmeUrl = getProjectUrl('src', cpInfo.name, 'demo', 'readme.md');
+    const readmeUrl = getProjectUrl('src', cpt.name, 'demo', 'readme.md');
     const readme = fs.readFileSync(readmeUrl, 'utf8');
     fs.writeFileSync(readmeUrl, readme + EOL + tableMd.join(EOL), 'utf8');
 }
@@ -122,9 +124,11 @@ function mapPropsToTable(propStr: string, indexStr: string) {
 (async () => {
     try {
         await userInput();
-        await getTemplate();
-        mapPropsToTable(cp.PropsType, cp.index);
-        console.log('> Congratulations, generator API success !!!');
+        await readCptFile();
+        mapPropsToTable(cptDir['PropsType.tsx'], cptDir['index.tsx']);
+        console.log(
+            `> Congratulations, generator API success !!!\n> You can find it in 'src/${cpt.name}/demo/readme.md'`,
+        );
     } catch (err) {
         console.log(err);
     }

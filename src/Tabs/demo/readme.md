@@ -1,5 +1,3 @@
-# Tabs
-
 description
 
 ## Demo

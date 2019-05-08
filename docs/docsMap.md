@@ -14,7 +14,7 @@ Project
 │       webpack.config.prod.ts  //  组件 build 配置文件
 │       webpack.config.dev.ts   //  开发模式配置文件
 │       getStyleLoader.ts       //  样式 loader 的封装
-│       until.ts                //  打包过程中用到的公共方法
+│       _util.ts                //  打包过程中用到的公共方法
 │
 │   //  组件源码
 ├── component
@@ -86,7 +86,7 @@ Project
 │   │   index.scss  //  样式入口
 │   │
 │   │   //  通用方法
-│   └── until
+│   └── _util
 │   ·   structure.ts  //  组件目录结构
 │   ·
 │   index.d.ts  //  类型声明

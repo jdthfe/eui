@@ -1,5 +1,5 @@
 /**
- * 仅用于 example 和 dist 打包
+ * 仅用于 site 和 dist 打包
  */
 import './Button/style';
 import './Icon/style';
@@ -13,3 +13,4 @@ import './Badge/style';
 import './Tabs/style';
 import './WingBlank/style';
 import './WhiteSpace/style';
+import './Test/style';

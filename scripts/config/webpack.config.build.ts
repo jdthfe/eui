@@ -8,8 +8,13 @@ import { getProjectUrl } from '../helpers';
 
 const config: webpack.Configuration = {
     entry: {
-        example: getProjectUrl('site', 'index.tsx'),
+        index: getProjectUrl('site', 'index.tsx'),
     },
+    // optimization: {
+    //     splitChunks: {
+    //         chunks: 'all',
+    //     },
+    // },
     // resolve: {
     //     plugins: [new TsConfigPathsPlugin({})],
     // },

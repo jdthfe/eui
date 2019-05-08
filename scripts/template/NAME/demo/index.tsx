@@ -1,4 +1,12 @@
-import demoSource from '!!raw-loader!./demo';
-import demo from './demo';
-import readme from '!!raw-loader!./readme.md';
-export { demoSource, demo, readme };
+import React from 'react';
+import { NAME } from '@src/index';
+const Demo = () => {
+    return (
+        <div className="NAME">
+            <NAME>children</NAME>
+            <NAME prop={'Hello World'}>children</NAME>
+        </div>
+    );
+};
+
+export default Demo;

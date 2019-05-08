@@ -1,12 +1,12 @@
 import React from 'react';
-import { getComponent } from '../until/structure';
+import { getInstance } from '../_util';
 
 interface DemoProps {
-    item: DirectoryStructureItem;
+    item: ComponentIndex;
 }
 const Demo = (props: DemoProps) => {
     const { item } = props;
-    const Demo = getComponent(item).demo || null;
+    const Demo = getInstance(item) || null;
     return <main className="instance-demo">{Demo ? <Demo /> : null}</main>;
 };
 
