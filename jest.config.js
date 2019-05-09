@@ -26,7 +26,7 @@ var config = {
     //         // },
     //     },
     // },
-    preset: 'ts-jest',
+    // preset: 'ts-jest',
 
     transform: {
         '^.+\\.tsx?$': 'babel-jest',
