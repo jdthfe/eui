@@ -16,7 +16,7 @@ const Preface = () => {
                         </Button>
                     </a>
                 </p>
-                <Link to="/document/button">
+                <Link to="/document/introduce">
                     <Button theme="primary" className="preface-btn" inline>
                         document
                     </Button>
