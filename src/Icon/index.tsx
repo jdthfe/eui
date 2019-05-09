@@ -7,7 +7,9 @@ const prefixCls = `${prefix}-icon`;
 
 const Icon = (props: IconProps) => {
     const { value, size = 'l', className, ...restProps } = props;
-    const cls = classnames(prefixCls, className, `${prefixCls}-${size}`);
+    const cls = classnames(prefixCls, className, `${prefixCls}-${size}`, {
+        [`${prefixCls}-loading`]: value === 'loading',
+    });
     useEffect(() => {
         loadSprite();
         return () => {};

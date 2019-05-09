@@ -21,6 +21,11 @@ const Demo = () => {
                     primary | ghost | disabled
                 </Button>
                 <WhiteSpace />
+                <Button theme="primary">
+                    <Icon fill="#fff" value="loading" />
+                </Button>
+
+                <WhiteSpace />
             </WingBlank>
 
             <h4>Size</h4>

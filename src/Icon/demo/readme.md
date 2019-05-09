@@ -2,9 +2,13 @@ icon component
 
 ## Demo
 
+## Tips
+
+The Prop `fill` is the attribute of the svg element itself
+
 ## API
 
-| 属性  | 说明     | 类型                                                              | 默认值 | 必填    |
-| ----- | -------- | ----------------------------------------------------------------- | ------ | ------- |
-| value | 图标名称 | `'addcart' | 'alipay' | 'close' | 'remind' | 'selected' | string` | -      | `true`  |
-| size  | 尺寸     | `'xxs' | 'xs' | 's' | 'm' | 'l'`                                  | `'l'`  | `false` |
+| Properties | Descrition                       | Type                                                                          | Default | Required |
+| ---------- | -------------------------------- | ----------------------------------------------------------------------------- | ------- | -------- |
+| value      | Select the icon you want to show | `'addcart' | 'alipay' | 'close' | 'loading' | 'remind' | 'selected' | string` | -       | `true`   |
+| size       | Ionc's Size                      | `'xs' | 's' | 'm' | 'l' | 'xl'`                                               | `'l'`   | `false`  |

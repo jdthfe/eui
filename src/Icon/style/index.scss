@@ -31,4 +31,13 @@ $icon-prefix: $preifx + '-icon';
         width: $icon-size-xl;
         height: $icon-size-xl;
     }
+    &-loading {
+        animation: cirle-anim 2s linear infinite;
+    }
+}
+
+@keyframes cirle-anim {
+    100% {
+        transform: rotate(360deg);
+    }
 }
