@@ -1,0 +1,1 @@
+.hello{opacity:1;-webkit-transition:all .5s;transition:all .5s}.hello-entry,.hello-exit-active,.world{opacity:0}.world{-webkit-transition:all .5s;transition:all .5s}.world-entry-active,.world-entry-done{opacity:1}.world-exit-active{opacity:0}

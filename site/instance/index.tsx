@@ -2,7 +2,8 @@ import { Route, Link, RouteComponentProps } from 'react-router-dom';
 import React from 'react';
 import { componentIndex, sortComponentIndex } from '../_util';
 import Home from './Home';
-import Demo from './Demo';
+// import Demo from './Demo';
+import { AsyncDemo } from './AsyncDemo';
 
 const Mobile: React.SFC<RouteComponentProps> = props => {
     const { match } = props;
@@ -14,7 +15,7 @@ const Mobile: React.SFC<RouteComponentProps> = props => {
             {match.isExact ? <Home structure={sortComponentIndex(componentIndex)} /> : null}
 
             {componentIndex.map(item => (
-                <Route key={item.name} path={`/instance/${item.name}`} component={() => <Demo item={item} />} />
+                <Route key={item.name} path={`/instance/${item.name}`} component={() => <AsyncDemo item={item} />} />
             ))}
         </div>
     );

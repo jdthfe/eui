@@ -1,6 +1,5 @@
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-// import TsConfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 
 import base from './webpack.config';
 import webpackMerge from 'webpack-merge';
@@ -10,14 +9,7 @@ const config: webpack.Configuration = {
     entry: {
         index: getProjectUrl('site', 'index.tsx'),
     },
-    // optimization: {
-    //     splitChunks: {
-    //         chunks: 'all',
-    //     },
-    // },
-    // resolve: {
-    //     plugins: [new TsConfigPathsPlugin({})],
-    // },
+    devtool: false,
     mode: 'production',
     output: {
         path: getProjectUrl('build'),

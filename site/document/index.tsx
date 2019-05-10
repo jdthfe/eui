@@ -3,7 +3,8 @@ import { componentIndex, sortComponentIndex } from '../_util';
 import { Route, RouteComponentProps } from 'react-router-dom';
 
 import Nav from './component/Nav';
-import Article from './Article';
+// import Article from './Article';
+import { AsyncArticle } from './AsyncArticle';
 import Aside from './component/Aside';
 import Iframe from './component/Iframe';
 import Footer from './component/Footer';
@@ -42,7 +43,7 @@ const Document: React.SFC<RouteComponentProps> = props => {
                         <Route
                             key={item.name}
                             path={`/document/${item.name}`}
-                            component={() => <Article item={item} />}
+                            component={() => <AsyncArticle item={item} />}
                         />
                     ))}
 
