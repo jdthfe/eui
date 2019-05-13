@@ -13,6 +13,7 @@ const config: webpack.Configuration = {
     mode: 'production',
     output: {
         path: getProjectUrl('build'),
+        publicPath: getProjectUrl('build'),
     },
     plugins: [
         new HtmlWebpackPlugin({

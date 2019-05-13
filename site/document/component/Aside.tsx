@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Button } from '@src/index';
+import Button from '@src/Button';
 import { Link } from 'react-router-dom';
 import { getLanguage } from '../../_util/language';
 interface AsideProps {

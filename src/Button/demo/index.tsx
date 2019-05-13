@@ -1,5 +1,9 @@
 import React from 'react';
 import { Button, Icon, WingBlank, WhiteSpace } from '@src/index';
+// import Button from '../../../compiled/lib/Button';
+// import Icon from '../../../compiled/lib/Icon';
+// import WingBlank from '../../../compiled/lib/WingBlank';
+// import WhiteSpace from '../../../compiled/lib/WhiteSpace';
 const Demo = () => {
     return (
         <div className="Button">

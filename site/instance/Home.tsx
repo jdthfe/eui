@@ -1,5 +1,8 @@
 import React, { Fragment } from 'react';
-import { Button, WhiteSpace, WingBlank } from '@src/index';
+// import { Button, WhiteSpace, WingBlank } from '@src/index';
+import Button from '@src/Button';
+import WhiteSpace from '@src/WhiteSpace';
+import WingBlank from '@src/WingBlank';
 import { Link } from 'react-router-dom';
 
 interface HomeProps {

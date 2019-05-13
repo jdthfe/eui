@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button } from '@src/index';
+// import { Button } from '@src/index';
+import Button from '@src/Button';
 import Logo from './component/Logo';
 import { Link } from 'react-router-dom';
 
