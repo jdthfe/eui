@@ -2,7 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 import { TouchFeedbackPropsWithChildren } from './PropsType';
 
-const TouchFeedback = (props: TouchFeedbackPropsWithChildren) => {
+const TouchFeedback: (props: TouchFeedbackPropsWithChildren) => JSX.Element = props => {
     const { children, disabled = false, activeStyle = {}, activeClassName = '' } = props;
 
     const [active, setActive] = React.useState(false);
