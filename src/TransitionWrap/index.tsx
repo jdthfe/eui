@@ -70,7 +70,9 @@ const TransitionWrap = (props: TransitionWrapPropsWithChildren) => {
                 {React.Children.map(children, child => {
                     let { className } = child.props;
                     if (transitionClassName) {
-                        className = classnames(className, `${transitionClassName}-${status}`);
+                        className = classnames(className, `${transitionClassName}-${status}`, {
+                            [transitionClassName]: transitionClassName !== className,
+                        });
                     }
                     return React.cloneElement(child, { className });
                 })}

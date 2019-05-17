@@ -5,6 +5,7 @@ export default [
     { name: 'TouchFeedback', type: 'Depth', 'zh-CN': '触摸反馈' },
     { name: 'Portal', type: 'Depth', 'zh-CN': '传送门' },
     { name: 'TransitionWrap', type: 'Depth', 'zh-CN': '动画包裹' },
+    { name: 'Cover', type: 'Depth', 'zh-CN': '遮罩' },
     { name: 'CountDown', type: 'Data Display', 'zh-CN': '计时器' },
     { name: 'Popover', type: 'Data Display', 'zh-CN': '气泡' },
     { name: 'FixTop', type: 'Data Display', 'zh-CN': '提示' },

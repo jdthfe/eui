@@ -13,3 +13,4 @@ import './Badge/style';
 import './Tabs/style';
 import './WingBlank/style';
 import './WhiteSpace/style';
+import './Cover/style';

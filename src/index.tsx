@@ -34,3 +34,4 @@ export { default as Badge } from './Badge';
 // export { Button, Icon, TouchFeedback, Portal, TransitionWrap, CountDown, Popover };
 export { default as WingBlank } from './WingBlank';
 export { default as WhiteSpace } from './WhiteSpace';
+export { default as Cover } from './Cover';
