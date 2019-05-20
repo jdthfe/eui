@@ -3,22 +3,37 @@ $tabs-prefix: $preifx + '-tabs';
 
 .#{$tabs-prefix} {
     position: relative;
-    display: flex;
     .#{$tabs-prefix}-nav-box {
         display: flex;
         min-height: 40px;
         margin-bottom: 0;
         margin-left: 0;
         overflow: hidden;
+
+        &.#{$tabs-prefix}-nav-flex {
+            .#{$tabs-prefix}-nav-wrapper {
+                flex: 1;
+                justify-content: center;
+                align-items: center;
+            }
+            .#{$tabs-prefix}-nav {
+                padding: 0 5px;
+                text-align: center;
+                flex: 1;
+            }
+        }
     }
-    .#{$tabs-prefix}-nav-flex {
-        .#{$tabs-prefix}-nav-wrapper {
-            flex: 1;
-        }
-        .#{$tabs-prefix}-nav {
-            flex: 1;
-            padding: 0 5px;
-        }
+    .#{$tabs-prefix}-nav-underline {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 25px;
+        height: 3px;
+        margin: auto;
+        background-image: linear-gradient(-45deg, #ff7e0e 0%, #f10202 100%);
+        border-radius: 3px;
+        content: '';
+        box-shadow: 0 2px 4px 0 rgba(255, 62, 62, 0.2);
     }
     .#{$tabs-prefix}-nav-wrapper {
         position: relative;
@@ -27,52 +42,18 @@ $tabs-prefix: $preifx + '-tabs';
     }
     .#{$tabs-prefix}-nav {
         position: relative;
-        display: inline-block;
-
+        display: flex;
+        align-items: center;
+        justify-content: center;
         padding: 0 10px;
         font-size: 14px;
         line-height: 1.2;
         color: #666;
 
-        .inner {
-            display: flex;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            box-sizing: content-box;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .icon {
-            width: 20px;
-            height: 20px;
-            color: #959595;
-        }
-
         &.active {
             position: relative;
-            .inner {
-                font-weight: bold;
-                color: #2e2d2d;
-            }
-            .icon {
-                color: #f0250f;
-            }
-
-            &::after {
-                position: absolute;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                width: 25px;
-                height: 3px;
-                margin: auto;
-                background-image: linear-gradient(-45deg, #ff7e0e 0%, #f10202 100%);
-                border-radius: 3px;
-                content: '';
-                box-shadow: 0 2px 4px 0 rgba(255, 62, 62, 0.2);
-            }
+            font-weight: bold;
+            color: #2e2d2d;
         }
     }
 
@@ -106,25 +87,6 @@ $tabs-prefix: $preifx + '-tabs';
         flex-direction: row;
         .#{$tabs-prefix}-nav-wrapper {
             flex-direction: column;
-        }
-
-        .#{$tabs-prefix}-nav {
-            &.active {
-                &::after {
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    left: 100%;
-                    width: 3px;
-                    height: 25px;
-                    margin: auto;
-                    background-image: linear-gradient(-45deg, #ff7e0e 0%, #f10202 100%);
-                    border-radius: 3px;
-                    content: '';
-                    box-shadow: 0 2px 4px 0 rgba(255, 62, 62, 0.2);
-                }
-            }
         }
 
         .#{$tabs-prefix}-con-wrapper {

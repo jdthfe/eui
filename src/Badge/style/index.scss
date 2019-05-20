@@ -16,8 +16,8 @@ $font-size-subhead: 15 * $hd;
     position: relative;
     display: inline-block;
     line-height: 15px;
+    white-space: nowrap;
     vertical-align: middle;
-
     &-text {
         position: absolute;
         top: -1 * $v-spacing-sm;

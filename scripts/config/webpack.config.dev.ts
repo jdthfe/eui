@@ -22,7 +22,7 @@ const config: webpack.Configuration = {
             chunkModules: false, // 不将内置模块的信息加到包信息
         },
         // port: 80,
-        open: true,
+        // open: true,
         headers: { 'Access-Control-Allow-Origin': '*' },
         disableHostCheck: true,
         // 如果不启用无法使用 BrowserRouter

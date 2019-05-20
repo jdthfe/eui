@@ -1,30 +1,16 @@
-export interface TabProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-    index?: number;
-    disabled?: boolean;
-    activeIndex?: number;
-}
-
 export interface TabsProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+    /** default selected index value=0 */
     activeIndex?: number;
-    centerMode?: boolean;
-    scrollable?: boolean;
+
+    /** position of the tabs */
     position?: 'top' | 'right' | 'bottom' | 'left';
+
+    /** Whether the tab option is full screen， when flex is true, divide the width */
     flex?: boolean;
-    // onChange?: (index: number) => void;
-}
 
-export interface TabContainerProps
-    extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-    index?: number;
-    activeIndex?: any;
-}
+    /** The tabs option, type is any */
+    tabs: any;
 
-export interface TabsGroupProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+    /** when click one tab option, whether animated is allowed */
     animated?: boolean;
-    activeIndex?: number;
-    centerMode?: boolean;
-    position?: 'top' | 'right' | 'bottom' | 'left';
-    scrollable?: boolean;
-    /** tabs项是否均等分 */
-    flex?: boolean;
 }

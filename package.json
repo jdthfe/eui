@@ -13,7 +13,7 @@
         "compiled"
     ],
     "scripts": {
-        "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./scripts/config/webpack.config.dev.ts",
+        "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./scripts/config/webpack.config.dev.ts --open 'Google Chrome'",
         "build": "cross-env NODE_ENV=build webpack -p --config ./scripts/config/webpack.config.build.ts",
         "test": "cross-env NODE_ENV=test jest --config=./jest.config.js --runInBand",
         "rm": "ts-node scripts/template/remove.ts && eslint ./site/_util/componentIndex.tsx --fix",
@@ -22,7 +22,7 @@
         "svg": "ts-node scripts/template/svg.ts && eslint ./src/Icon/svgs.tsx --fix",
         "dist": "cross-env NODE_ENV=dist webpack -p --config ./scripts/config/webpack.config.dist.ts",
         "compile": "gulp -f ./scripts/gulp/gulpfile.ts compile",
-        "prod": "yarn dist && yarn compile"
+        "prod": "yarn dist && yarn compile &&     "
     },
     "repository": {
         "type": "git",
