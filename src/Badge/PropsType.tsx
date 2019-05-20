@@ -1,16 +1,16 @@
 export interface BadgeProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLSpanElement>, HTMLSpanElement> {
-    /** 角标的大小 large 或者 small */
+    /** the size of Badge : large or small */
     size?: 'large' | 'small';
 
-    /** 数字的最大值 */
+    /** the maximum of number */
     max?: number;
 
-    /** 是否置于角落 */
+    /** Is it in a corner? */
     corner?: boolean;
 
-    /** 是否只展示一个点 */
+    /** only one point ? */
     dot?: boolean;
 
-    /** 展示的数字或文案，当为数字的时候，大于max展示 ${max}+， 为0时隐藏 */
+    /** the num or text, ${max}+: when the num is gt the max,  hidden when it is 0.*/
     text?: any;
 }
