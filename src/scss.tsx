@@ -14,3 +14,4 @@ import './Tabs/style';
 import './WingBlank/style';
 import './WhiteSpace/style';
 import './Cover/style';
+import './Toast/style';

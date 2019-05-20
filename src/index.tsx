@@ -35,3 +35,4 @@ export { default as Badge } from './Badge';
 export { default as WingBlank } from './WingBlank';
 export { default as WhiteSpace } from './WhiteSpace';
 export { default as Cover } from './Cover';
+export { default as Toast } from './Toast';

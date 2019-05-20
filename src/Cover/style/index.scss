@@ -9,7 +9,7 @@ $cover-prefix: $preifx + '-cover';
     height: 100%;
     background: $cover;
 
-    &-transparent {
+    &-transparent.#{$cover-prefix} {
         opacity: 0;
     }
 }

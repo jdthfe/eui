@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Cover, Button, WhiteSpace } from '@src/index';
 const Demo = () => {
-    const [visible, setVisible] = useState(false);
-    const [visible2, setVisible2] = useState(false);
+    let cover = () => {};
     return (
         <div className="Cover">
             <Button
                 theme="primary"
                 onClick={() => {
-                    setVisible(!visible);
+                    cover();
+                    cover = Cover.visible({ time: 200, onClick: () => cover() });
                 }}
             >
                 Cover
@@ -17,26 +17,17 @@ const Demo = () => {
             <Button
                 theme="primary"
                 onClick={() => {
-                    setVisible2(!visible2);
+                    cover();
+                    cover = Cover.invisible({
+                        onClick: () => cover(),
+                        onExitDone: () => {
+                            console.log('onExitDone');
+                        },
+                    });
                 }}
             >
-                Cover Transparent
+                Cover | Transparent
             </Button>
-
-            <Cover
-                onClick={() => {
-                    setVisible(!visible);
-                }}
-                time={200}
-                visible={visible}
-            />
-            <Cover
-                onClick={() => {
-                    setVisible2(!visible2);
-                }}
-                visible={visible2}
-                transparent
-            />
         </div>
     );
 };
