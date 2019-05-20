@@ -4,7 +4,6 @@ const Demo = () => {
     const cFun = () => {
         console.log('倒计时结束');
     };
-    window.localStorage.clear();
     return (
         <div>
             <div>
