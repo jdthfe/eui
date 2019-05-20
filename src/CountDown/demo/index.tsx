@@ -1,5 +1,5 @@
 import React from 'react';
-import { CountDown } from '../CountDownRed';
+import { CountDown } from '@src/index';
 const Demo = () => {
     const cFun = () => {
         console.log('倒计时结束');
