@@ -3,7 +3,7 @@
 exports[`renders Popover correctly 1`] = `
 <div>
   <button
-    class="edm-button edm-button-small edm-button-default edm-button-radius"
+    class="edm-button edm-button-s edm-button-customize"
     role="button"
   >
     test

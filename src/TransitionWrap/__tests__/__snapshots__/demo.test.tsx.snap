@@ -5,7 +5,7 @@ exports[`renders TransitionWrap correctly 1`] = `
   class="TransitionWrap"
 >
   <button
-    class="edm-button edm-button-middle edm-button-default edm-button-radius"
+    class="edm-button edm-button-l edm-button-customize"
     role="button"
   >
     click to show text

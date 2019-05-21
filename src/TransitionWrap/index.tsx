@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useLayoutEffect } from 'react';
 import classnames from 'classnames';
 import { TransitionStatus, TransitionWrapPropsWithChildren } from './PropsType';
 
@@ -23,7 +23,7 @@ const TransitionWrap = (props: TransitionWrapPropsWithChildren) => {
     const [status, setStatus] = React.useState(visible ? statusCase.entryDone : statusCase.exitDone);
     const [show, setShow] = React.useState(visible);
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         let id = 0;
         if (visible) {
             switch (status) {
@@ -70,7 +70,9 @@ const TransitionWrap = (props: TransitionWrapPropsWithChildren) => {
                 {React.Children.map(children, child => {
                     let { className } = child.props;
                     if (transitionClassName) {
-                        className = classnames(className, `${transitionClassName}-${status}`);
+                        className = classnames(className, `${transitionClassName}-${status}`, {
+                            [transitionClassName]: transitionClassName !== className,
+                        });
                     }
                     return React.cloneElement(child, { className });
                 })}

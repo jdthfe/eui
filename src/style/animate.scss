@@ -1,0 +1,14 @@
+@import './variables';
+
+$fade-prefix: $preifx + '-fade';
+.#{$fade-prefix} {
+    opacity: 1;
+    transition: opacity 0.3s;
+    &-entry {
+        opacity: 0;
+    }
+    &-exit-active,
+    &-exit-done {
+        opacity: 0;
+    }
+}

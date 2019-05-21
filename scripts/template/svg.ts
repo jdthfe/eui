@@ -134,9 +134,13 @@ async function watiSvgo(key: string, data: string, filePath: string): Promise<vo
 
 Promise.all(
     svgList.map(async key => {
-        const filePath = getProjectUrl(...dirList, key);
-        const data = fs.readFileSync(filePath, 'utf8');
-        return await watiSvgo(key, data, filePath);
+        try {
+            const filePath = getProjectUrl(...dirList, key);
+            const data = fs.readFileSync(filePath, 'utf8');
+            return await watiSvgo(key, data, filePath);
+        } catch (err) {
+            console.log(err);
+        }
     }),
 )
     .then(() => {
@@ -154,4 +158,5 @@ Promise.all(
             .join(EOL);
         fs.writeFileSync(getProjectUrl(...dirList, '../', 'PropsType.tsx'), str, 'utf8');
         console.log('> Congratulations, generator svgs success !!!');
-    });
+    })
+    .catch(err => console.log(err));

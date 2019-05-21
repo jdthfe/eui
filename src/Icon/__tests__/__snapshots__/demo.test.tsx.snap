@@ -1,64 +1,274 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders Icon correctly 1`] = `
-<div>
+<div
+  class="Icon"
+>
+  <h4>
+    Value
+  </h4>
   <div
-    style="background:gainsboro"
+    class="Icon-value"
   >
-    <svg
-      aria-hidden="true"
-      class="edm-icon edm-icon-middle"
-      fill="red"
+    <div
+      class="Icon-value-item"
     >
-      <use
-        href="#addcart"
-      />
-    </svg>
-    <svg
-      aria-hidden="true"
-      class="edm-icon edm-icon-middle"
-      fill="blue"
+      <svg
+        aria-hidden="true"
+        class="edm-icon edm-icon-l"
+      >
+        <use
+          href="#addcart"
+        />
+      </svg>
+      <p>
+        addcart
+      </p>
+    </div>
+    <div
+      class="Icon-value-item"
     >
-      <use
-        href="#addcart"
-      />
-    </svg>
-    <svg
-      aria-hidden="true"
-      class="edm-icon edm-icon-middle"
-      fill="green"
+      <svg
+        aria-hidden="true"
+        class="edm-icon edm-icon-l"
+      >
+        <use
+          href="#alipay"
+        />
+      </svg>
+      <p>
+        alipay
+      </p>
+    </div>
+    <div
+      class="Icon-value-item"
     >
-      <use
-        href="#addcart"
-      />
-    </svg>
-    <svg
-      aria-hidden="true"
-      class="edm-icon edm-icon-middle"
-      fill="red"
+      <svg
+        aria-hidden="true"
+        class="edm-icon edm-icon-l"
+      >
+        <use
+          href="#close"
+        />
+      </svg>
+      <p>
+        close
+      </p>
+    </div>
+    <div
+      class="Icon-value-item"
     >
-      <use
-        href="#close"
-      />
-    </svg>
-    <svg
-      aria-hidden="true"
-      class="edm-icon edm-icon-middle"
-      fill="blue"
+      <svg
+        aria-hidden="true"
+        class="edm-icon edm-icon-l"
+      >
+        <use
+          href="#remind"
+        />
+      </svg>
+      <p>
+        remind
+      </p>
+    </div>
+    <div
+      class="Icon-value-item"
     >
-      <use
-        href="#remind"
-      />
-    </svg>
-    <svg
-      aria-hidden="true"
-      class="edm-icon edm-icon-middle"
-      fill="green"
+      <svg
+        aria-hidden="true"
+        class="edm-icon edm-icon-l"
+      >
+        <use
+          href="#selected"
+        />
+      </svg>
+      <p>
+        selected
+      </p>
+    </div>
+    <div
+      class="Icon-value-item"
     >
-      <use
-        href="#selected"
-      />
-    </svg>
+      <svg
+        aria-hidden="true"
+        class="edm-icon edm-icon-l edm-icon-loading"
+      >
+        <use
+          href="#loading"
+        />
+      </svg>
+      <p>
+        loading
+      </p>
+    </div>
+  </div>
+  <h4>
+    Size
+  </h4>
+  <div
+    class="Icon-size"
+  >
+    <div
+      class="Icon-size-item"
+    >
+      <svg
+        aria-hidden="true"
+        class="edm-icon edm-icon-xs"
+      >
+        <use
+          href="#addcart"
+        />
+      </svg>
+      <p>
+        xs
+      </p>
+    </div>
+    <div
+      class="Icon-size-item"
+    >
+      <svg
+        aria-hidden="true"
+        class="edm-icon edm-icon-s"
+      >
+        <use
+          href="#addcart"
+        />
+      </svg>
+      <p>
+        s
+      </p>
+    </div>
+    <div
+      class="Icon-size-item"
+    >
+      <svg
+        aria-hidden="true"
+        class="edm-icon edm-icon-m"
+      >
+        <use
+          href="#addcart"
+        />
+      </svg>
+      <p>
+        m
+      </p>
+    </div>
+    <div
+      class="Icon-size-item"
+    >
+      <svg
+        aria-hidden="true"
+        class="edm-icon edm-icon-l"
+      >
+        <use
+          href="#addcart"
+        />
+      </svg>
+      <p>
+        l
+      </p>
+    </div>
+    <div
+      class="Icon-size-item"
+    >
+      <svg
+        aria-hidden="true"
+        class="edm-icon edm-icon-xl"
+      >
+        <use
+          href="#addcart"
+        />
+      </svg>
+      <p>
+        xl
+      </p>
+    </div>
+  </div>
+  <h4>
+    Fill
+  </h4>
+  <div
+    class="Icon-fill"
+  >
+    <div
+      class="Icon-fill-item"
+    >
+      <svg
+        aria-hidden="true"
+        class="edm-icon edm-icon-l"
+        fill="red"
+      >
+        <use
+          href="#close"
+        />
+      </svg>
+      <p>
+        red
+      </p>
+    </div>
+    <div
+      class="Icon-fill-item"
+    >
+      <svg
+        aria-hidden="true"
+        class="edm-icon edm-icon-l"
+        fill="orange"
+      >
+        <use
+          href="#close"
+        />
+      </svg>
+      <p>
+        orange
+      </p>
+    </div>
+    <div
+      class="Icon-fill-item"
+    >
+      <svg
+        aria-hidden="true"
+        class="edm-icon edm-icon-l"
+        fill="yellow"
+      >
+        <use
+          href="#close"
+        />
+      </svg>
+      <p>
+        yellow
+      </p>
+    </div>
+    <div
+      class="Icon-fill-item"
+    >
+      <svg
+        aria-hidden="true"
+        class="edm-icon edm-icon-l"
+        fill="green"
+      >
+        <use
+          href="#close"
+        />
+      </svg>
+      <p>
+        green
+      </p>
+    </div>
+    <div
+      class="Icon-fill-item"
+    >
+      <svg
+        aria-hidden="true"
+        class="edm-icon edm-icon-l"
+        fill="blue"
+      >
+        <use
+          href="#close"
+        />
+      </svg>
+      <p>
+        blue
+      </p>
+    </div>
   </div>
 </div>
 `;
