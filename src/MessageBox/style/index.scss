@@ -1,0 +1,48 @@
+@import '../../style/mixin';
+$messagebox-prefix: $preifx + '-messagebox';
+
+.#{$messagebox-prefix} {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 300px;
+    max-width: 300px;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 1.2;
+    text-align: center;
+    background: #ddd;
+    border-radius: 4px;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    &-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    &-title {
+        margin: 20px;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 1.5;
+    }
+    &-content {
+        margin: 20px;
+    }
+    &-buttons {
+        @include borderTop;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row-reverse;
+    }
+    &-buttons-multiline {
+        display: block;
+        padding: 0 20px;
+        background-image: none;
+    }
+    // & > svg {
+    //     width: 40px;
+    //     height: 40px;
+    // }
+}

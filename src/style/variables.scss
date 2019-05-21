@@ -10,11 +10,12 @@ $fontFamily: roboto, helvetica neue light, helvetica neue, helvetica, arial, luc
 
 // 主题色
 $dark: #2e2d2d;
+$gray: #e5e5e5;
 $light: #ffffff;
 $primary: hsl(10, 100%, 55%);
 $secondary: hsl(43, 100%, 65%);
 $customize: hsl(0, 1%, 18%);
-$cover: hsla(0, 0%, 0%, 0.4);
+$cover: hsla(0, 0%, 0%, 0.3);
 // font size
 $radius-l: 999px;
 $font-l: 16 * $hd;
@@ -62,4 +63,9 @@ $icon-size-xl: 36 * $hd;
 /* prettier-ignore */
 @function px($px) {
   @return $px + PX;
+}
+@mixin borderTop($color: $gray) {
+    background-image: linear-gradient(to top, #fff, $color);
+    background-repeat: no-repeat;
+    background-size: auto px(1);
 }

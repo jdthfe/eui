@@ -13,4 +13,5 @@ export default [
     { name: 'Tabs', type: 'Data Display', 'zh-CN': '标签页' },
     { name: 'WhiteSpace', type: 'Layout', 'zh-CN': '上下留白' },
     { name: 'Toast', type: 'Data Display', 'zh-CN': '轻提示' },
+    { name: 'MessageBox', type: 'Data Display', 'zh-CN': '待输入_中文名' },
 ];
