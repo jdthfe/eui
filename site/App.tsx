@@ -1,3 +1,4 @@
+import './_util/rem';
 import React from 'react';
 import { HashRouter as Router, Route, Redirect } from 'react-router-dom';
 import '@src/scss';

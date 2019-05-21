@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/no-triple-slash-reference
+/// <reference path="../postcss-pxtorem.d.ts" />
 import { series, src, dest } from 'gulp';
 import { spawn } from 'child_process';
 
@@ -8,6 +10,10 @@ import process from 'process';
 import rimraf from 'rimraf';
 import babel from 'gulp-babel';
 import debug from 'gulp-debug';
+import postcss from 'gulp-postcss';
+import autoprefixer from 'autoprefixer';
+import cssnano from 'cssnano';
+import pxtorem from 'postcss-pxtorem';
 
 import babelrc from '../babelrc';
 import { getProjectUrl } from '../helpers';
@@ -94,6 +100,22 @@ function convertScssToCss(modules?: boolean) {
         src(scssSource)
             .pipe(debug({ title }))
             .pipe(scss())
+            .pipe(
+                postcss([
+                    //   postcssFlexbugsFixes,
+                    autoprefixer({
+                        browsers: ['last 2 versions', 'Firefox ESR', '> 1%', 'ie >= 9', 'iOS >= 8', 'Android >= 4'],
+                    }),
+                    pxtorem({
+                        // todo change value
+                        rootValue: 16,
+                        propWhiteList: ['*'],
+                    }),
+                    cssnano({
+                        preset: 'default',
+                    }),
+                ]),
+            )
             .on('error', rej)
             .pipe(dest(modules !== false ? libDir : esDir))
             .on('end', res);
