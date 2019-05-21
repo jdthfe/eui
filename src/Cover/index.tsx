@@ -5,7 +5,7 @@ import Cover from './Cover';
 import { CoverProps } from './PropsType';
 
 const modal = (props: CoverProps) => {
-    const { onExitDone = () => {}, time, ...restProps } = props;
+    const { onExitDone = () => {}, ...restProps } = props;
     const div = document.createElement('div');
     document.body.append(div);
     const component = (

@@ -13,12 +13,15 @@ const Cover = (props: CoverProps) => {
         transparent = false,
         children,
         className,
-        onExitDone,
+        // TransistionWrap
         visible,
         keepOnExit,
         time,
+        onExitDone,
         transitionClassName = transitionFade,
+        //Portal
         mountNode,
+
         ...restProps
     } = props;
     const cls = classnames(prefixCls, className, { [`${prefixCls}-transparent`]: transparent === true });

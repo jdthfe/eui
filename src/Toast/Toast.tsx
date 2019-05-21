@@ -12,12 +12,15 @@ const Toast = (props: ToastPropsWithModel) => {
     const {
         children,
         className,
-        onExitDone,
+        // TransitionWrap
         visible,
         keepOnExit,
         time,
+        onExitDone,
         transitionClassName = transitionFade,
+        // Portal
         mountNode,
+
         ...restProps
     } = props;
     const cls = classnames(prefixCls, className);
