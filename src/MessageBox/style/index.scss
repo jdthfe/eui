@@ -12,7 +12,7 @@ $messagebox-prefix: $preifx + '-messagebox';
     font-size: 14px;
     line-height: 1.2;
     text-align: center;
-    background: #ddd;
+    background: $light;
     border-radius: 4px;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
@@ -22,16 +22,21 @@ $messagebox-prefix: $preifx + '-messagebox';
         right: 10px;
     }
     &-title {
+        position: relative;
         margin: 20px;
         font-size: 16px;
         font-weight: bold;
         line-height: 1.5;
     }
     &-content {
+        position: relative;
         margin: 20px;
     }
+    &-line {
+        @include border(bottom);
+        height: px(1);
+    }
     &-buttons {
-        @include borderTop;
         display: flex;
         flex-wrap: nowrap;
         flex-direction: row-reverse;

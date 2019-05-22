@@ -64,8 +64,8 @@ $icon-size-xl: 36 * $hd;
 @function px($px) {
   @return $px + PX;
 }
-@mixin borderTop($color: $gray) {
-    background-image: linear-gradient(to top, #fff, $color);
+@mixin border($dir: top, $color: $gray) {
+    background-image: linear-gradient(unquote(#{$dir}), $color, #fff);
     background-repeat: no-repeat;
     background-size: auto px(1);
 }

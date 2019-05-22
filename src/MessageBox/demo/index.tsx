@@ -1,14 +1,71 @@
-import React, { useState } from 'react';
-import { MessageBox, Button } from '@src/index';
+import React from 'react';
+import { MessageBox, Button, WhiteSpace } from '@src/index';
 const Demo = () => {
-    const [visible, setVisible] = useState(false);
-    const [visible2, setVisible2] = useState(false);
     return (
         <div className="MessageBox">
-            <Button theme="primary" onClick={() => setVisible(!visible)}>
-                MessageBox
+            <Button
+                theme="primary"
+                onClick={() =>
+                    MessageBox.default({
+                        title: 'title',
+                        children: 'children',
+                        buttons: [
+                            {
+                                children: 'left',
+                                theme: 'primary',
+                                rectangle: true,
+                                onClick: () => {
+                                    console.log('default');
+                                    return true;
+                                },
+                            },
+                            {
+                                children: 'right',
+                                ghost: true,
+                                rectangle: true,
+                                style: { color: '#666', border: 'none' },
+                            },
+                        ],
+                    })
+                }
+            >
+                Default
             </Button>
-            <MessageBox
+            <WhiteSpace />
+            <Button
+                theme="primary"
+                onClick={() =>
+                    MessageBox.alert({
+                        confirmText: 'confirmText',
+                        title: 'alert',
+                        children: 'children',
+                        confirmCallback: () => {
+                            // console.log('confirmCallback');
+                            MessageBox.default({
+                                title: 'title',
+                                children: 'children',
+                                buttons: [
+                                    { children: 'Button', theme: 'primary', rectangle: true },
+                                    {
+                                        children: 'Button',
+                                        ghost: true,
+                                        rectangle: true,
+                                        style: { color: '#666', border: 'none' },
+                                    },
+                                ],
+                            });
+                            return true;
+                        },
+                    })
+                }
+            >
+                Alert
+            </Button>
+            <WhiteSpace />
+            <Button theme="primary" onClick={() => MessageBox.confirm({ title: 'Confirm', children: 'children' })}>
+                Confirm
+            </Button>
+            {/* <MessageBox
                 time={200}
                 title="Title"
                 visible={visible}
@@ -37,7 +94,7 @@ const Demo = () => {
                 ]}
             >
                 children
-            </MessageBox>
+            </MessageBox> */}
         </div>
     );
 };
