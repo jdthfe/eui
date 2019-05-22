@@ -1,33 +1,52 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import classnames from 'classnames';
+import { CoverProps, CoverWithTransitionWrap } from './PropsType';
+import prefix from '../_util/prefix';
 
-import Cover from './Cover';
-import { CoverProps } from './PropsType';
+import TransitionWrap from '../TransitionWrap';
+import { transitionFade } from '@src/_util/variable';
 
-const modal = (props: CoverProps) => {
-    const { onExitDone = () => {}, ...restProps } = props;
-    const div = document.createElement('div');
-    document.body.append(div);
-    const component = (
-        <Cover
-            {...restProps}
-            onExitDone={() => {
-                ReactDOM.unmountComponentAtNode(div);
-                div.remove();
-                onExitDone();
-            }}
-            mountNode={div}
-        />
+const prefixCls = `${prefix}-Cover`;
+
+const Module = (props: CoverProps) => {
+    const { transparent = false, className, children, ...restProps } = props;
+    const cls = classnames(prefixCls, className, { [`${prefixCls}-transparent`]: transparent });
+    return (
+        <div {...restProps} className={cls}>
+            {children}
+        </div>
     );
-    ReactDOM.render(component, div, () => {
-        ReactDOM.render(React.cloneElement(component, { visible: true }), div);
-    });
-    const close = () => ReactDOM.render(React.cloneElement(component, { visible: false }), div);
+};
 
-    return close;
+const Transition = (props: CoverWithTransitionWrap) => {
+    const {
+        transparent = false,
+        className,
+        children,
+        visible,
+        keepOnExit,
+        time,
+        onExitDone,
+        transitionClassName = transitionFade,
+        ...restProps
+    } = props;
+    const cls = classnames(prefixCls, className, { [`${prefixCls}-transparent`]: transparent });
+    return (
+        <TransitionWrap
+            visible={visible}
+            keepOnExit={keepOnExit}
+            time={time}
+            onExitDone={onExitDone}
+            transitionClassName={transitionClassName}
+        >
+            <div {...restProps} className={cls}>
+                {children}
+            </div>
+        </TransitionWrap>
+    );
 };
 
 export default {
-    visible: (props: CoverProps = {}) => modal({ ...props }),
-    invisible: (props: CoverProps = {}) => modal({ ...props, transparent: true }),
+    Module,
+    Transition,
 };

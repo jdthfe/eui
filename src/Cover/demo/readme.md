@@ -4,17 +4,6 @@ description
 
 other description
 
-## Extends
-
-### element
-
-`div`
-
-### component
-
-[`Portal`](#/document/Portal)
-[`TransitionWrap`](#/document/TransitionWrap)
-
 ## API
 
 | Properties | Descrition  | Type     | Default     | Required |

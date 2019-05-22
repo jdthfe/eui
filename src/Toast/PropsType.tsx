@@ -1,6 +1,6 @@
 import { TransitionWrapProps } from '../TransitionWrap/PropsType';
 import { PortalProps } from '../Portal/PropsType';
-import { CoverWithTransitionWrap } from '@src/NewCover/PropsType';
+import { CoverWithTransitionWrap } from '@src/Cover/PropsType';
 
 export interface ToastPropsWithModel
     extends PortalProps,

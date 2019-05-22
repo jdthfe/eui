@@ -7,7 +7,7 @@ const prefixCls = `${prefix}-toast`;
 import { transitionFade } from '../_util/variable';
 import Portal from '../Portal';
 import TransitionWrap from '../TransitionWrap';
-import Cover from '../NewCover';
+import Cover from '../Cover';
 
 const Toast = (props: ToastPropsWithModel) => {
     const {
@@ -28,7 +28,7 @@ const Toast = (props: ToastPropsWithModel) => {
     const cls = classnames(prefixCls, className);
     return (
         <Portal mountNode={mountNode}>
-            <Cover.TCover
+            <Cover.Transition
                 transparent
                 visible={visible}
                 keepOnExit={keepOnExit}

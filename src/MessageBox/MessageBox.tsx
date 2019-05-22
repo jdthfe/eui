@@ -7,7 +7,7 @@ const prefixCls = `${prefix}-messagebox`;
 import { transitionFade } from '../_util/variable';
 import Icon from '../Icon';
 import Button from '../Button';
-import Cover from '../NewCover';
+import Cover from '../Cover';
 import Portal from '../Portal';
 import TransitionWrap from '../TransitionWrap';
 
@@ -37,7 +37,7 @@ const MessageBox = (props: MessageBoxProps) => {
     const btnCls = classnames(`${prefixCls}-buttons`, { [`${prefixCls}-buttons-multiline`]: multiLineButtons });
     return (
         <Portal mountNode={mountNode}>
-            <Cover.TCover
+            <Cover.Transition
                 visible={visible}
                 keepOnExit={keepOnExit}
                 time={time}
@@ -57,7 +57,9 @@ const MessageBox = (props: MessageBoxProps) => {
                     {onClickCloseIcon ? (
                         <Icon className={`${prefixCls}-close`} onClick={onClickCloseIcon} value="close" />
                     ) : null}
+                    {/* Title */}
                     {title ? <p className={`${prefixCls}-title`}>{title}</p> : null}
+                    {/* Main */}
                     {children ? <div className={`${prefixCls}-content`}>{children}</div> : null}
                     {(hiddenline === undefined ? (
                         multiLineButtons
@@ -66,6 +68,7 @@ const MessageBox = (props: MessageBoxProps) => {
                     )) ? null : (
                         <div className={`${prefixCls}-line`} />
                     )}
+                    {/* Footer */}
                     {buttons.length ? (
                         <div className={btnCls}>
                             {buttons.map((btnProps, index) => (

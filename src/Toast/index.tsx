@@ -21,15 +21,15 @@ const modal = (props: ToastProps) => {
 
     const div = document.createElement('div');
     document.body.append(div);
-    const newCoverProps: typeof coverProps = {
+    const CoverProps: typeof coverProps = {
         ...coverProps,
     };
     if (noCover) {
-        newCoverProps.visible = false;
+        CoverProps.visible = false;
     }
     const component = (
         <Toast
-            coverProps={newCoverProps}
+            coverProps={CoverProps}
             onExitDone={() => {
                 ReactDOM.unmountComponentAtNode(div);
                 div.remove();

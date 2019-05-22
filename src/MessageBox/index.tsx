@@ -39,7 +39,7 @@ const modal = (props: MessageBoxCommen) => {
 
     const div = document.createElement('div');
     document.body.append(div);
-    const newCoverProps: typeof coverProps = {
+    const CoverProps: typeof coverProps = {
         ...coverProps,
         onClick: preventClickCover
             ? () => {}
@@ -52,7 +52,7 @@ const modal = (props: MessageBoxCommen) => {
               },
     };
     if (noCover) {
-        newCoverProps.visible = false;
+        CoverProps.visible = false;
     }
 
     const component = (
@@ -67,7 +67,7 @@ const modal = (props: MessageBoxCommen) => {
                       }
                     : onClickCloseIcon
             }
-            coverProps={newCoverProps}
+            coverProps={CoverProps}
             onExitDone={() => {
                 ReactDOM.unmountComponentAtNode(div);
                 div.remove();

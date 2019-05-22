@@ -1,7 +1,7 @@
 @import '../../style/mixin';
-$cover-prefix: $preifx + '-cover';
+$Cover-prefix: $preifx + '-Cover';
 
-.#{$cover-prefix} {
+.#{$Cover-prefix} {
     position: fixed;
     top: 0;
     left: 0;
@@ -9,7 +9,7 @@ $cover-prefix: $preifx + '-cover';
     height: 100%;
     background: $cover;
 
-    &-transparent.#{$cover-prefix} {
+    &-transparent.#{$Cover-prefix} {
         opacity: 0;
     }
 }
