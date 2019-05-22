@@ -7,8 +7,13 @@ const Demo = () => {
                 theme="primary"
                 onClick={() =>
                     MessageBox.default({
+                        onClickCloseIcon: () => {
+                            console.log(111);
+                        },
+                        onClickCover: () => true,
                         title: 'title',
                         children: 'children',
+                        noCover: true,
                         buttons: [
                             {
                                 children: 'left',
@@ -36,11 +41,10 @@ const Demo = () => {
                 theme="primary"
                 onClick={() =>
                     MessageBox.alert({
-                        confirmText: 'confirmText',
+                        confirmChildren: 'confirmText',
                         title: 'alert',
                         children: 'children',
                         confirmCallback: () => {
-                            // console.log('confirmCallback');
                             MessageBox.default({
                                 title: 'title',
                                 children: 'children',
@@ -62,7 +66,34 @@ const Demo = () => {
                 Alert
             </Button>
             <WhiteSpace />
+            <Button
+                theme="primary"
+                onClick={() =>
+                    MessageBox.alert({
+                        multiLineButtons: true,
+                        confirmChildren: 'confirmText',
+                        title: 'alert',
+                        children: 'children',
+                    })
+                }
+            >
+                Alert
+            </Button>
+            <WhiteSpace />
             <Button theme="primary" onClick={() => MessageBox.confirm({ title: 'Confirm', children: 'children' })}>
+                Confirm
+            </Button>
+            <WhiteSpace />
+            <Button
+                theme="primary"
+                onClick={() =>
+                    MessageBox.confirm({
+                        multiLineButtons: true,
+                        title: 'Confirm',
+                        children: 'children',
+                    })
+                }
+            >
                 Confirm
             </Button>
             {/* <MessageBox

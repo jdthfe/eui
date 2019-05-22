@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom';
 import Toast from './Toast';
 import Loading from './Loading';
 import { ToastProps } from './PropsType';
-import Cover from '../Cover';
 import Icon from '../Icon';
 import WhiteSpace from '../WhiteSpace';
 
@@ -12,18 +11,25 @@ import { transitionTime, defaultDuration } from '../_util/variable';
 
 const modal = (props: ToastProps) => {
     const {
+        coverProps = {},
         onExitDone = () => {},
         time = transitionTime,
         duration = defaultDuration,
-        noCover = false,
+        noCover,
         ...restProps
     } = props;
-    const cover = noCover || !props.children ? () => {} : Cover.invisible({ time: time });
 
     const div = document.createElement('div');
     document.body.append(div);
+    const newCoverProps: typeof coverProps = {
+        ...coverProps,
+    };
+    if (noCover) {
+        newCoverProps.visible = false;
+    }
     const component = (
         <Toast
+            coverProps={newCoverProps}
             onExitDone={() => {
                 ReactDOM.unmountComponentAtNode(div);
                 div.remove();
@@ -43,7 +49,6 @@ const modal = (props: ToastProps) => {
     if (duration) {
         setTimeout(() => {
             close();
-            cover();
         }, duration);
     }
     return close;

@@ -20,6 +20,7 @@ $messagebox-prefix: $preifx + '-messagebox';
         position: absolute;
         top: 10px;
         right: 10px;
+        z-index: 1;
     }
     &-title {
         position: relative;
@@ -30,7 +31,10 @@ $messagebox-prefix: $preifx + '-messagebox';
     }
     &-content {
         position: relative;
+        max-height: 56vh;
         margin: 20px;
+        overflow: scroll;
+        color: #666;
     }
     &-line {
         @include border(bottom);
@@ -46,8 +50,12 @@ $messagebox-prefix: $preifx + '-messagebox';
         padding: 0 20px;
         background-image: none;
     }
-    // & > svg {
-    //     width: 40px;
-    //     height: 40px;
-    // }
+    &-buttons-multiline-last {
+        color: #666;
+        background: none;
+        border: none;
+    }
+    &-buttons-multiline-alert {
+        padding-bottom: 20px;
+    }
 }

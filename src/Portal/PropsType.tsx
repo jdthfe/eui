@@ -5,5 +5,5 @@ export interface PortalProps {
 
 export interface PortalPropsWithChildren extends PortalProps {
     /** 被包裹的唯一子节点 */
-    children: React.ReactNode;
+    children: React.ReactNode | React.ReactNode[];
 }

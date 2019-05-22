@@ -1,14 +1,17 @@
 import { TransitionWrapProps } from '../TransitionWrap/PropsType';
 import { PortalProps } from '../Portal/PropsType';
+import { CoverWithTransitionWrap } from '@src/NewCover/PropsType';
 
 export interface ToastPropsWithModel
     extends PortalProps,
         TransitionWrapProps,
-        React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
+        React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+    coverProps?: CoverWithTransitionWrap;
+}
 
 export interface ToastProps extends ToastPropsWithModel {
-    /** duration */
-    duration?: number;
     /** Cover will block page clicks */
     noCover?: boolean;
+    /** duration */
+    duration?: number;
 }

@@ -14,4 +14,5 @@ export default [
     { name: 'WhiteSpace', type: 'Layout', 'zh-CN': '上下留白' },
     { name: 'Toast', type: 'Data Display', 'zh-CN': '轻提示' },
     { name: 'MessageBox', type: 'Data Display', 'zh-CN': '对话框' },
+    { name: 'NewCover', type: 'Feedback', 'zh-CN': '遮罩' },
 ];

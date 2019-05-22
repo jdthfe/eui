@@ -17,7 +17,6 @@ const modal = (props: CoverProps) => {
                 onExitDone();
             }}
             mountNode={div}
-            visible={false}
         />
     );
     ReactDOM.render(component, div, () => {

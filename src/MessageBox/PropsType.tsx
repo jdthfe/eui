@@ -1,7 +1,7 @@
 import { TransitionWrapProps } from '../TransitionWrap/PropsType';
 import { PortalProps } from '../Portal/PropsType';
 import { ButtonProps } from '../Button/PropsType';
-import { CoverProps } from '@src/Cover/PropsType';
+import { CoverWithTransitionWrap } from '@src/NewCover/PropsType';
 
 export interface MessageBoxProps
     extends PortalProps,
@@ -12,32 +12,38 @@ export interface MessageBoxProps
     /** ButtonProps list，When `multiLine = false`, the button is rendered from left to right */
     buttons?: ButtonProps[];
     /** Let each button take a single line */
-    multiLine?: boolean;
+    multiLineButtons?: boolean;
     /** Hidden the line before buttons */
     hiddenline?: boolean;
     /** Callback on click the cross button. When the value is empty, the button is not displayed  */
-    onClickCancel?: () => void;
+    onClickCloseIcon?: () => void;
+    /** CoverProps */
+    coverProps?: CoverWithTransitionWrap;
 }
 
 export interface MessageBoxCommen extends MessageBoxProps {
+    /** Callback on click the cross button. When the value is empty, the button is not displayed  */
+    onClickCloseIcon?: () => void | boolean;
+    /** On click cover, return `true` to prvent  */
+    preventClickCover?: boolean;
+    /** On click cover, return `true` to prvent  */
+    onClickCover?: () => void | boolean;
     /** Cover will block page clicks */
     noCover?: boolean;
-    /** CoverProps */
-    coverProps?: CoverProps;
 }
+
 export interface MessageBoxConfirmProps {
     confirmButton?: ButtonProps;
-    confirmCallback?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => boolean | void;
-    confirmText?: string;
+    confirmCallback?: () => void | boolean;
+    confirmChildren?: React.ReactNode;
 }
 export interface MessageBoxCancelProps {
     cancelButton?: ButtonProps;
-    cancelCallback?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => boolean | void;
-    cancelText?: string;
+    cancelCallback?: () => void | boolean;
+    cancelChildren?: React.ReactNode;
 }
 
-export interface MessageBoxDefault extends MessageBoxProps, MessageBoxProps {}
-export interface MessageBoxAlert extends MessageBoxProps, MessageBoxProps, MessageBoxConfirmProps {}
+export interface MessageBoxAlert extends MessageBoxCommen, MessageBoxConfirmProps {}
 export interface MessageBoxConfirm
     extends MessageBoxProps,
         MessageBoxProps,

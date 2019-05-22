@@ -15,7 +15,7 @@ const TransitionWrap = (props: TransitionWrapPropsWithChildren) => {
     const {
         children,
         time = 0,
-        visible = true,
+        visible = false,
         keepOnExit = false,
         transitionClassName = 'transition',
         onExitDone = () => {},

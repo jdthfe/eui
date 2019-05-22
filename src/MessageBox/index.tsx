@@ -3,23 +3,29 @@ import ReactDOM from 'react-dom';
 
 import MessageBox from './MessageBox';
 import { MessageBoxCommen, MessageBoxAlert, MessageBoxConfirm } from './PropsType';
-import Cover from '../Cover';
-// import Icon from '../Icon';
-// import WhiteSpace from '../WhiteSpace';
+import prefix from '../_util/prefix';
+const prefixCls = `${prefix}-messagebox`;
 
 import { transitionTime } from '../_util/variable';
 import { ButtonProps } from '@src/Button/PropsType';
 
 const modal = (props: MessageBoxCommen) => {
     const {
+        noCover,
         buttons,
+        onClickCloseIcon,
+        // Cover
         coverProps = {},
+        onClickCover = () => {},
+        preventClickCover = false,
+        // TransisitonWrap
         onExitDone = () => {},
         time = transitionTime,
-        noCover = false,
+        // rest
         ...restProps
     } = props;
-
+    // eslint-disable-next-line @typescript-eslint/no-use-before-define
+    const closeMessageBox = () => close();
     const newButtons =
         buttons &&
         buttons.map<ButtonProps>(btnProps => ({
@@ -27,29 +33,42 @@ const modal = (props: MessageBoxCommen) => {
             onClick: e => {
                 const { onClick = () => {} } = btnProps;
                 const isClose = Boolean(onClick(e));
-                // eslint-disable-next-line @typescript-eslint/no-use-before-define
-                isClose ? null : close();
+                isClose ? null : closeMessageBox();
             },
         }));
 
-    const cover = noCover
-        ? () => {}
-        : Cover.visible({
-              time: time,
-              ...coverProps,
-              onClick: e => {
-                  coverProps.onClick && coverProps.onClick(e);
-                  // eslint-disable-next-line @typescript-eslint/no-use-before-define
-                  close();
-              },
-          });
     const div = document.createElement('div');
     document.body.append(div);
+    const newCoverProps: typeof coverProps = {
+        ...coverProps,
+        onClick: preventClickCover
+            ? () => {}
+            : e => {
+                  const { onClick } = coverProps;
+                  onClick && onClick(e);
+                  if (!onClickCover()) {
+                      closeMessageBox();
+                  }
+              },
+    };
+    if (noCover) {
+        newCoverProps.visible = false;
+    }
+
     const component = (
         <MessageBox
             {...restProps}
+            onClickCloseIcon={
+                onClickCloseIcon
+                    ? () => {
+                          if (!onClickCloseIcon()) {
+                              closeMessageBox();
+                          }
+                      }
+                    : onClickCloseIcon
+            }
+            coverProps={newCoverProps}
             onExitDone={() => {
-                cover();
                 ReactDOM.unmountComponentAtNode(div);
                 div.remove();
                 onExitDone();
@@ -69,50 +88,72 @@ const modal = (props: MessageBoxCommen) => {
 export default {
     default: (props: MessageBoxCommen = {}) => modal(props),
     alert: (props: MessageBoxAlert = {}) => {
-        const { confirmButton = {}, confirmText = 'confirm', confirmCallback = () => {}, ...restProps } = props;
+        const {
+            multiLineButtons,
+            confirmButton = {},
+            confirmChildren = 'confirm',
+            confirmCallback = () => {},
+            className,
+            ...restProps
+        } = props;
         modal({
             ...restProps,
+            multiLineButtons,
+            className: multiLineButtons ? className + ` ${prefixCls}-buttons-multiline-alert` : className,
             buttons: [
                 {
-                    ghost: true,
-                    rectangle: true,
+                    ghost: !multiLineButtons,
+                    rectangle: !multiLineButtons,
                     theme: 'primary',
                     style: { border: 'none' },
-                    children: confirmText,
-                    onClick: confirmCallback,
+                    children: confirmChildren,
                     ...confirmButton,
+                    onClick: e => {
+                        confirmButton.onClick && confirmButton.onClick(e);
+                        return confirmCallback();
+                    },
                 },
             ],
         });
     },
     confirm: (props: MessageBoxConfirm = {}) => {
         const {
+            multiLineButtons,
             confirmButton = {},
-            confirmText = 'confirm',
+            confirmChildren = 'confirm',
             confirmCallback = () => {},
             cancelButton = {},
-            cancelText = 'cancel',
+            cancelChildren = 'cancel',
             cancelCallback = () => {},
             ...restProps
         } = props;
         modal({
             ...restProps,
+            multiLineButtons,
             buttons: [
                 {
-                    rectangle: true,
+                    rectangle: !multiLineButtons,
                     theme: 'primary',
-                    children: confirmText,
-                    onClick: confirmCallback,
+                    children: confirmChildren,
                     ...confirmButton,
+                    onClick: e => {
+                        confirmButton.onClick && confirmButton.onClick(e);
+                        return confirmCallback();
+                    },
                 },
                 {
                     ghost: true,
-                    rectangle: true,
-                    theme: 'primary',
+                    rectangle: !multiLineButtons,
+                    activeClassName: multiLineButtons ? 'none' : '',
+                    className: multiLineButtons ? `${prefixCls}-buttons-multiline-last` : '',
+                    theme: multiLineButtons ? 'customize' : 'primary',
                     style: { border: 'none' },
-                    children: cancelText,
-                    onClick: cancelCallback,
+                    children: cancelChildren,
                     ...cancelButton,
+                    onClick: e => {
+                        cancelButton.onClick && cancelButton.onClick(e);
+                        return cancelCallback();
+                    },
                 },
             ],
         });

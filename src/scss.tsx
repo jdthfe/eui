@@ -16,3 +16,4 @@ import './WhiteSpace/style';
 import './Cover/style';
 import './Toast/style';
 import './MessageBox/style';
+import './NewCover/style';
