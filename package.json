@@ -22,6 +22,7 @@
         "svg": "ts-node scripts/template/svg.ts && eslint ./src/Icon/svgs.tsx --fix",
         "dist": "cross-env NODE_ENV=dist webpack -p --config ./scripts/config/webpack.config.dist.ts",
         "compile": "gulp -f ./scripts/gulp/gulpfile.ts compile",
+        "likk": "yarn dist && yarn compile && cp -avR /Users/likeke3/Desktop/jd-component/edm/compiled /Users/likeke3/Desktop/jd-global/mitem/project/common/",
         "prod": "yarn dist && yarn compile"
     },
     "repository": {

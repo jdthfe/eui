@@ -13,6 +13,9 @@ const iconList: string[] = [
     'successful',
     'alert',
     'test',
+    'closeFilled',
+    'pwd',
+    'pwdOpen',
 ];
 const sizeList: IconProps['size'][] = ['xs', 's', 'm', 'l', 'xl'];
 const fillList: string[] = ['red', 'orange', 'yellow', 'green', 'blue'];
