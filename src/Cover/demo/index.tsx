@@ -24,7 +24,15 @@ const Demo = () => {
             <Button theme="primary" onClick={changeVisible2}>
                 Cover | transparent
             </Button>
-            {visible2 ? <Cover transparent onClick={changeVisible2} /> : null}
+            {visible2 ? (
+                <Cover
+                    transparent
+                    onClick={() => {
+                        alert('You clicked on the transparent Cover！');
+                        changeVisible2();
+                    }}
+                />
+            ) : null}
             <WhiteSpace />
 
             <h4>Cover.Transition</h4>
