@@ -1,58 +1,34 @@
-import React from 'react';
-import { Tab, Tabs, TabsGroup, TabContainer } from '../index';
-import { Icon } from '@src/index';
+import React, { Fragment } from 'react';
+import { Badge, Tabs } from '@src/index';
 
+//
 const Demo = () => {
+    const tabs = [
+        <Badge text={'3'}>First Tab</Badge>,
+        <Badge text={'今日(20)'}>Second Tab</Badge>,
+        <Badge dot>Third Tab</Badge>,
+        <Badge dot>Fourth Tab</Badge>,
+        <Badge dot>Fifth Tab</Badge>,
+        <Badge dot>Sixth Tab</Badge>,
+        <Badge dot>Seventh Tab</Badge>,
+        <Badge dot>Eighth Tab</Badge>,
+    ];
+
+    const tabsFlex = [<div>Login</div>, <div>Register</div>];
     return (
-        <>
-            <TabsGroup centerMode={true} animated={false} flex={true}>
-                <Tabs>
-                    <Tab>Login</Tab>
-                    <Tab>Sign up</Tab>
-                </Tabs>
+        <Fragment>
+            <Tabs tabs={tabs} activeIndex={0}>
+                {[0, 1, 2].map(value => {
+                    return <div key={value}>{value + 1}</div>;
+                })}
+            </Tabs>
 
+            <Tabs tabs={tabsFlex} activeIndex={0} flex>
                 {[0, 1].map(value => {
-                    return <TabContainer key={value}>{value + 1}</TabContainer>;
+                    return <div key={value}>{value + 1}</div>;
                 })}
-            </TabsGroup>
-            <br />
-            <TabsGroup centerMode={true} animated={true}>
-                <Tabs>
-                    <Tab>
-                        <Icon fill="currentColor" value="alipay" className="icon" />
-                        Home
-                    </Tab>
-                    <Tab>Home2</Tab>
-                    <Tab>Home3</Tab>
-                    <Tab>Home4</Tab>
-                    <Tab>Home5</Tab>
-                    <Tab>Home6</Tab>
-                    <Tab>Home7</Tab>
-                    <Tab>Home8</Tab>
-                    <Tab>Home9</Tab>
-                    <Tab>Home10</Tab>
-                    <Tab>Home11</Tab>
-                </Tabs>
-                {[0, 1, 2, 3, 4, 5, 6, 7, 8].map(value => {
-                    return <TabContainer key={value}>{value + 1}</TabContainer>;
-                })}
-            </TabsGroup>
-
-            <TabsGroup centerMode={true} position="right">
-                <Tabs>
-                    <Tab>
-                        <Icon fill="currentColor" value="alipay" className="icon" />
-                        Home
-                    </Tab>
-                    <Tab>Home2</Tab>
-                    <Tab>Home3</Tab>
-                    <Tab>Home4</Tab>
-                </Tabs>
-                {[0, 1, 2, 3].map(value => {
-                    return <TabContainer key={value}>{value + 1}</TabContainer>;
-                })}
-            </TabsGroup>
-        </>
+            </Tabs>
+        </Fragment>
     );
 };
 

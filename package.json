@@ -13,7 +13,7 @@
         "compiled"
     ],
     "scripts": {
-        "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./scripts/config/webpack.config.dev.ts",
+        "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./scripts/config/webpack.config.dev.ts --open 'Google Chrome'",
         "build": "cross-env NODE_ENV=build webpack -p --config ./scripts/config/webpack.config.build.ts",
         "test": "cross-env NODE_ENV=test jest --config=./jest.config.js --runInBand",
         "rm": "ts-node scripts/template/remove.ts && eslint ./site/_util/componentIndex.tsx --fix",
@@ -54,6 +54,7 @@
         "@types/gulp": "^4.0.6",
         "@types/gulp-babel": "^6.1.29",
         "@types/gulp-debug": "^2.0.31",
+        "@types/gulp-postcss": "^8.0.0",
         "@types/gulp-rename": "^0.0.33",
         "@types/gulp-replace": "^0.0.31",
         "@types/gulp-sass": "^0.0.31",
@@ -97,6 +98,7 @@
         "gulp": "^4.0.0",
         "gulp-babel": "^8.0.0",
         "gulp-debug": "^4.0.0",
+        "gulp-postcss": "^8.0.0",
         "gulp-rename": "^1.4.0",
         "gulp-replace": "^1.0.0",
         "gulp-sass": "^4.0.2",
@@ -109,6 +111,7 @@
         "mini-css-extract-plugin": "^0.5.0",
         "node-sass": "^4.11.0",
         "postcss-loader": "^3.0.0",
+        "postcss-pxtorem": "^4.0.1",
         "prettier": "^1.16.4",
         "raw-loader": "^2.0.0",
         "react": "^16.8.3",
