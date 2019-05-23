@@ -1,7 +1,7 @@
 import { TransitionWrapProps } from '../TransitionWrap/PropsType';
 import { PortalProps } from '../Portal/PropsType';
 import { ButtonProps } from '../Button/PropsType';
-import { CoverWithTransitionWrap } from '@src/Cover/PropsType';
+import { CoverWithTransitionWrap } from '../Cover/PropsType';
 
 export interface MessageBoxProps
     extends PortalProps,

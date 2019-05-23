@@ -6,59 +6,6 @@ Array [
     class="edm-tabs edm-tabs-top"
   >
     <div
-      class="edm-tabs-nav-box edm-tabs-nav-flex"
-    >
-      <div
-        class="edm-tabs-nav-wrapper"
-        style="transform:translate3d(0px, 0, 0)"
-      >
-        <div
-          class="edm-tabs-nav active"
-          data-index="0"
-        >
-          <span
-            class="inner"
-          >
-            Login
-          </span>
-        </div>
-        <div
-          class="edm-tabs-nav"
-          data-index="1"
-        >
-          <span
-            class="inner"
-          >
-            Sign up
-          </span>
-        </div>
-      </div>
-    </div>
-    <div
-      class="edm-tabs-con-box"
-    >
-      <div
-        class="edm-tabs-con-wrapper"
-        style="transform:translate3d(0px, 0, 0);-webkit-transform:translate3d(0px, 0, 0);-ms-transform:translate3d(0px, 0, 0);-webkit-transition:;transition:"
-      >
-        <div
-          class="edm-tabs-con active"
-        >
-          1
-        </div>
-        <div
-          class="edm-tabs-con"
-        >
-          2
-        </div>
-      </div>
-    </div>
-  </div>,
-  <br />,
-  <div
-    class="edm-tabs edm-tabs-top"
-  >
-    <div
       class="edm-tabs-nav-box "
     >
       <div
@@ -67,123 +14,124 @@ Array [
       >
         <div
           class="edm-tabs-nav active"
-          data-index="0"
         >
           <span
-            class="inner"
+            class="edm-badge"
+            index="0"
           >
-            <svg
-              aria-hidden="true"
-              class="edm-icon icon edm-icon-l"
-              fill="currentColor"
+            First Tab
+            <sup
+              class="edm-badge-text"
+              index="0"
             >
-              <use
-                href="#alipay"
-              />
-            </svg>
-            Home
+              3
+            </sup>
           </span>
         </div>
         <div
           class="edm-tabs-nav"
-          data-index="1"
         >
           <span
-            class="inner"
+            class="edm-badge"
+            index="1"
           >
-            Home2
+            Second Tab
+            <sup
+              class="edm-badge-text"
+              index="1"
+            >
+              今日(20)
+            </sup>
           </span>
         </div>
         <div
           class="edm-tabs-nav"
-          data-index="2"
         >
           <span
-            class="inner"
+            class="edm-badge"
+            index="2"
           >
-            Home3
+            Third Tab
+            <sup
+              class="edm-badge-dot"
+              index="2"
+            />
           </span>
         </div>
         <div
           class="edm-tabs-nav"
-          data-index="3"
         >
           <span
-            class="inner"
+            class="edm-badge"
+            index="3"
           >
-            Home4
+            Fourth Tab
+            <sup
+              class="edm-badge-dot"
+              index="3"
+            />
           </span>
         </div>
         <div
           class="edm-tabs-nav"
-          data-index="4"
         >
           <span
-            class="inner"
+            class="edm-badge"
+            index="4"
           >
-            Home5
+            Fifth Tab
+            <sup
+              class="edm-badge-dot"
+              index="4"
+            />
           </span>
         </div>
         <div
           class="edm-tabs-nav"
-          data-index="5"
         >
           <span
-            class="inner"
+            class="edm-badge"
+            index="5"
           >
-            Home6
+            Sixth Tab
+            <sup
+              class="edm-badge-dot"
+              index="5"
+            />
           </span>
         </div>
         <div
           class="edm-tabs-nav"
-          data-index="6"
         >
           <span
-            class="inner"
+            class="edm-badge"
+            index="6"
           >
-            Home7
+            Seventh Tab
+            <sup
+              class="edm-badge-dot"
+              index="6"
+            />
           </span>
         </div>
         <div
           class="edm-tabs-nav"
-          data-index="7"
         >
           <span
-            class="inner"
+            class="edm-badge"
+            index="7"
           >
-            Home8
+            Eighth Tab
+            <sup
+              class="edm-badge-dot"
+              index="7"
+            />
           </span>
         </div>
         <div
-          class="edm-tabs-nav"
-          data-index="8"
-        >
-          <span
-            class="inner"
-          >
-            Home9
-          </span>
-        </div>
-        <div
-          class="edm-tabs-nav"
-          data-index="9"
-        >
-          <span
-            class="inner"
-          >
-            Home10
-          </span>
-        </div>
-        <div
-          class="edm-tabs-nav"
-          data-index="10"
-        >
-          <span
-            class="inner"
-          >
-            Home11
-          </span>
-        </div>
+          class="edm-tabs-nav-underline"
+          style="transform:translate3d(0px, 0, 0)"
+        />
       </div>
     </div>
     <div
@@ -194,58 +142,31 @@ Array [
         style="transform:translate3d(0px, 0, 0);-webkit-transform:translate3d(0px, 0, 0);-ms-transform:translate3d(0px, 0, 0);-webkit-transition:-webkit-transform .3s cubic-bezier(0.35, 0, 0.25, 1);transition:transform .3s cubic-bezier(0.35, 0, 0.25, 1)"
       >
         <div
-          class="edm-tabs-con active"
+          class="edm-tabs-con"
+          index="0"
         >
           1
         </div>
         <div
           class="edm-tabs-con"
+          index="1"
         >
           2
         </div>
         <div
           class="edm-tabs-con"
+          index="2"
         >
           3
-        </div>
-        <div
-          class="edm-tabs-con"
-        >
-          4
-        </div>
-        <div
-          class="edm-tabs-con"
-        >
-          5
-        </div>
-        <div
-          class="edm-tabs-con"
-        >
-          6
-        </div>
-        <div
-          class="edm-tabs-con"
-        >
-          7
-        </div>
-        <div
-          class="edm-tabs-con"
-        >
-          8
-        </div>
-        <div
-          class="edm-tabs-con"
-        >
-          9
         </div>
       </div>
     </div>
   </div>,
   <div
-    class="edm-tabs edm-tabs-right"
+    class="edm-tabs edm-tabs-top"
   >
     <div
-      class="edm-tabs-nav-box "
+      class="edm-tabs-nav-box edm-tabs-nav-flex"
     >
       <div
         class="edm-tabs-nav-wrapper"
@@ -253,53 +174,26 @@ Array [
       >
         <div
           class="edm-tabs-nav active"
-          data-index="0"
         >
-          <span
-            class="inner"
+          <div
+            index="0"
           >
-            <svg
-              aria-hidden="true"
-              class="edm-icon icon edm-icon-l"
-              fill="currentColor"
-            >
-              <use
-                href="#alipay"
-              />
-            </svg>
-            Home
-          </span>
+            Login
+          </div>
         </div>
         <div
           class="edm-tabs-nav"
-          data-index="1"
         >
-          <span
-            class="inner"
+          <div
+            index="1"
           >
-            Home2
-          </span>
+            Register
+          </div>
         </div>
         <div
-          class="edm-tabs-nav"
-          data-index="2"
-        >
-          <span
-            class="inner"
-          >
-            Home3
-          </span>
-        </div>
-        <div
-          class="edm-tabs-nav"
-          data-index="3"
-        >
-          <span
-            class="inner"
-          >
-            Home4
-          </span>
-        </div>
+          class="edm-tabs-nav-underline"
+          style="transform:translate3d(0px, 0, 0)"
+        />
       </div>
     </div>
     <div
@@ -307,27 +201,19 @@ Array [
     >
       <div
         class="edm-tabs-con-wrapper"
-        style="transform:translate3d(0, 0px, 0);-webkit-transform:translate3d(0, 0px, 0);-ms-transform:translate3d(0, 0px, 0);-webkit-transition:;transition:"
+        style="transform:translate3d(0px, 0, 0);-webkit-transform:translate3d(0px, 0, 0);-ms-transform:translate3d(0px, 0, 0);-webkit-transition:-webkit-transform .3s cubic-bezier(0.35, 0, 0.25, 1);transition:transform .3s cubic-bezier(0.35, 0, 0.25, 1)"
       >
         <div
-          class="edm-tabs-con active"
+          class="edm-tabs-con"
+          index="0"
         >
           1
         </div>
         <div
           class="edm-tabs-con"
+          index="1"
         >
           2
-        </div>
-        <div
-          class="edm-tabs-con"
-        >
-          3
-        </div>
-        <div
-          class="edm-tabs-con"
-        >
-          4
         </div>
       </div>
     </div>
