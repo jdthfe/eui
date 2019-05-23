@@ -51,9 +51,6 @@ const TransitionWrap = (props: TransitionWrapPropsWithChildren) => {
                     setStatus(statusCase.exitActive);
                     break;
                 case statusCase.exitDone:
-                    if (show) {
-                        onExitDone();
-                    }
                     setShow(false);
                     break;
                 default:
@@ -63,6 +60,9 @@ const TransitionWrap = (props: TransitionWrapPropsWithChildren) => {
         }
         return () => {
             window.clearTimeout(id);
+            if (show && status === statusCase.exitDone) {
+                onExitDone();
+            }
         };
     }, [visible, time, status, show, onExitDone]);
 
