@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders MessageBox correctly 1`] = `
+<div
+  class="MessageBox"
+>
+  <button
+    class="edm-button edm-button-l edm-button-primary"
+    role="button"
+  >
+    Default
+  </button>
+  <div
+    class="edm-whitespace edm-whitespace-m"
+  />
+  <button
+    class="edm-button edm-button-l edm-button-primary"
+    role="button"
+  >
+    Alert
+  </button>
+  <div
+    class="edm-whitespace edm-whitespace-m"
+  />
+  <button
+    class="edm-button edm-button-l edm-button-primary"
+    role="button"
+  >
+    Alert
+  </button>
+  <div
+    class="edm-whitespace edm-whitespace-m"
+  />
+  <button
+    class="edm-button edm-button-l edm-button-primary"
+    role="button"
+  >
+    Confirm
+  </button>
+  <div
+    class="edm-whitespace edm-whitespace-m"
+  />
+  <button
+    class="edm-button edm-button-l edm-button-primary"
+    role="button"
+  >
+    Confirm
+  </button>
+</div>
+`;

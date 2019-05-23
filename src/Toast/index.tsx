@@ -32,8 +32,8 @@ const modal = (props: ToastProps) => {
             coverProps={CoverProps}
             onExitDone={() => {
                 ReactDOM.unmountComponentAtNode(div);
-                div.remove();
                 onExitDone();
+                div.remove();
             }}
             {...restProps}
             time={time}

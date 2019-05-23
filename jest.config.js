@@ -1,16 +1,14 @@
+const cpt = process.argv.pop();
+const all = cpt === '--runInBand' || cpt === '-u' ? true : false;
+const dir = all ? '**' : `${cpt}/**`;
+const collectCoverageFrom = all
+    ? ['src/*/*.tsx', 'src/index.tsx', 'src/*/demo/*.tsx', '!src/style/*.tsx', '!**/**/PropsType.tsx']
+    : [`src/${cpt}/*.tsx`, `src/${cpt}/demo/*.tsx`, '!**/**/PropsType.tsx'];
+const coverageDirectory = all ? 'coverage' : `src/${cpt}/__tests__/coverage`;
 var config = {
     collectCoverage: true,
-    collectCoverageFrom: [
-        'src/*/*.tsx',
-        'src/index.tsx',
-        'src/*/demo/index.tsx',
-        '!src/style/*.tsx',
-        // '!src/**/demo/index.tsx',
-        // '!src/**/*.d.ts',
-        // '!src/*/style/*.tsx',
-        // '!src/scss.tsx',
-    ],
-    coverageDirectory: 'coverage',
+    collectCoverageFrom,
+    coverageDirectory,
     coverageReporters: ['text', 'lcov'],
     setupFiles: ['./scripts/tests/setup.js'],
     reporters: ['default'],
@@ -33,7 +31,7 @@ var config = {
         // '^.+test\\.(js|jsx)$': 'babel-jest',
         // '^.+\\.(ts|tsx)$': 'ts-jest',
     },
-    testMatch: ['<rootDir>/src/**/__tests__/**/*.test.(js|jsx|ts|tsx)'],
+    testMatch: [`<rootDir>/src/${dir}/__tests__/**/*.test.(js|jsx|ts|tsx)`],
 
     moduleNameMapper: {
         '@src/(.*)$': '<rootDir>/src/$1',

@@ -10,7 +10,7 @@ import Footer from './component/Footer';
 
 import Preface from './Preface';
 
-const Document: React.SFC<RouteComponentProps> = props => {
+const Document: React.FC<RouteComponentProps> = props => {
     const { match, location } = props;
 
     /**
@@ -19,7 +19,10 @@ const Document: React.SFC<RouteComponentProps> = props => {
      * @name 请创建 [name].md 在对应文件夹中 site\document\markdown
      * 在 site\document\markdown\index.ts 中创建对应的 import 和 export
      */
-    const markdownOnly: ComponentIndex[] = [{ name: 'introduce', type: 'markdownOnly', 'zh-CN': '介绍' }];
+    const markdownOnly: ComponentIndex[] = [
+        { name: 'introduce', type: 'markdownOnly', 'zh-CN': '介绍' },
+        { name: 'variable', type: 'markdownOnly', 'zh-CN': '变量' },
+    ];
     const newDirectoryStructure = markdownOnly.concat(componentIndex);
     function isMarkdownOnly(markdownOnly: ComponentIndex[]) {
         const name = location.pathname.split('/').pop();

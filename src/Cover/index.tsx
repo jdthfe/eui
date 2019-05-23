@@ -8,7 +8,9 @@ import { transitionFade } from '@src/_util/variable';
 
 const prefixCls = `${prefix}-Cover`;
 
-const Module = (props: CoverProps) => {
+const Cover: React.FC<CoverProps> & {
+    Transition: React.FC<CoverWithTransitionWrap>;
+} = props => {
     const { transparent = false, className, children, ...restProps } = props;
     const cls = classnames(prefixCls, className, { [`${prefixCls}-transparent`]: transparent });
     return (
@@ -46,7 +48,5 @@ const Transition = (props: CoverWithTransitionWrap) => {
     );
 };
 
-export default {
-    Module,
-    Transition,
-};
+Cover.Transition = Transition;
+export default Cover;

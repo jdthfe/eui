@@ -22,7 +22,7 @@ export const sortComponentIndex = (componentIndex: ComponentIndex[]) => {
     return newStructure;
 };
 export const getInstance = (item: ComponentIndex) => {
-    let instance: React.SFC;
+    let instance: React.FC;
     try {
         if (item.type === 'markdownOnly') {
             throw 'markdownOnly have not Instance';

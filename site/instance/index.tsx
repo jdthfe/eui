@@ -4,7 +4,7 @@ import { componentIndex, sortComponentIndex } from '../_util';
 import Home from './Home';
 import Demo from './Demo';
 
-const Mobile: React.SFC<RouteComponentProps> = props => {
+const Mobile: React.FC<RouteComponentProps> = props => {
     const { match } = props;
     return (
         <div className="instance">

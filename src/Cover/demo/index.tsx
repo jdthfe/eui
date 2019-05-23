@@ -1,10 +1,40 @@
-import React from 'react';
-import { Cover } from '@src/index';
+import React, { useState } from 'react';
+import { Cover, Button, WhiteSpace, WingBlank, Portal } from '@src/index';
 const Demo = () => {
+    const [visible, setVisible] = useState(false);
+    function changeVisible() {
+        setVisible(!visible);
+    }
+    const [visible2, setVisible2] = useState(false);
+    function changeVisible2() {
+        setVisible2(!visible2);
+    }
+    const [visible3, setVisible3] = useState(false);
+    function changeVisible3() {
+        setVisible3(!visible3);
+    }
     return (
-        <div className="Cover">
-            <Cover.Transition visible />
-        </div>
+        <WingBlank className="Cover">
+            <h4>Cover</h4>
+            <Button theme="primary" onClick={changeVisible}>
+                Cover
+            </Button>
+            {visible ? <Cover onClick={changeVisible} /> : null}
+            <WhiteSpace />
+            <Button theme="primary" onClick={changeVisible2}>
+                Cover | transparent
+            </Button>
+            {visible2 ? <Cover transparent onClick={changeVisible2} /> : null}
+            <WhiteSpace />
+
+            <h4>Cover.Transition</h4>
+            <Button theme="primary" onClick={changeVisible3}>
+                Cover.Transition | Portal
+            </Button>
+            <Portal>
+                <Cover.Transition time={200} onClick={changeVisible3} visible={visible3} />
+            </Portal>
+        </WingBlank>
     );
 };
 

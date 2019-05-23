@@ -8,6 +8,7 @@ import { transitionFade } from '../_util/variable';
 import Icon from '../Icon';
 import Button from '../Button';
 import Cover from '../Cover';
+const { Transition } = Cover;
 import Portal from '../Portal';
 import TransitionWrap from '../TransitionWrap';
 
@@ -37,7 +38,7 @@ const MessageBox = (props: MessageBoxProps) => {
     const btnCls = classnames(`${prefixCls}-buttons`, { [`${prefixCls}-buttons-multiline`]: multiLineButtons });
     return (
         <Portal mountNode={mountNode}>
-            <Cover.Transition
+            <Transition
                 visible={visible}
                 keepOnExit={keepOnExit}
                 time={time}
