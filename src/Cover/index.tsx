@@ -4,7 +4,7 @@ import { CoverProps, CoverWithTransitionWrap } from './PropsType';
 import prefix from '../_util/prefix';
 
 import TransitionWrap from '../TransitionWrap';
-import { transitionFade } from '@src/_util/variable';
+import { transitionFade } from '../_util/variable';
 
 const prefixCls = `${prefix}-Cover`;
 

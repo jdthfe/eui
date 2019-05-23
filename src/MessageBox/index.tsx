@@ -7,7 +7,6 @@ import prefix from '../_util/prefix';
 const prefixCls = `${prefix}-messagebox`;
 
 import { transitionTime } from '../_util/variable';
-import { ButtonProps } from '@src/Button/PropsType';
 
 const modal = (props: MessageBoxCommen) => {
     const {
@@ -28,7 +27,7 @@ const modal = (props: MessageBoxCommen) => {
     const closeMessageBox = () => close();
     const newButtons =
         buttons &&
-        buttons.map<ButtonProps>(btnProps => ({
+        buttons.map<typeof buttons[0]>(btnProps => ({
             ...btnProps,
             onClick: e => {
                 const { onClick = () => {} } = btnProps;
