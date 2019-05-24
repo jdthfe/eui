@@ -3,15 +3,19 @@
 exports[`renders CountDown correctly 1`] = `
 <div>
   <div>
-    <h5>
-      倒计时5秒
-    </h5>
-    <div
-      class="edm-countdown"
-    >
-      <span>
-        50  
-      </span>
+    <div>
+      <h5>
+        倒计时5秒
+      </h5>
+      <div
+        class="edm-countdown"
+      >
+        <span>
+          50
+           
+           
+        </span>
+      </div>
     </div>
   </div>
 </div>

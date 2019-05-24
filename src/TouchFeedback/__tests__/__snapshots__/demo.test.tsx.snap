@@ -1,14 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders TouchFeedback correctly 1`] = `
-<div
-  class="TouchFeedback"
->
-  <p>
-    TouchFeedback
-  </p>
-  <p>
-    TouchFeedback disabled
-  </p>
+<div>
+  <div
+    class="TouchFeedback"
+  >
+    <p>
+      TouchFeedback
+    </p>
+    <p>
+      TouchFeedback disabled
+    </p>
+  </div>
 </div>
 `;

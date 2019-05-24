@@ -4,21 +4,15 @@
 
 ## Demo
 
-## Extends
-
-### element
-
-`div`
-
 ## API
+
+### Extends `div`
 
 ### Cover
 
 | 属性        | 说明 | 类型      | 默认值  | 必填    |
 | ----------- | ---- | --------- | ------- | ------- |
 | transparent | 透明 | `boolean` | `false` | `false` |
-
-[`TransitionWrap`](#/document/TransitionWrap)
 
 ### Cover.Transition
 
@@ -27,6 +21,4 @@
 | 属性                                             | 说明     | 类型     | 默认值                                | 必填    |
 | ------------------------------------------------ | -------- | -------- | ------------------------------------- | ------- |
 | transitionClassName                              | 动画属性 | `string` | [transitionFade](#/document/variable) | `false` |
-| [`...TransitionWrap`](#/document/TransitionWrap) |          |          |                                       | `false` |
-
-## [Test](src/Cover/__tests__/coverage/lcov-report/index.html)
+| [`...TransitionWrap`](#/document/TransitionWrap) |          |          |                                       |         |

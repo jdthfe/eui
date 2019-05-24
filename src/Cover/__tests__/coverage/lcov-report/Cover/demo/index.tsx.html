@@ -20,31 +20,31 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">80% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>5/10</span>
+        <span class='fraction'>8/10</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>2/4</span>
+        <span class='fraction'>4/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">20% </span>
+        <span class="strong">80% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/5</span>
+        <span class='fraction'>4/5</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">80% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>5/10</span>
+        <span class='fraction'>8/10</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line medium'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -98,19 +98,19 @@
 <a name='L50'></a><a href='#L50'>50</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -148,16 +148,16 @@
 import { Cover, Button, WhiteSpace, WingBlank, Portal } from '@src/index';
 const Demo = () =&gt; {
     const [visible, setVisible] = useState(false);
-    function <span class="fstat-no" title="function not covered" >changeVisible(</span>) {
-<span class="cstat-no" title="statement not covered" >        setVisible(!visible);</span>
+    function changeVisible() {
+        setVisible(!visible);
     }
     const [visible2, setVisible2] = useState(false);
-    function <span class="fstat-no" title="function not covered" >changeVisible2(</span>) {
-<span class="cstat-no" title="statement not covered" >        setVisible2(!visible2);</span>
+    function changeVisible2() {
+        setVisible2(!visible2);
     }
     const [visible3, setVisible3] = useState(false);
-    function <span class="fstat-no" title="function not covered" >changeVisible3(</span>) {
-<span class="cstat-no" title="statement not covered" >        setVisible3(!visible3);</span>
+    function changeVisible3() {
+        setVisible3(!visible3);
     }
     return (
         &lt;WingBlank className="Cover"&gt;
@@ -165,13 +165,13 @@ const Demo = () =&gt; {
             &lt;Button theme="primary" onClick={changeVisible}&gt;
                 Cover
             &lt;/Button&gt;
-            {visible ? <span class="branch-0 cbranch-no" title="branch not covered" >&lt;Cover onClick={changeVisible} /&gt; </span>: null}
+            {visible ? &lt;Cover onClick={changeVisible} /&gt; : null}
             &lt;WhiteSpace /&gt;
             &lt;Button theme="primary" onClick={changeVisible2}&gt;
                 Cover | transparent
             &lt;/Button&gt;
             {visible2 ? (
-<span class="branch-0 cbranch-no" title="branch not covered" >                &lt;Cover</span>
+                &lt;Cover
                     transparent
                     onClick={<span class="fstat-no" title="function not covered" >()</span> =&gt; {
 <span class="cstat-no" title="statement not covered" >                        alert('You clicked on the transparent Cover！');</span>
@@ -199,7 +199,7 @@ export default Demo;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu May 23 2019 15:37:35 GMT+0800 (China Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri May 24 2019 16:33:09 GMT+0800 (China Standard Time)
 </div>
 </div>
 <script src="../../prettify.js"></script>

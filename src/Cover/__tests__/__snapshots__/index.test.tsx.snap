@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Cover Cover show successful 1`] = `
-<div
-  class="edm-Cover"
-/>
-`;
-
-exports[`Cover Cover.Transition show successful 1`] = `null`;

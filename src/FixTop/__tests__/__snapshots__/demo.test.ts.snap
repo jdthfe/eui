@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders FixTop correctly 1`] = `
-Array [
+<div>
   <div
-    style="position:relative;margin:0 auto;width:100%;min-width:320PX;max-width:640PX"
+    style="position: relative; margin: 0px auto; width: 100%; min-width: 320PX; max-width: 640PX;"
   >
     <div
       class="edm-fixtop"
@@ -17,12 +17,13 @@ Array [
           fill="666"
         >
           <use
-            href="#remind"
+            xlink:href="#remind"
           />
         </svg>
       </div>
       <div>
-        Buy 199 get 20% off text text text text text text textfixTop1
+        Buy 199 get 20% off text text text text text text text
+        fixTop1
       </div>
       <div
         class="edm-fixtop-close"
@@ -33,19 +34,19 @@ Array [
           fill="DE6A1C"
         >
           <use
-            href="#close"
+            xlink:href="#close"
           />
         </svg>
       </div>
     </div>
     <div
-      style="height:500px;background:#f1f1f1"
+      style="height: 500px; background: rgb(241, 241, 241);"
     >
       fixTop1
     </div>
-  </div>,
+  </div>
   <div
-    style="position:relative;margin:0 auto;width:100%;min-width:320PX;max-width:640PX"
+    style="position: relative; margin: 0px auto; width: 100%; min-width: 320PX; max-width: 640PX;"
   >
     <div
       class="edm-fixtop"
@@ -59,25 +60,26 @@ Array [
           fill="#F00"
         >
           <use
-            href="#alipay"
+            xlink:href="#alipay"
           />
         </svg>
       </div>
       <div>
-        Buy 199 get 20% off text text text text text text textfixTop2
+        Buy 199 get 20% off text text text text text text text
+        fixTop2
       </div>
       <div
         class="edm-fixtop-close"
       />
     </div>
     <div
-      style="height:500px;background:#f1f1f1"
+      style="height: 500px; background: rgb(241, 241, 241);"
     >
       fixTop2
     </div>
-  </div>,
+  </div>
   <div
-    style="position:relative;margin:0 auto;width:100%;min-width:320PX;max-width:640PX"
+    style="position: relative; margin: 0px auto; width: 100%; min-width: 320PX; max-width: 640PX;"
   >
     <div
       class="edm-fixtop"
@@ -86,7 +88,8 @@ Array [
         class="edm-fixtop-icon"
       />
       <div>
-        Buy 199 get 20% off text text text text text text textfixTop3
+        Buy 199 get 20% off text text text text text text text
+        fixTop3
       </div>
       <div
         class="edm-fixtop-close"
@@ -97,16 +100,16 @@ Array [
           fill="#F00"
         >
           <use
-            href="#selected"
+            xlink:href="#selected"
           />
         </svg>
       </div>
     </div>
     <div
-      style="height:500px;background:#f1f1f1"
+      style="height: 500px; background: rgb(241, 241, 241);"
     >
       fixTop3
     </div>
-  </div>,
-]
+  </div>
+</div>
 `;
