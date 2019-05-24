@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders Tabs correctly 1`] = `
-Array [
+<div>
   <div
     class="edm-tabs edm-tabs-top"
   >
@@ -10,7 +10,7 @@ Array [
     >
       <div
         class="edm-tabs-nav-wrapper"
-        style="transform:translate3d(0px, 0, 0)"
+        style="transform: translate3d(0px, 0, 0); webkit-transition-duration: 300ms; transition-duration: 300ms;"
       >
         <div
           class="edm-tabs-nav active"
@@ -130,7 +130,7 @@ Array [
         </div>
         <div
           class="edm-tabs-nav-underline"
-          style="transform:translate3d(0px, 0, 0)"
+          style="transform: translate3d(0px, 0, 0); webkit-transition-duration: 380ms; transition-duration: 380ms;"
         />
       </div>
     </div>
@@ -139,7 +139,7 @@ Array [
     >
       <div
         class="edm-tabs-con-wrapper"
-        style="transform:translate3d(0px, 0, 0);-webkit-transform:translate3d(0px, 0, 0);-ms-transform:translate3d(0px, 0, 0);-webkit-transition:-webkit-transform .3s cubic-bezier(0.35, 0, 0.25, 1);transition:transform .3s cubic-bezier(0.35, 0, 0.25, 1)"
+        style="transform: translate3d(0px, 0, 0); transition: transform .3s cubic-bezier(0.35, 0, 0.25, 1);"
       >
         <div
           class="edm-tabs-con"
@@ -161,7 +161,7 @@ Array [
         </div>
       </div>
     </div>
-  </div>,
+  </div>
   <div
     class="edm-tabs edm-tabs-top"
   >
@@ -170,7 +170,7 @@ Array [
     >
       <div
         class="edm-tabs-nav-wrapper"
-        style="transform:translate3d(0px, 0, 0)"
+        style="transform: translate3d(0px, 0, 0); webkit-transition-duration: 300ms; transition-duration: 300ms;"
       >
         <div
           class="edm-tabs-nav active"
@@ -192,7 +192,7 @@ Array [
         </div>
         <div
           class="edm-tabs-nav-underline"
-          style="transform:translate3d(0px, 0, 0)"
+          style="transform: translate3d(0px, 0, 0); webkit-transition-duration: 380ms; transition-duration: 380ms;"
         />
       </div>
     </div>
@@ -201,7 +201,7 @@ Array [
     >
       <div
         class="edm-tabs-con-wrapper"
-        style="transform:translate3d(0px, 0, 0);-webkit-transform:translate3d(0px, 0, 0);-ms-transform:translate3d(0px, 0, 0);-webkit-transition:-webkit-transform .3s cubic-bezier(0.35, 0, 0.25, 1);transition:transform .3s cubic-bezier(0.35, 0, 0.25, 1)"
+        style="transform: translate3d(0px, 0, 0); transition: transform .3s cubic-bezier(0.35, 0, 0.25, 1);"
       >
         <div
           class="edm-tabs-con"
@@ -217,6 +217,6 @@ Array [
         </div>
       </div>
     </div>
-  </div>,
-]
+  </div>
+</div>
 `;
