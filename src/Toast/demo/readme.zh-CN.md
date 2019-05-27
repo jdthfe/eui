@@ -1,4 +1,6 @@
-描述
+一种轻量级反馈/提示，可以用来显示不会打断用户操作的内容，适合用于页面转场、数据交互的等场景中。
+
+提供两种调用方式，一种为常见的 `React.Dom`，一种为执行方法（所有的方法都是基于第一种的封装。因此，如果有特殊需求，可以通过自行封装来实现）
 
 ## Demo
 
@@ -6,6 +8,56 @@
 
 ## API
 
-| 属性 | 说明        | 类型     | 默认值      | 必填    |
-| ---- | ----------- | -------- | ----------- | ------- |
-| prop | description | `string` | `'default'` | `false` |
+### Extends `div`
+
+### Toast
+
+React.Dom
+
+| 属性                                             | 说明                     | 类型                                          | 默认值 | 必填    |
+| ------------------------------------------------ | ------------------------ | --------------------------------------------- | ------ | ------- |
+| coverProps                                       | Toast 中，Cover 的 props | [`CoverWithTransitionWrap`](#/document/Cover) |        | `false` |
+| [`...Portal`](#/document/Portal)                 |                          |                                               |        |         |
+| [`...TransitionWrap`](#/document/TransitionWrap) |                          |                                               |        |         |
+
+### Toast.normal
+
+通过 `const close = Toast.normal()` 调用，运行 `close()` 可以立即关闭。如果 `children` 为空，则不展示
+
+| 属性     | 说明         | 类型      | 默认值                                 | 必填    |
+| -------- | ------------ | --------- | -------------------------------------- | ------- |
+| noCover  | 是否展示遮罩 | `boolean` | `false`                                | `false` |
+| duration | 持续时间     | `number`  | [defaultDuration](#/document/variable) | `false` |
+
+### Toast.success
+
+通过 `const close = Toast.success()` 调用，运行 `close()` 可以立即关闭。默认附带 `<Icon value="success" />`
+
+| 属性     | 说明         | 类型      | 默认值                                 | 必填    |
+| -------- | ------------ | --------- | -------------------------------------- | ------- |
+| noCover  | 是否展示遮罩 | `boolean` | `false`                                | `false` |
+| duration | 持续时间     | `number`  | [defaultDuration](#/document/variable) | `false` |
+
+### Toast.alert
+
+通过 `const close = Toast.alert()` 调用，运行 `close()` 可以立即关闭。默认附带 `<Icon value="alert" />`
+
+| 属性     | 说明         | 类型      | 默认值                                 | 必填    |
+| -------- | ------------ | --------- | -------------------------------------- | ------- |
+| noCover  | 是否展示遮罩 | `boolean` | `false`                                | `false` |
+| duration | 持续时间     | `number`  | [defaultDuration](#/document/variable) | `false` |
+
+### Toast.loading
+
+通过 `Toast.loading()` 调用，运行 `Toast.closeLoading()` 可以立即关闭。默认附带 `<Icon value="loading" />`
+
+与上述 Toast 最大区别是，loading 为单例函数。多次调用之后以最后一次为准。
+
+| 属性     | 说明         | 类型      | 默认值                                 | 必填    |
+| -------- | ------------ | --------- | -------------------------------------- | ------- |
+| noCover  | 是否展示遮罩 | `boolean` | `false`                                | `false` |
+| duration | 持续时间     | `number`  | [defaultDuration](#/document/variable) | `false` |
+
+### Toast.closeLoading
+
+用以在任何上下文中关闭 `Toast.loading`

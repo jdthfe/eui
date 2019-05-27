@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toast base: show 1`] = `
+<body>
+  
+  
+  
+
+  
+  
+  
+
+  <div />
+  <div
+    class="edm-Cover edm-Cover-transparent edm-fade-entry-done edm-fade"
+  />
+  <div
+    class="edm-toast edm-fade-entry-done edm-fade"
+  >
+    toastTxt
+  </div>
+</body>
+`;
+
+exports[`Toast snapshots: close 1`] = `
+<body>
+  
+  
+  
+
+  <div>
+    <div />
+  </div>
+</body>
+`;
+
+exports[`Toast snapshots: show 1`] = `
+<body>
+  
+  
+  
+
+  <div>
+    <div />
+  </div>
+  <div>
+    <div
+      class="edm-Cover edm-Cover-transparent edm-fade-entry-done edm-fade"
+    />
+    <div
+      class="edm-toast edm-fade-entry-done edm-fade"
+    >
+      normal
+    </div>
+  </div>
+  <div>
+    <div
+      class="edm-Cover edm-Cover-transparent edm-fade-entry-done edm-fade"
+    />
+    <div
+      class="edm-toast edm-fade-entry-done edm-fade"
+    >
+      <svg
+        aria-hidden="true"
+        class="edm-icon edm-icon-l"
+        fill="#fff"
+      >
+        <use
+          xlink:href="#alert"
+        />
+      </svg>
+      <div
+        class="edm-whitespace edm-whitespace-l"
+      />
+      alert
+    </div>
+  </div>
+  <div>
+    <div
+      class="edm-Cover edm-Cover-transparent edm-fade-entry-done edm-fade"
+    />
+    <div
+      class="edm-toast edm-fade-entry-done edm-fade"
+    >
+      <svg
+        aria-hidden="true"
+        class="edm-icon edm-icon-l"
+        fill="#fff"
+      >
+        <use
+          xlink:href="#successful"
+        />
+      </svg>
+      <div
+        class="edm-whitespace edm-whitespace-l"
+      />
+      success
+    </div>
+  </div>
+  <div />
+  <div>
+    <div
+      class="edm-Cover edm-Cover-transparent edm-fade-entry-done edm-fade"
+    />
+    <div
+      class="edm-toast edm-fade-entry-done edm-fade"
+    >
+      <svg
+        aria-hidden="true"
+        class="edm-icon edm-icon-l"
+        fill="#fff"
+      >
+        <use
+          xlink:href="#alert"
+        />
+      </svg>
+    </div>
+  </div>
+  <div>
+    <div
+      class="edm-Cover edm-Cover-transparent edm-fade-entry-done edm-fade"
+    />
+    <div
+      class="edm-toast edm-fade-entry-done edm-fade"
+    >
+      <svg
+        aria-hidden="true"
+        class="edm-icon edm-icon-l"
+        fill="#fff"
+      >
+        <use
+          xlink:href="#successful"
+        />
+      </svg>
+    </div>
+  </div>
+  <div>
+    <div
+      class="edm-Cover edm-Cover-transparent edm-fade-entry-done edm-fade"
+    />
+    <div
+      class="edm-toast edm-fade-entry-done edm-fade"
+    >
+      <svg
+        aria-hidden="true"
+        class="edm-icon edm-icon-l edm-icon-loading"
+        fill="#fff"
+      >
+        <use
+          xlink:href="#loading"
+        />
+      </svg>
+    </div>
+  </div>
+</body>
+`;

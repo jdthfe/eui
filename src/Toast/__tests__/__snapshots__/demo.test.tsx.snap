@@ -3,8 +3,23 @@
 exports[`renders Toast correctly 1`] = `
 <div>
   <div
-    class="Toast"
+    class="edm-wingblank Toast edm-wingblank-m"
   >
+    <h4>
+      Dom
+    </h4>
+    <button
+      class="edm-button edm-button-l edm-button-primary"
+      role="button"
+    >
+      Base
+    </button>
+    <div
+      class="edm-whitespace edm-whitespace-m"
+    />
+    <h4>
+      Method
+    </h4>
     <button
       class="edm-button edm-button-l edm-button-primary"
       role="button"

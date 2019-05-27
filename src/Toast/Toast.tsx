@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-import { ToastPropsWithModel } from './PropsType';
+import { ToastProps } from './PropsType';
 import prefix from '../_util/prefix';
 const prefixCls = `${prefix}-toast`;
 
@@ -9,7 +9,7 @@ import Portal from '../Portal';
 import TransitionWrap from '../TransitionWrap';
 import Cover from '../Cover';
 
-const Toast = (props: ToastPropsWithModel) => {
+const Toast = (props: ToastProps) => {
     const {
         children,
         className,
@@ -26,11 +26,12 @@ const Toast = (props: ToastPropsWithModel) => {
         ...restProps
     } = props;
     const cls = classnames(prefixCls, className);
+    const newVisible = children === undefined ? false : visible;
     return (
         <Portal mountNode={mountNode}>
             <Cover.Transition
                 transparent
-                visible={visible}
+                visible={newVisible}
                 keepOnExit={keepOnExit}
                 time={time}
                 onExitDone={onExitDone}
@@ -38,13 +39,13 @@ const Toast = (props: ToastPropsWithModel) => {
                 {...coverProps}
             />
             <TransitionWrap
-                visible={visible}
+                visible={newVisible}
                 keepOnExit={keepOnExit}
                 time={time}
                 onExitDone={onExitDone}
                 transitionClassName={transitionClassName}
             >
-                <div {...restProps} className={children ? cls : ''}>
+                <div {...restProps} className={cls}>
                     {children}
                 </div>
             </TransitionWrap>

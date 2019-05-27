@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
 
 import Toast from './Toast';
-import { ToastProps } from './PropsType';
+import { ToastPropsWithModel } from './PropsType';
 import Icon from '../Icon';
 import WhiteSpace from '../WhiteSpace';
 
@@ -11,7 +11,7 @@ const div = document.createElement('div');
 let close = () => {};
 let timer: number;
 
-const modal = (props: ToastProps) => {
+const modal = (props: ToastPropsWithModel) => {
     const {
         coverProps = {},
         onExitDone = () => {},
@@ -61,7 +61,7 @@ const modal = (props: ToastProps) => {
 // export default Toast;
 
 export default {
-    loading: (props: ToastProps = {}) => {
+    loading: (props: ToastPropsWithModel = {}) => {
         modal({
             ...props,
             children: (
@@ -73,7 +73,7 @@ export default {
             ),
         });
     },
-    close: () => {
+    closeLoading: () => {
         close();
     },
 };
