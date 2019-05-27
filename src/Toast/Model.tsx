@@ -8,7 +8,7 @@ import WhiteSpace from '../WhiteSpace';
 
 import { transitionTime, defaultDuration } from '../_util/variable';
 
-const modal = (props: ToastPropsWithModel) => {
+const model = (props: ToastPropsWithModel) => {
     const {
         coverProps,
         onExitDone = () => {},
@@ -61,9 +61,9 @@ const modal = (props: ToastPropsWithModel) => {
 };
 
 export default {
-    normal: (props: ToastPropsWithModel = {}) => modal(props),
+    model: (props: ToastPropsWithModel = {}) => model(props),
     success: (props: ToastPropsWithModel = {}) =>
-        modal({
+        model({
             ...props,
             children: (
                 <Fragment>
@@ -74,7 +74,7 @@ export default {
             ),
         }),
     alert: (props: ToastPropsWithModel = {}) =>
-        modal({
+        model({
             ...props,
             children: (
                 <Fragment>

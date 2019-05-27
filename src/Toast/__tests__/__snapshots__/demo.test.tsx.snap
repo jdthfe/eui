@@ -12,7 +12,7 @@ exports[`renders Toast correctly 1`] = `
       class="edm-button edm-button-l edm-button-primary"
       role="button"
     >
-      Base
+      Toast
     </button>
     <div
       class="edm-whitespace edm-whitespace-m"
@@ -24,7 +24,7 @@ exports[`renders Toast correctly 1`] = `
       class="edm-button edm-button-l edm-button-primary"
       role="button"
     >
-      Normal
+      Model
     </button>
     <div
       class="edm-whitespace edm-whitespace-m"

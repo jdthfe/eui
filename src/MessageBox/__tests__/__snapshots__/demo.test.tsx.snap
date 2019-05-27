@@ -3,22 +3,28 @@
 exports[`renders MessageBox correctly 1`] = `
 <div>
   <div
-    class="MessageBox"
+    class="edm-wingblank MessageBox edm-wingblank-m"
   >
+    <h4>
+      Dom
+    </h4>
     <button
       class="edm-button edm-button-l edm-button-primary"
       role="button"
     >
-      Default
+      MessageBox
     </button>
     <div
       class="edm-whitespace edm-whitespace-m"
     />
+    <h4>
+      Method
+    </h4>
     <button
       class="edm-button edm-button-l edm-button-primary"
       role="button"
     >
-      Alert
+      Model | noCover
     </button>
     <div
       class="edm-whitespace edm-whitespace-m"
@@ -45,7 +51,7 @@ exports[`renders MessageBox correctly 1`] = `
       class="edm-button edm-button-l edm-button-primary"
       role="button"
     >
-      Confirm
+      Confirm | multiLineButtons
     </button>
   </div>
 </div>

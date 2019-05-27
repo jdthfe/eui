@@ -11,7 +11,7 @@ const div = document.createElement('div');
 let close = () => {};
 let timer: number;
 
-const modal = (props: ToastPropsWithModel) => {
+const model = (props: ToastPropsWithModel) => {
     const {
         coverProps = {},
         onExitDone = () => {},
@@ -62,7 +62,7 @@ const modal = (props: ToastPropsWithModel) => {
 
 export default {
     loading: (props: ToastPropsWithModel = {}) => {
-        modal({
+        model({
             ...props,
             children: (
                 <Fragment>

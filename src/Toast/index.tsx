@@ -4,14 +4,14 @@ import model from './Model';
 import { ToastProps } from './PropsType';
 
 const toastExport = Toast as ((props: ToastProps) => JSX.Element) & {
-    normal: typeof model.normal;
+    model: typeof model.model;
     success: typeof model.success;
     alert: typeof model.alert;
     loading: typeof loading.loading;
     closeLoading: typeof loading.closeLoading;
 };
 
-toastExport.normal = model.normal;
+toastExport.model = model.model;
 toastExport.success = model.success;
 toastExport.alert = model.alert;
 toastExport.loading = loading.loading;

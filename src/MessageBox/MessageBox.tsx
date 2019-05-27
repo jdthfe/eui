@@ -20,7 +20,7 @@ const MessageBox = (props: MessageBoxProps) => {
         buttons = [],
         multiLineButtons = false,
         hiddenline,
-        onClickCloseIcon = undefined,
+        onClickCloseIcon,
         // TransitionWrap
         visible,
         keepOnExit,

@@ -11,10 +11,10 @@ describe('Toast', () => {
     it('snapshots', async () => {
         let flag = false;
         const { baseElement } = render(<div />);
-        const normal = Toast.normal({ children: 'normal', duration: 0, time });
+        const model = Toast.model({ children: 'normal', duration: 0, time });
         const alert = Toast.alert({ children: 'alert', duration: 0, time });
         const success = Toast.success({ children: 'success', duration: 0, time });
-        const normal2 = Toast.normal();
+        const model2 = Toast.model();
         const alert2 = Toast.alert();
         const success2 = Toast.success();
         Toast.loading();
@@ -29,10 +29,10 @@ describe('Toast', () => {
         baseElement.querySelector('svg')!.remove();
         expect(baseElement).toMatchSnapshot('show');
 
-        normal();
+        model();
         alert();
         success();
-        normal2();
+        model2();
         alert2();
         success2();
         Toast.closeLoading();
@@ -61,7 +61,7 @@ describe('Toast', () => {
     // });
     it('closed successfully', async () => {
         const { getByText } = render(<div />);
-        const close = Toast.normal({ children: toastTxt, duration });
+        const close = Toast.model({ children: toastTxt, duration });
         const showTime = new Date().getTime();
         await waitForElement(() => getByText(toastTxt));
         close();
@@ -74,7 +74,7 @@ describe('Toast', () => {
     it('cover boolean', async () => {
         const { baseElement, getByText } = render(<div />);
         const mockFn = jest.fn();
-        const close = Toast.normal({
+        const close = Toast.model({
             children: toastTxt,
             coverProps: { onClick: mockFn, className: CoverClass },
         });
@@ -83,7 +83,7 @@ describe('Toast', () => {
         expect(mockFn).toBeCalled();
         close();
         await waitForElementToBeRemoved(() => baseElement.querySelector('.' + CoverClass));
-        const close2 = Toast.normal({
+        const close2 = Toast.model({
             children: toastTxt,
             noCover: true,
             coverProps: { onClick: mockFn, className: CoverClass },

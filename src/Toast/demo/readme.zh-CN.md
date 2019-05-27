@@ -14,38 +14,33 @@
 
 React.Dom
 
-| 属性                                             | 说明                     | 类型                                          | 默认值 | 必填    |
-| ------------------------------------------------ | ------------------------ | --------------------------------------------- | ------ | ------- |
-| coverProps                                       | Toast 中，Cover 的 props | [`CoverWithTransitionWrap`](#/document/Cover) |        | `false` |
-| [`...Portal`](#/document/Portal)                 |                          |                                               |        |         |
-| [`...TransitionWrap`](#/document/TransitionWrap) |                          |                                               |        |         |
+| 属性                                             | 说明                                                                                     | 类型                                          | 默认值                                  | 必填    |
+| ------------------------------------------------ | ---------------------------------------------------------------------------------------- | --------------------------------------------- | --------------------------------------- | ------- |
+| transitionClassName                              | 动画属性（设置 `coverProps` 中的 `transitionClassName`，可以让遮罩和窗口有不同动画属性） | `string`                                      | [`transitionFade`](#/document/variable) | `false` |
+| coverProps                                       | Toast 中，Cover 的 props                                                                 | [`CoverWithTransitionWrap`](#/document/Cover) |                                         | `false` |
+| [`...Portal`](#/document/Portal)                 |                                                                                          |                                               |                                         |         |
+| [`...TransitionWrap`](#/document/TransitionWrap) |                                                                                          |                                               |                                         |         |
 
-### Toast.normal
+### Toast.model
 
-通过 `const close = Toast.normal()` 调用，运行 `close()` 可以立即关闭。如果 `children` 为空，则不展示
-
-| 属性     | 说明         | 类型      | 默认值                                 | 必填    |
-| -------- | ------------ | --------- | -------------------------------------- | ------- |
-| noCover  | 是否展示遮罩 | `boolean` | `false`                                | `false` |
-| duration | 持续时间     | `number`  | [defaultDuration](#/document/variable) | `false` |
+通过 `const close = Toast.model()` 调用，运行 `close()` 可以立即关闭。如果 `children` 为空，则不展示
 
 ### Toast.success
 
 通过 `const close = Toast.success()` 调用，运行 `close()` 可以立即关闭。默认附带 `<Icon value="success" />`
 
-| 属性     | 说明         | 类型      | 默认值                                 | 必填    |
-| -------- | ------------ | --------- | -------------------------------------- | ------- |
-| noCover  | 是否展示遮罩 | `boolean` | `false`                                | `false` |
-| duration | 持续时间     | `number`  | [defaultDuration](#/document/variable) | `false` |
-
 ### Toast.alert
 
 通过 `const close = Toast.alert()` 调用，运行 `close()` 可以立即关闭。默认附带 `<Icon value="alert" />`
 
-| 属性     | 说明         | 类型      | 默认值                                 | 必填    |
-| -------- | ------------ | --------- | -------------------------------------- | ------- |
-| noCover  | 是否展示遮罩 | `boolean` | `false`                                | `false` |
-| duration | 持续时间     | `number`  | [defaultDuration](#/document/variable) | `false` |
+（上述三个方法的通用 API）
+
+| 属性                           | 说明                                  | 类型      | 默认值                                 | 必填    |
+| ------------------------------ | ------------------------------------- | --------- | -------------------------------------- | ------- |
+| [`...Toast`](#/document/Toast) |                                       |           |                                        |         |
+| time                           | active 动画持续时长（TransitionWrap） | `number`  | [transitionTime](#/document/variable)  | `false` |
+| noCover                        | 是否展示遮罩                          | `boolean` | `false`                                | `false` |
+| duration                       | 持续时间（0 表示不自动关闭）          | `number`  | [defaultDuration](#/document/variable) | `false` |
 
 ### Toast.loading
 
@@ -53,10 +48,12 @@ React.Dom
 
 与上述 Toast 最大区别是，loading 为单例函数。多次调用之后以最后一次为准。
 
-| 属性     | 说明         | 类型      | 默认值                                 | 必填    |
-| -------- | ------------ | --------- | -------------------------------------- | ------- |
-| noCover  | 是否展示遮罩 | `boolean` | `false`                                | `false` |
-| duration | 持续时间     | `number`  | [defaultDuration](#/document/variable) | `false` |
+| 属性                           | 说明                                  | 类型      | 默认值                                | 必填    |
+| ------------------------------ | ------------------------------------- | --------- | ------------------------------------- | ------- |
+| [`...Toast`](#/document/Toast) |                                       |           |                                       |         |
+| time                           | active 动画持续时长（TransitionWrap） | `number`  | [transitionTime](#/document/variable) | `false` |
+| noCover                        | 是否展示遮罩                          | `boolean` | `false`                               | `false` |
+| duration                       | 持续时间（0 表示不自动关闭）          | `number`  | `0`                                   | `false` |
 
 ### Toast.closeLoading
 

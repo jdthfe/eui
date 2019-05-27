@@ -21,31 +21,33 @@ export interface MessageBoxProps
     coverProps?: CoverWithTransitionWrap;
 }
 
-export interface MessageBoxCommen extends MessageBoxProps {
+export interface MessageBoxPropsWithModel extends MessageBoxProps {
     /** Callback on click the cross button. When the value is empty, the button is not displayed  */
     onClickCloseIcon?: () => void | boolean;
-    /** On click cover, return `true` to prvent  */
+    /** On click cover, return `true` to prvent Message's close  */
     preventClickCover?: boolean;
-    /** On click cover, return `true` to prvent  */
+    /** On click cover, return `true` to prvent Message's close  */
     onClickCover?: () => void | boolean;
     /** Cover will block page clicks */
     noCover?: boolean;
 }
 
 export interface MessageBoxConfirmProps {
+    /** confirmButton’s props */
     confirmButton?: ButtonProps;
+    /** confirmButton’s callback, return `true` to prvent Message's close*/
     confirmCallback?: () => void | boolean;
+    /** confirmButton’s children */
     confirmChildren?: React.ReactNode;
 }
 export interface MessageBoxCancelProps {
+    /** cancelButton’s props */
     cancelButton?: ButtonProps;
+    /** cancelButton’s callback, return `true` to prvent Message's close*/
     cancelCallback?: () => void | boolean;
+    /** cancelButton’s children */
     cancelChildren?: React.ReactNode;
 }
 
-export interface MessageBoxAlert extends MessageBoxCommen, MessageBoxConfirmProps {}
-export interface MessageBoxConfirm
-    extends MessageBoxProps,
-        MessageBoxProps,
-        MessageBoxConfirmProps,
-        MessageBoxCancelProps {}
+export interface MessageBoxAlert extends MessageBoxPropsWithModel, MessageBoxConfirmProps {}
+export interface MessageBoxConfirm extends MessageBoxPropsWithModel, MessageBoxConfirmProps, MessageBoxCancelProps {}

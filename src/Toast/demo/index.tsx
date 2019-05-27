@@ -12,10 +12,10 @@ const Demo = () => {
         <WingBlank className="Toast">
             <h4>Dom</h4>
             <Button theme="primary" onClick={changeVisible}>
-                Base
+                Toast
             </Button>
             <Toast visible={visible} time={200}>
-                Base
+                Toast
             </Toast>
             <WhiteSpace />
 
@@ -23,12 +23,12 @@ const Demo = () => {
             <Button
                 theme="primary"
                 onClick={() =>
-                    Toast.normal({
-                        children: 'Normal Toast',
+                    Toast.model({
+                        children: 'Model Toast',
                     })
                 }
             >
-                Normal
+                Model
             </Button>
             <WhiteSpace />
 
@@ -75,7 +75,7 @@ const Demo = () => {
             </Button>
             <WhiteSpace />
 
-            <Button theme="primary" onClick={() => Toast.normal()}>
+            <Button theme="primary" onClick={() => Toast.model()}>
                 null
             </Button>
             <WhiteSpace />
