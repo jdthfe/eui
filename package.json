@@ -19,7 +19,7 @@
         "rm": "ts-node scripts/template/remove.ts && eslint ./site/_util/componentIndex.tsx --fix",
         "api": "ts-node scripts/template/api.ts",
         "new": "ts-node scripts/template/new.ts && eslint ./site/_util/componentIndex.tsx --fix",
-        "svg": "ts-node scripts/template/svg.ts && eslint ./src/Icon/svgs.tsx --fix",
+        "svg": "ts-node scripts/template/svg.ts && eslint ./src/Icon/svgs.tsx ./src/Icon/PropsType.tsx ./src/Icon/demo/index.tsx --fix",
         "dist": "cross-env NODE_ENV=dist webpack -p --config ./scripts/config/webpack.config.dist.ts",
         "compile": "gulp -f ./scripts/gulp/gulpfile.ts compile",
         "prod": "yarn dist && yarn compile"
