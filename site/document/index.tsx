@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { componentIndex, sortComponentIndex } from '../_util';
 import { Route, RouteComponentProps } from 'react-router-dom';
 
@@ -12,7 +12,7 @@ import Preface from './Preface';
 
 const Document: React.FC<RouteComponentProps> = props => {
     const { match, location } = props;
-
+    const [preOffsetTop, setPreOffsetTop] = useState<number>(0);
     /**
      * 添加纯文本页面
      * @type 类型必须为 markdownOnly
@@ -33,8 +33,18 @@ const Document: React.FC<RouteComponentProps> = props => {
         console.log(key);
     }
 
+    let src = `#${location.pathname.replace('document', 'instance')}`;
+    useEffect(() => {
+        const tPre = document.querySelector<HTMLPreElement>('.markdown-body pre');
+        if (!tPre) {
+            return;
+        }
+        setPreOffsetTop(tPre.offsetTop);
+        return;
+    }, [src]);
+
     return (
-        <div>
+        <div className="document">
             <Nav />
             {match.isExact ? (
                 <Preface />
@@ -50,8 +60,9 @@ const Document: React.FC<RouteComponentProps> = props => {
                     ))}
 
                     <Iframe
+                        offsetTop={preOffsetTop || 0}
                         className={isMarkdownOnly(markdownOnly) ? 'hide' : ''}
-                        src={`#${location.pathname.replace('document', 'instance')}`}
+                        src={src}
                     />
                 </main>
             )}

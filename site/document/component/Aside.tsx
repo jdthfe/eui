@@ -16,7 +16,7 @@ const Aside = (props: AsideProps) => {
                 <Fragment key={key}>
                     <p>{key}</p>
                     {structure[key].map(item => (
-                        <Link to={`/document/${item.name}`} key={item.name}>
+                        <Link to={`/document/${item.name}`} replace key={item.name}>
                             <Button
                                 theme="primary"
                                 className="document-aside-btn"

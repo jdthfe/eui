@@ -1,7 +1,11 @@
 @import './markdown.scss';
-
+// * {
+//     // box-sizing: border-box;
+// }
 .document {
+    min-width: 1000px;
     &-nav {
+        position: relative;
         line-height: 3;
         color: #fff;
         text-align: center;
@@ -21,13 +25,15 @@
         }
     }
     &-main {
+        position: relative;
         display: flex;
+        // min-width: 1200px;
+        overflow: hidden;
     }
     &-aside {
         width: 200px;
         min-height: 100vh;
         padding: 20px;
-        // background: #eee;
         flex-shrink: 0;
         box-shadow: 10px 0 10px -10px rgba(0, 0, 0, 0.2);
 
@@ -47,24 +53,52 @@
         padding: 30px;
         flex-grow: 1;
         pre {
-            max-width: 540px;
-            max-height: 50vh;
+            // width: 540px;
+            height: 800px;
             overflow: auto;
         }
         .markdown-body {
+            &-code {
+                display: flex;
+                & > pre {
+                    width: 0;
+                    flex-grow: 1;
+                    flex-shrink: 1;
+                }
+            }
+            &-code::after {
+                width: 375px;
+                height: 1px;
+                padding: 20px;
+                content: '';
+                box-sizing: border-box;
+                // flex-shrink: 0;
+            }
             flex-grow: 1;
-            max-width: 860px;
+            // max-width: 860px;
         }
     }
 
     &-iframe {
-        padding: 20px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        // padding: 20px;
+        // height: 100%;
+        transition: padding-top 0.2s;
         iframe {
-            position: sticky;
-            top: 20px;
-            right: 0;
+            background: #eee;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
             border: none;
-            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+            // position: sticky;
+            // top: 0;
+            // right: 0;
+            // padding: 60px 25px;
+            border-radius: 20px;
+            // box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
         }
     }
 

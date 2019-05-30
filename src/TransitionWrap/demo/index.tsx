@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { TransitionWrap, Button, WingBlank } from '@src/index';
-// import './index.scss';
+import './index.scss';
 const Demo = () => {
     const [visible, setvisible] = useState(false);
     return (

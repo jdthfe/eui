@@ -27,9 +27,11 @@ const Article = (props: ContainerProps) => {
                 <ReactMarkdown source={`# ${item.name} ${lang !== 'en-US' ? item[lang] : ''}\n${demoBefore}`} />
                 {demoAfter ? (
                     <Fragment>
-                        <SyntaxHighlighter style={base16AteliersulphurpoolLight} language="jsx">
-                            {demoSource}
-                        </SyntaxHighlighter>
+                        <div className="markdown-body-code">
+                            <SyntaxHighlighter style={base16AteliersulphurpoolLight} language="jsx">
+                                {demoSource}
+                            </SyntaxHighlighter>
+                        </div>
                         <ReactMarkdown source={demoAfter} />
                     </Fragment>
                 ) : null}
