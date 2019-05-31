@@ -25,9 +25,23 @@ const config: webpack.Configuration = {
             '@tests': getProjectUrl('scripts', 'tests'),
         },
     },
+    // output: {
+    //     publicPath: './dist',
+    // },
     devtool: devMode ? 'cheap-module-eval-source-map' : 'cheap-module-source-map',
     module: {
         rules: [
+            {
+                test: /\.(png|jpe?g|gif)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            publicPath: 'assets',
+                        },
+                    },
+                ],
+            },
             {
                 test: /\.(j|t)sx?$/,
                 exclude: /(node_modules)/,
