@@ -1,14 +1,40 @@
-import React from 'react';
-import { MessageBox, Button, WhiteSpace } from '@src/index';
+import React, { useState } from 'react';
+import { MessageBox, Button, WhiteSpace, WingBlank, Icon } from '@src/index';
 const Demo = () => {
+    const [visible, setVisible] = useState(false);
+    function changeVisible() {
+        setVisible(!visible);
+    }
     return (
-        <div className="MessageBox">
+        <WingBlank className="MessageBox">
+            <h4>Dom</h4>
+            <Button onClick={changeVisible} theme="primary">
+                MessageBox
+            </Button>
+            <MessageBox
+                title="title"
+                visible={visible}
+                time={200}
+                coverProps={{ onClick: changeVisible }}
+                onClickCloseIcon={changeVisible}
+                buttons={[
+                    { rectangle: true, theme: 'primary', children: 'right', onClick: changeVisible },
+                    { rectangle: true, theme: 'secondary', children: 'left' },
+                ]}
+            >
+                <Icon fill="lightgreen" style={{ width: '100px', height: '100px' }} value="successful" />
+                <br />
+                Children
+            </MessageBox>
+
+            <WhiteSpace />
+            <h4>Method</h4>
             <Button
                 theme="primary"
                 onClick={() =>
-                    MessageBox.default({
+                    MessageBox.model({
                         onClickCloseIcon: () => {
-                            console.log(111);
+                            console.log('onClickCloseIcon');
                         },
                         onClickCover: () => true,
                         title: 'title',
@@ -16,16 +42,16 @@ const Demo = () => {
                         noCover: true,
                         buttons: [
                             {
-                                children: 'left',
+                                children: 'right',
                                 theme: 'primary',
                                 rectangle: true,
                                 onClick: () => {
-                                    console.log('default');
+                                    console.log('right');
                                     return true;
                                 },
                             },
                             {
-                                children: 'right',
+                                children: 'left',
                                 ghost: true,
                                 rectangle: true,
                                 style: { color: '#666', border: 'none' },
@@ -34,29 +60,22 @@ const Demo = () => {
                     })
                 }
             >
-                Default
+                Model | noCover
             </Button>
             <WhiteSpace />
+
             <Button
                 theme="primary"
                 onClick={() =>
                     MessageBox.alert({
-                        confirmChildren: 'confirmText',
-                        title: 'alert',
+                        confirmChildren: 'Alert | MultiLineButtons',
+                        title: 'Alert',
                         children: 'children',
                         confirmCallback: () => {
-                            MessageBox.default({
-                                title: 'title',
+                            MessageBox.alert({
+                                multiLineButtons: true,
+                                title: 'MultiLineButtons',
                                 children: 'children',
-                                buttons: [
-                                    { children: 'Button', theme: 'primary', rectangle: true },
-                                    {
-                                        children: 'Button',
-                                        ghost: true,
-                                        rectangle: true,
-                                        style: { color: '#666', border: 'none' },
-                                    },
-                                ],
                             });
                             return true;
                         },
@@ -65,25 +84,22 @@ const Demo = () => {
             >
                 Alert
             </Button>
+
             <WhiteSpace />
             <Button
                 theme="primary"
                 onClick={() =>
-                    MessageBox.alert({
-                        multiLineButtons: true,
-                        confirmChildren: 'confirmText',
-                        title: 'alert',
+                    MessageBox.confirm({
+                        title: 'Confirm',
                         children: 'children',
+                        confirmCallback: () => console.log('confirmCallback'),
                     })
                 }
             >
-                Alert
-            </Button>
-            <WhiteSpace />
-            <Button theme="primary" onClick={() => MessageBox.confirm({ title: 'Confirm', children: 'children' })}>
                 Confirm
             </Button>
             <WhiteSpace />
+
             <Button
                 theme="primary"
                 onClick={() =>
@@ -94,39 +110,9 @@ const Demo = () => {
                     })
                 }
             >
-                Confirm
+                Confirm | multiLineButtons
             </Button>
-            {/* <MessageBox
-                time={200}
-                title="Title"
-                visible={visible}
-                onClickCancel={() => {
-                    setVisible(!visible);
-                }}
-                // multiLine
-                buttons={[
-                    { children: 'Button', theme: 'primary', rectangle: true },
-                    { children: 'Button', ghost: true, rectangle: true, style: { color: '#666', border: 'none' } },
-                ]}
-            >
-                children
-            </MessageBox>
-            <Button theme="primary" onClick={() => setVisible2(!visible2)}>
-                MessageBox
-            </Button>
-            <MessageBox
-                time={200}
-                title="Title"
-                visible={visible2}
-                multiLine
-                buttons={[
-                    { children: 'Button', theme: 'primary' },
-                    { children: 'Button', ghost: true, style: { color: '#666', border: 'none' } },
-                ]}
-            >
-                children
-            </MessageBox> */}
-        </div>
+        </WingBlank>
     );
 };
 

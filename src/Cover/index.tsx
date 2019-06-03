@@ -8,8 +8,8 @@ import { transitionFade } from '../_util/variable';
 
 const prefixCls = `${prefix}-Cover`;
 
-const Cover: React.FC<CoverProps> & {
-    Transition: React.FC<CoverWithTransitionWrap>;
+const Cover: ((props: CoverProps) => JSX.Element) & {
+    Transition: (props: CoverWithTransitionWrap) => JSX.Element;
 } = props => {
     const { transparent = false, className, children, ...restProps } = props;
     const cls = classnames(prefixCls, className, { [`${prefixCls}-transparent`]: transparent });

@@ -1,20 +1,37 @@
-import React from 'react';
-import { Toast, Button, WhiteSpace } from '@src/index';
+import React, { useState } from 'react';
+import { Toast, Button, WhiteSpace, WingBlank } from '@src/index';
 const Demo = () => {
-    // const [visible, setVisible] = useState(false);
+    const [visible, setVisible] = useState(false);
+    function changeVisible() {
+        setVisible(true);
+        setTimeout(() => {
+            setVisible(false);
+        }, 1500);
+    }
     return (
-        <div className="Toast">
+        <WingBlank className="Toast">
+            <h4>Dom</h4>
+            <Button theme="primary" onClick={changeVisible}>
+                Toast
+            </Button>
+            <Toast visible={visible} time={200}>
+                Toast
+            </Toast>
+            <WhiteSpace />
+
+            <h4>Method</h4>
             <Button
                 theme="primary"
                 onClick={() =>
-                    Toast.normal({
-                        children: 'Normal Toast',
+                    Toast.model({
+                        children: 'Model Toast',
                     })
                 }
             >
-                Normal
+                Model
             </Button>
             <WhiteSpace />
+
             <Button
                 theme="primary"
                 onClick={() =>
@@ -26,6 +43,7 @@ const Demo = () => {
                 Success
             </Button>
             <WhiteSpace />
+
             <Button
                 theme="primary"
                 onClick={() =>
@@ -41,6 +59,7 @@ const Demo = () => {
                 Alert | noCover
             </Button>
             <WhiteSpace />
+
             <Button
                 theme="primary"
                 onClick={() => {
@@ -49,17 +68,18 @@ const Demo = () => {
                             console.log('loading done');
                         },
                     });
-                    setTimeout(() => Toast.close(), 5000);
+                    setTimeout(() => Toast.closeLoading(), 5000);
                 }}
             >
                 loading
             </Button>
             <WhiteSpace />
-            <Button theme="primary" onClick={() => Toast.normal()}>
+
+            <Button theme="primary" onClick={() => Toast.model()}>
                 null
             </Button>
             <WhiteSpace />
-        </div>
+        </WingBlank>
     );
 };
 

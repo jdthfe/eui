@@ -18,6 +18,8 @@ other description
 
 ## API
 
-| Properties | Descrition  | Type     | Default     | Required |
-| ---------- | ----------- | -------- | ----------- | -------- |
-| prop       | description | `string` | `'default'` | `false`  |
+| Properties | Descrition                   | Type                      | Default | Required |
+| ---------- | ---------------------------- | ------------------------- | ------- | -------- |
+| coverProps | cover's props                | `CoverWithTransitionWrap` | -       | `false`  |
+| noCover    | Cover will block page clicks | `boolean`                 | -       | `false`  |
+| duration   | duration                     | `number`                  | -       | `false`  |

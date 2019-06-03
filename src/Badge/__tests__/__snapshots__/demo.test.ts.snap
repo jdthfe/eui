@@ -1,72 +1,74 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders Badge correctly 1`] = `
-<div
-  class="Badge"
->
-  <span
-    class="edm-badge"
+<div>
+  <div
+    class="Badge"
   >
     <span
-      style="width:26px;height:26px;background:#ddd;display:inline-block"
-    />
-    <sup
-      class="edm-badge-dot"
-    />
-  </span>
-  <div>
-    <span
       class="edm-badge"
     >
       <span
-        style="width:26px;height:26px;background:#ddd;display:inline-block"
+        style="width: 26px; height: 26px; background: rgb(221, 221, 221); display: inline-block;"
       />
       <sup
-        class="edm-badge-text"
-      >
-        10+
-      </sup>
+        class="edm-badge-dot"
+      />
     </span>
-  </div>
-  <div>
-    <span
-      class="edm-badge"
-    >
+    <div>
       <span
-        style="width:26px;height:26px;background:#ddd;display:inline-block"
-      />
-      <sup
-        class="edm-badge-text"
+        class="edm-badge"
       >
-        9
-      </sup>
-    </span>
-  </div>
-  <div>
-    <span
-      class="edm-badge"
-    >
+        <span
+          style="width: 26px; height: 26px; background: rgb(221, 221, 221); display: inline-block;"
+        />
+        <sup
+          class="edm-badge-text"
+        >
+          10+
+        </sup>
+      </span>
+    </div>
+    <div>
       <span
-        style="width:26px;height:26px;background:#ddd;display:inline-block"
-      />
-    </span>
-  </div>
-  <div>
-    <span
-      class="edm-badge my-corner edm-badge-corner-wrapper"
-    >
-      <div
-        class="corner-badge"
-        style="height:71px"
+        class="edm-badge"
       >
-        Use corner prop
-      </div>
-      <sup
-        class="edm-badge-corner"
+        <span
+          style="width: 26px; height: 26px; background: rgb(221, 221, 221); display: inline-block;"
+        />
+        <sup
+          class="edm-badge-text"
+        >
+          9
+        </sup>
+      </span>
+    </div>
+    <div>
+      <span
+        class="edm-badge"
       >
-        คูปองใหม่
-      </sup>
-    </span>
+        <span
+          style="width: 26px; height: 26px; background: rgb(221, 221, 221); display: inline-block;"
+        />
+      </span>
+    </div>
+    <div>
+      <span
+        class="edm-badge my-corner edm-badge-corner-wrapper"
+      >
+        <div
+          class="corner-badge"
+          style="height: 71px;"
+        >
+          Use corner prop
+        </div>
+        <sup
+          class="edm-badge-corner"
+        >
+          คูปองใหม่
+        </sup>
+      </span>
+    </div>
   </div>
 </div>
 `;

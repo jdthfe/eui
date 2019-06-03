@@ -1,19 +1,81 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`TransitionWrapDemo animation: visible=false 1`] = `
+<body>
+  <div>
+    <div
+      class="edm-wingblank TransitionWrap edm-wingblank-m"
+    >
+      <button
+        class="edm-button edm-button-l edm-button-primary"
+        role="button"
+      >
+        click to 
+        show
+         text
+      </button>
+      <h1
+        class="hello hello-exit-active"
+      >
+        hello
+      </h1>
+      <h1
+        class="world world-exit-active"
+      >
+        world
+      </h1>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`TransitionWrapDemo animation: visible=true 1`] = `
+<body>
+  <div>
+    <div
+      class="edm-wingblank TransitionWrap edm-wingblank-m"
+    >
+      <button
+        class="edm-button edm-button-l edm-button-primary"
+        role="button"
+      >
+        click to 
+        hide
+         text
+      </button>
+      <h1
+        class="hello hello-entry-done"
+      >
+        hello
+      </h1>
+      <h1
+        class="world world-entry-done"
+      >
+        world
+      </h1>
+    </div>
+  </div>
+</body>
+`;
+
 exports[`renders TransitionWrap correctly 1`] = `
-<div
-  class="TransitionWrap"
->
-  <button
-    class="edm-button edm-button-l edm-button-customize"
-    role="button"
+<div>
+  <div
+    class="edm-wingblank TransitionWrap edm-wingblank-m"
   >
-    click to show text
-  </button>
-  <h1
-    class="world world-exit-done"
-  >
-    world
-  </h1>
+    <button
+      class="edm-button edm-button-l edm-button-primary"
+      role="button"
+    >
+      click to 
+      show
+       text
+    </button>
+    <h1
+      class="world world-exit-done"
+    >
+      world
+    </h1>
+  </div>
 </div>
 `;

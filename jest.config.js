@@ -2,8 +2,8 @@ const cpt = process.argv.pop();
 const all = cpt === '--runInBand' || cpt === '-u' ? true : false;
 const dir = all ? '**' : `${cpt}/**`;
 const collectCoverageFrom = all
-    ? ['src/*/*.tsx', 'src/index.tsx', 'src/*/demo/*.tsx', '!src/style/*.tsx', '!**/**/PropsType.tsx']
-    : [`src/${cpt}/*.tsx`, `src/${cpt}/demo/*.tsx`, '!**/**/PropsType.tsx'];
+    ? ['src/*/*.tsx', 'src/index.tsx', '!src/style/*.tsx', '!**/**/PropsType.tsx']
+    : [`src/${cpt}/*.tsx`, '!**/**/PropsType.tsx'];
 const coverageDirectory = all ? 'coverage' : `src/${cpt}/__tests__/coverage`;
 var config = {
     collectCoverage: true,

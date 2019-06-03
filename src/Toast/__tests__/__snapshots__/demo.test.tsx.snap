@@ -1,53 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders Toast correctly 1`] = `
-<div
-  class="Toast"
->
-  <button
-    class="edm-button edm-button-l edm-button-primary"
-    role="button"
-  >
-    Normal
-  </button>
+<div>
   <div
-    class="edm-whitespace edm-whitespace-m"
-  />
-  <button
-    class="edm-button edm-button-l edm-button-primary"
-    role="button"
+    class="edm-wingblank Toast edm-wingblank-m"
   >
-    Success
-  </button>
-  <div
-    class="edm-whitespace edm-whitespace-m"
-  />
-  <button
-    class="edm-button edm-button-l edm-button-primary"
-    role="button"
-  >
-    Alert | noCover
-  </button>
-  <div
-    class="edm-whitespace edm-whitespace-m"
-  />
-  <button
-    class="edm-button edm-button-l edm-button-primary"
-    role="button"
-  >
-    loading
-  </button>
-  <div
-    class="edm-whitespace edm-whitespace-m"
-  />
-  <button
-    class="edm-button edm-button-l edm-button-primary"
-    role="button"
-  >
-    null
-  </button>
-  <div
-    class="edm-whitespace edm-whitespace-m"
-  />
+    <h4>
+      Dom
+    </h4>
+    <button
+      class="edm-button edm-button-l edm-button-primary"
+      role="button"
+    >
+      Toast
+    </button>
+    <div
+      class="edm-whitespace edm-whitespace-m"
+    />
+    <h4>
+      Method
+    </h4>
+    <button
+      class="edm-button edm-button-l edm-button-primary"
+      role="button"
+    >
+      Model
+    </button>
+    <div
+      class="edm-whitespace edm-whitespace-m"
+    />
+    <button
+      class="edm-button edm-button-l edm-button-primary"
+      role="button"
+    >
+      Success
+    </button>
+    <div
+      class="edm-whitespace edm-whitespace-m"
+    />
+    <button
+      class="edm-button edm-button-l edm-button-primary"
+      role="button"
+    >
+      Alert | noCover
+    </button>
+    <div
+      class="edm-whitespace edm-whitespace-m"
+    />
+    <button
+      class="edm-button edm-button-l edm-button-primary"
+      role="button"
+    >
+      loading
+    </button>
+    <div
+      class="edm-whitespace edm-whitespace-m"
+    />
+    <button
+      class="edm-button edm-button-l edm-button-primary"
+      role="button"
+    >
+      null
+    </button>
+    <div
+      class="edm-whitespace edm-whitespace-m"
+    />
+  </div>
 </div>
 `;

@@ -53,13 +53,16 @@
         }
         .markdown-body {
             flex-grow: 1;
-            max-width: 760px;
+            max-width: 860px;
         }
     }
 
     &-iframe {
         padding: 20px;
         iframe {
+            position: sticky;
+            top: 20px;
+            right: 0;
             border: none;
             box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
         }

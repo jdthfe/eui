@@ -1,50 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders MessageBox correctly 1`] = `
-<div
-  class="MessageBox"
->
-  <button
-    class="edm-button edm-button-l edm-button-primary"
-    role="button"
-  >
-    Default
-  </button>
+<div>
   <div
-    class="edm-whitespace edm-whitespace-m"
-  />
-  <button
-    class="edm-button edm-button-l edm-button-primary"
-    role="button"
+    class="edm-wingblank MessageBox edm-wingblank-m"
   >
-    Alert
-  </button>
-  <div
-    class="edm-whitespace edm-whitespace-m"
-  />
-  <button
-    class="edm-button edm-button-l edm-button-primary"
-    role="button"
-  >
-    Alert
-  </button>
-  <div
-    class="edm-whitespace edm-whitespace-m"
-  />
-  <button
-    class="edm-button edm-button-l edm-button-primary"
-    role="button"
-  >
-    Confirm
-  </button>
-  <div
-    class="edm-whitespace edm-whitespace-m"
-  />
-  <button
-    class="edm-button edm-button-l edm-button-primary"
-    role="button"
-  >
-    Confirm
-  </button>
+    <h4>
+      Dom
+    </h4>
+    <button
+      class="edm-button edm-button-l edm-button-primary"
+      role="button"
+    >
+      MessageBox
+    </button>
+    <div
+      class="edm-whitespace edm-whitespace-m"
+    />
+    <h4>
+      Method
+    </h4>
+    <button
+      class="edm-button edm-button-l edm-button-primary"
+      role="button"
+    >
+      Model | noCover
+    </button>
+    <div
+      class="edm-whitespace edm-whitespace-m"
+    />
+    <button
+      class="edm-button edm-button-l edm-button-primary"
+      role="button"
+    >
+      Alert
+    </button>
+    <div
+      class="edm-whitespace edm-whitespace-m"
+    />
+    <button
+      class="edm-button edm-button-l edm-button-primary"
+      role="button"
+    >
+      Confirm
+    </button>
+    <div
+      class="edm-whitespace edm-whitespace-m"
+    />
+    <button
+      class="edm-button edm-button-l edm-button-primary"
+      role="button"
+    >
+      Confirm | multiLineButtons
+    </button>
+  </div>
 </div>
 `;
