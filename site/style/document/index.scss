@@ -1,7 +1,12 @@
 @import './markdown.scss';
 
+$radius: 10px;
+
 .document {
+    min-width: 1000px;
+    background: #fff;
     &-nav {
+        position: relative;
         line-height: 3;
         color: #fff;
         text-align: center;
@@ -21,15 +26,17 @@
         }
     }
     &-main {
+        position: relative;
         display: flex;
+        // min-width: 1200px;
+        overflow: hidden;
     }
     &-aside {
         width: 200px;
         min-height: 100vh;
         padding: 20px;
-        // background: #eee;
-        flex-shrink: 0;
         box-shadow: 10px 0 10px -10px rgba(0, 0, 0, 0.2);
+        flex-shrink: 0;
 
         p:first-child {
             display: none;
@@ -46,25 +53,76 @@
         display: flex;
         padding: 30px;
         flex-grow: 1;
-        pre {
-            max-width: 540px;
-            max-height: 50vh;
-            overflow: auto;
-        }
+
         .markdown-body {
+            &-code {
+                display: flex;
+                & > pre {
+                    width: 0;
+                    height: 750px;
+                    overflow: auto;
+                    border-radius: $radius;
+                    flex-grow: 1;
+                    flex-shrink: 1;
+                }
+            }
+            &-code::after {
+                width: 375px;
+                height: 1px;
+                // margin: 0 30px;
+                margin-left: 30px;
+                content: '';
+                box-sizing: border-box;
+                // flex-shrink: 0;
+            }
             flex-grow: 1;
-            max-width: 860px;
+            // max-width: 860px;
         }
     }
 
     &-iframe {
-        padding: 20px;
-        iframe {
-            position: sticky;
-            top: 20px;
-            right: 0;
+        position: absolute;
+        top: 0;
+        right: 30px;
+        display: flex;
+        width: 375px;
+        height: 750px;
+        // background: #333;
+        overflow: hidden;
+        border-radius: $radius;
+        transition: margin-top 0.2s;
+        flex-direction: column;
+        &-header {
+            img {
+                width: 100%;
+                padding: 0 10px 4px;
+                box-sizing: border-box;
+            }
+            input {
+                width: 100%;
+                padding: 0 10px;
+                font-size: 12px;
+                line-height: 1.6;
+                border: none;
+                border-radius: 100px;
+                box-sizing: border-box;
+            }
+            padding: 6px 8px 10px;
+            background: #333;
+        }
+        &-main {
+            // background: #eee;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
             border: none;
-            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+            // position: sticky;
+            // top: 0;
+            // right: 0;
+            // padding: 60px 25px;
+            // box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+            // box-sizing: border-box;
+            flex-grow: 1;
         }
     }
 

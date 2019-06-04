@@ -1,24 +1,24 @@
 import React from 'react';
-import { Icon } from '@src/index';
+import { Icon, WingBlank } from '@src/index';
 import { IconProps } from '@src/Icon/PropsType';
 import './index.scss';
 
-const iconList: string[] = [
+const iconList: IconProps['value'][] = [
     'addcart',
+    'alert',
     'alipay',
     'close',
+    'loading',
     'remind',
     'selected',
-    'loading',
     'successful',
-    'alert',
     'test',
 ];
 const sizeList: IconProps['size'][] = ['xs', 's', 'm', 'l', 'xl'];
 const fillList: string[] = ['red', 'orange', 'yellow', 'green', 'blue'];
 const Demo = () => {
     return (
-        <div className="Icon">
+        <WingBlank className="Icon">
             <h4>Value</h4>
             <div className="Icon-value">
                 {iconList.map(item => (
@@ -46,7 +46,7 @@ const Demo = () => {
                     </div>
                 ))}
             </div>
-        </div>
+        </WingBlank>
     );
 };
 

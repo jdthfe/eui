@@ -3,13 +3,15 @@ import React from 'react';
 import { componentIndex, sortComponentIndex } from '../_util';
 import Home from './Home';
 import Demo from './Demo';
-
 const Mobile: React.FC<RouteComponentProps> = props => {
     const { match } = props;
     return (
         <div className="instance">
             <nav className="instance-nav">
-                <Link to="/instance">Back</Link> Header
+                <Link className="instance-nav-link" to="/instance">
+                    HOME{' '}
+                </Link>
+                | {(location.href.split('/').pop() || '').toUpperCase()}
             </nav>
             {match.isExact ? <Home structure={sortComponentIndex(componentIndex)} /> : null}
 

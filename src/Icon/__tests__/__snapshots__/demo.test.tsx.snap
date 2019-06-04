@@ -3,7 +3,7 @@
 exports[`renders Icon correctly 1`] = `
 <div>
   <div
-    class="Icon"
+    class="edm-wingblank Icon edm-wingblank-m"
   >
     <h4>
       Value
@@ -24,6 +24,21 @@ exports[`renders Icon correctly 1`] = `
         </svg>
         <p>
           addcart
+        </p>
+      </div>
+      <div
+        class="Icon-value-item"
+      >
+        <svg
+          aria-hidden="true"
+          class="edm-icon edm-icon-l"
+        >
+          <use
+            xlink:href="#alert"
+          />
+        </svg>
+        <p>
+          alert
         </p>
       </div>
       <div
@@ -61,6 +76,21 @@ exports[`renders Icon correctly 1`] = `
       >
         <svg
           aria-hidden="true"
+          class="edm-icon edm-icon-l edm-icon-loading"
+        >
+          <use
+            xlink:href="#loading"
+          />
+        </svg>
+        <p>
+          loading
+        </p>
+      </div>
+      <div
+        class="Icon-value-item"
+      >
+        <svg
+          aria-hidden="true"
           class="edm-icon edm-icon-l"
         >
           <use
@@ -91,21 +121,6 @@ exports[`renders Icon correctly 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="edm-icon edm-icon-l edm-icon-loading"
-        >
-          <use
-            xlink:href="#loading"
-          />
-        </svg>
-        <p>
-          loading
-        </p>
-      </div>
-      <div
-        class="Icon-value-item"
-      >
-        <svg
-          aria-hidden="true"
           class="edm-icon edm-icon-l"
         >
           <use
@@ -114,21 +129,6 @@ exports[`renders Icon correctly 1`] = `
         </svg>
         <p>
           successful
-        </p>
-      </div>
-      <div
-        class="Icon-value-item"
-      >
-        <svg
-          aria-hidden="true"
-          class="edm-icon edm-icon-l"
-        >
-          <use
-            xlink:href="#alert"
-          />
-        </svg>
-        <p>
-          alert
         </p>
       </div>
       <div
