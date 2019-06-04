@@ -54,7 +54,7 @@ function convertTstoJs(output: string, modules?: boolean) {
     });
 }
 function convertTstoDts() {
-    console.log('[es] convert Ts to Dts By Typescript...');
+    console.log('[  e  s  ] convert Ts to Dts By Typescript...');
     const tsc = spawn('tsc', ['-pretty', '--emitDeclarationOnly', '-p', '../../tsconfig.dts.json'], {
         stdio: 'inherit',
         shell: process.platform === 'win32',
@@ -72,7 +72,7 @@ function convertTstoDts() {
 }
 
 function copyDts() {
-    console.log('[lib]  convert Ts to Dts By Typescript...');
+    console.log('[ l i b  ] convert Ts to Dts By Typescript...');
     const dtsFile = [getProjectUrl('compiled/es/**/*.d.ts')];
     return new Promise((res, rej) => {
         src(dtsFile)

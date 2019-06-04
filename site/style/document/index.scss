@@ -1,9 +1,10 @@
 @import './markdown.scss';
-// * {
-//     // box-sizing: border-box;
-// }
+
+$radius: 10px;
+
 .document {
     min-width: 1000px;
+    background: #fff;
     &-nav {
         position: relative;
         line-height: 3;
@@ -34,8 +35,8 @@
         width: 200px;
         min-height: 100vh;
         padding: 20px;
-        flex-shrink: 0;
         box-shadow: 10px 0 10px -10px rgba(0, 0, 0, 0.2);
+        flex-shrink: 0;
 
         p:first-child {
             display: none;
@@ -52,17 +53,15 @@
         display: flex;
         padding: 30px;
         flex-grow: 1;
-        pre {
-            // width: 540px;
-            height: 750px;
-            overflow: auto;
-        }
+
         .markdown-body {
             &-code {
                 display: flex;
                 & > pre {
                     width: 0;
-                    border-radius: 20px;
+                    height: 750px;
+                    overflow: auto;
+                    border-radius: $radius;
                     flex-grow: 1;
                     flex-shrink: 1;
                 }
@@ -85,11 +84,34 @@
         position: absolute;
         top: 0;
         right: 30px;
-        // padding: 20px;
-        // height: 100%;
-        transition: padding-top 0.2s;
-        iframe {
-            background: #eee;
+        display: flex;
+        width: 375px;
+        height: 750px;
+        // background: #333;
+        overflow: hidden;
+        border-radius: $radius;
+        transition: margin-top 0.2s;
+        flex-direction: column;
+        &-header {
+            img {
+                width: 100%;
+                padding: 0 10px 4px;
+                box-sizing: border-box;
+            }
+            input {
+                width: 100%;
+                padding: 0 10px;
+                font-size: 12px;
+                line-height: 1.6;
+                border: none;
+                border-radius: 100px;
+                box-sizing: border-box;
+            }
+            padding: 6px 8px 10px;
+            background: #333;
+        }
+        &-main {
+            // background: #eee;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -98,9 +120,9 @@
             // top: 0;
             // right: 0;
             // padding: 60px 25px;
-            border-radius: 20px;
             // box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-            box-sizing: border-box;
+            // box-sizing: border-box;
+            flex-grow: 1;
         }
     }
 

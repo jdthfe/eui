@@ -8,7 +8,10 @@ const Mobile: React.FC<RouteComponentProps> = props => {
     return (
         <div className="instance">
             <nav className="instance-nav">
-                <Link to="/instance">Back</Link> Header
+                <Link className="instance-nav-link" to="/instance">
+                    HOME{' '}
+                </Link>
+                | {(location.href.split('/').pop() || '').toUpperCase()}
             </nav>
             {match.isExact ? <Home structure={sortComponentIndex(componentIndex)} /> : null}
 

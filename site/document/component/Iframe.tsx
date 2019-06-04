@@ -1,6 +1,5 @@
 import React from 'react';
-// import instanceTop from '../../assets/instance-top.png';
-
+import imgUrl from '../../assets/instanceTop.png';
 interface IframeProps {
     src: string;
     className: string;
@@ -11,9 +10,13 @@ const Iframe = (props: IframeProps) => {
     const iframe = (
         // 增加 key，可以实现在 document 页面中，后退时整体后退
         // <div key={src} className={`document-iframe ${className}`}>
-        <div className={`document-iframe ${className}`} style={{ paddingTop: offsetTop }}>
-            {/* <img src="/assets/instance-top.png" alt="instanceTop" /> */}
-            <iframe id="iframe" src={src} width="375" height="750" />
+        <div className={`document-iframe ${className}`} style={{ marginTop: offsetTop }}>
+            <div className="document-iframe-header">
+                <img src={imgUrl} alt="instanceTop" />
+                <input type="text" readOnly disabled value={`${location.href.replace('document', 'instance')}`} />
+            </div>
+            <iframe className="document-iframe-main" src={src} id="iframe" />
+            {/* <iframe id="iframe" width="375" height="750" /> */}
             {/* <iframe id="iframe" src={src} width="375" height="667" /> */}
         </div>
     );

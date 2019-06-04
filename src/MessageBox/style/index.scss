@@ -33,7 +33,6 @@ $messagebox-prefix: $preifx + '-messagebox';
         position: relative;
         max-height: 56vh;
         margin: 20px;
-        overflow: scroll;
         color: #666;
     }
     &-line {
