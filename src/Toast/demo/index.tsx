@@ -11,7 +11,7 @@ const Demo = () => {
     return (
         <WingBlank className="Toast">
             <h4>Dom</h4>
-            <Button theme="primary" onClick={changeVisible}>
+            <Button ghost onClick={changeVisible}>
                 Toast
             </Button>
             <Toast visible={visible} time={200}>
@@ -21,7 +21,7 @@ const Demo = () => {
 
             <h4>Method</h4>
             <Button
-                theme="primary"
+                ghost
                 onClick={() =>
                     Toast.model({
                         children: 'Model Toast',
@@ -33,7 +33,7 @@ const Demo = () => {
             <WhiteSpace />
 
             <Button
-                theme="primary"
+                ghost
                 onClick={() =>
                     Toast.success({
                         children: 'Successful Added',
@@ -45,7 +45,7 @@ const Demo = () => {
             <WhiteSpace />
 
             <Button
-                theme="primary"
+                ghost
                 onClick={() =>
                     Toast.alert({
                         children: 'Failed Added',
@@ -61,7 +61,7 @@ const Demo = () => {
             <WhiteSpace />
 
             <Button
-                theme="primary"
+                ghost
                 onClick={() => {
                     Toast.loading({
                         onExitDone: () => {
@@ -75,7 +75,7 @@ const Demo = () => {
             </Button>
             <WhiteSpace />
 
-            <Button theme="primary" onClick={() => Toast.model()}>
+            <Button ghost onClick={() => Toast.model()}>
                 null
             </Button>
             <WhiteSpace />

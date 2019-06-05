@@ -10,7 +10,7 @@ exports[`CoverDemo Cover change visible 1`] = `
         Cover
       </h4>
       <button
-        class="edm-button edm-button-l edm-button-primary"
+        class="edm-button edm-button-l edm-button-customize edm-button-ghost"
         role="button"
       >
         Cover
@@ -22,7 +22,7 @@ exports[`CoverDemo Cover change visible 1`] = `
         class="edm-whitespace edm-whitespace-m"
       />
       <button
-        class="edm-button edm-button-l edm-button-primary"
+        class="edm-button edm-button-l edm-button-customize edm-button-ghost"
         role="button"
       >
         Cover | transparent
@@ -37,7 +37,7 @@ exports[`CoverDemo Cover change visible 1`] = `
         Cover.Transition
       </h4>
       <button
-        class="edm-button edm-button-l edm-button-primary"
+        class="edm-button edm-button-l edm-button-customize edm-button-ghost"
         role="button"
       >
         Cover.Transition | Portal
@@ -59,7 +59,7 @@ exports[`renders Cover correctly 1`] = `
       Cover
     </h4>
     <button
-      class="edm-button edm-button-l edm-button-primary"
+      class="edm-button edm-button-l edm-button-customize edm-button-ghost"
       role="button"
     >
       Cover
@@ -68,7 +68,7 @@ exports[`renders Cover correctly 1`] = `
       class="edm-whitespace edm-whitespace-m"
     />
     <button
-      class="edm-button edm-button-l edm-button-primary"
+      class="edm-button edm-button-l edm-button-customize edm-button-ghost"
       role="button"
     >
       Cover | transparent
@@ -80,7 +80,7 @@ exports[`renders Cover correctly 1`] = `
       Cover.Transition
     </h4>
     <button
-      class="edm-button edm-button-l edm-button-primary"
+      class="edm-button edm-button-l edm-button-customize edm-button-ghost"
       role="button"
     >
       Cover.Transition | Portal

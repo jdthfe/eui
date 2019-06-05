@@ -8,7 +8,7 @@ const Demo = () => {
     return (
         <WingBlank className="MessageBox">
             <h4>Dom</h4>
-            <Button onClick={changeVisible} theme="primary">
+            <Button onClick={changeVisible} ghost>
                 MessageBox
             </Button>
             <MessageBox
@@ -30,7 +30,7 @@ const Demo = () => {
             <WhiteSpace />
             <h4>Method</h4>
             <Button
-                theme="primary"
+                ghost
                 onClick={() =>
                     MessageBox.model({
                         onClickCloseIcon: () => {
@@ -65,7 +65,7 @@ const Demo = () => {
             <WhiteSpace />
 
             <Button
-                theme="primary"
+                ghost
                 onClick={() =>
                     MessageBox.alert({
                         confirmChildren: 'Alert | MultiLineButtons',
@@ -87,7 +87,7 @@ const Demo = () => {
 
             <WhiteSpace />
             <Button
-                theme="primary"
+                ghost
                 onClick={() =>
                     MessageBox.confirm({
                         title: 'Confirm',
@@ -101,7 +101,7 @@ const Demo = () => {
             <WhiteSpace />
 
             <Button
-                theme="primary"
+                ghost
                 onClick={() =>
                     MessageBox.confirm({
                         multiLineButtons: true,

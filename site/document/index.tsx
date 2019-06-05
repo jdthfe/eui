@@ -20,9 +20,12 @@ const Document: React.FC<RouteComponentProps> = props => {
      * 在 site\document\markdown\index.ts 中创建对应的 import 和 export
      */
     const markdownOnly: ComponentIndex[] = [
-        { name: 'introduce', type: 'markdownOnly', 'zh-CN': '介绍' },
-        { name: 'variable', type: 'markdownOnly', 'zh-CN': '变量' },
+        { name: 'Introduce', type: 'markdownOnly', 'zh-CN': '介绍' },
+        { name: 'Variable', type: 'markdownOnly', 'zh-CN': '变量' },
     ];
+    const disableIframe = `|${Object.values(markdownOnly)
+        .map(item => item.name.toLocaleLowerCase())
+        .join('|')}|`;
     const newDirectoryStructure = markdownOnly.concat(componentIndex);
     function isMarkdownOnly(markdownOnly: ComponentIndex[]) {
         const name = location.pathname.split('/').pop();
@@ -59,11 +62,13 @@ const Document: React.FC<RouteComponentProps> = props => {
                         />
                     ))}
 
-                    <Iframe
-                        offsetTop={preOffsetTop || 0}
-                        className={isMarkdownOnly(markdownOnly) ? 'hide' : ''}
-                        src={src}
-                    />
+                    {disableIframe.includes(`|${(src.split('/').pop() || '').toLocaleLowerCase()}|`) ? null : (
+                        <Iframe
+                            offsetTop={preOffsetTop || 0}
+                            className={isMarkdownOnly(markdownOnly) ? 'hide' : ''}
+                            src={src}
+                        />
+                    )}
                 </main>
             )}
             <Footer />

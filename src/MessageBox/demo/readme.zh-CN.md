@@ -11,7 +11,7 @@
 
 ## API
 
-### Extends `div`
+Extends `div`
 
 ### MessageBox
 

@@ -7,7 +7,7 @@ exports[`TransitionWrapDemo animation: visible=false 1`] = `
       class="edm-wingblank TransitionWrap edm-wingblank-m"
     >
       <button
-        class="edm-button edm-button-l edm-button-primary"
+        class="edm-button edm-button-l edm-button-customize edm-button-ghost"
         role="button"
       >
         click to 
@@ -36,7 +36,7 @@ exports[`TransitionWrapDemo animation: visible=true 1`] = `
       class="edm-wingblank TransitionWrap edm-wingblank-m"
     >
       <button
-        class="edm-button edm-button-l edm-button-primary"
+        class="edm-button edm-button-l edm-button-customize edm-button-ghost"
         role="button"
       >
         click to 
@@ -64,7 +64,7 @@ exports[`renders TransitionWrap correctly 1`] = `
     class="edm-wingblank TransitionWrap edm-wingblank-m"
   >
     <button
-      class="edm-button edm-button-l edm-button-primary"
+      class="edm-button edm-button-l edm-button-customize edm-button-ghost"
       role="button"
     >
       click to 

@@ -5,7 +5,7 @@ const Demo = () => {
     const [visible, setvisible] = useState(false);
     return (
         <WingBlank className="TransitionWrap">
-            <Button theme="primary" onClick={() => setvisible(!visible)}>
+            <Button ghost onClick={() => setvisible(!visible)}>
                 click to {visible ? 'hide' : 'show'} text
             </Button>
             <TransitionWrap

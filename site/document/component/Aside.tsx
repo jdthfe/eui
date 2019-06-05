@@ -7,6 +7,11 @@ interface AsideProps {
     onClick: (key: string) => void;
 }
 
+function isActive(str: string) {
+    const href = location.href.split('/').pop();
+    return href === str;
+}
+
 const Aside = (props: AsideProps) => {
     const { structure, onClick } = props;
 
@@ -14,13 +19,15 @@ const Aside = (props: AsideProps) => {
         <div className="document-aside">
             {Object.keys(structure).map(key => (
                 <Fragment key={key}>
-                    <p>{key}</p>
+                    <p className="document-aside-type">{key}</p>
                     {structure[key].map(item => (
                         <Link to={`/document/${item.name}`} replace key={item.name}>
                             <Button
-                                theme="primary"
-                                className="document-aside-btn"
+                                // theme="primary"
+                                style={isActive(item.name) ? { color: '#b73132' } : { color: '#333' }}
                                 ghost
+                                rectangle
+                                className="document-aside-btn"
                                 onClick={() => onClick(item.name)}
                             >
                                 {item.name} {getLanguage() !== 'en-US' ? item[getLanguage() as keyof LanguageObj] : ''}

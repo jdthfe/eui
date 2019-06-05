@@ -6,7 +6,7 @@
 
 ## API
 
-### Extends `div`
+Extends `div`
 
 ### Cover
 
