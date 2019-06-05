@@ -1,0 +1,31 @@
+
+<svg width="95px" height="14px" viewBox="0 0 95 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="WeUI-Minapp-Controls" transform="translate(-752.000000, -285.000000)">
+            <rect fill="#F6F6F6" x="0" y="0" width="915" height="530"></rect>
+            <g id="Android-Dark-With-Back" transform="translate(495.000000, 280.000000)">
+                <g id="Material/Android/Status-bar-360dp-black">
+                    <g id="Material/Android/Status-bar-content-light" transform="translate(242.000000, 0.000000)">
+                        <g id="time" opacity="0.9" transform="translate(74.000000, 4.000000)" fill="#FFFFFF" font-family="Helvetica" font-size="14" font-weight="normal">
+                            <text id="12:30">
+                                <tspan x="0.965820312" y="14">12:30</tspan>
+                            </text>
+                        </g>
+                        <g id="battery" transform="translate(55.000000, 4.000000)">
+                            <polygon id="bounds" points="0 0 16 0 16 16 0 16"></polygon>
+                            <polygon id="Shape" fill="#FFFFFF" points="9 1.875 9 1 6 1 6 1.875 3 1.875 3 15 12 15 12 1.875"></polygon>
+                        </g>
+                        <g id="cellular" transform="translate(35.000000, 4.000000)">
+                            <polygon id="bounds" points="0 0 16 0 16 16 0 16"></polygon>
+                            <polygon id="Shape" fill="#FFFFFF" points="0 15 14 15 14 1"></polygon>
+                        </g>
+                        <g id="wifi" transform="translate(14.000000, 4.000000)">
+                            <polygon id="bounds" points="2 0 18 0 18 16 2 16"></polygon>
+                            <path d="M0.977372085,4.01593123 C3.48821908,2.12256382 6.61301513,1 10,1 C13.3869849,1 16.5117809,2.12256382 19.0226279,4.01593123 L10,15 L0.977372085,4.01593123 Z" id="Shape" fill="#FFFFFF"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

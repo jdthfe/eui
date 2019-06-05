@@ -16,12 +16,12 @@ const Demo = () => {
     return (
         <WingBlank className="Cover">
             <h4>Cover</h4>
-            <Button theme="primary" onClick={changeVisible}>
+            <Button ghost onClick={changeVisible}>
                 Cover
             </Button>
             {visible ? <Cover onClick={changeVisible} /> : null}
             <WhiteSpace />
-            <Button theme="primary" onClick={changeVisible2}>
+            <Button ghost onClick={changeVisible2}>
                 Cover | transparent
             </Button>
             {visible2 ? (
@@ -36,7 +36,7 @@ const Demo = () => {
             <WhiteSpace />
 
             <h4>Cover.Transition</h4>
-            <Button theme="primary" onClick={changeVisible3}>
+            <Button ghost onClick={changeVisible3}>
                 Cover.Transition | Portal
             </Button>
             <Portal>

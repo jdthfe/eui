@@ -8,7 +8,7 @@
 
 ## API
 
-### Extends `div`
+Extends `div`
 
 ### Toast
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import imgUrl from '../../assets/instanceTop.png';
+import imgUrl from '../../assets/instanceBar.png';
 interface IframeProps {
     src: string;
     className: string;
@@ -17,7 +17,6 @@ const Iframe = (props: IframeProps) => {
             </div>
             <iframe className="document-iframe-main" src={src} id="iframe" />
             {/* <iframe id="iframe" width="375" height="750" /> */}
-            {/* <iframe id="iframe" src={src} width="375" height="667" /> */}
         </div>
     );
     return iframe;

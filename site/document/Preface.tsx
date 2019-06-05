@@ -1,28 +1,42 @@
 import React from 'react';
 import { Button } from '@src/index';
-import Logo from './component/Logo';
+// import Logo from './component/Logo';
+import logo from '../assets/logo1.png';
 import { Link } from 'react-router-dom';
+
+function getContent() {
+    const lang = localStorage.getItem('language');
+    switch (lang) {
+        case 'zh-CN':
+            return '基于 React 的移动端组件';
+        default:
+            return 'React-based mobile component';
+    }
+}
 
 const Preface = () => {
     return (
         <div className="preface">
             <header>
-                <Logo />
-                <p>
-                    基于 React 的移动端组件{' '}
-                    <a href="https://github.com/qqqqqcy/EDM">
-                        <Button className="preface-star" ghost inline>
-                            star ★
-                        </Button>
+                {/* <Logo /> */}
+                <img className="preface-logo" src={logo} alt="logo" />
+                <p className="preface-introduce">
+                    {getContent()}{' '}
+                    <a href="https://github.com/jdthfe/edm/tree/master">
+                        <img
+                            className="preface-star"
+                            src="https://img.shields.io/github/stars/jdthfe/edm.svg?style=social"
+                            alt="stars"
+                        />
                     </a>
                 </p>
-                <Link to="/document/introduce">
-                    <Button theme="primary" className="preface-btn" inline>
+                <Link to="/document/Introduce">
+                    <Button style={{ color: '#b73132' }} className="preface-btn" inline>
                         document
                     </Button>
                 </Link>
                 <Link to="/instance">
-                    <Button theme="primary" ghost className="preface-btn" inline>
+                    <Button style={{ color: '#b73132' }} ghost className="preface-btn" inline>
                         instance
                     </Button>
                 </Link>
