@@ -8,13 +8,31 @@
 
 以 vscode 为例
 
-1. 安装并启用扩展 `Eslint` 、`Prettier - Code formatter` 、`stylelint`（选择工作区启用，防止影响其他项目）
+1.  安装并启用扩展 `Eslint` 、`Prettier - Code formatter` 、`stylelint`（选择工作区启用，防止影响其他项目）
 
-2. 基于 vscode，相关配置已经同步到的了 `.vscode/settings.json` 中
+2.  基于 vscode，增加如下配置
 
-3. `ctrl`+`p`，输入 `>reload window`，重载窗口
+    ```json
+    {
+        // 增加测试快照可读性
+        "files.associations": { "*.ts.snap": "html" },
+        // 储存时自动格式化
+        "editor.formatOnSave": true,
+        // 允许在如下语言中提示错误和自动修复
+        "eslint.validate": [
+            "javascript",
+            "javascriptreact",
+            { "language": "typescript", "autoFix": true },
+            { "language": "typescriptreact", "autoFix": true }
+        ],
+        // 关联 prettier & stylelint
+        "prettier.stylelintIntegration": true
+    }
+    ```
 
-4. 完成！可以通过保存来自动格式化文件了
+3.  `ctrl`+`p`，输入 `>reload window`，重载窗口
+
+4.  完成！可以通过保存来自动格式化文件了
 
 ## Dev
 
