@@ -1,7 +1,3 @@
-env:
-    global:
-        - GH_REF: github.com/jdthfe/edm.git
-        - secure: 'MdWW2O5x/M7Odv4UdNK2scUa15cLq9Kq2WHYawIDlSzWeKOiO5btW0H9mdZ0eIXgWE0FIiNnYosRFU4SL0l71WvqozhSypy6WQLOrFH+x81JzX6vhtPBnhtqG1o/u3Ku1FgdBJHqEGtqO1iwEBqTSyBCQgYF/PATQMBAfWZbkdc0FhUSUvgNaw1GpnFUx9X0BArL6+ZNrnepzSkq3VkDb0GSr5LCaOFT+JMmW9fLyv0mg/k9/n5Oen2vChQYo/pkzY7lj5mlPseuKe9ss5z1s1IZVmoC/mVSNSRhICDSGYE6Nlozq5rYf0F+bGrGJqOZvArbQpffDjDi7mKvRgGhMdoFyLm/jICzTq/SzO4LK0dvw6CqGnFlcZc8bPddGBSNUdcI0wbceLbYRcfZDeD9zeEMnFIcTI4sLungm2B8iVrJyLToS4mMPEMHa47uE3sXl3IODrI8B4fqAjL+2hHNfS3MIrJ4SCLFTqUkudT5ZbfN53yTQsCBbDx9kyYWOUVZDjtkwyr5VXz5wVLtnRA7hsFBvE6PbnCmF2dXd3KK/ikw6qAyCrvjceIEtPT04U40m8OEk7yJxWWsf2dRRjOTkDuWJV88z3nWdxPzN5Ftl3CVulrcVcGLJLW4UrFCDpP5lufPLKPEw+uMa5AnhOf/mNJX9Wdv9k/3f6A6aOekT0c='
 language: node_js
 node_js:
     - 10
@@ -24,4 +20,9 @@ after_script:
     - git config user.email "qqqqqcy@gmail.com"
     - git add .
     - git commit -m "Update docs"
-    - git push -f "https://${GH_TOKEN}@${GH_REF}" master:gh-pages
+    - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages
+
+env:
+    global:
+        - GH_REF: github.com/jdthfe/edm.git
+        - secure: 'MdWW2O5x/M7Odv4UdNK2scUa15cLq9Kq2WHYawIDlSzWeKOiO5btW0H9mdZ0eIXgWE0FIiNnYosRFU4SL0l71WvqozhSypy6WQLOrFH+x81JzX6vhtPBnhtqG1o/u3Ku1FgdBJHqEGtqO1iwEBqTSyBCQgYF/PATQMBAfWZbkdc0FhUSUvgNaw1GpnFUx9X0BArL6+ZNrnepzSkq3VkDb0GSr5LCaOFT+JMmW9fLyv0mg/k9/n5Oen2vChQYo/pkzY7lj5mlPseuKe9ss5z1s1IZVmoC/mVSNSRhICDSGYE6Nlozq5rYf0F+bGrGJqOZvArbQpffDjDi7mKvRgGhMdoFyLm/jICzTq/SzO4LK0dvw6CqGnFlcZc8bPddGBSNUdcI0wbceLbYRcfZDeD9zeEMnFIcTI4sLungm2B8iVrJyLToS4mMPEMHa47uE3sXl3IODrI8B4fqAjL+2hHNfS3MIrJ4SCLFTqUkudT5ZbfN53yTQsCBbDx9kyYWOUVZDjtkwyr5VXz5wVLtnRA7hsFBvE6PbnCmF2dXd3KK/ikw6qAyCrvjceIEtPT04U40m8OEk7yJxWWsf2dRRjOTkDuWJV88z3nWdxPzN5Ftl3CVulrcVcGLJLW4UrFCDpP5lufPLKPEw+uMa5AnhOf/mNJX9Wdv9k/3f6A6aOekT0c='
