@@ -4,9 +4,9 @@ A configurable Mobile UI
 
 ## 效果预览
 
--   [电脑访问](https://jdthfe.github.io/edm/build/)
+-   [电脑访问](https://jdthfe.github.io/edm/)
 
--   [手机访问](https://jdthfe.github.io/edm/build/#/instance)
+-   [手机访问](https://jdthfe.github.io/edm/#/instance)
 
 ## 快速开发
 
