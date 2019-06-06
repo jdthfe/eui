@@ -9,4 +9,6 @@ cache:
         - node_modules
 install:
     - yarn install
-scripts: yarn test && yarn build
+scripts:
+    - yarn test
+    - yarn build
