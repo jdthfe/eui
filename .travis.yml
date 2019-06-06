@@ -7,13 +7,10 @@ branchs:
 cache:
     directories:
         - node_modules
-
 install:
     - yarn install
-
 script:
     - yarn test && yarn build
-
 after_script:
     - cd build
     - git init
@@ -22,8 +19,7 @@ after_script:
     - git add .
     - git commit -m "Update docs"
     - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages
-
 env:
     global:
         - GH_REF: github.com/jdthfe/edm.git
-        - secure: 'QDWWIikYFb12Y5NgGkDio8Di1PVBUDtXCvcQGacUglAIOuVfOFJ6IQDDXSWBEKU4KOT2noD3U0qvGevqaJuS0OrDeSJB2vqjaY+fIFTXQ4tQ64OLc5AgFSVmEdEb8oEX2hlaXiyOyUMmAsgm+dPtNdoyG3lXAypbJe31BqXa68pGvfAaOxPRLvy2vxAd+8Zca+fK31m7K99FO/VVU71vETdzxEY5bHqlgtub9UggodU8KeHZH72ilI1KZt1oc/Jz038+qzkgWDsaHLe4IZUqsfSFHEMNp3ZAdxfsaFj5Ez3HL4xpLNbThsIO2lIwpaCuOpxbLFG5ueftN0YPpV7sRKMhQ98Y+0kHCOc4rlpfQdId7mABsh94Wy4z6I/WpdF6pElsXeYo0nbkMZ6dFSM7nDJj56XBpAIzgi4UAR5Mk0mtMzt7/yUSUNSbGzYHgIIG4oWRF7vuJbI3qDbJtsviYCMhRO9bd3QP/Buxs729zByiPcf0Iv3Vm3A8Dm6TACFYIeEQd1XWZN/by8PSL4725HaWRhlbIKgUendQ15iiV92t/QxRFBWX6SlqGScWOnKY1RSpBKB87rTEtkgIqWSuLoP7HbIYtWeOiLS0bWPc5cOKlz4dZ7STtBSHvFofrqmbVC2EJX1ljRTBhzoxAmlcVSMf0+eCvn6rl9gIYFy43DQ='
+        - secure: oGpBn+qB9J4alvSQAY9kxHkoxTH/F3MznA8R9K+U40U3iy2xZ7KfRoDCGlRyt5iFqVUZ2YGWDY+uv9owoikfg6nkGtnKRwB9JINSLDapJJscNAA5cw9athG07Y8xI2Ryi57e7ENWQWJiGtEctvI6orz2RvZnmPvssMwmTFaHBoK/y54feBChBTv/WZvSpvyjPVqXE6GJw++5tKFR3Ux+Fcg9f8n4Rn2yHf8W87Rl096DVXG205PTarhnhXzjSSTE9y+NQY9DWoMd5QsSG7bDPrgXjbmgfx8TYoUReSabwl7QoUoSawRhWfkfgfNnirLMQJLzOF0TFOze/Oqh4NonEq5VBLRc5wluL/SXGeKLnB/rLJ0D21/8wRO5jwiTNIwAiBPinUelasWRNBopVoq/1kAjZbS1z8M71e4wTkU8v1AyRMVs770lbws27N3R0MiyrmndRNMUvyA5pf+qX5D2rH8CBTjDwzG2GOUc8Ew3eqNat8VtILqUtrWN6yWlh5wq2WlHlmODISMJo7SNGkGlRlVeKM6XYqeTOv59omKVf8kHVYNDb8MjuLv7wqlDQjanDIYHoVG9yOoRKOfT/QXzpcUHwOzbmhLxJ8p6Dxac2cU1crw4B4/xI8Oj5MyFmSglQXgSEHrxbKNIm1EZYAlLpH58xuPYHlEN7CK0+7MBBa4=
