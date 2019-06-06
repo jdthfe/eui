@@ -2,12 +2,18 @@
 
 [
 ![Travis (.org)](https://img.shields.io/travis/jdthfe/edm.svg?style=for-the-badge)](https://travis-ci.com/jdthfe/edm)
+[
+![Codecov](https://img.shields.io/codecov/c/gh/jdthfe/edm.svg?style=for-the-badge)](https://codecov.io/gh/jdthfe/edm/)
 ![GitHub top language](https://img.shields.io/github/languages/top/jdthfe/edm.svg?style=for-the-badge)
 ![GitHub](https://img.shields.io/github/license/jdthfe/edm.svg?style=for-the-badge)
 
-![GitHub](./site/assets/logo.png)
+基于 React 的可配置的移动端 UI 组件库
 
-A configurable Mobile UI
+<p align="center">
+  <a href="https://jdthfe.github.io/edm/" rel="nofollow">
+    <img width="320" src="./site/assets/logo.png" style="max-width:100%;">
+  </a>
+</p>
 
 ## 效果预览
 
