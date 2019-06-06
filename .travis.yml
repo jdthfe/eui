@@ -11,12 +11,11 @@ cache:
 install:
     - yarn install
 
-scripts:
-    - yarn run build
+script:
+    - yarn test && yarn build && ls && cd build && ls
 
 after_script:
     - cd build
-    - ls
     - git init
     - git config user.name "Travis"
     - git config user.email "qqqqqcy@gmail.com"
