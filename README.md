@@ -1,10 +1,11 @@
 # EUI（Elephant UI）
 
-![Travis (.org)](https://img.shields.io/travis/jdthfe/edm.svg?style=for-the-badge)
+[
+![Travis (.org)](https://img.shields.io/travis/jdthfe/edm.svg?style=for-the-badge)](https://travis-ci.com/jdthfe/edm)
 ![GitHub top language](https://img.shields.io/github/languages/top/jdthfe/edm.svg?style=for-the-badge)
 ![GitHub](https://img.shields.io/github/license/jdthfe/edm.svg?style=for-the-badge)
 
-<img src="./site/assets/logo1.png" alt="logo" style="display:block;width:200px;margin:50px auto;" />
+![GitHub](./site/assets/logo.png)
 
 A configurable Mobile UI
 

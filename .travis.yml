@@ -18,8 +18,8 @@ after_script:
     - git config user.email "qqqqqcy@gmail.com"
     - git add .
     - git commit -m "Update docs"
-    - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages
+    - git push -f "https://${GH_TOKEN}@${GH_REF}" master:gh-pages
 env:
     global:
         - GH_REF: github.com/jdthfe/edm.git
-        - secure: Bg7H7ma0w+8MWLHMbInsMq1+LNA02znTJjWhmvwVxmxyAV93WlCRm+PDMhF98xoxn9XjKVua9Nca51XHQzyu/kAt8nJlRS6vfVZXKUbv2jbILb2AAjJ3RxVlXFVnDGj/j0ULM/36v/gJOfPd6UWZNCBGk+XHj5rfbsTUqzlWfGQiMhYNvHhTX8DytZFJCaH5xek6QTXXiz9CvSkLMQk2HdGw9nPd8yFeQpq3r3SbBrU/HmyhoyJ1nkFl1Fh3ycJiL712o92uEKdrqPvGPSzm9B+kPxxYar4sm0NaL59cNiDsrLnpLmluLn03qvhoaNUOIOvZTfFL33pLNvO/v2WD9hKTJi3i3CXpfn8OHxglMM72WdlNj7xNGG0K8wmNlIAJoEX4hbbzCZjDKEpdVLca65Adtw8iaYx0HeO/H54mGfyprZhzANV4rfeDJhAxMQfmZWr3x+8sVQKr6Y2LabUAofNcB2kBi8gujCz7Ibii/yP/WgtXuU8jvmXz9OnXcxximNK+ewOvbukwYf5WZJ8JBX2aIRgV/4dt2wKzxsm1pi5a4Ex3RwUoHj+28/AY+wZUsMNrUqGodDMumEld1Kd23jkQKwz7BtFSlzq7UauZlLQVbpAu8z+t1lZV82BCPgxWMIVoQa3Gs9tP+IayLegDTFNFY4bT/T2apBANFeryDMg=
+        - secure: NOy8tZjKLQRMGtvojX3FiFLVP/Hf2h1RSQjsf1CcLeXLaPoB0P1EwTVOfMMc6swc7DySmPPT9GUm5zCqM9NC86MqKVRFd9Ze3/Vl//XZ7p2Hu0DyyuiHNYFdy6xjg2gPU0K2UGH5VsuZWYYbSmISi33lZE1xpY+cf/a6DRSHP1jzrqz9ertOXr6gVCFU4pKGNWo9Ru5oa2wy03r+pUAJywPsor4NhWMaYA+XCKtt3GzhM+x85o9IMHnrdi+p3kPlU0trW4xO/zXOzAi8XaP+jj/Cu44L3O4wdy9EipUN/kOoJTsLVngk4lUD6/HrbXbcgq+f0ZkKOPJYlNxI8Yid/ZJPBQaTZhwreskukaLlKFagP2mjZGHphInHPOErAzhfBYsYudifDFSOP4geMWJ9BTEzefZ9LSxtxSXSkJ0pYfJ/nTSapllIHBxLLHPAV7jK/wywhyppq+Rfv75kOoqbcCUrm8nMY7ZJ4/3d9T5hmzAcKp7phuUJTWKhRtyUMhEKFxVTIciG/yZPlM8sbUOe1h1GFJtZ7fLE1fakgVdpHOgdEg8Ie69EjHLj4/oR6gfzWVQdemwZrkKba7itBuYyK6xs/Gk5YVgYDglgQMgm8tO+tWjnMyAvDDM6wiTUwBmPbgAntuGxg/GJ2z8hXIHh1zifQXjWr9fM6edVBudieTM=
