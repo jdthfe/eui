@@ -12,7 +12,7 @@ install:
     - yarn install
 
 script:
-    - yarn test && yarn build && ls && cd build && ls
+    - yarn test && yarn build
 
 after_script:
     - cd build
@@ -26,4 +26,4 @@ after_script:
 env:
     global:
         - GH_REF: github.com/jdthfe/edm.git
-        - secure: 'MdWW2O5x/M7Odv4UdNK2scUa15cLq9Kq2WHYawIDlSzWeKOiO5btW0H9mdZ0eIXgWE0FIiNnYosRFU4SL0l71WvqozhSypy6WQLOrFH+x81JzX6vhtPBnhtqG1o/u3Ku1FgdBJHqEGtqO1iwEBqTSyBCQgYF/PATQMBAfWZbkdc0FhUSUvgNaw1GpnFUx9X0BArL6+ZNrnepzSkq3VkDb0GSr5LCaOFT+JMmW9fLyv0mg/k9/n5Oen2vChQYo/pkzY7lj5mlPseuKe9ss5z1s1IZVmoC/mVSNSRhICDSGYE6Nlozq5rYf0F+bGrGJqOZvArbQpffDjDi7mKvRgGhMdoFyLm/jICzTq/SzO4LK0dvw6CqGnFlcZc8bPddGBSNUdcI0wbceLbYRcfZDeD9zeEMnFIcTI4sLungm2B8iVrJyLToS4mMPEMHa47uE3sXl3IODrI8B4fqAjL+2hHNfS3MIrJ4SCLFTqUkudT5ZbfN53yTQsCBbDx9kyYWOUVZDjtkwyr5VXz5wVLtnRA7hsFBvE6PbnCmF2dXd3KK/ikw6qAyCrvjceIEtPT04U40m8OEk7yJxWWsf2dRRjOTkDuWJV88z3nWdxPzN5Ftl3CVulrcVcGLJLW4UrFCDpP5lufPLKPEw+uMa5AnhOf/mNJX9Wdv9k/3f6A6aOekT0c='
+        - secure: 'QDWWIikYFb12Y5NgGkDio8Di1PVBUDtXCvcQGacUglAIOuVfOFJ6IQDDXSWBEKU4KOT2noD3U0qvGevqaJuS0OrDeSJB2vqjaY+fIFTXQ4tQ64OLc5AgFSVmEdEb8oEX2hlaXiyOyUMmAsgm+dPtNdoyG3lXAypbJe31BqXa68pGvfAaOxPRLvy2vxAd+8Zca+fK31m7K99FO/VVU71vETdzxEY5bHqlgtub9UggodU8KeHZH72ilI1KZt1oc/Jz038+qzkgWDsaHLe4IZUqsfSFHEMNp3ZAdxfsaFj5Ez3HL4xpLNbThsIO2lIwpaCuOpxbLFG5ueftN0YPpV7sRKMhQ98Y+0kHCOc4rlpfQdId7mABsh94Wy4z6I/WpdF6pElsXeYo0nbkMZ6dFSM7nDJj56XBpAIzgi4UAR5Mk0mtMzt7/yUSUNSbGzYHgIIG4oWRF7vuJbI3qDbJtsviYCMhRO9bd3QP/Buxs729zByiPcf0Iv3Vm3A8Dm6TACFYIeEQd1XWZN/by8PSL4725HaWRhlbIKgUendQ15iiV92t/QxRFBWX6SlqGScWOnKY1RSpBKB87rTEtkgIqWSuLoP7HbIYtWeOiLS0bWPc5cOKlz4dZ7STtBSHvFofrqmbVC2EJX1ljRTBhzoxAmlcVSMf0+eCvn6rl9gIYFy43DQ='
