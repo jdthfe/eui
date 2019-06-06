@@ -7,11 +7,12 @@ branchs:
 cache:
     directories:
         - node_modules
+
 install:
     - yarn install
+
 scripts:
-    - yarn build
-    - yarn test
+    - yarn run build
 
 after_script:
     - cd build
