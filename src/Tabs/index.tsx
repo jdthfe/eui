@@ -18,7 +18,7 @@ function getLineOffset(index: any, tabWrapNode?: any) {
         top = 0;
     if (tabWrapNode) {
         const tabs = tabWrapNode.querySelectorAll('.edm-tabs-nav');
-        console.log(tabs);
+        // console.log(tabs);
         for (let i = 0; i < tabs.length; i++) {
             if (i < index) {
                 left += tabs[i].offsetWidth;
