@@ -183,7 +183,6 @@
         background-color: $siteYellow;
     }
     code {
-        padding: 2px;
         background-color: $siteYellow;
     }
     a {
@@ -306,6 +305,9 @@
     }
     code {
         padding: 0 6px;
+    }
+    &-code code {
+        padding: 0;
     }
     table {
         width: 100%;

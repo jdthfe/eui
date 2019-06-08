@@ -13,7 +13,7 @@
         "compiled"
     ],
     "scripts": {
-        "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./scripts/config/webpack.config.dev.ts --open 'Google Chrome'",
+        "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./scripts/config/webpack.config.dev.ts",
         "build": "cross-env NODE_ENV=build webpack -p --config ./scripts/config/webpack.config.build.ts",
         "test": "cross-env NODE_ENV=test jest --config=./jest.config.js --runInBand",
         "rm": "ts-node scripts/template/remove.ts && eslint ./site/_util/componentIndex.tsx --fix",
