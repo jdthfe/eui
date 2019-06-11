@@ -1,37 +1,61 @@
-description
+Use to show important information for the system, and ask for user feedback. eg: When deleting an important content, pop up a Modal for secondary confirmation.
 
-## Rule
-
--   尽可能少用。Modal 会打断用户操作，只用在重要的时候。
--   标题应该简明，不能超过 1 行；描述内容应该简明、完整，一般不多于 2 行。
--   操作按钮最多到 3 个（竖排可以使用 multiLineButtons 样式），一般为 1-2 个（横排）；
--   一般将用户最可能点击的按钮，放在右侧。另外，取消按钮应当始终放在左侧。
+When there are more than 2 action buttons, it is recommended to use the multiLineButtons style to have the buttons line up vertically.
 
 ## Demo
 
-other description
-
 ## API
 
-| Properties | Descrition  | Type     | Default     | Required |
-| ---------- | ----------- | -------- | ----------- | -------- |
-| prop       | description | `string` | `'default'` | `false`  |
+Extends `div`
 
-| Properties        | Descrition                                                                               | Type                      | Default | Required |
-| ----------------- | ---------------------------------------------------------------------------------------- | ------------------------- | ------- | -------- |
-| title             | Title                                                                                    | `string`                  | -       | `false`  |
-| buttons           | ButtonProps list，When `multiLine = false`, the button is rendered from left to right    | `ButtonProps[]`           | -       | `false`  |
-| multiLineButtons  | Let each button take a single line                                                       | `boolean`                 | -       | `false`  |
-| hiddenline        | Hidden the line before buttons                                                           | `boolean`                 | -       | `false`  |
-| onClickCloseIcon  | Callback on click the cross button. When the value is empty, the button is not displayed | `() => void`              | -       | `false`  |
-| coverProps        | CoverProps                                                                               | `CoverWithTransitionWrap` | -       | `false`  |
-| onClickCloseIcon  | Callback on click the cross button. When the value is empty, the button is not displayed | `() => void | boolean`    | -       | `false`  |
-| preventClickCover | On click cover, return `true` to prvent                                                  | `boolean`                 | -       | `false`  |
-| onClickCover      | On click cover, return `true` to prvent                                                  | `() => void | boolean`    | -       | `false`  |
-| noCover           | Cover will block page clicks                                                             | `boolean`                 | -       | `false`  |
-| confirmButton     |                                                                                          | `ButtonProps`             | -       | `false`  |
-| confirmCallback   |                                                                                          | `() => void | boolean`    | -       | `false`  |
-| confirmChildren   |                                                                                          | `React.ReactNode`         | -       | `false`  |
-| cancelButton      |                                                                                          | `ButtonProps`             | -       | `false`  |
-| cancelCallback    |                                                                                          | `() => void | boolean`    | -       | `false`  |
-| cancelChildren    |                                                                                          | `React.ReactNode`         | -       | `false`  |
+### MessageBox
+
+React.Dom
+
+| Properties | Descrition | Type | Default | Required |
+| --- | --- | --- | --- | --- |
+| title | Title | `string` | - | `false` |
+| buttons | ButtonProps list，When `multiLine = false`, the button is rendered from left to right | `ButtonProps[]` | - | `false` |
+| multiLineButtons | Let each button take a single line | `boolean` | - | `false` |
+| hiddenline | Hidden the line before buttons | `boolean` | - | `false` |
+| onClickCloseIcon | Callback on click the cross button. When the value is empty, the button is not displayed | `() => void` | - | `false` |
+| coverProps | CoverProps | `CoverWithTransitionWrap` | - | `false` |
+| [`...Portal`](#/document/Portal) |  |  |  |  |
+| [`...TransitionWrap`](#/document/TransitionWrap) |  |  |  |  |
+| [transitionClassName](#/document/TransitionWrap) | The animation classNames applied to the component as it enters, exits or has finished the transition. | `string` | [`transitionFade`](#/document/variable) | `false` |
+
+---
+
+### MessageBox.model
+
+Call `const close = MessageBox.model()` to show, call `close()` to turn it off immediately. （**Prevents the MessageBox from closing when `onClick` in `buttons[]` returns `true`**. The same below）
+
+| Properties | Descrition | Type | Default | Required |
+| --- | --- | --- | --- | --- |
+| [`...MessageBox`](#/document/MessageBox) |  |  |  |  |
+| preventClickCover | Prevent click cover | `boolean` | - | `false` |
+| onClickCloseIcon | Callback on click the cross button. When the value is empty, the button is not displayed. **return `true` to prvent Message's close** | `() => void | boolean` | - | `false` |
+| onClickCover | On click cover, |
+| **return `true` to prvent Message's close** | `() => void | boolean` | - | `false` |
+
+### MessageBox.alert
+
+Call `const close = MessageBox.alert()` to show, call `close()` to turn it off immediately. Comes with a confirmation button
+
+| Properties | Descrition | Type | Default | Required |
+| --- | --- | --- | --- | --- |
+| [`...MessageBox.model`](#/document/MessageBox) |  |  |  |  |
+| confirmButton | confirmButton’s props | `ButtonProps` | - | `false` |
+| confirmCallback | confirmButton’s callback, **return `true` to prvent Message's close** | `() => void | boolean` | - | `false` |
+| confirmChildren | confirmButton’s children | `React.ReactNode` | - | `false` |
+
+### MessageBox.confirm
+
+Call `const close = MessageBox.confirm()` to show, call `close()` to turn it off immediately. Comes with a confirmation button and a cancel button
+
+| Properties | Descrition | Type | Default | Required |
+| --- | --- | --- | --- | --- |
+| [`...MessageBox.alert`](#/document/MessageBox) |  |  |  |  |
+| cancelButton | cancelButton’s props | `ButtonProps` | - | `false` |
+| cancelCallback | cancelButton’s callback, **return `true` to prvent Message's close** | `() => void | boolean` | - | `false` |
+| cancelChildren | cancelButton’s children | `React.ReactNode` | - | `false` |

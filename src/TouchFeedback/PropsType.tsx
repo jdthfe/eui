@@ -1,13 +1,13 @@
 export interface TouchFeedbackProps {
-    /** 禁用 */
+    /** disabled */
     disabled?: boolean;
-    /** 点击时的属性名 */
+    /** className applied to child when active */
     activeClassName?: string;
-    /** 点击时的样式 */
+    /** style applied to child when active  */
     activeStyle?: React.CSSProperties;
 }
 
 export interface TouchFeedbackPropsWithChildren extends TouchFeedbackProps {
-    /** 被包裹的唯一子组件 */
+    /** children */
     children: React.ReactElement;
 }

@@ -36,7 +36,7 @@ const config: webpack.Configuration = {
     // },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'EDM',
+            title: 'Elephant UI',
             template: getProjectUrl('site', 'index.html'),
         }),
     ],

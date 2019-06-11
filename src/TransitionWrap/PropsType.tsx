@@ -1,18 +1,18 @@
 export interface TransitionWrapProps {
-    /** 是否展示 */
+    /** Show the component; triggers the enter or exit states */
     visible?: boolean;
-    /** active 动画持续时长 */
+    /** The duration of the transition, in milliseconds */
     time?: number;
-    /** 动画的属性名 */
+    /** The animation classNames applied to the component as it enters, exits or has finished the transition */
     transitionClassName?: string;
-    /** visible 为 false 时节点也不删除 */
+    /** By default the child component unmount after it reaches the '[transitionClassName]-exit-done' state. Set keepOnExit if you'd prefer to retain the component after it finishes exiting. */
     keepOnExit?: boolean;
-    /** 动画完成时的回调函数 */
+    /** Callback fired after the ‘[transitionClassName]-exit-done’ status is applied.  */
     onExitDone?: () => void;
 }
 
 export interface TransitionWrapPropsWithChildren extends TransitionWrapProps {
-    /** 子组件，可以包含多个 */
+    /** children */
     children: React.ReactElement | React.ReactElement[];
 }
 

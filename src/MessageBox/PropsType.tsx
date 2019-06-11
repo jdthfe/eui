@@ -24,7 +24,7 @@ export interface MessageBoxProps
 export interface MessageBoxPropsWithModel extends MessageBoxProps {
     /** Callback on click the cross button. When the value is empty, the button is not displayed  */
     onClickCloseIcon?: () => void | boolean;
-    /** On click cover, return `true` to prvent Message's close  */
+    /** Prevent click cover  */
     preventClickCover?: boolean;
     /** On click cover, return `true` to prvent Message's close  */
     onClickCover?: () => void | boolean;

@@ -1,10 +1,17 @@
+> reference: [React Transition Group](https://reactcommunity.org/react-transition-group/)
+
 Simple animation component
+
+The animation classNames applied to the component as it enters, exits or has finished the transition. A single name can be provided and it will be suffixed for each stage: e.g.
+
+_transitionClassName="fade" applies fade-enter, fade-enter-active, fade-enter-done, fade-exit, fade-exit-active and fade-exit-done._
 
 ## Demo
 
 ## Style
 
-```scss
+```css
+/* demo style */
 .hello {
     opacity: 1;
     transition: all 0.5s;
@@ -33,11 +40,12 @@ other description
 
 ## API
 
-| 属性                | 说明                            | 类型                                        | 默认值         | 必填    |
-| ------------------- | ------------------------------- | ------------------------------------------- | -------------- | ------- |
-| visible             | 是否展示                        | `boolean`                                   | `true`         | `false` |
-| time                | active 动画持续时长             | `number`                                    | `0`            | `false` |
-| transitionClassName | 动画的属性名                    | `string`                                    | `'transition'` | `false` |
-| keepOnExit          | visible 为 false 时节点也不删除 | `boolean`                                   | `false`        | `false` |
-| onExitDone          | 动画完成时的回调函数            | `() => void`                                | `() => {}`     | `false` |
-| children            | 子组件，可以包含多个            | `React.ReactElement | React.ReactElement[]` | -              | `true`  |
+children : `React.ReactElement | React.ReactElement[]`
+
+| Properties | Descrition | Type | Default | Required |
+| --- | --- | --- | --- | --- |
+| visible | Show the component; triggers the enter or exit states | `boolean` | `false` | `false` |
+| time | The duration of the transition, in milliseconds | `number` | `0` | `false` |
+| transitionClassName | The animation classNames applied to the component as it enters, exits or has finished the transition | `string` | `'transition'` | `false` |
+| keepOnExit | By default the child component unmount after it reaches the 'exit-done' state. Set keepOnExit if you'd prefer to retain the component after it finishes exiting. | `boolean` | `false` | `false` |
+| onExitDone | Callback fired after the "exit-done" status is applied. | `() => void` | `() => {}` | `false` |

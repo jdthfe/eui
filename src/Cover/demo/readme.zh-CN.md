@@ -6,7 +6,7 @@
 
 ## API
 
-Extends `div`
+继承 `div`
 
 ### Cover
 
@@ -18,7 +18,8 @@ Extends `div`
 
 附带动画效果的 `Cover`
 
-| 属性                                             | 说明     | 类型     | 默认值                                | 必填    |
-| ------------------------------------------------ | -------- | -------- | ------------------------------------- | ------- |
-| transitionClassName                              | 动画属性 | `string` | [transitionFade](#/document/variable) | `false` |
-| [`...TransitionWrap`](#/document/TransitionWrap) |          |          |                                       |         |
+| 属性 | 说明 | 类型 | 默认值 | 必填 |
+| --- | --- | --- | --- | --- |
+| [`...Cover`](#/document/Cover) |  |  |  |  |
+| [`...TransitionWrap`](#/document/TransitionWrap) |  |  |  |  |
+| [transitionClassName](#/document/TransitionWrap) | 动画属性 | `string` | [`transitionFade`](#/document/variable) | `false` |

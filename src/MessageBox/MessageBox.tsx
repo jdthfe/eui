@@ -8,9 +8,9 @@ import { transitionFade } from '../_util/variable';
 import Icon from '../Icon';
 import Button from '../Button';
 import Cover from '../Cover';
-const { Transition } = Cover;
 import Portal from '../Portal';
 import TransitionWrap from '../TransitionWrap';
+const { Transition } = Cover;
 
 const MessageBox = (props: MessageBoxProps) => {
     const {

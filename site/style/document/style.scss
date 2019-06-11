@@ -334,4 +334,16 @@
     table th {
         background: $siteYellow;
     }
+    hr {
+        border: none;
+        /* prettier-ignore */
+        border-top: 1PX $siteBlack solid;
+        opacity: 0.2;
+    }
+    blockquote {
+        padding: 0 1em;
+        margin-left: 0;
+        color: #6a737d;
+        border-left: 0.25em solid #dfe2e5;
+    }
 }
