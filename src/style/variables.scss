@@ -36,6 +36,9 @@ $v-spacing-m: 9 * $hd;
 $v-spacing-l: 15 * $hd;
 $v-spacing-xl: 21 * $hd;
 
+//Time
+$transitionTime: 0.16s;
+
 // Button
 // ---
 @function getGradientDark($color) {

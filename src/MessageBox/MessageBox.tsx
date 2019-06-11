@@ -4,12 +4,14 @@ import { MessageBoxProps } from './PropsType';
 import prefix from '../_util/prefix';
 const prefixCls = `${prefix}-messagebox`;
 
-import { transitionFade } from '../_util/variable';
 import Icon from '../Icon';
 import Button from '../Button';
 import Cover from '../Cover';
 import Portal from '../Portal';
 import TransitionWrap from '../TransitionWrap';
+import variable from '../_util/variable';
+const { transitionFade } = variable;
+
 const { Transition } = Cover;
 
 const MessageBox = (props: MessageBoxProps) => {
@@ -38,14 +40,7 @@ const MessageBox = (props: MessageBoxProps) => {
     const btnCls = classnames(`${prefixCls}-buttons`, { [`${prefixCls}-buttons-multiline`]: multiLineButtons });
     return (
         <Portal mountNode={mountNode}>
-            <Transition
-                visible={visible}
-                keepOnExit={keepOnExit}
-                time={time}
-                onExitDone={onExitDone}
-                transitionClassName={transitionClassName}
-                {...coverProps}
-            />
+            <Transition visible={visible} time={time} keepOnExit={keepOnExit} onExitDone={onExitDone} {...coverProps} />
 
             <TransitionWrap
                 visible={visible}

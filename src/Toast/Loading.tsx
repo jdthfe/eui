@@ -6,7 +6,9 @@ import { ToastPropsWithModel } from './PropsType';
 import Icon from '../Icon';
 import WhiteSpace from '../WhiteSpace';
 
-import { transitionTime } from '../_util/variable';
+import variable from '../_util/variable';
+const { transitionTime } = variable;
+
 const div = document.createElement('div');
 let close = () => {};
 let timer: number;

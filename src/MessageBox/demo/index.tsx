@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MessageBox, Button, WhiteSpace, WingBlank, Icon } from '@src/index';
+import { MessageBox, Button, WhiteSpace, WingBlank, Icon, Variable } from '@src/index';
 const Demo = () => {
     const [visible, setVisible] = useState(false);
     function changeVisible() {
@@ -107,6 +107,7 @@ const Demo = () => {
                         multiLineButtons: true,
                         title: 'Confirm',
                         children: 'children',
+                        transitionClassName: Variable.transitionZoom,
                     })
                 }
             >

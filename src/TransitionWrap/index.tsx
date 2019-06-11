@@ -2,6 +2,9 @@ import React, { useEffect } from 'react';
 import classnames from 'classnames';
 import { TransitionStatus, TransitionWrapPropsWithChildren } from './PropsType';
 
+import variable from '../_util/variable';
+const { transitionTime } = variable;
+
 const statusCase: { [propName: string]: TransitionStatus } = {
     entry: 'entry',
     entryActive: 'entry-active',
@@ -14,7 +17,7 @@ const statusCase: { [propName: string]: TransitionStatus } = {
 const TransitionWrap = (props: TransitionWrapPropsWithChildren) => {
     const {
         children,
-        time = 0,
+        time = transitionTime,
         visible = false,
         keepOnExit = false,
         transitionClassName = 'transition',

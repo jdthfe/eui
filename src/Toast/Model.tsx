@@ -6,7 +6,8 @@ import { ToastPropsWithModel } from './PropsType';
 import Icon from '../Icon';
 import WhiteSpace from '../WhiteSpace';
 
-import { transitionTime, defaultDuration } from '../_util/variable';
+import variable from '../_util/variable';
+const { transitionTime, defaultDuration } = variable;
 
 const model = (props: ToastPropsWithModel) => {
     const {

@@ -4,9 +4,8 @@ import ReactDOM from 'react-dom';
 import MessageBox from './MessageBox';
 import { MessageBoxPropsWithModel, MessageBoxAlert, MessageBoxConfirm } from './PropsType';
 import prefix from '../_util/prefix';
-const prefixCls = `${prefix}-messagebox`;
 
-import { transitionTime } from '../_util/variable';
+const prefixCls = `${prefix}-messagebox`;
 
 const model = (props: MessageBoxPropsWithModel) => {
     const {
@@ -19,7 +18,7 @@ const model = (props: MessageBoxPropsWithModel) => {
         preventClickCover = false,
         // TransisitonWrap
         onExitDone = () => {},
-        time = transitionTime,
+        time,
         // rest
         ...restProps
     } = props;

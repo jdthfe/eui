@@ -13,6 +13,7 @@ if (
             'please use https://www.npmjs.com/package/babel-plugin-import to reduce app bundle size.',
     );
 }
+export { default as Variable } from './_util/variable';
 export { default as Button } from './Button';
 export { default as Icon } from './Icon';
 export { default as TouchFeedback } from './TouchFeedback';
