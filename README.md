@@ -1,12 +1,25 @@
-# EDM（Elephant Design Mobile）
+# EUI（Elephant UI）
 
-A configurable Mobile UI
+[
+![Travis (.org)](https://img.shields.io/travis/jdthfe/edm.svg?style=for-the-badge)](https://travis-ci.com/jdthfe/edm)
+[
+![Codecov](https://img.shields.io/codecov/c/gh/jdthfe/edm.svg?style=for-the-badge)](https://codecov.io/gh/jdthfe/edm/)
+![GitHub top language](https://img.shields.io/github/languages/top/jdthfe/edm.svg?style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/jdthfe/edm.svg?style=for-the-badge)
+
+基于 React 的可配置的移动端 UI 组件库
+
+<p align="center">
+  <a href="https://jdthfe.github.io/edm/" rel="nofollow">
+    <img width="320" src="./site/assets/logo.png" style="max-width:100%;">
+  </a>
+</p>
 
 ## 效果预览
 
--   [电脑访问](https://jdthfe.github.io/edm/build/)
+-   [文档](https://jdthfe.github.io/edm/)
 
--   [手机访问](https://jdthfe.github.io/edm/build/#/instance)
+-   [移动端实例](https://jdthfe.github.io/edm/#/instance)
 
 ## 快速开发
 

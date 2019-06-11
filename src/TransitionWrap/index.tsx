@@ -71,11 +71,9 @@ const TransitionWrap = (props: TransitionWrapPropsWithChildren) => {
             <React.Fragment>
                 {React.Children.map(children, child => {
                     let { className } = child.props;
-                    if (transitionClassName) {
-                        className = classnames(className, `${transitionClassName}-${status}`, {
-                            [transitionClassName]: transitionClassName !== className,
-                        });
-                    }
+                    className = classnames(className, `${transitionClassName}-${status}`, {
+                        [transitionClassName]: transitionClassName !== className,
+                    });
                     return React.cloneElement(child, { className });
                 })}
             </React.Fragment>

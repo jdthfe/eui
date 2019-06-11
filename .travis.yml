@@ -1,0 +1,31 @@
+language: node_js
+node_js:
+    - 10
+branchs:
+    only:
+        - master
+cache:
+    directories:
+        - node_modules
+install:
+    - yarn install
+    - yarn add codecov -D
+script:
+    - yarn test
+    - yarn build
+
+after_success:
+    - ./node_modules/.bin/codecov
+
+after_script:
+    - cd build
+    - git init
+    - git config user.name "qqqqqcy"
+    - git config user.email "qqqqqcy@gmail.com"
+    - git add .
+    - git commit -m "Update docs"
+    - git push -f "https://${GH_TOKEN}@${GH_REF}" master:gh-pages
+env:
+    global:
+        - GH_REF: github.com/jdthfe/edm.git
+        - secure: NOy8tZjKLQRMGtvojX3FiFLVP/Hf2h1RSQjsf1CcLeXLaPoB0P1EwTVOfMMc6swc7DySmPPT9GUm5zCqM9NC86MqKVRFd9Ze3/Vl//XZ7p2Hu0DyyuiHNYFdy6xjg2gPU0K2UGH5VsuZWYYbSmISi33lZE1xpY+cf/a6DRSHP1jzrqz9ertOXr6gVCFU4pKGNWo9Ru5oa2wy03r+pUAJywPsor4NhWMaYA+XCKtt3GzhM+x85o9IMHnrdi+p3kPlU0trW4xO/zXOzAi8XaP+jj/Cu44L3O4wdy9EipUN/kOoJTsLVngk4lUD6/HrbXbcgq+f0ZkKOPJYlNxI8Yid/ZJPBQaTZhwreskukaLlKFagP2mjZGHphInHPOErAzhfBYsYudifDFSOP4geMWJ9BTEzefZ9LSxtxSXSkJ0pYfJ/nTSapllIHBxLLHPAV7jK/wywhyppq+Rfv75kOoqbcCUrm8nMY7ZJ4/3d9T5hmzAcKp7phuUJTWKhRtyUMhEKFxVTIciG/yZPlM8sbUOe1h1GFJtZ7fLE1fakgVdpHOgdEg8Ie69EjHLj4/oR6gfzWVQdemwZrkKba7itBuYyK6xs/Gk5YVgYDglgQMgm8tO+tWjnMyAvDDM6wiTUwBmPbgAntuGxg/GJ2z8hXIHh1zifQXjWr9fM6edVBudieTM=
