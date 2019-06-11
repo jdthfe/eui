@@ -11,7 +11,7 @@ const config: webpack.Configuration = {
     mode: 'production',
     output: {
         path: getProjectUrl('compiled', 'dist'),
-        library: 'eled-mobile',
+        library: 'e-ui',
         libraryTarget: 'umd',
         globalObject: 'this',
     },
