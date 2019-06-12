@@ -13,8 +13,8 @@ install:
     - yarn install
     - yarn add codecov -D
 script:
-    - yarn test
     - |
+        yarn test && \
         if [ $? -ne 0 ]; then
             echo "Test failed"
         else
