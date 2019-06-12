@@ -1,15 +1,22 @@
-组件中常用的变量
+组件中一些常用的变量
 
-```jsx
-// 样式名前缀
-prefix = 'edm';
+```tsx
+import prefix from './prefix';
 
-// toast 持续时间
-defaultDuration = 2000;
+export default {
+    defaultDuration: 2000,
 
-// 动画出现、消失时长
-transitionTime = 160;
+    transitionTime: 160,
+    transitionFade: `${prefix}-fade`,
+    transitionZoom: `${prefix}-zoom`,
+};
+```
 
-// 渐变效果属性名
-transitionFade = `${prefix}-fade`;
+如何使用
+
+```tsx
+import { Variable } from 'eui';
+// import Variable from 'eui/compiled/lib/_util/variable.js'; // 如果使用了 babel-plugin-import
+
+console.log(Variable.defaultDuration); // 2000
 ```

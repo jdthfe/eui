@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { componentIndex, sortComponentIndex } from '../_util';
+import { componentIndex, markdownOnly, sortComponentIndex } from '../_util';
 import { Route, RouteComponentProps } from 'react-router-dom';
 
 import Nav from './component/Nav';
@@ -17,12 +17,7 @@ const Document: React.FC<RouteComponentProps> = props => {
      * 添加纯文本页面
      * @type 类型必须为 markdownOnly
      * @name 请创建 [name].md 在对应文件夹中 site\document\markdown
-     * 在 site\document\markdown\index.ts 中创建对应的 import 和 export
      */
-    const markdownOnly: ComponentIndex[] = [
-        { name: 'Introduce', type: 'markdownOnly', 'zh-CN': '介绍' },
-        { name: 'Variable', type: 'markdownOnly', 'zh-CN': '变量' },
-    ];
     const disableIframe = `|${Object.values(markdownOnly)
         .map(item => item.name.toLocaleLowerCase())
         .join('|')}|`;

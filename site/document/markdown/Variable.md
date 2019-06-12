@@ -1,15 +1,22 @@
 Common variables in components
 
-```jsx
-// components class prefix
-prefix = 'edm';
+```tsx
+import prefix from './prefix';
 
-// toast 持续时间
-defaultDuration = 2000;
+export default {
+    defaultDuration: 2000,
 
-// 动画出现、消失时长
-transitionTime = 160;
+    transitionTime: 160,
+    transitionFade: `${prefix}-fade`,
+    transitionZoom: `${prefix}-zoom`,
+};
+```
 
-// 渐变效果属性名
-transitionFade = `${prefix}-fade`;
+Usage
+
+```tsx
+import { Variable } from 'eui';
+// import Variable from 'eui/compiled/lib/_util/variable.js'; // If you use babel-plugin-import
+
+console.log(Variable.defaultDuration); // 2000
 ```

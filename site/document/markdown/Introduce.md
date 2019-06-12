@@ -1,63 +1,87 @@
-`EUI` ( Elephant UI) 是一套使用 Typescript 和最新 React Hooks 语法开发的移动端组件库。
+`EUI` ( Elephant UI) is a set of mobile component libraries developed using Typescript and the latest React Hooks syntax.
 
-### 特性和优势
+### Features and Advantages
 
--   UI 样式高度可配置，拓展性更强，轻松适应各类产品风格
--   提供 "组件按需加载" / "Web 页面高清显示" / "SVG Icon" 等优化方案，一体式开发
--   使用 TypeScript 开发，提供类型定义文件，支持类型及属性智能提示，方便业务开发
--   使用配合 TS 使用属性继承，方便对组件进行二次封装
--   使用 React Hooks 开发，性能优异
--   [测试覆盖率 80% 以上](https://codecov.io/gh/jdthfe/edm/)
+-   The UI is fully Configurable and Scalable, easily adapt to all kinds of product style.
+-   Provide "Components are loaded on demand" / "Web page HD display" / "SVG Icon" optimization features, integrated development.
+-   Use TypeScript to develop, provide type definition files, support type and attribute smart tips for easy business development.
+-   Use attribute inheritance with TS to facilitate secondary encapsulation of components
+-   Developed with React Hooks for superior performance
+-   [Test coverage is over 80%](https://codecov.io/gh/jdthfe/edm/)
 
-### 快速上手
+### Getting Started
 
-> 在开始之前，推荐先学习 React 和 ES2015。我们使用了 babel，试试用 ES2015 的写法来提升编码的愉悦感。确认 Node.js 已经升级到 v8.x 或以上。
+> Before delving into Ant Design React, a good knowledge of React and ES2015 is needed. Make sure that you had installed Node.js(> v8.x) correctly.
 
-#### 1. 创建一个项目
+#### 1. Create a New Project
 
-可以是已有项目，或者是使用 dva / create-react-app 新创建的空项目。**React 版本需要 v16.8 以上**
+Can be an existing project, or a newly created empty project with dva / create-react-app. **React version requires higher than v16.8**
 
-#### 2. 安装
+#### 2. Installation
 
 ```tsx
 npm install e-ui --save
 ```
 
-#### 3. 使用
+#### 3. Usage
 
-组件使用实例：
+Example of usage:
 
 ```tsx
 import { Button } from 'e-ui';
 ReactDOM.render(<Button>Start</Button>, mountNode);
 ```
 
-引入样式
+And import stylesheets manually:
 
 ```tsx
-import 'e-ui/compiled/dist/index.css'; // or 'e-ui/compiled/dist/index.sass'
+import 'e-ui/compiled/dist/index.css';
 ```
 
-**按需加载**
+**Use modularized e-ui**
 
-**注意：强烈推荐使用。**
+**Note: Strongly recommended.**
 
-下面两种方式都可以只加载用到的组件，选择其中一种方式即可。
+The following two ways used to load the only components you used, select one of the ways you like.
 
--   使用 babel-plugin-import（推荐）。
+-   Manually import
+
+```tsx
+import Button from 'e-ui/compiled/lib/Button'; // for JS
+import 'e-ui/compiled/lib/Button/style/css'; // for CSS
+// import 'e-ui/compiled/lib/Button/style'; // that will import sass
+```
+
+If `webpack` or `rollup` is used in the project, the following is supported（Recommended）.
+
+```tsx
+import { Button } from 'e-ui';
+import 'e-ui/compiled/lib/Button/style/css'; // for CSS
+// import 'e-ui/compiled/dist/index.css'; // Recommend to import all styles in the entry file
+```
+
+-   Use [babel-plugin-import](https://github.com/ant-design/babel-plugin-import)。
 
 ```tsx
 // .babelrc or babel-loader option
 {
-  "plugins": [
-    ["import", { libraryName: "antd-mobile", style: "css" }] // `style: true` 会加载 less 文件
-  ]
+        "plugins": [
+      [
+        "import",
+        {
+          "libraryName": "e-ui",
+          "libraryDirectory": "compiled/lib", // or "compilesed/es"
+          "camel2DashComponentName": false,
+          "style": "css"// `style: true` for sass
+        }
+      ]
+    ]
 }
 ```
 
-然后只需从 antd-mobile 引入模块即可，无需单独引入样式。
+This allows you to import components from antd-mobile without having to manually import the corresponding stylesheet. The babel plugin will automatically import stylesheets.
 
 ```tsx
-// babel-plugin-import 会帮助你加载 JS 和 CSS
-import { DatePicker } from 'antd-mobile';
+// import js and css modularly, parsed by babel-plugin-import
+import { Button } from 'e-ui';
 ```

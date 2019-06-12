@@ -9,7 +9,7 @@ if (
     typeof window !== 'undefined'
 ) {
     console.warn(
-        'You are using a whole package of EDM, ' +
+        'You are using a whole package of EUI, ' +
             'please use https://www.npmjs.com/package/babel-plugin-import to reduce app bundle size.',
     );
 }
