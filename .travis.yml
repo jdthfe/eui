@@ -1,9 +1,11 @@
 language: node_js
 node_js:
     - 10
-branchs:
-    only:
-        - master
+# safelist
+# branches:
+#     only:
+#         - master
+
 cache:
     directories:
         - node_modules
@@ -12,19 +14,27 @@ install:
     - yarn add codecov -D
 script:
     - yarn test
-    - yarn build
-
-after_success:
-    - ./node_modules/.bin/codecov
+    - |
+        if [ $? -ne 0 ]; then
+            echo "Test failed"
+        else
+            yarn build && \
+            TEST_RESULT=true && \
+            ./node_modules/.bin/codecov
+        fi
 
 after_script:
-    - cd build
-    - git init
-    - git config user.name "qqqqqcy"
-    - git config user.email "qqqqqcy@gmail.com"
-    - git add .
-    - git commit -m "Update docs"
-    - git push -f "https://${GH_TOKEN}@${GH_REF}" master:gh-pages
+    - |
+        if [[ $TEST_RESULT == true && $TRAVIS_BRANCH == "master" ]]; then
+            cd build && \
+            git init && \
+            git config user.name "qqqqqcy" && \
+            git config user.email "qqqqqcy@gmail.com" && \
+            git add . && \
+            git commit -m "Update docs" && \
+            git push -f "https://${GH_TOKEN}@${GH_REF}" master:gh-pages 
+          fi
+
 env:
     global:
         - GH_REF: github.com/jdthfe/edm.git
