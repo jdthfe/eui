@@ -91,10 +91,8 @@ const config: webpack.Configuration = {
             tsconfig,
         }),
         new MiniCssExtractPlugin({
-            filename: '[name].css',
-            chunkFilename: '[id].css',
-            // filename: devMode ? "[name].css" : "[name].[hash].css",
-            // chunkFilename: devMode ? "[id].css" : "[id].[hash].css"
+            filename: devMode ? '[name].css' : '[name].[hash].css',
+            chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
         }),
     ],
 };
