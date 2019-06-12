@@ -18,14 +18,17 @@ script:
         if [ $? -ne 0 ]; then
             echo "Test failed"
         else
+            echo "Test success"
             yarn build && \
             TEST_RESULT=true && \
             ./node_modules/.bin/codecov
         fi
 
 after_script:
+    - echo $TEST_RESULT
+    - echo $TRAVIS_BRANCH
     - |
-        if [[ $TEST_RESULT == true && $TRAVIS_BRANCH == "master" ]]; then
+        if [ $TEST_RESULT == true && $TRAVIS_BRANCH == "master" ]; then
             cd build && \
             git init && \
             git config user.name "qqqqqcy" && \
