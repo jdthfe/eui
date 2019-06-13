@@ -1,13 +1,8 @@
 # EUI（Elephant UI）
 
-[
-![Travis (.org)](https://img.shields.io/travis/jdthfe/edm.svg?style=for-the-badge)](https://travis-ci.com/jdthfe/edm)
-[
-![Codecov](https://img.shields.io/codecov/c/gh/jdthfe/edm.svg?style=for-the-badge)](https://codecov.io/gh/jdthfe/edm/)
-![GitHub top language](https://img.shields.io/github/languages/top/jdthfe/edm.svg?style=for-the-badge)
-![GitHub](https://img.shields.io/github/license/jdthfe/edm.svg?style=for-the-badge)
+[ ![Travis (.org)](https://img.shields.io/travis/jdthfe/edm.svg?style=for-the-badge)](https://travis-ci.com/jdthfe/edm) [ ![Codecov](https://img.shields.io/codecov/c/gh/jdthfe/edm.svg?style=for-the-badge)](https://codecov.io/gh/jdthfe/edm/) ![GitHub top language](https://img.shields.io/github/languages/top/jdthfe/edm.svg?style=for-the-badge) ![GitHub](https://img.shields.io/github/license/jdthfe/edm.svg?style=for-the-badge)
 
-基于 React 的可配置的移动端 UI 组件库
+`EUI` ( Elephant UI) 是一套使用 Typescript 和最新 React Hooks 语法开发的移动端组件库。
 
 <p align="center">
   <a href="https://jdthfe.github.io/edm/" rel="nofollow">
@@ -25,22 +20,22 @@
 
 安装依赖
 
-NPM
-
-```bash
-npm install
-```
-
-YARN（推荐）
+yarn（推荐）
 
 ```bash
 yarn install
 ```
 
+npm
+
+```bash
+npm install
+```
+
 ## 使用
 
--   [我是开发者](./docs/develop.md)
--   [我是使用者](./docs/client.md)
+-   [开发新组件](./docs/develop.md)
+-   [使用组件库](https://jdthfe.github.io/edm/#/document/Introduce)
 
 ## 目录结构
 
@@ -49,40 +44,44 @@ yarn install
 ```js
 Project
 │
-├── src            //  组件源码
+├── src              //  组件源码
+│   ├── _util            //  工具集
 │   ├── [component]      //  单个组件
 │   │   ├── __tests__    //  测试文件
-│   │   └── demo         //  用以展示的 demo
-│   ├── common           //  底层公共组件和方法
-│   │   └── [component]  //  底层组件，结构同上
+│   │   ├── demo         //  用以展示的 demo
+│   │   └── style        //  组件样式
 │   └── style            //  样式
 │
-├── example              //  展示页源码
+├── site             //  展示页源码
+│   ├── _util            //  通用方法
+│   ├── assets           //  静态资源
 │   ├── document         //  文档页（用以电脑访问）
 │   ├── instance         //  实例（用以手机访问）
-│   ├── style            //  样式
-│   └── _util            //  通用方法
+│   └── style            //  样式
 │
-├── script               //  脚本
-│   └── template         //  组件模板
-├── config               //  配置文件
-├── tests                //  通用测试配置
-├── lib                  //  组件打包目录
-├── docs                 //  项目文档
-├── typings              //  类型文件
-└── bak                  //  无用。请忽略
+├── script           //  开发脚本
+│   ├── config           //  webpack config
+│   ├── gulp             //  gulp script
+│   ├── template         //  组件模板
+│   └── tests            //  测试相关
+│
+├── docs             //  项目文档
+├── typings          //  类型文件
+│                    //  下列文件夹需要运行对应脚本生成
+├── build            //  yarn build，展示页打包代码
+├── compiled         //  yarn prod，组件库打包代码
+│   ├── dist             //  符合 umd 的代码
+│   ├── es               //  符合 es6 模块化的代码
+│   └── lib              //  符合 CommonJS 规范的模块化的代码
+└── coverage         //  测试覆盖率
     ...
 ```
 
 ## 项目特性
 
--   基于 ts-node 全程使用 Typescript（包括 webpack 配置）
--   开发模式基于 `FC（React.FunctionComponent）` + React Hooks
-
-## 组件开发规范
-
-开发组件过程中所需注意的规范和提示
-
-### Typescript 相关
-
-组件需要继承本身标签的所有属性
+-   UI 样式高度可配置，拓展性更强，轻松适应各类产品风格
+-   提供 "组件按需加载" / "Web 页面高清显示" / "SVG Icon" 等优化方案，一体式开发
+-   使用 TypeScript 开发，提供类型定义文件，支持类型及属性智能提示，方便业务开发
+-   配合 TS 使用属性继承，方便对组件进行二次封装
+-   使用 React Hooks 开发，性能优异
+-   [测试覆盖率 80% 以上](https://codecov.io/gh/jdthfe/edm/)

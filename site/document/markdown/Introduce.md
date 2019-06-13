@@ -85,3 +85,34 @@ This allows you to import components from antd-mobile without having to manually
 // import js and css modularly, parsed by babel-plugin-import
 import { Button } from 'e-ui';
 ```
+
+#### 4. API
+
+When the component is defined, the attribute of the element itself is strictly inherited, so when using it, it is convenient to use all the attributes of the corresponding tag. Eg:
+
+```tsx
+// The Button component is a wrapper around the <button /> element and the TouchFeedback component
+// extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
+// and TouchFeedbackProps
+import { Button } from 'e-ui';
+function buttonClick() {
+    console.log('buttonClick!');
+}
+ReactDOM.render(
+    <Button
+        // button Element attribute
+        onClick={buttonClick}
+        // button Element attribute
+        className="my-button"
+        // TouchFeedbackProps's props
+        activeClassName="my-active"
+        // Button‘s props
+        theme="praimary"
+    >
+        button
+    </Button>,
+    mountNode,
+);
+```
+
+The corresponding property descriptions for inheritance can be viewed in the component API introduction. Attached with a link

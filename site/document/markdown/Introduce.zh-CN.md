@@ -85,3 +85,34 @@ import 'e-ui/compiled/lib/Button/style/css'; // 加载 CSS
 // babel-plugin-import 会帮助你加载 JS 和 CSS
 import { Button } from 'e-ui';
 ```
+
+#### 4. API
+
+组件定义时严格的继承了元素本身属性，因此在使用时，可以方便的使用对应标签的所有属性。eg:
+
+```tsx
+// Button 组件是对 <button /> 元素和 TouchFeedback 组件的封装
+// 继承 React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
+// 和 TouchFeedbackProps
+import { Button } from 'e-ui';
+function buttonClick() {
+    console.log('buttonClick!');
+}
+ReactDOM.render(
+    <Button
+        // button 元素自身属性
+        onClick={buttonClick}
+        // button 元素自身属性
+        className="my-button"
+        // TouchFeedbackProps 组件属性
+        activeClassName="my-active"
+        // Button 组件新增属性
+        theme="praimary"
+    >
+        button
+    </Button>,
+    mountNode,
+);
+```
+
+对应继承的属性说明，都能在组件 API 介绍中查看。附带有链接
