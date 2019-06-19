@@ -1,20 +1,20 @@
 # EUI（Elephant UI）
 
-[ ![Travis (.org)](https://img.shields.io/travis/jdthfe/edm.svg?style=for-the-badge)](https://travis-ci.com/jdthfe/edm) [ ![Codecov](https://img.shields.io/codecov/c/gh/jdthfe/edm.svg?style=for-the-badge)](https://codecov.io/gh/jdthfe/edm/) ![GitHub top language](https://img.shields.io/github/languages/top/jdthfe/edm.svg?style=for-the-badge) ![GitHub](https://img.shields.io/github/license/jdthfe/edm.svg?style=for-the-badge)
+[ ![Travis (.org)](https://img.shields.io/travis/jdthfe/eui.svg?style=for-the-badge)](https://travis-ci.com/jdthfe/eui) [ ![Codecov](https://img.shields.io/codecov/c/gh/jdthfe/eui.svg?style=for-the-badge)](https://codecov.io/gh/jdthfe/eui/) ![GitHub top language](https://img.shields.io/github/languages/top/jdthfe/eui.svg?style=for-the-badge) ![GitHub](https://img.shields.io/github/license/jdthfe/eui.svg?style=for-the-badge)
 
 `EUI` ( Elephant UI) 是一套使用 Typescript 和最新 React Hooks 语法开发的移动端组件库。
 
 <p align="center">
-  <a href="https://jdthfe.github.io/edm/" rel="nofollow">
+  <a href="https://jdthfe.github.io/eui/" rel="nofollow">
     <img width="320" src="./site/assets/logo.png" style="max-width:100%;">
   </a>
 </p>
 
 ## 效果预览
 
--   [文档](https://jdthfe.github.io/edm/)
+-   [文档](https://jdthfe.github.io/eui/)
 
--   [移动端实例](https://jdthfe.github.io/edm/#/instance)
+-   [移动端实例](https://jdthfe.github.io/eui/#/instance)
 
 ## 快速开发
 
@@ -35,7 +35,7 @@ npm install
 ## 使用
 
 -   [开发新组件](./docs/develop.md)
--   [使用组件库](https://jdthfe.github.io/edm/#/document/Introduce)
+-   [使用组件库](https://jdthfe.github.io/eui/#/document/Introduce)
 
 ## 目录结构
 
@@ -84,4 +84,4 @@ Project
 -   使用 TypeScript 开发，提供类型定义文件，支持类型及属性智能提示，方便业务开发
 -   配合 TS 使用属性继承，方便对组件进行二次封装
 -   使用 React Hooks 开发，性能优异
--   [测试覆盖率 80% 以上](https://codecov.io/gh/jdthfe/edm/)
+-   [测试覆盖率 80% 以上](https://codecov.io/gh/jdthfe/eui/)

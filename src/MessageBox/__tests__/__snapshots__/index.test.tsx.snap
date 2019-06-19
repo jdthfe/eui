@@ -315,26 +315,26 @@ exports[`MessageBox snapshots alert: alert show 1`] = `
   </div>
   <div>
     <div
-      class="edm-Cover edm-fade-entry-active edm-fade"
+      class="eui-Cover eui-fade-entry-active eui-fade"
     />
     <div
-      class="edm-messagebox undefined edm-messagebox-buttons-multiline-single edm-fade-entry-active edm-fade"
+      class="eui-messagebox undefined eui-messagebox-buttons-multiline-single eui-fade-entry-active eui-fade"
     >
       <p
-        class="edm-messagebox-title"
+        class="eui-messagebox-title"
       >
         title
       </p>
       <div
-        class="edm-messagebox-content"
+        class="eui-messagebox-content"
       >
         MessageBoxText
       </div>
       <div
-        class="edm-messagebox-buttons edm-messagebox-buttons-multiline"
+        class="eui-messagebox-buttons eui-messagebox-buttons-multiline"
       >
         <button
-          class="edm-button edm-button-l edm-button-primary"
+          class="eui-button eui-button-l eui-button-primary"
           role="button"
         >
           confirmChildren
@@ -672,32 +672,32 @@ exports[`MessageBox snapshots confirm: confirm show 1`] = `
   </div>
   <div>
     <div
-      class="edm-Cover edm-fade-entry-active edm-fade"
+      class="eui-Cover eui-fade-entry-active eui-fade"
     />
     <div
-      class="edm-messagebox edm-fade-entry-active edm-fade"
+      class="eui-messagebox eui-fade-entry-active eui-fade"
     >
       <p
-        class="edm-messagebox-title"
+        class="eui-messagebox-title"
       >
         title
       </p>
       <div
-        class="edm-messagebox-content"
+        class="eui-messagebox-content"
       >
         MessageBoxText
       </div>
       <div
-        class="edm-messagebox-buttons edm-messagebox-buttons-multiline"
+        class="eui-messagebox-buttons eui-messagebox-buttons-multiline"
       >
         <button
-          class="edm-button edm-button-l edm-button-primary"
+          class="eui-button eui-button-l eui-button-primary"
           role="button"
         >
           confirmChildren
         </button>
         <button
-          class="edm-button edm-messagebox-buttons-multiline-last edm-button-l edm-button-customize edm-button-ghost"
+          class="eui-button eui-messagebox-buttons-multiline-last eui-button-l eui-button-customize eui-button-ghost"
           role="button"
         >
           cancel
@@ -723,18 +723,18 @@ exports[`MessageBox snapshots model: model show 1`] = `
   </div>
   <div>
     <div
-      class="edm-Cover edm-fade-entry-active edm-fade"
+      class="eui-Cover eui-fade-entry-active eui-fade"
     />
     <div
-      class="edm-messagebox edm-fade-entry-active edm-fade"
+      class="eui-messagebox eui-fade-entry-active eui-fade"
     >
       <div
-        class="edm-messagebox-content"
+        class="eui-messagebox-content"
       >
         MessageBoxText
       </div>
       <div
-        class="edm-messagebox-line"
+        class="eui-messagebox-line"
       />
     </div>
   </div>

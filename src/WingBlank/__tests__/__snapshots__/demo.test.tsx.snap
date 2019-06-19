@@ -11,10 +11,10 @@ exports[`renders WingBlank correctly 1`] = `
       placeholder
     </div>
     <div
-      class="edm-whitespace edm-whitespace-m"
+      class="eui-whitespace eui-whitespace-m"
     />
     <div
-      class="edm-wingblank edm-wingblank-s"
+      class="eui-wingblank eui-wingblank-s"
     >
       <div
         class="placeholder"
@@ -23,10 +23,10 @@ exports[`renders WingBlank correctly 1`] = `
       </div>
     </div>
     <div
-      class="edm-whitespace edm-whitespace-m"
+      class="eui-whitespace eui-whitespace-m"
     />
     <div
-      class="edm-wingblank edm-wingblank-m"
+      class="eui-wingblank eui-wingblank-m"
     >
       <div
         class="placeholder"
@@ -35,10 +35,10 @@ exports[`renders WingBlank correctly 1`] = `
       </div>
     </div>
     <div
-      class="edm-whitespace edm-whitespace-m"
+      class="eui-whitespace eui-whitespace-m"
     />
     <div
-      class="edm-wingblank edm-wingblank-l"
+      class="eui-wingblank eui-wingblank-l"
     >
       <div
         class="placeholder"

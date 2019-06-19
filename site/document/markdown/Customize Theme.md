@@ -4,7 +4,7 @@ Ant Design Mobile allows to customize some basic design aspects in order to meet
 
 We are using [Sass](https://sass-lang.com/) as the development language of style. A set of sass variables are defined for each design aspect that can be customized to your needs.
 
--   [the default style variable](https://github.com/jdthfe/edm/blob/master/src/style/variables.scss)
+-   [the default style variable](https://github.com/jdthfe/eui/blob/master/src/style/variables.scss)
 
 Please report an issue if the existing list of variables is not enough for you.
 
@@ -39,7 +39,7 @@ Secondly, configuration `babel-plugin-import` to load e-ui sass
 }
 ```
 
--   in your `webpack` config file,add scss about config，Set all the theme styles we want to modify in the options.[default theme styles](https://github.com/jdthfe/edm/blob/master/src/style/variables.scss)
+-   in your `webpack` config file,add scss about config，Set all the theme styles we want to modify in the options.[default theme styles](https://github.com/jdthfe/eui/blob/master/src/style/variables.scss)
 
 ```tsx
  {

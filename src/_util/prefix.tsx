@@ -1,1 +1,1 @@
-export default 'edm';
+export default 'eui';

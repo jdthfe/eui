@@ -4,7 +4,7 @@
 
 ## 1. Prepare
 
-下载源代码 [`https://github.com/jdthfe/edm/tree/master`](https://github.com/jdthfe/edm/tree/master)
+下载源代码 [`https://github.com/jdthfe/eui/tree/master`](https://github.com/jdthfe/eui/tree/master)
 
 安装依赖
 

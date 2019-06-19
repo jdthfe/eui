@@ -3,27 +3,27 @@
 exports[`renders Button correctly 1`] = `
 <div>
   <div
-    class="edm-wingblank Button edm-wingblank-m"
+    class="eui-wingblank Button eui-wingblank-m"
   >
     <h4>
       Theme
     </h4>
     <button
-      class="edm-button edm-button-l edm-button-primary"
+      class="eui-button eui-button-l eui-button-primary"
       role="button"
     >
       primary
     </button>
     <div
-      class="edm-whitespace edm-whitespace-m"
+      class="eui-whitespace eui-whitespace-m"
     />
     <button
-      class="edm-button edm-button-l edm-button-secondary"
+      class="eui-button eui-button-l eui-button-secondary"
       role="button"
     >
       <svg
         aria-hidden="true"
-        class="edm-icon edm-icon-l"
+        class="eui-icon eui-icon-l"
         fill="#fff"
       >
         <use
@@ -33,46 +33,46 @@ exports[`renders Button correctly 1`] = `
        icon with secondary
     </button>
     <div
-      class="edm-whitespace edm-whitespace-m"
+      class="eui-whitespace eui-whitespace-m"
     />
     <button
-      class="edm-button edm-button-l edm-button-customize edm-button-ghost"
+      class="eui-button eui-button-l eui-button-customize eui-button-ghost"
       role="button"
     >
       customize
     </button>
     <div
-      class="edm-whitespace edm-whitespace-m"
+      class="eui-whitespace eui-whitespace-m"
     />
     <button
       aria-disabled="true"
-      class="edm-button edm-button-l edm-button-primary edm-button-disabled"
+      class="eui-button eui-button-l eui-button-primary eui-button-disabled"
       disabled=""
       role="button"
     >
       primary | disabled
     </button>
     <div
-      class="edm-whitespace edm-whitespace-m"
+      class="eui-whitespace eui-whitespace-m"
     />
     <button
       aria-disabled="true"
-      class="edm-button edm-button-l edm-button-primary edm-button-disabled edm-button-ghost"
+      class="eui-button eui-button-l eui-button-primary eui-button-disabled eui-button-ghost"
       disabled=""
       role="button"
     >
       primary | ghost | disabled
     </button>
     <div
-      class="edm-whitespace edm-whitespace-m"
+      class="eui-whitespace eui-whitespace-m"
     />
     <button
-      class="edm-button edm-button-l edm-button-primary"
+      class="eui-button eui-button-l eui-button-primary"
       role="button"
     >
       <svg
         aria-hidden="true"
-        class="edm-icon edm-icon-l edm-icon-loading"
+        class="eui-icon eui-icon-l eui-icon-loading"
         fill="#fff"
       >
         <use
@@ -81,65 +81,65 @@ exports[`renders Button correctly 1`] = `
       </svg>
     </button>
     <div
-      class="edm-whitespace edm-whitespace-m"
+      class="eui-whitespace eui-whitespace-m"
     />
     <h4>
       Size
     </h4>
     <button
-      class="edm-button edm-button-m edm-button-primary"
+      class="eui-button eui-button-m eui-button-primary"
       role="button"
     >
       middle
     </button>
     <div
-      class="edm-whitespace edm-whitespace-m"
+      class="eui-whitespace eui-whitespace-m"
     />
     <button
-      class="edm-button edm-button-s edm-button-primary"
+      class="eui-button eui-button-s eui-button-primary"
       role="button"
     >
       small
     </button>
     <div
-      class="edm-whitespace edm-whitespace-m"
+      class="eui-whitespace eui-whitespace-m"
     />
     <div
       style="display: flex;"
     >
       <button
-        class="edm-button edm-button-l edm-button-customize edm-button-ghost edm-button-inline"
+        class="eui-button eui-button-l eui-button-customize eui-button-ghost eui-button-inline"
         role="button"
       >
         customize | ghost
       </button>
       <button
-        class="edm-button edm-button-l edm-button-secondary edm-button-rectangle"
+        class="eui-button eui-button-l eui-button-secondary eui-button-rectangle"
         role="button"
       >
         secondary
       </button>
       <button
-        class="edm-button edm-button-l edm-button-primary edm-button-rectangle"
+        class="eui-button eui-button-l eui-button-primary eui-button-rectangle"
         role="button"
       >
         primary
       </button>
     </div>
     <div
-      class="edm-whitespace edm-whitespace-m"
+      class="eui-whitespace eui-whitespace-m"
     />
     <h4>
       Customize
     </h4>
     <button
-      class="edm-button edm-button-l edm-button-customize edm-button-ghost"
+      class="eui-button eui-button-l eui-button-customize eui-button-ghost"
       role="button"
       style="border-radius: 10px; color: green;"
     >
       <svg
         aria-hidden="true"
-        class="edm-icon edm-icon-l"
+        class="eui-icon eui-icon-l"
         fill="currentColor"
       >
         <use
@@ -149,17 +149,17 @@ exports[`renders Button correctly 1`] = `
        color | radius | ghost
     </button>
     <div
-      class="edm-whitespace edm-whitespace-m"
+      class="eui-whitespace eui-whitespace-m"
     />
     <button
-      class="edm-button edm-button-l edm-button-customize"
+      class="eui-button eui-button-l eui-button-customize"
       role="button"
       style="color: hotpink;"
     >
       color | hotpink
     </button>
     <div
-      class="edm-whitespace edm-whitespace-m"
+      class="eui-whitespace eui-whitespace-m"
     />
   </div>
 </div>

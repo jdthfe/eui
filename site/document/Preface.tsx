@@ -22,10 +22,10 @@ const Preface = () => {
                 <img className="preface-logo" src={logo} alt="logo" />
                 <p className="preface-introduce">
                     {getContent()}{' '}
-                    <a href="https://github.com/jdthfe/edm/tree/master">
+                    <a href="https://github.com/jdthfe/eui/tree/master">
                         <img
                             className="preface-star"
-                            src="https://img.shields.io/github/stars/jdthfe/edm.svg?style=social"
+                            src="https://img.shields.io/github/stars/jdthfe/eui.svg?style=social"
                             alt="stars"
                         />
                     </a>

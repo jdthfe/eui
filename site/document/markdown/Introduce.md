@@ -7,7 +7,7 @@
 -   Use TypeScript to develop, provide type definition files, support type and attribute smart tips for easy business development.
 -   Use attribute inheritance with TS to facilitate secondary encapsulation of components
 -   Developed with React Hooks for superior performance
--   [Test coverage is over 80%](https://codecov.io/gh/jdthfe/edm/)
+-   [Test coverage is over 80%](https://codecov.io/gh/jdthfe/eui/)
 
 ### Getting Started
 

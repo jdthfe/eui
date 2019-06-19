@@ -3,7 +3,7 @@
 exports[`renders Icon correctly 1`] = `
 <div>
   <div
-    class="edm-wingblank Icon edm-wingblank-m"
+    class="eui-wingblank Icon eui-wingblank-m"
   >
     <h4>
       Value
@@ -16,7 +16,7 @@ exports[`renders Icon correctly 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="edm-icon edm-icon-l"
+          class="eui-icon eui-icon-l"
         >
           <use
             xlink:href="#addcart"
@@ -31,7 +31,7 @@ exports[`renders Icon correctly 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="edm-icon edm-icon-l"
+          class="eui-icon eui-icon-l"
         >
           <use
             xlink:href="#alert"
@@ -46,7 +46,7 @@ exports[`renders Icon correctly 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="edm-icon edm-icon-l"
+          class="eui-icon eui-icon-l"
         >
           <use
             xlink:href="#alipay"
@@ -61,7 +61,7 @@ exports[`renders Icon correctly 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="edm-icon edm-icon-l"
+          class="eui-icon eui-icon-l"
         >
           <use
             xlink:href="#close"
@@ -76,7 +76,7 @@ exports[`renders Icon correctly 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="edm-icon edm-icon-l edm-icon-loading"
+          class="eui-icon eui-icon-l eui-icon-loading"
         >
           <use
             xlink:href="#loading"
@@ -91,7 +91,7 @@ exports[`renders Icon correctly 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="edm-icon edm-icon-l"
+          class="eui-icon eui-icon-l"
         >
           <use
             xlink:href="#remind"
@@ -106,7 +106,7 @@ exports[`renders Icon correctly 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="edm-icon edm-icon-l"
+          class="eui-icon eui-icon-l"
         >
           <use
             xlink:href="#selected"
@@ -121,7 +121,7 @@ exports[`renders Icon correctly 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="edm-icon edm-icon-l"
+          class="eui-icon eui-icon-l"
         >
           <use
             xlink:href="#successful"
@@ -136,7 +136,7 @@ exports[`renders Icon correctly 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="edm-icon edm-icon-l"
+          class="eui-icon eui-icon-l"
         >
           <use
             xlink:href="#test"
@@ -158,7 +158,7 @@ exports[`renders Icon correctly 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="edm-icon edm-icon-xs"
+          class="eui-icon eui-icon-xs"
         >
           <use
             xlink:href="#addcart"
@@ -173,7 +173,7 @@ exports[`renders Icon correctly 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="edm-icon edm-icon-s"
+          class="eui-icon eui-icon-s"
         >
           <use
             xlink:href="#addcart"
@@ -188,7 +188,7 @@ exports[`renders Icon correctly 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="edm-icon edm-icon-m"
+          class="eui-icon eui-icon-m"
         >
           <use
             xlink:href="#addcart"
@@ -203,7 +203,7 @@ exports[`renders Icon correctly 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="edm-icon edm-icon-l"
+          class="eui-icon eui-icon-l"
         >
           <use
             xlink:href="#addcart"
@@ -218,7 +218,7 @@ exports[`renders Icon correctly 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="edm-icon edm-icon-xl"
+          class="eui-icon eui-icon-xl"
         >
           <use
             xlink:href="#addcart"
@@ -240,7 +240,7 @@ exports[`renders Icon correctly 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="edm-icon edm-icon-l"
+          class="eui-icon eui-icon-l"
           fill="red"
         >
           <use
@@ -256,7 +256,7 @@ exports[`renders Icon correctly 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="edm-icon edm-icon-l"
+          class="eui-icon eui-icon-l"
           fill="orange"
         >
           <use
@@ -272,7 +272,7 @@ exports[`renders Icon correctly 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="edm-icon edm-icon-l"
+          class="eui-icon eui-icon-l"
           fill="yellow"
         >
           <use
@@ -288,7 +288,7 @@ exports[`renders Icon correctly 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="edm-icon edm-icon-l"
+          class="eui-icon eui-icon-l"
           fill="green"
         >
           <use
@@ -304,7 +304,7 @@ exports[`renders Icon correctly 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="edm-icon edm-icon-l"
+          class="eui-icon eui-icon-l"
           fill="blue"
         >
           <use

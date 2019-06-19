@@ -4,19 +4,19 @@ exports[`TransitionWrapDemo keepOnExit: visible=false 1`] = `
 <body>
   <div>
     <div
-      class="edm-wingblank TransitionWrap edm-wingblank-m"
+      class="eui-wingblank TransitionWrap eui-wingblank-m"
     >
       <button
-        class="edm-button edm-button-l edm-button-customize edm-button-ghost"
+        class="eui-button eui-button-l eui-button-customize eui-button-ghost"
         role="button"
       >
         keepOnExit = false
       </button>
       <div
-        class="edm-whitespace edm-whitespace-m"
+        class="eui-whitespace eui-whitespace-m"
       />
       <button
-        class="edm-button edm-button-l edm-button-customize edm-button-ghost"
+        class="eui-button eui-button-l eui-button-customize eui-button-ghost"
         role="button"
       >
         keepOnExit = true
@@ -35,19 +35,19 @@ exports[`TransitionWrapDemo keepOnExit: visible=true 1`] = `
 <body>
   <div>
     <div
-      class="edm-wingblank TransitionWrap edm-wingblank-m"
+      class="eui-wingblank TransitionWrap eui-wingblank-m"
     >
       <button
-        class="edm-button edm-button-l edm-button-customize edm-button-ghost"
+        class="eui-button eui-button-l eui-button-customize eui-button-ghost"
         role="button"
       >
         keepOnExit = false
       </button>
       <div
-        class="edm-whitespace edm-whitespace-m"
+        class="eui-whitespace eui-whitespace-m"
       />
       <button
-        class="edm-button edm-button-l edm-button-customize edm-button-ghost"
+        class="eui-button eui-button-l eui-button-customize eui-button-ghost"
         role="button"
       >
         keepOnExit = true
@@ -66,19 +66,19 @@ exports[`TransitionWrapDemo unmontOnExit: visible=false 1`] = `
 <body>
   <div>
     <div
-      class="edm-wingblank TransitionWrap edm-wingblank-m"
+      class="eui-wingblank TransitionWrap eui-wingblank-m"
     >
       <button
-        class="edm-button edm-button-l edm-button-customize edm-button-ghost"
+        class="eui-button eui-button-l eui-button-customize eui-button-ghost"
         role="button"
       >
         keepOnExit = false
       </button>
       <div
-        class="edm-whitespace edm-whitespace-m"
+        class="eui-whitespace eui-whitespace-m"
       />
       <button
-        class="edm-button edm-button-l edm-button-customize edm-button-ghost"
+        class="eui-button eui-button-l eui-button-customize eui-button-ghost"
         role="button"
       >
         keepOnExit = true
@@ -97,19 +97,19 @@ exports[`TransitionWrapDemo unmontOnExit: visible=true 1`] = `
 <body>
   <div>
     <div
-      class="edm-wingblank TransitionWrap edm-wingblank-m"
+      class="eui-wingblank TransitionWrap eui-wingblank-m"
     >
       <button
-        class="edm-button edm-button-l edm-button-customize edm-button-ghost"
+        class="eui-button eui-button-l eui-button-customize eui-button-ghost"
         role="button"
       >
         keepOnExit = false
       </button>
       <div
-        class="edm-whitespace edm-whitespace-m"
+        class="eui-whitespace eui-whitespace-m"
       />
       <button
-        class="edm-button edm-button-l edm-button-customize edm-button-ghost"
+        class="eui-button eui-button-l eui-button-customize eui-button-ghost"
         role="button"
       >
         keepOnExit = true
@@ -132,19 +132,19 @@ exports[`TransitionWrapDemo unmontOnExit: visible=true 1`] = `
 exports[`renders TransitionWrap correctly 1`] = `
 <div>
   <div
-    class="edm-wingblank TransitionWrap edm-wingblank-m"
+    class="eui-wingblank TransitionWrap eui-wingblank-m"
   >
     <button
-      class="edm-button edm-button-l edm-button-customize edm-button-ghost"
+      class="eui-button eui-button-l eui-button-customize eui-button-ghost"
       role="button"
     >
       keepOnExit = false
     </button>
     <div
-      class="edm-whitespace edm-whitespace-m"
+      class="eui-whitespace eui-whitespace-m"
     />
     <button
-      class="edm-button edm-button-l edm-button-customize edm-button-ghost"
+      class="eui-button eui-button-l eui-button-customize eui-button-ghost"
       role="button"
     >
       keepOnExit = true

@@ -12,10 +12,10 @@ exports[`Toast base: show 1`] = `
 
   <div />
   <div
-    class="edm-Cover edm-Cover-transparent edm-fade-entry-done edm-fade"
+    class="eui-Cover eui-Cover-transparent eui-fade-entry-done eui-fade"
   />
   <div
-    class="edm-toast edm-fade-entry-done edm-fade"
+    class="eui-toast eui-fade-entry-done eui-fade"
   >
     toastTxt
   </div>
@@ -45,24 +45,24 @@ exports[`Toast snapshots: show 1`] = `
   </div>
   <div>
     <div
-      class="edm-Cover edm-Cover-transparent edm-fade-entry-done edm-fade"
+      class="eui-Cover eui-Cover-transparent eui-fade-entry-done eui-fade"
     />
     <div
-      class="edm-toast edm-fade-entry-done edm-fade"
+      class="eui-toast eui-fade-entry-done eui-fade"
     >
       normal
     </div>
   </div>
   <div>
     <div
-      class="edm-Cover edm-Cover-transparent edm-fade-entry-done edm-fade"
+      class="eui-Cover eui-Cover-transparent eui-fade-entry-done eui-fade"
     />
     <div
-      class="edm-toast edm-fade-entry-done edm-fade"
+      class="eui-toast eui-fade-entry-done eui-fade"
     >
       <svg
         aria-hidden="true"
-        class="edm-icon edm-icon-xl"
+        class="eui-icon eui-icon-xl"
         fill="#fff"
       >
         <use
@@ -70,21 +70,21 @@ exports[`Toast snapshots: show 1`] = `
         />
       </svg>
       <div
-        class="edm-whitespace edm-whitespace-l"
+        class="eui-whitespace eui-whitespace-l"
       />
       alert
     </div>
   </div>
   <div>
     <div
-      class="edm-Cover edm-Cover-transparent edm-fade-entry-done edm-fade"
+      class="eui-Cover eui-Cover-transparent eui-fade-entry-done eui-fade"
     />
     <div
-      class="edm-toast edm-fade-entry-done edm-fade"
+      class="eui-toast eui-fade-entry-done eui-fade"
     >
       <svg
         aria-hidden="true"
-        class="edm-icon edm-icon-xl"
+        class="eui-icon eui-icon-xl"
         fill="#fff"
       >
         <use
@@ -92,7 +92,7 @@ exports[`Toast snapshots: show 1`] = `
         />
       </svg>
       <div
-        class="edm-whitespace edm-whitespace-l"
+        class="eui-whitespace eui-whitespace-l"
       />
       success
     </div>
@@ -100,14 +100,14 @@ exports[`Toast snapshots: show 1`] = `
   <div />
   <div>
     <div
-      class="edm-Cover edm-Cover-transparent edm-fade-entry-done edm-fade"
+      class="eui-Cover eui-Cover-transparent eui-fade-entry-done eui-fade"
     />
     <div
-      class="edm-toast edm-fade-entry-done edm-fade"
+      class="eui-toast eui-fade-entry-done eui-fade"
     >
       <svg
         aria-hidden="true"
-        class="edm-icon edm-icon-xl"
+        class="eui-icon eui-icon-xl"
         fill="#fff"
       >
         <use
@@ -118,14 +118,14 @@ exports[`Toast snapshots: show 1`] = `
   </div>
   <div>
     <div
-      class="edm-Cover edm-Cover-transparent edm-fade-entry-done edm-fade"
+      class="eui-Cover eui-Cover-transparent eui-fade-entry-done eui-fade"
     />
     <div
-      class="edm-toast edm-fade-entry-done edm-fade"
+      class="eui-toast eui-fade-entry-done eui-fade"
     >
       <svg
         aria-hidden="true"
-        class="edm-icon edm-icon-xl"
+        class="eui-icon eui-icon-xl"
         fill="#fff"
       >
         <use
@@ -136,14 +136,14 @@ exports[`Toast snapshots: show 1`] = `
   </div>
   <div>
     <div
-      class="edm-Cover edm-Cover-transparent edm-fade-entry-done edm-fade"
+      class="eui-Cover eui-Cover-transparent eui-fade-entry-done eui-fade"
     />
     <div
-      class="edm-toast edm-fade-entry-done edm-fade"
+      class="eui-toast eui-fade-entry-done eui-fade"
     >
       <svg
         aria-hidden="true"
-        class="edm-icon edm-icon-xl edm-icon-loading"
+        class="eui-icon eui-icon-xl eui-icon-loading"
         fill="#fff"
       >
         <use

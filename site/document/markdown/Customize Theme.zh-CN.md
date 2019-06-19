@@ -4,7 +4,7 @@ e-ui 设计规范上支持一定程度的样式定制，以满足业务和品牌
 
 e-ui 的样式使用了 [Sass](https://sass-lang.com/) 作为开发语言，并定义了一系列全局/组件的样式变量，你可以根据需求进行相应调整。
 
--   [默认样式变量](https://github.com/jdthfe/edm/blob/master/src/style/variables.scss)
+-   [默认样式变量](https://github.com/jdthfe/eui/blob/master/src/style/variables.scss)
 
 ### 定制方式
 
@@ -37,7 +37,7 @@ e-ui 的样式使用了 [Sass](https://sass-lang.com/) 作为开发语言，并�
 }
 ```
 
--   在 `webpack` 配置文件中添加 scss 文件的 sass-loader 处理，在 options 选项里面将包含所有我们想要修改的主题样式。[全部主题样式参考这里](https://github.com/jdthfe/edm/blob/master/src/style/variables.scss)
+-   在 `webpack` 配置文件中添加 scss 文件的 sass-loader 处理，在 options 选项里面将包含所有我们想要修改的主题样式。[全部主题样式参考这里](https://github.com/jdthfe/eui/blob/master/src/style/variables.scss)
 
 ```tsx
  {

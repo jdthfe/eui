@@ -8,7 +8,7 @@ exports[`renders CountDown correctly 1`] = `
         倒计时5秒
       </h5>
       <div
-        class="edm-countdown"
+        class="eui-countdown"
       >
         <span>
           50

@@ -29,14 +29,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/jdthfe/edm.git"
+        "url": "git+https://github.com/jdthfe/eui.git"
     },
     "author": "qqqqqcy",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/jdthfe/edm/issues"
+        "url": "https://github.com/jdthfe/eui/issues"
     },
-    "homepage": "https://github.com/jdthfe/edm#readme",
+    "homepage": "https://github.com/jdthfe/eui#readme",
     "dependencies": {
         "@babel/runtime": "^7.4.3",
         "classnames": "^2.2.6"

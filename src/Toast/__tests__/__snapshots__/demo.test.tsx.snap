@@ -3,67 +3,67 @@
 exports[`renders Toast correctly 1`] = `
 <div>
   <div
-    class="edm-wingblank Toast edm-wingblank-m"
+    class="eui-wingblank Toast eui-wingblank-m"
   >
     <h4>
       Dom
     </h4>
     <button
-      class="edm-button edm-button-l edm-button-customize edm-button-ghost"
+      class="eui-button eui-button-l eui-button-customize eui-button-ghost"
       role="button"
     >
       Toast
     </button>
     <div
-      class="edm-whitespace edm-whitespace-m"
+      class="eui-whitespace eui-whitespace-m"
     />
     <h4>
       Method
     </h4>
     <button
-      class="edm-button edm-button-l edm-button-customize edm-button-ghost"
+      class="eui-button eui-button-l eui-button-customize eui-button-ghost"
       role="button"
     >
       Model
     </button>
     <div
-      class="edm-whitespace edm-whitespace-m"
+      class="eui-whitespace eui-whitespace-m"
     />
     <button
-      class="edm-button edm-button-l edm-button-customize edm-button-ghost"
+      class="eui-button eui-button-l eui-button-customize eui-button-ghost"
       role="button"
     >
       Success
     </button>
     <div
-      class="edm-whitespace edm-whitespace-m"
+      class="eui-whitespace eui-whitespace-m"
     />
     <button
-      class="edm-button edm-button-l edm-button-customize edm-button-ghost"
+      class="eui-button eui-button-l eui-button-customize eui-button-ghost"
       role="button"
     >
       Alert | noCover
     </button>
     <div
-      class="edm-whitespace edm-whitespace-m"
+      class="eui-whitespace eui-whitespace-m"
     />
     <button
-      class="edm-button edm-button-l edm-button-customize edm-button-ghost"
+      class="eui-button eui-button-l eui-button-customize eui-button-ghost"
       role="button"
     >
       loading
     </button>
     <div
-      class="edm-whitespace edm-whitespace-m"
+      class="eui-whitespace eui-whitespace-m"
     />
     <button
-      class="edm-button edm-button-l edm-button-customize edm-button-ghost"
+      class="eui-button eui-button-l eui-button-customize eui-button-ghost"
       role="button"
     >
       null
     </button>
     <div
-      class="edm-whitespace edm-whitespace-m"
+      class="eui-whitespace eui-whitespace-m"
     />
   </div>
 </div>

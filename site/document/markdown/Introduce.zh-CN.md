@@ -7,7 +7,7 @@
 -   使用 TypeScript 开发，提供类型定义文件，支持类型及属性智能提示，方便业务开发
 -   配合 TS 使用属性继承，方便对组件进行二次封装
 -   使用 React Hooks 开发，性能优异
--   [测试覆盖率 80% 以上](https://codecov.io/gh/jdthfe/edm/)
+-   [测试覆盖率 80% 以上](https://codecov.io/gh/jdthfe/eui/)
 
 ### 快速上手
 
