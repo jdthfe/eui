@@ -26,20 +26,16 @@ const Demo = () => {
                 <br />
                 Children
             </MessageBox>
-
             <WhiteSpace />
             <h4>Method</h4>
             <Button
                 ghost
                 onClick={() =>
                     MessageBox.model({
-                        onClickCloseIcon: () => {
-                            console.log('onClickCloseIcon');
-                        },
-                        onClickCover: () => true,
+                        onClickCloseIcon: true,
+                        onClickCover: false,
                         title: 'title',
                         children: 'children',
-                        noCover: true,
                         buttons: [
                             {
                                 children: 'right',
@@ -47,7 +43,7 @@ const Demo = () => {
                                 rectangle: true,
                                 onClick: () => {
                                     console.log('right');
-                                    return true;
+                                    return false;
                                 },
                             },
                             {
@@ -63,7 +59,6 @@ const Demo = () => {
                 Model | noCover
             </Button>
             <WhiteSpace />
-
             <Button
                 ghost
                 onClick={() =>
@@ -77,19 +72,19 @@ const Demo = () => {
                                 title: 'MultiLineButtons',
                                 children: 'children',
                             });
-                            return true;
+                            return false;
                         },
                     })
                 }
             >
                 Alert
             </Button>
-
             <WhiteSpace />
             <Button
                 ghost
                 onClick={() =>
                     MessageBox.confirm({
+                        onClickCover: () => false,
                         title: 'Confirm',
                         children: 'children',
                         confirmCallback: () => console.log('confirmCallback'),
@@ -99,7 +94,6 @@ const Demo = () => {
                 Confirm
             </Button>
             <WhiteSpace />
-
             <Button
                 ghost
                 onClick={() =>

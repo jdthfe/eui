@@ -1,10 +1,6 @@
 @import '../../style/mixin';
 $button-prefix: $preifx + '-button';
 
-// todo 修改 px 为变量
-$button-shadow: 0 10px 20px -10px currentColor;
-$button-tap: inset 0 0 0 100px rgba(0, 0, 0, 0.1);
-// 颜色
 .#{$button-prefix}-primary {
     color: $primary;
     background-image: getColorGradient($primary);
@@ -88,5 +84,5 @@ $button-tap: inset 0 0 0 100px rgba(0, 0, 0, 0.1);
 
 // 禁用
 .#{$button-prefix}-disabled {
-    opacity: 0.45;
+    opacity: $button-disabled;
 }

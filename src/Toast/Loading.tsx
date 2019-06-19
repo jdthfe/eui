@@ -68,7 +68,7 @@ export default {
             ...props,
             children: (
                 <Fragment>
-                    <Icon value="loading" fill="#fff" />
+                    <Icon size="xl" value="loading" fill="#fff" />
                     {props.children ? <WhiteSpace size="l" /> : null}
                     {props.children}
                 </Fragment>

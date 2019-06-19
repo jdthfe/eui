@@ -18,7 +18,7 @@ React.Dom
 | buttons | 按钮属性列表，从左渲染到右。当 `multiLine = true` 时从上到下 | [`Button`](#/document/Button)`[]` | `[]` | `false` |
 | multiLineButtons | 每个按钮独占一行 | `boolean` | `false` | `false` |
 | hiddenline | 隐藏内容和按钮之间的分割线 | `boolean` | `undefined` | `false` |
-| onClickCloseIcon | 点击关闭图标时触发的函数 | `() => void` | `undefined` | `false` |
+| onClickCloseIcon | 点击关闭图标时触发的函数 | `() => void` | `false` | `false` |
 | coverProps | MessageBox 中，Cover 的 props | [`Cover.Transition`](#/document/Cover) | `{}` | `false` |
 | [`...Portal`](#/document/Portal) |  |  |  |  |
 | [`...TransitionWrap`](#/document/TransitionWrap) |  |  |  |  |
@@ -33,9 +33,8 @@ React.Dom
 | 属性 | 说明 | 类型 | 默认值 | 必填 |
 | --- | --- | --- | --- | --- |
 | [`...MessageBox`](#/document/MessageBox) |  |  |  |  |
-| preventClickCover | 阻止点击 `Cover` | `boolean` | `false` | `false` |
-| onClickCover | 点击遮罩时触发的函数。**返回 `true` 时阻止 MessageBox 关闭** | `() => void | boolean` | `undefined` | `false` |
-| onClickCloseIcon | 点击关闭图标时触发的函数。**返回 `true` 时阻止 MessageBox 关闭** | `() => void | boolean` | `undefined` | `false` |
+| onClickCover | 值为 false 或者 undefined 时，隐藏遮罩。点击遮罩时触发的函数。**返回 `false` 时阻止 MessageBox 关闭** | `(() => void | boolean) | boolean` | `false` | `false` |
+| onClickCloseIcon | 值为 false 或者 undefined 时，不展示关闭图标。点击关闭图标时触发的函数。**返回 `false` 时阻止 MessageBox 关闭** | `(() => void | boolean) | boolean` | `true` | `false` |
 
 ### MessageBox.alert
 
@@ -45,7 +44,7 @@ React.Dom
 | --- | --- | --- | --- | --- |
 | [`...MessageBox.model`](#/document/MessageBox) |  |  |  |  |
 | confirmButton | 确认按钮的属性，返回 `true` 时阻止关闭 | [`Button`](#/document/Button) | `{}` | `false` |
-| confirmCallback | 点击确认按钮时触发的函数。**返回 `true` 时阻止 MessageBox 关闭** | `() => void | boolean` | `() => {}` | `false` |
+| confirmCallback | 点击确认按钮时触发的函数。**返回 `false` 时阻止 MessageBox 关闭** | `() => void | boolean` | `() => {}` | `false` |
 | confirmChildren | 确认按钮的内容 | `React.ReactNode` | `confirm` | `false` |
 
 ### MessageBox.confirm
@@ -56,5 +55,5 @@ React.Dom
 | --- | --- | --- | --- | --- |
 | [`...MessageBox.alert`](#/document/MessageBox) |  |  |  |  |
 | cancelButton | 取消按钮的属性，返回 `true` 时阻止关闭 | [`Button`](#/document/Button) | `{}` | `false` |
-| cancelCallback | 点击取消按钮时触发的函数。**返回 `true` 时阻止 MessageBox 关闭** | `() => void | boolean` | `() => {}` | `false` |
+| cancelCallback | 点击取消按钮时触发的函数。**返回 `false` 时阻止 MessageBox 关闭** | `() => void | boolean` | `() => {}` | `false` |
 | cancelChildren | 取消按钮的内容 | `React.ReactNode` | `confirm` | `false` |

@@ -9,13 +9,11 @@ const prefixCls = `${prefix}-messagebox`;
 
 const model = (props: MessageBoxPropsWithModel) => {
     const {
-        noCover,
         buttons,
-        onClickCloseIcon,
+        onClickCloseIcon = false,
         // Cover
         coverProps = {},
-        onClickCover = () => {},
-        preventClickCover = false,
+        onClickCover = true,
         // TransisitonWrap
         onExitDone = () => {},
         time,
@@ -23,15 +21,14 @@ const model = (props: MessageBoxPropsWithModel) => {
         ...restProps
     } = props;
     // eslint-disable-next-line @typescript-eslint/no-use-before-define
-    const closeMessageBox = () => close();
+    const closeMessageBox = (flag: any = true) => (flag === false ? null : close());
     const newButtons =
         buttons &&
         buttons.map<typeof buttons[0]>(btnProps => ({
             ...btnProps,
             onClick: e => {
                 const { onClick = () => {} } = btnProps;
-                const isClose = Boolean(onClick(e));
-                isClose ? null : closeMessageBox();
+                closeMessageBox(onClick(e));
             },
         }));
 
@@ -39,17 +36,14 @@ const model = (props: MessageBoxPropsWithModel) => {
     document.body.append(div);
     const CoverProps: typeof coverProps = {
         ...coverProps,
-        onClick: preventClickCover
-            ? () => {}
-            : e => {
-                  const { onClick } = coverProps;
-                  onClick && onClick(e);
-                  if (!onClickCover()) {
-                      closeMessageBox();
-                  }
-              },
+        onClick: e => {
+            if (onClickCover && (onClickCover === true || onClickCover() !== false)) {
+                const { onClick = () => {} } = coverProps;
+                closeMessageBox(onClick(e));
+            }
+        },
     };
-    if (noCover) {
+    if (!onClickCover) {
         CoverProps.visible = false;
     }
 
@@ -59,9 +53,7 @@ const model = (props: MessageBoxPropsWithModel) => {
             onClickCloseIcon={
                 onClickCloseIcon
                     ? () => {
-                          if (!onClickCloseIcon()) {
-                              closeMessageBox();
-                          }
+                          closeMessageBox(onClickCloseIcon === true || onClickCloseIcon());
                       }
                     : onClickCloseIcon
             }
@@ -97,7 +89,7 @@ export default {
         return model({
             ...restProps,
             multiLineButtons,
-            className: multiLineButtons ? className + ` ${prefixCls}-buttons-multiline-alert` : className,
+            className: multiLineButtons ? className + ` ${prefixCls}-buttons-multiline-single` : className,
             buttons: [
                 {
                     ghost: !multiLineButtons,

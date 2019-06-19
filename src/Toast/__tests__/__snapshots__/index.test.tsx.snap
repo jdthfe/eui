@@ -62,7 +62,7 @@ exports[`Toast snapshots: show 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="edm-icon edm-icon-l"
+        class="edm-icon edm-icon-xl"
         fill="#fff"
       >
         <use
@@ -84,7 +84,7 @@ exports[`Toast snapshots: show 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="edm-icon edm-icon-l"
+        class="edm-icon edm-icon-xl"
         fill="#fff"
       >
         <use
@@ -107,7 +107,7 @@ exports[`Toast snapshots: show 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="edm-icon edm-icon-l"
+        class="edm-icon edm-icon-xl"
         fill="#fff"
       >
         <use
@@ -125,7 +125,7 @@ exports[`Toast snapshots: show 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="edm-icon edm-icon-l"
+        class="edm-icon edm-icon-xl"
         fill="#fff"
       >
         <use
@@ -143,7 +143,7 @@ exports[`Toast snapshots: show 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="edm-icon edm-icon-l edm-icon-loading"
+        class="edm-icon edm-icon-xl edm-icon-loading"
         fill="#fff"
       >
         <use

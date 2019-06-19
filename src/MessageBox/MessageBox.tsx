@@ -22,7 +22,7 @@ const MessageBox = (props: MessageBoxProps) => {
         buttons = [],
         multiLineButtons = false,
         hiddenline,
-        onClickCloseIcon,
+        onClickCloseIcon = false,
         // TransitionWrap
         visible,
         keepOnExit,
@@ -51,7 +51,11 @@ const MessageBox = (props: MessageBoxProps) => {
             >
                 <div {...restProps} className={cls}>
                     {onClickCloseIcon ? (
-                        <Icon className={`${prefixCls}-close`} onClick={onClickCloseIcon} value="close" />
+                        <Icon
+                            className={`${prefixCls}-close`}
+                            onClick={onClickCloseIcon === true ? () => {} : onClickCloseIcon}
+                            value="close"
+                        />
                     ) : null}
                     {/* Title */}
                     {title ? <p className={`${prefixCls}-title`}>{title}</p> : null}

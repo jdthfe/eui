@@ -34,14 +34,14 @@ describe('MessageBox', () => {
         const onClick = jest.fn();
         const { baseElement, getByText } = render(<div />);
         const close = MessageBox.model({
-            preventClickCover: true,
+            onClickCover: () => false,
             children: MessageBoxText,
             coverProps: { className: coverClassName },
             buttons: [
                 {
                     onClick: () => {
                         onClick();
-                        return true;
+                        return false;
                     },
                     children: confirmChildren,
                 },
@@ -139,7 +139,11 @@ describe('MessageBox', () => {
         const cancelChildren = 'cancel';
         const coverClassName = 'coverClassName';
         const { getByText, baseElement } = render(<div />);
-        MessageBox.confirm({ noCover: true, cancelButton: { onClick }, coverProps: { className: coverClassName } });
+        MessageBox.confirm({
+            onClickCover: false,
+            cancelButton: { onClick },
+            coverProps: { className: coverClassName },
+        });
         await waitForElement(() => getByText(cancelChildren));
         expect(baseElement.querySelector(`.${coverClassName}`) === null).toEqual(true);
         fireEvent.click(getByText(cancelChildren));

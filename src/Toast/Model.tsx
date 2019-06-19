@@ -68,7 +68,7 @@ export default {
             ...props,
             children: (
                 <Fragment>
-                    <Icon value="successful" fill="#fff" />
+                    <Icon size="xl" value="successful" fill="#fff" />
                     {props.children ? <WhiteSpace size="l" /> : null}
                     {props.children}
                 </Fragment>
@@ -79,7 +79,7 @@ export default {
             ...props,
             children: (
                 <Fragment>
-                    <Icon value="alert" fill="#fff" />
+                    <Icon size="xl" value="alert" fill="#fff" />
                     {props.children ? <WhiteSpace size="l" /> : null}
                     {props.children}
                 </Fragment>

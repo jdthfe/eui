@@ -15,27 +15,23 @@ export interface MessageBoxProps
     multiLineButtons?: boolean;
     /** Hidden the line before buttons */
     hiddenline?: boolean;
-    /** Callback on click the cross button. When the value is empty, the button is not displayed  */
-    onClickCloseIcon?: () => void;
+    /** Callback on click the cross button. When the value is empty or false, the button is not displayed  */
+    onClickCloseIcon?: (() => void) | boolean;
     /** CoverProps */
     coverProps?: CoverWithTransitionWrap;
 }
 
 export interface MessageBoxPropsWithModel extends MessageBoxProps {
-    /** Callback on click the cross button. When the value is empty, the button is not displayed  */
-    onClickCloseIcon?: () => void | boolean;
-    /** Prevent click cover  */
-    preventClickCover?: boolean;
-    /** On click cover, return `true` to prvent Message's close  */
-    onClickCover?: () => void | boolean;
-    /** Cover will block page clicks */
-    noCover?: boolean;
+    /** Callback on click the cross button. When the value is empty or false, the button is not displayed. **return `false` to prvent Message's close** */
+    onClickCloseIcon?: (() => void | boolean) | boolean;
+    /** When the value is empty or false, the cover is not displayed. On click cover, **return `false` to prvent Message's close** */
+    onClickCover?: (() => void | boolean) | boolean;
 }
 
 export interface MessageBoxConfirmProps {
     /** confirmButton’s props */
     confirmButton?: ButtonProps;
-    /** confirmButton’s callback, return `true` to prvent Message's close*/
+    /** confirmButton’s callback, **return `false` to prvent Message's close** */
     confirmCallback?: () => void | boolean;
     /** confirmButton’s children */
     confirmChildren?: React.ReactNode;
@@ -43,7 +39,7 @@ export interface MessageBoxConfirmProps {
 export interface MessageBoxCancelProps {
     /** cancelButton’s props */
     cancelButton?: ButtonProps;
-    /** cancelButton’s callback, return `true` to prvent Message's close*/
+    /** cancelButton’s callback, **return `false` to prvent Message's close** */
     cancelCallback?: () => void | boolean;
     /** cancelButton’s children */
     cancelChildren?: React.ReactNode;

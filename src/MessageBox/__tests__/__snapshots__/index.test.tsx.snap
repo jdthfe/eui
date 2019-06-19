@@ -318,7 +318,7 @@ exports[`MessageBox snapshots alert: alert show 1`] = `
       class="edm-Cover edm-fade-entry-active edm-fade"
     />
     <div
-      class="edm-messagebox undefined edm-messagebox-buttons-multiline-alert edm-fade-entry-active edm-fade"
+      class="edm-messagebox undefined edm-messagebox-buttons-multiline-single edm-fade-entry-active edm-fade"
     >
       <p
         class="edm-messagebox-title"

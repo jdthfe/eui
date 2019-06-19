@@ -48,17 +48,7 @@ describe('Toast', () => {
         expect(baseElement).toMatchSnapshot('close');
     });
     const timeDeviation = 200;
-    // 误差允许
-    // it('Toast lasted for the specified time', async () => {
-    //     const { getByText } = render(<div />);
-    //     Toast.normal({ children: toastTxt, duration, time });
 
-    //     const showTime = new Date().getTime();
-    //     await waitForElement(() => getByText(toastTxt));
-    //     await waitForElementToBeRemoved(() => getByText(toastTxt));
-    //     const realDuration = new Date().getTime() - showTime;
-    //     expect(realDuration >= duration && realDuration < duration + time + timeDeviation).toEqual(true);
-    // });
     it('closed successfully', async () => {
         const { getByText } = render(<div />);
         const close = Toast.model({ children: toastTxt, duration });
