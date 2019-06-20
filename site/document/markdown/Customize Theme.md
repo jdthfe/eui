@@ -20,7 +20,7 @@ we can use the way of [options data](https://sass-lang.com/documentation/variabl
   npm install --save-dev babel-plugin-import babel-plugin-import node-sass sass-loader style-loader css-loader
 ```
 
-Secondly, configuration `babel-plugin-import` to load e-ui sass
+Secondly, configuration `babel-plugin-import` to load eui sass
 
 ```tsx
 {
@@ -29,8 +29,8 @@ Secondly, configuration `babel-plugin-import` to load e-ui sass
       [
         "import",
         {
-          "libraryName": "e-ui",
-          "libraryDirectory": "compiled/lib", // or "compilesed/es"
+          "libraryName": "@jdthfe/eui",
+          "libraryDirectory": "compiled/ed", // or "compilesed/lib"
           "camel2DashComponentName": false,
           "style": true// `style: true` for sass
         }

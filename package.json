@@ -1,5 +1,5 @@
 {
-    "name": "e-ui",
+    "name": "@jdthfe/eui",
     "keywords": [
         "eui",
         "typescript",
@@ -7,7 +7,7 @@
         "ui",
         "mobile"
     ],
-    "version": "0.1.0",
+    "version": "0.0.2",
     "description": "",
     "files": [
         "compiled"

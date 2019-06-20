@@ -1,8 +1,8 @@
-e-ui 设计规范上支持一定程度的样式定制，以满足业务和品牌上多样化的视觉需求，包括但不限于主色、圆角、边框和部分组件的视觉定制。
+eui 设计规范上支持一定程度的样式定制，以满足业务和品牌上多样化的视觉需求，包括但不限于主色、圆角、边框和部分组件的视觉定制。
 
 ### 样式变量
 
-e-ui 的样式使用了 [Sass](https://sass-lang.com/) 作为开发语言，并定义了一系列全局/组件的样式变量，你可以根据需求进行相应调整。
+eui 的样式使用了 [Sass](https://sass-lang.com/) 作为开发语言，并定义了一系列全局/组件的样式变量，你可以根据需求进行相应调整。
 
 -   [默认样式变量](https://github.com/jdthfe/eui/blob/master/src/style/variables.scss)
 
@@ -18,7 +18,7 @@ e-ui 的样式使用了 [Sass](https://sass-lang.com/) 作为开发语言，并�
   npm install --save-dev babel-plugin-import sass sass-loader style-loader css-loader
 ```
 
-配置 `babel-plugin-import` 确保加载 e-ui scss 文件
+配置 `babel-plugin-import` 确保加载 eui scss 文件
 
 ```tsx
 {
@@ -27,8 +27,8 @@ e-ui 的样式使用了 [Sass](https://sass-lang.com/) 作为开发语言，并�
       [
         "import",
         {
-          "libraryName": "e-ui",
-          "libraryDirectory": "compiled/lib", // or "compilesed/es"
+          "libraryName": "@jdthfe/eui",
+          "libraryDirectory": "compiled/es", // or "compilesed/lib"
           "camel2DashComponentName": false,
           "style": true// `style: true` for sass
         }

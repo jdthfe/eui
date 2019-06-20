@@ -20,7 +20,7 @@ Can be an existing project, or a newly created empty project with dva / create-r
 #### 2. Installation
 
 ```tsx
-npm install e-ui --save
+npm install @jdthfe/eui --save
 ```
 
 #### 3. Usage
@@ -28,17 +28,17 @@ npm install e-ui --save
 Example of usage:
 
 ```tsx
-import { Button } from 'e-ui';
+import { Button } from '@jdthfe/eui';
 ReactDOM.render(<Button>Start</Button>, mountNode);
 ```
 
 And import stylesheets manually:
 
 ```tsx
-import 'e-ui/compiled/dist/index.css';
+import 'eui/compiled/dist/index.css';
 ```
 
-**Use modularized e-ui**
+**Use modularized eui**
 
 **Note: Strongly recommended.**
 
@@ -47,17 +47,17 @@ The following two ways used to load the only components you used, select one of 
 -   Manually import
 
 ```tsx
-import Button from 'e-ui/compiled/lib/Button'; // for JS
-import 'e-ui/compiled/lib/Button/style/css'; // for CSS
-// import 'e-ui/compiled/lib/Button/style'; // that will import sass
+import Button from 'eui/compiled/lib/Button'; // for JS
+import 'eui/compiled/lib/Button/style/css'; // for CSS
+// import 'eui/compiled/lib/Button/style'; // that will import sass
 ```
 
 If `webpack` or `rollup` is used in the project, the following is supported（Recommended）.
 
 ```tsx
-import { Button } from 'e-ui';
-import 'e-ui/compiled/lib/Button/style/css'; // for CSS
-// import 'e-ui/compiled/dist/index.css'; // Recommend to import all styles in the entry file
+import { Button } from '@jdthfe/eui';
+import 'eui/compiled/lib/Button/style/css'; // for CSS
+// import 'eui/compiled/dist/index.css'; // Recommend to import all styles in the entry file
 ```
 
 -   Use [babel-plugin-import](https://github.com/ant-design/babel-plugin-import)。
@@ -69,7 +69,7 @@ import 'e-ui/compiled/lib/Button/style/css'; // for CSS
       [
         "import",
         {
-          "libraryName": "e-ui",
+          "libraryName": "eui",
           "libraryDirectory": "compiled/lib", // or "compilesed/es"
           "camel2DashComponentName": false,
           "style": "css"// `style: true` for sass
@@ -83,7 +83,7 @@ This allows you to import components from antd-mobile without having to manually
 
 ```tsx
 // import js and css modularly, parsed by babel-plugin-import
-import { Button } from 'e-ui';
+import { Button } from '@jdthfe/eui';
 ```
 
 #### 4. API
@@ -94,7 +94,7 @@ When the component is defined, the attribute of the element itself is strictly i
 // The Button component is a wrapper around the <button /> element and the TouchFeedback component
 // extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
 // and TouchFeedbackProps
-import { Button } from 'e-ui';
+import { Button } from '@jdthfe/eui';
 function buttonClick() {
     console.log('buttonClick!');
 }

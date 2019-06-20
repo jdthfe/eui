@@ -11,7 +11,7 @@ const config: webpack.Configuration = {
     mode: 'production',
     output: {
         path: getProjectUrl('compiled', 'dist'),
-        library: 'e-ui',
+        library: 'eui',
         libraryTarget: 'umd',
         globalObject: 'this',
     },

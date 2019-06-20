@@ -8,6 +8,7 @@ $messagebox-prefix: $preifx + '-messagebox';
 
     max-width: $msgbox-min-width;
     min-width: $msgbox-max-width;
+    overflow: hidden;
     text-align: center;
     background: $light;
     border-radius: $msgbox-radius;

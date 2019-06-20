@@ -20,7 +20,7 @@
 #### 2. 安装
 
 ```tsx
-npm install e-ui --save
+npm install @jdthfe/eui --save
 ```
 
 #### 3. 使用
@@ -28,14 +28,14 @@ npm install e-ui --save
 组件使用实例：
 
 ```tsx
-import { Button } from 'e-ui';
+import { Button } from '@jdthfe/eui';
 ReactDOM.render(<Button>Start</Button>, mountNode);
 ```
 
 引入样式
 
 ```tsx
-import 'e-ui/compiled/dist/index.css';
+import 'eui/compiled/dist/index.css';
 ```
 
 **按需加载**
@@ -47,17 +47,17 @@ import 'e-ui/compiled/dist/index.css';
 -   手动引入
 
 ```tsx
-import Button from 'e-ui/compiled/lib/Button'; // 加载 JS
-import 'e-ui/compiled/lib/Button/style/css'; // 加载 CSS
-// import 'e-ui/compiled/lib/Button/style';         // 加载 LESS
+import Button from 'eui/compiled/lib/Button'; // 加载 JS
+import 'eui/compiled/lib/Button/style/css'; // 加载 CSS
+// import 'eui/compiled/lib/Button/style';         // 加载 LESS
 ```
 
 如果项目中使用了 `webpack` 或者 `rollup`，支持如下写法（推荐）。
 
 ```tsx
-import { Button } from 'e-ui';
-import 'e-ui/compiled/lib/Button/style/css'; // 加载 CSS
-// import 'e-ui/compiled/dist/index.css';   // 推荐在入口文件引入全部样式
+import { Button } from '@jdthfe/eui';
+import 'eui/compiled/lib/Button/style/css'; // 加载 CSS
+// import 'eui/compiled/dist/index.css';   // 推荐在入口文件引入全部样式
 ```
 
 -   使用 [babel-plugin-import](https://github.com/ant-design/babel-plugin-import)。
@@ -69,7 +69,7 @@ import 'e-ui/compiled/lib/Button/style/css'; // 加载 CSS
       [
         "import",
         {
-          "libraryName": "e-ui",
+          "libraryName": "eui",
           "libraryDirectory": "compiled/lib", // or "compilesed/es"
           "camel2DashComponentName": false,
           "style": "css"// `style: true` 会加载 sass 文件
@@ -83,7 +83,7 @@ import 'e-ui/compiled/lib/Button/style/css'; // 加载 CSS
 
 ```tsx
 // babel-plugin-import 会帮助你加载 JS 和 CSS
-import { Button } from 'e-ui';
+import { Button } from '@jdthfe/eui';
 ```
 
 #### 4. API
@@ -94,7 +94,7 @@ import { Button } from 'e-ui';
 // Button 组件是对 <button /> 元素和 TouchFeedback 组件的封装
 // 继承 React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
 // 和 TouchFeedbackProps
-import { Button } from 'e-ui';
+import { Button } from '@jdthfe/eui';
 function buttonClick() {
     console.log('buttonClick!');
 }

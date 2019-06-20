@@ -15,7 +15,7 @@ export default {
 如何使用
 
 ```tsx
-import { Variable } from 'eui';
+import { Variable } from '@jdthfe/eui';
 // import Variable from 'eui/compiled/lib/_util/variable.js'; // 如果使用了 babel-plugin-import
 
 console.log(Variable.defaultDuration); // 2000

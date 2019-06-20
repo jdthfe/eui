@@ -41,7 +41,7 @@ const Article = (props: ContainerProps) => {
         readme = docs[`readme${lang !== 'en-US' ? '.' + lang : ''}`] || '';
     const str = `# ${item.name} ${lang !== 'en-US' ? item[lang] : ''}\n${readme.replace(
         '## Demo',
-        `## Demo\n\`\`\`jsx\n${demoSource}\n\`\`\``.replace('@src/index', 'e-ui'), // eui
+        `## Demo\n\`\`\`jsx\n${demoSource}\n\`\`\``.replace('@src/index', '@jdthfe/eui'),
     )}`;
     return (
         <article className="document-article">
