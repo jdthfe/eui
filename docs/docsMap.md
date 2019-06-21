@@ -40,7 +40,7 @@ Project
 │           mixin.scss           //  mixin
 │           variables.scss       //  样式主题变量
 │
-├── site                     //  展示页源码
+├── site                     //  文档页源码
 │   │   App.tsx                  //  路由入口
 │   │   index.html               //  html 模板
 │   │   index.tsx                //  展示页入口
