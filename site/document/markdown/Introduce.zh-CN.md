@@ -49,7 +49,7 @@ import 'eui/compiled/dist/index.css';
 ```tsx
 import Button from 'eui/compiled/lib/Button'; // 加载 JS
 import 'eui/compiled/lib/Button/style/css'; // 加载 CSS
-// import 'eui/compiled/lib/Button/style';         // 加载 LESS
+// import 'eui/compiled/lib/Button/style';         // 加载 Sass
 ```
 
 如果项目中使用了 `webpack` 或者 `rollup`，支持如下写法（推荐）。

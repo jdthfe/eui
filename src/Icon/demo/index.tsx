@@ -4,15 +4,16 @@ import { IconProps } from '@src/Icon/PropsType';
 import './index.scss';
 
 const iconList: IconProps['value'][] = [
-    'addcart',
     'alert',
-    'alipay',
+    'arrow',
     'close',
+    'eyeClose',
+    'eyeOpen',
     'loading',
+    'more',
     'remind',
     'selected',
     'successful',
-    'test',
 ];
 const sizeList: IconProps['size'][] = ['xs', 's', 'm', 'l', 'xl'];
 const fillList: string[] = ['red', 'orange', 'yellow', 'green', 'blue'];
