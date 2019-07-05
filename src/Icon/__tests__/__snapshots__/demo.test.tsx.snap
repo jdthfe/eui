@@ -19,21 +19,6 @@ exports[`renders Icon correctly 1`] = `
           class="eui-icon eui-icon-l"
         >
           <use
-            xlink:href="#addcart"
-          />
-        </svg>
-        <p>
-          addcart
-        </p>
-      </div>
-      <div
-        class="Icon-value-item"
-      >
-        <svg
-          aria-hidden="true"
-          class="eui-icon eui-icon-l"
-        >
-          <use
             xlink:href="#alert"
           />
         </svg>
@@ -49,11 +34,11 @@ exports[`renders Icon correctly 1`] = `
           class="eui-icon eui-icon-l"
         >
           <use
-            xlink:href="#alipay"
+            xlink:href="#arrow"
           />
         </svg>
         <p>
-          alipay
+          arrow
         </p>
       </div>
       <div
@@ -76,6 +61,36 @@ exports[`renders Icon correctly 1`] = `
       >
         <svg
           aria-hidden="true"
+          class="eui-icon eui-icon-l"
+        >
+          <use
+            xlink:href="#eyeClose"
+          />
+        </svg>
+        <p>
+          eyeClose
+        </p>
+      </div>
+      <div
+        class="Icon-value-item"
+      >
+        <svg
+          aria-hidden="true"
+          class="eui-icon eui-icon-l"
+        >
+          <use
+            xlink:href="#eyeOpen"
+          />
+        </svg>
+        <p>
+          eyeOpen
+        </p>
+      </div>
+      <div
+        class="Icon-value-item"
+      >
+        <svg
+          aria-hidden="true"
           class="eui-icon eui-icon-l eui-icon-loading"
         >
           <use
@@ -84,6 +99,21 @@ exports[`renders Icon correctly 1`] = `
         </svg>
         <p>
           loading
+        </p>
+      </div>
+      <div
+        class="Icon-value-item"
+      >
+        <svg
+          aria-hidden="true"
+          class="eui-icon eui-icon-l"
+        >
+          <use
+            xlink:href="#more"
+          />
+        </svg>
+        <p>
+          more
         </p>
       </div>
       <div
@@ -131,21 +161,6 @@ exports[`renders Icon correctly 1`] = `
           successful
         </p>
       </div>
-      <div
-        class="Icon-value-item"
-      >
-        <svg
-          aria-hidden="true"
-          class="eui-icon eui-icon-l"
-        >
-          <use
-            xlink:href="#test"
-          />
-        </svg>
-        <p>
-          test
-        </p>
-      </div>
     </div>
     <h4>
       Size
@@ -161,7 +176,7 @@ exports[`renders Icon correctly 1`] = `
           class="eui-icon eui-icon-xs"
         >
           <use
-            xlink:href="#addcart"
+            xlink:href="#alert"
           />
         </svg>
         <p>
@@ -176,7 +191,7 @@ exports[`renders Icon correctly 1`] = `
           class="eui-icon eui-icon-s"
         >
           <use
-            xlink:href="#addcart"
+            xlink:href="#alert"
           />
         </svg>
         <p>
@@ -191,7 +206,7 @@ exports[`renders Icon correctly 1`] = `
           class="eui-icon eui-icon-m"
         >
           <use
-            xlink:href="#addcart"
+            xlink:href="#alert"
           />
         </svg>
         <p>
@@ -206,7 +221,7 @@ exports[`renders Icon correctly 1`] = `
           class="eui-icon eui-icon-l"
         >
           <use
-            xlink:href="#addcart"
+            xlink:href="#alert"
           />
         </svg>
         <p>
@@ -221,7 +236,7 @@ exports[`renders Icon correctly 1`] = `
           class="eui-icon eui-icon-xl"
         >
           <use
-            xlink:href="#addcart"
+            xlink:href="#alert"
           />
         </svg>
         <p>
