@@ -60,7 +60,7 @@ exports[`renders FixTop correctly 1`] = `
           fill="#F00"
         >
           <use
-            xlink:href="#alipay"
+            xlink:href="#close"
           />
         </svg>
       </div>
