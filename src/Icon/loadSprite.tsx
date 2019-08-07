@@ -31,7 +31,7 @@ const loadSprite = () => {
     if (!document) {
         return;
     }
-    const existing = document.getElementById('__ANTD_MOBILE_SVG_SPRITE_NODE__');
+    const existing = document.getElementById('__EUI_MOBILE_SVG_SPRITE_NODE__');
     const mountNode = document.body;
 
     if (!existing) {

@@ -7,10 +7,14 @@ import Icon from '../Icon';
 import WhiteSpace from '../WhiteSpace';
 
 import variable from '../_util/variable';
+import prefix from '../_util/prefix';
+import classNames from 'classnames';
+const prefixCls = `${prefix}-toast`;
 const { transitionTime, defaultDuration } = variable;
 
-const model = (props: ToastPropsWithModel) => {
+const model = (props: ToastPropsWithModel, type = '') => {
     const {
+        className,
         coverProps,
         onExitDone = () => {},
         time = transitionTime,
@@ -18,7 +22,9 @@ const model = (props: ToastPropsWithModel) => {
         noCover = false,
         ...restProps
     } = props;
-
+    const cls = classNames(className, {
+        [`${prefixCls}-${type}`]: type,
+    });
     const div = document.createElement('div');
     document.body.append(div);
     const newCoverProps: typeof coverProps = {
@@ -29,6 +35,7 @@ const model = (props: ToastPropsWithModel) => {
     }
     const component = (
         <Toast
+            className={cls}
             coverProps={newCoverProps}
             onExitDone={() => {
                 ReactDOM.unmountComponentAtNode(div);
@@ -64,25 +71,31 @@ const model = (props: ToastPropsWithModel) => {
 export default {
     model: (props: ToastPropsWithModel = {}) => model(props),
     success: (props: ToastPropsWithModel = {}) =>
-        model({
-            ...props,
-            children: (
-                <Fragment>
-                    <Icon size="xl" value="successful" fill="#fff" />
-                    {props.children ? <WhiteSpace size="l" /> : null}
-                    {props.children}
-                </Fragment>
-            ),
-        }),
+        model(
+            {
+                ...props,
+                children: (
+                    <Fragment>
+                        <Icon size="xl" value="successful" fill="#fff" />
+                        {props.children ? <WhiteSpace size="l" /> : null}
+                        {props.children}
+                    </Fragment>
+                ),
+            },
+            'success',
+        ),
     alert: (props: ToastPropsWithModel = {}) =>
-        model({
-            ...props,
-            children: (
-                <Fragment>
-                    <Icon size="xl" value="alert" fill="#fff" />
-                    {props.children ? <WhiteSpace size="l" /> : null}
-                    {props.children}
-                </Fragment>
-            ),
-        }),
+        model(
+            {
+                ...props,
+                children: (
+                    <Fragment>
+                        <Icon size="xl" value="alert" fill="#fff" />
+                        {props.children ? <WhiteSpace size="l" /> : null}
+                        {props.children}
+                    </Fragment>
+                ),
+            },
+            'alert',
+        ),
 };

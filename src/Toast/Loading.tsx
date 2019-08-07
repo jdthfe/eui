@@ -7,6 +7,9 @@ import Icon from '../Icon';
 import WhiteSpace from '../WhiteSpace';
 
 import variable from '../_util/variable';
+import prefix from '../_util/prefix';
+import classNames from 'classnames';
+const prefixCls = `${prefix}-toast`;
 const { transitionTime } = variable;
 
 const div = document.createElement('div');
@@ -15,6 +18,7 @@ let timer: number;
 
 const model = (props: ToastPropsWithModel) => {
     const {
+        className,
         coverProps = {},
         onExitDone = () => {},
         time = transitionTime,
@@ -22,6 +26,7 @@ const model = (props: ToastPropsWithModel) => {
         noCover = false,
         ...restProps
     } = props;
+    const cls = classNames(className, `${prefixCls}-loading`);
     document.body.append(div);
     const CoverProps: typeof coverProps = {
         ...coverProps,
@@ -31,6 +36,7 @@ const model = (props: ToastPropsWithModel) => {
     }
     const component = (
         <Toast
+            className={cls}
             coverProps={CoverProps}
             {...restProps}
             onExitDone={() => {

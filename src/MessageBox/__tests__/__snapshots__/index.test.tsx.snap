@@ -5,7 +5,7 @@ exports[`MessageBox snapshots alert: alert close 1`] = `
   
   
   <svg
-    id="__ANTD_MOBILE_SVG_SPRITE_NODE__"
+    id="__EUI_MOBILE_SVG_SPRITE_NODE__"
     style="position:absolute;width:0;height:0"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -175,7 +175,7 @@ exports[`MessageBox snapshots alert: alert show 1`] = `
   
   
   <svg
-    id="__ANTD_MOBILE_SVG_SPRITE_NODE__"
+    id="__EUI_MOBILE_SVG_SPRITE_NODE__"
     style="position:absolute;width:0;height:0"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -374,7 +374,7 @@ exports[`MessageBox snapshots confirm: confirm close 1`] = `
   
   
   <svg
-    id="__ANTD_MOBILE_SVG_SPRITE_NODE__"
+    id="__EUI_MOBILE_SVG_SPRITE_NODE__"
     style="position:absolute;width:0;height:0"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -550,7 +550,7 @@ exports[`MessageBox snapshots confirm: confirm show 1`] = `
   
   
   <svg
-    id="__ANTD_MOBILE_SVG_SPRITE_NODE__"
+    id="__EUI_MOBILE_SVG_SPRITE_NODE__"
     style="position:absolute;width:0;height:0"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
