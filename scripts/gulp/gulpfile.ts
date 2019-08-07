@@ -41,7 +41,7 @@ const source = [
     // getProjectUrl('typings/**/*.ts'),
 ];
 function convertTstoJs(output: string, modules?: boolean) {
-    const title = modules !== false ? 'ts -> lib' : 'ts -> es';
+    const title = modules !== false ? 'lib: [tsx ] -> [ js ]' : 'es : [tsx ] -> [ js ]';
     return new Promise((res, rej) => {
         src([getProjectUrl('src/index.tsx')])
             .pipe(replace(/false &&/g, modules !== false ? '' : 'false &&'))
@@ -54,7 +54,9 @@ function convertTstoJs(output: string, modules?: boolean) {
     });
 }
 function convertTstoDts() {
-    console.log('[  e  s  ] convert Ts to Dts By Typescript...');
+    console.log();
+    console.log('Convert Ts to Dts By Typescript...');
+    console.log();
     const tsc = spawn('tsc', ['-pretty', '--emitDeclarationOnly', '-p', '../../tsconfig.dts.json'], {
         stdio: 'inherit',
         shell: process.platform === 'win32',
@@ -72,7 +74,9 @@ function convertTstoDts() {
 }
 
 function copyDts() {
-    console.log('[ l i b  ] convert Ts to Dts By Typescript...');
+    console.log();
+    console.log('Convert Ts to Dts By Typescript...');
+    console.log();
     const dtsFile = [getProjectUrl('compiled/es/**/*.d.ts')];
     return new Promise((res, rej) => {
         src(dtsFile)
@@ -84,7 +88,7 @@ function copyDts() {
 
 const scssSource = [getProjectUrl('src/**/style/*.scss')];
 function copyScss(modules?: boolean) {
-    const title = modules !== false ? 'scss -> lib' : 'scss -> es';
+    const title = modules !== false ? 'lib: [scss] -> [scss]' : 'es : [scss] -> [scss]';
     return new Promise((res, rej) => {
         src(scssSource)
             .pipe(debug({ title }))
@@ -95,7 +99,7 @@ function copyScss(modules?: boolean) {
 }
 
 function convertScssToCss(modules?: boolean) {
-    const title = modules !== false ? 'css -> lib' : 'css -> es';
+    const title = modules !== false ? 'lib: [scss] -> [ css]' : 'es : [scss] -> [ css]';
     return new Promise((res, rej) => {
         src(scssSource)
             .pipe(debug({ title }))
@@ -108,8 +112,12 @@ function convertScssToCss(modules?: boolean) {
                     }),
                     pxtorem({
                         // todo change value
-                        rootValue: 16,
-                        propWhiteList: ['*'],
+                        // rootValue: 16,
+                        /**
+                         * [*]  转换
+                         * [ ]  不转换
+                         */
+                        propList: [],
                     }),
                     cssnano({
                         preset: 'default',
@@ -124,10 +132,13 @@ function convertScssToCss(modules?: boolean) {
 
 const styleIndexSource = [getProjectUrl('src/**/style/index.tsx')];
 function buildCssJs(modules?: boolean) {
+    const title = modules !== false ? 'lib: [tsx ] -> [ js ]' : 'es : [tsx ] -> [ js ]';
     return new Promise((res, rej) => {
         src(styleIndexSource)
+            .pipe(debug({ title }))
             .pipe(replace(/\/style\/?'/g, "/style/css'"))
             .pipe(replace(/\.scss/g, '.css'))
+            .pipe(babel(babelrc(modules)))
             .pipe(
                 rename({
                     basename: 'css',
