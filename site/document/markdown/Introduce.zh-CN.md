@@ -79,7 +79,7 @@ import 'eui/compiled/lib/Button/style/css'; // 加载 CSS
 }
 ```
 
-然后只需从 antd-mobile 引入模块即可，无需单独引入样式。
+然后只需从 eui 引入模块即可，无需单独引入样式。
 
 ```tsx
 // babel-plugin-import 会帮助你加载 JS 和 CSS

@@ -22,8 +22,12 @@ function getStyleLoader(): webpack.RuleSetUse {
                     }),
                     pxtorem({
                         // todo change value
-                        rootValue: 16,
-                        propWhiteList: ['*'],
+                        // rootValue: 16,
+                        /**
+                         * [*]  转换
+                         * [ ]  不转换
+                         */
+                        propList: [],
                     }),
                     cssnano({
                         preset: 'default',

@@ -79,7 +79,7 @@ import 'eui/compiled/lib/Button/style/css'; // for CSS
 }
 ```
 
-This allows you to import components from antd-mobile without having to manually import the corresponding stylesheet. The babel plugin will automatically import stylesheets.
+This allows you to import components from eui without having to manually import the corresponding stylesheet. The babel plugin will automatically import stylesheets.
 
 ```tsx
 // import js and css modularly, parsed by babel-plugin-import
