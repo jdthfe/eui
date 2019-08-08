@@ -27,7 +27,7 @@ const model = (props: ToastPropsWithModel) => {
         ...restProps
     } = props;
     const cls = classNames(className, `${prefixCls}-loading`);
-    document.body.append(div);
+    document.body.appendChild(div);
     const CoverProps: typeof coverProps = {
         ...coverProps,
     };

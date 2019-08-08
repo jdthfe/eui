@@ -22,7 +22,6 @@ describe('Toast', () => {
         await waitForElement(() => baseElement.querySelector(`${fadeCls}${prefixCls}-alert`));
         const success1 = Toast.success();
         await waitForElement(() => baseElement.querySelector(`${fadeCls}${prefixCls}-success`));
-        console.log(`${fadeCls}${prefixCls}-success`);
 
         //  排除 svg 文件干扰
         baseElement.querySelector('svg')!.remove();

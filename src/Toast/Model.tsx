@@ -26,7 +26,7 @@ const model = (props: ToastPropsWithModel, type = '') => {
         [`${prefixCls}-${type}`]: type,
     });
     const div = document.createElement('div');
-    document.body.append(div);
+    document.body.appendChild(div);
     const newCoverProps: typeof coverProps = {
         ...coverProps,
     };

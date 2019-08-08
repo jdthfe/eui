@@ -33,7 +33,7 @@ const model = (props: MessageBoxPropsWithModel) => {
         }));
 
     const div = document.createElement('div');
-    document.body.append(div);
+    document.body.appendChild(div);
     const CoverProps: typeof coverProps = {
         ...coverProps,
         onClick: e => {
