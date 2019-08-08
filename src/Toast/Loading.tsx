@@ -8,6 +8,7 @@ import WhiteSpace from '../WhiteSpace';
 
 import variable from '../_util/variable';
 import prefix from '../_util/prefix';
+import { removeNode } from '../_util/methods';
 import classNames from 'classnames';
 const prefixCls = `${prefix}-toast`;
 const { transitionTime } = variable;
@@ -42,7 +43,7 @@ const model = (props: ToastPropsWithModel) => {
             onExitDone={() => {
                 onExitDone();
                 ReactDOM.unmountComponentAtNode(div);
-                div.remove();
+                removeNode(div);
             }}
             time={time}
             mountNode={div}

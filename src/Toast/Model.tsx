@@ -9,6 +9,7 @@ import WhiteSpace from '../WhiteSpace';
 import variable from '../_util/variable';
 import prefix from '../_util/prefix';
 import classNames from 'classnames';
+import { removeNode } from '../_util/methods';
 const prefixCls = `${prefix}-toast`;
 const { transitionTime, defaultDuration } = variable;
 
@@ -40,7 +41,7 @@ const model = (props: ToastPropsWithModel, type = '') => {
             onExitDone={() => {
                 ReactDOM.unmountComponentAtNode(div);
                 onExitDone();
-                div.remove();
+                removeNode(div);
             }}
             {...restProps}
             time={time}
@@ -56,7 +57,7 @@ const model = (props: ToastPropsWithModel, type = '') => {
         if (props.children === undefined) {
             ReactDOM.unmountComponentAtNode(div);
             onExitDone();
-            div.remove();
+            removeNode(div);
         }
         return ReactDOM.render(React.cloneElement(component, { visible: false }), div);
     };

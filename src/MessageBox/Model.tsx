@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import MessageBox from './MessageBox';
 import { MessageBoxPropsWithModel, MessageBoxAlert, MessageBoxConfirm } from './PropsType';
 import prefix from '../_util/prefix';
+import { removeNode } from '../_util/methods';
 
 const prefixCls = `${prefix}-messagebox`;
 
@@ -60,7 +61,7 @@ const model = (props: MessageBoxPropsWithModel) => {
             coverProps={CoverProps}
             onExitDone={() => {
                 ReactDOM.unmountComponentAtNode(div);
-                div.remove();
+                removeNode(div);
                 onExitDone();
             }}
             time={time}
