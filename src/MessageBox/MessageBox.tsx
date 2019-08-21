@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import { MessageBoxProps } from './PropsType';
-import prefix from '../_util/prefix';
+import { prefix } from '../_util/';
 const prefixCls = `${prefix}-messagebox`;
 
 import Icon from '../Icon';
@@ -9,8 +9,8 @@ import Button from '../Button';
 import Cover from '../Cover';
 import Portal from '../Portal';
 import TransitionWrap from '../TransitionWrap';
-import variable from '../_util/variable';
-const { transitionFade } = variable;
+import { Variable } from '../_util/';
+const { transitionFade } = Variable;
 
 const { Transition } = Cover;
 

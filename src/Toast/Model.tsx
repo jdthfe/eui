@@ -6,12 +6,10 @@ import { ToastPropsWithModel } from './PropsType';
 import Icon from '../Icon';
 import WhiteSpace from '../WhiteSpace';
 
-import variable from '../_util/variable';
-import prefix from '../_util/prefix';
+import { Variable, removeNode, prefix } from '../_util/';
 import classNames from 'classnames';
-import { removeNode } from '../_util/methods';
 const prefixCls = `${prefix}-toast`;
-const { transitionTime, defaultDuration } = variable;
+const { transitionTime, defaultDuration } = Variable;
 
 const model = (props: ToastPropsWithModel, type = '') => {
     const {

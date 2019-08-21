@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { IconProps } from './PropsType';
 import loadSprite from './loadSprite';
 import classnames from 'classnames';
-import prefix from '../_util/prefix';
+import { prefix } from '../_util/';
 const prefixCls = `${prefix}-icon`;
 
 const Icon = (props: IconProps) => {

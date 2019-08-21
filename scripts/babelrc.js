@@ -1,4 +1,6 @@
-export default (modules?: boolean) => ({
+const browsers = require('./.browserslistrc.js');
+
+module.exports = modules => ({
     presets: [
         [
             '@babel/preset-env',
@@ -7,13 +9,13 @@ export default (modules?: boolean) => ({
                 corejs: 2,
                 useBuiltIns: 'usage',
                 targets: {
-                    browsers: ['ie >= 11'],
+                    browsers,
                 },
             },
         ],
         '@babel/preset-react',
         '@babel/preset-typescript',
-    ] as string[],
+    ],
     plugins: [
         [
             '@babel/plugin-transform-runtime',
@@ -26,5 +28,5 @@ export default (modules?: boolean) => ({
         ],
         '@babel/plugin-proposal-class-properties',
         '@babel/plugin-proposal-object-rest-spread',
-    ] as string[],
+    ],
 });

@@ -2,7 +2,8 @@ import { Toast } from '@src/index';
 import React from 'react';
 import { render, waitForElement, waitForElementToBeRemoved, fireEvent, cleanup } from 'react-testing-library';
 
-import prefix from '../../_util/prefix';
+import { prefix } from '../../_util/';
+
 const fadeCls = `.${prefix}-fade-entry-done`;
 const prefixCls = `.${prefix}-toast`;
 

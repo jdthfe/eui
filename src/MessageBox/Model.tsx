@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom';
 
 import MessageBox from './MessageBox';
 import { MessageBoxPropsWithModel, MessageBoxAlert, MessageBoxConfirm } from './PropsType';
-import prefix from '../_util/prefix';
-import { removeNode } from '../_util/methods';
+import { prefix, removeNode } from '../_util/';
 
 const prefixCls = `${prefix}-messagebox`;
 

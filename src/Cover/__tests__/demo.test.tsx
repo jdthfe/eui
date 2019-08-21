@@ -3,8 +3,8 @@ webDemoTest('Cover');
 
 import React from 'react';
 import Demo from '../demo';
-import variable from '../../_util/variable';
-const { transitionFade } = variable;
+import { Variable } from '../../_util/';
+const { transitionFade } = Variable;
 import { render, fireEvent, waitForElement } from 'react-testing-library';
 
 // https://codesandbox.io/s/rqj0lymyn?from-embed

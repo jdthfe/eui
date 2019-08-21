@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import { MessageBox, Button, WhiteSpace, WingBlank, Icon, Variable } from '@src/index';
+import { MessageBox, Button, WhiteSpace, WingBlank, Icon } from '@src/index';
+import { _util } from '@src/index';
+const { Variable } = _util;
+
 const Demo = () => {
     const [visible, setVisible] = useState(false);
     function changeVisible() {

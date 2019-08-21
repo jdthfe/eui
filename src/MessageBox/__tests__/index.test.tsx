@@ -1,7 +1,7 @@
 import { MessageBox } from '@src/index';
 import React from 'react';
 import { render, waitForElement, waitForElementToBeRemoved, fireEvent } from 'react-testing-library';
-import prefix from '../../_util/prefix';
+import { prefix } from '../../_util/';
 
 describe('MessageBox', () => {
     const MessageBoxText = 'MessageBoxText';

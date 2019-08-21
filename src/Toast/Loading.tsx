@@ -6,12 +6,10 @@ import { ToastPropsWithModel } from './PropsType';
 import Icon from '../Icon';
 import WhiteSpace from '../WhiteSpace';
 
-import variable from '../_util/variable';
-import prefix from '../_util/prefix';
-import { removeNode } from '../_util/methods';
+import { Variable, prefix, removeNode } from '../_util/';
 import classNames from 'classnames';
 const prefixCls = `${prefix}-toast`;
-const { transitionTime } = variable;
+const { transitionTime } = Variable;
 
 const div = document.createElement('div');
 let close = () => {};

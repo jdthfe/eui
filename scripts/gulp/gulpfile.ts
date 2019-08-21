@@ -11,12 +11,9 @@ import rimraf from 'rimraf';
 import babel from 'gulp-babel';
 import debug from 'gulp-debug';
 import postcss from 'gulp-postcss';
-import autoprefixer from 'autoprefixer';
-import cssnano from 'cssnano';
-import pxtorem from 'postcss-pxtorem';
-
-import babelrc from '../babelrc';
+import babelrc from '../babelrc.js';
 import { getProjectUrl } from '../helpers';
+import postcssOptions from '../postcssOptions';
 
 const libDir = getProjectUrl('compiled', 'lib');
 const esDir = getProjectUrl('compiled', 'es');
@@ -104,26 +101,7 @@ function convertScssToCss(modules?: boolean) {
         src(scssSource)
             .pipe(debug({ title }))
             .pipe(scss())
-            .pipe(
-                postcss([
-                    //   postcssFlexbugsFixes,
-                    autoprefixer({
-                        browsers: ['last 2 versions', 'Firefox ESR', '> 1%', 'ie >= 9', 'iOS >= 8', 'Android >= 4'],
-                    }),
-                    pxtorem({
-                        // todo change value
-                        // rootValue: 16,
-                        /**
-                         * [*]  转换
-                         * [ ]  不转换
-                         */
-                        propList: [],
-                    }),
-                    cssnano({
-                        preset: 'default',
-                    }),
-                ]),
-            )
+            .pipe(postcss(postcssOptions))
             .on('error', rej)
             .pipe(dest(modules !== false ? libDir : esDir))
             .on('end', res);
