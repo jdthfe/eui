@@ -24,4 +24,4 @@ Cover with TransitionWrap
 | --- | --- | --- | --- | --- |
 | [`...Cover`](#/document/Cover) |  |  |  |  |
 | [`...TransitionWrap`](#/document/TransitionWrap) |  |  |  |  |
-| [transitionClassName](#/document/TransitionWrap) | The animation classNames applied to the component as it enters, exits or has finished the transition. | `string` | [`transitionFade`](#/document/variable) | `false` |
+| [transitionClassName](#/document/TransitionWrap) | The animation classNames applied to the component as it enters, exits or has finished the transition. | `string` | [`transitionFade`](#/document/_util) | `false` |

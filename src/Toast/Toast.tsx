@@ -1,14 +1,13 @@
 import React from 'react';
 import classnames from 'classnames';
 import { ToastProps } from './PropsType';
-import prefix from '../_util/prefix';
+import { prefix, Variable } from '../_util/';
 const prefixCls = `${prefix}-toast`;
 
 import Portal from '../Portal';
 import TransitionWrap from '../TransitionWrap';
 import Cover from '../Cover';
-import variable from '../_util/variable';
-const { transitionFade } = variable;
+const { transitionFade } = Variable;
 
 const Toast = (props: ToastProps) => {
     const {

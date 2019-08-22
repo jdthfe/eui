@@ -74,7 +74,7 @@ import React from 'react';
 import classnames from 'classnames';
 import { LearnProps } from './PropsType';
 // 组件通用前缀
-import prefix from '../_util/prefix';
+import { prefix } from '../_util/';
 const prefixCls = `${prefix}-learn`;
 
 //  如果组件中包含其他组件，禁止从 src/index 中引入
@@ -82,8 +82,8 @@ const prefixCls = `${prefix}-learn`;
 //  import TouchFeedback from '../TouchFeedback';
 
 //  引入通用变量
-//  import variable from '../_util/variable';
-//  const { transitionFade } = variable;
+// import { Variable } from '../../_util/';
+// const { transitionFade } = Variable;
 
 // Function Component
 const Learn = (props: LearnProps) => {

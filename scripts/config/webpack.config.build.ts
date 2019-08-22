@@ -10,14 +10,6 @@ const config: webpack.Configuration = {
     entry: {
         index: getProjectUrl('site', 'index.tsx'),
     },
-    // optimization: {
-    //     splitChunks: {
-    //         chunks: 'all',
-    //     },
-    // },
-    // resolve: {
-    //     plugins: [new TsConfigPathsPlugin({})],
-    // },
     mode: 'production',
     output: {
         path: getProjectUrl('build'),

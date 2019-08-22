@@ -17,7 +17,7 @@ React.Dom
 | coverProps | cover's props | [`CoverWithTransitionWrap`](#/document/Cover) | - | `false` |
 | [`...Portal`](#/document/Portal) |  |  |  |  |
 | [`...TransitionWrap`](#/document/TransitionWrap) |  |  |  |  |
-| [transitionClassName](#/document/TransitionWrap) | The animation classNames applied to the component as it enters, exits or has finished the transition. | `string` | [`transitionFade`](#/document/variable) | `false` |
+| [transitionClassName](#/document/TransitionWrap) | The animation classNames applied to the component as it enters, exits or has finished the transition. | `string` | [`transitionFade`](#/document/_util) | `false` |
 
 ---
 
@@ -38,9 +38,9 @@ Call `const close = Toast.alert()` to show, call `close()` to turn it off immedi
 | Properties | Descrition | Type | Default | Required |
 | --- | --- | --- | --- | --- |
 | noCover | Whether to hide toast's transparent cover, which will prevent touch event of the whole page | `boolean` | - | `false` |
-| duration | Delay time to close, which units is second ( If set duration = 0, toast will not auto hide, you have to manually do it ) | `number` | [defaultDuration](#/document/variable) | `false` |
+| duration | Delay time to close, which units is second ( If set duration = 0, toast will not auto hide, you have to manually do it ) | `number` | [defaultDuration](#/document/_util) | `false` |
 | [`...Toast`](#/document/Toast) |  |  |  |  |
-| [time](#/document/TransitionWrap) | The duration of the transition, in milliseconds. | `number` | [transitionTime](#/document/variable) | `false` |
+| [time](#/document/TransitionWrap) | The duration of the transition, in milliseconds. | `number` | [transitionTime](#/document/_util) | `false` |
 
 ---
 
@@ -55,7 +55,7 @@ The biggest difference from the above Toast is that loading is a singleton funct
 | noCover | Whether to hide toast's transparent cover, which will prevent touch event of the whole page | `boolean` | - | `false` |
 | duration | Delay time to close, which units is second ( If set duration = 0, toast will not auto hide, you have to manually do it ) | `number` | `0` | `false` |
 | [`...Toast`](#/document/Toast) |  |  |  |  |
-| [time](#/document/TransitionWrap) | The duration of the transition, in milliseconds. | `number` | [transitionTime](#/document/variable) | `false` |
+| [time](#/document/TransitionWrap) | The duration of the transition, in milliseconds. | `number` | [transitionTime](#/document/_util) | `false` |
 
 ### Toast.closeLoading
 

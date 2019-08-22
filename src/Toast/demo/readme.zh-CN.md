@@ -17,7 +17,7 @@ React.Dom
 | coverProps | Toast 中，Cover 的 props | [`CoverWithTransitionWrap`](#/document/Cover) |  | `false` |
 | [`...Portal`](#/document/Portal) |  |  |  |  |
 | [`...TransitionWrap`](#/document/TransitionWrap) |  |  |  |  |
-| [transitionClassName](#/document/TransitionWrap) | 动画属性 | `string` | [`transitionFade`](#/document/variable) | `false` |
+| [transitionClassName](#/document/TransitionWrap) | 动画属性 | `string` | [`transitionFade`](#/document/_util) | `false` |
 
 ---
 
@@ -37,10 +37,10 @@ React.Dom
 
 | 属性 | 说明 | 类型 | 默认值 | 必填 |
 | --- | --- | --- | --- | --- |
-| time | active 动画持续时长（TransitionWrap） | `number` | [transitionTime](#/document/variable) | `false` |
+| time | active 动画持续时长（TransitionWrap） | `number` | [transitionTime](#/document/_util) | `false` |
 | noCover | 是否展示遮罩 | `boolean` | `false` | `false` |
 | [`...Toast`](#/document/Toast) |  |  |  |  |
-| [time](#/document/TransitionWrap) | 持续时间（0 表示不自动关闭） | `number` | [defaultDuration](#/document/variable) | `false` |
+| [time](#/document/TransitionWrap) | 持续时间（0 表示不自动关闭） | `number` | [defaultDuration](#/document/_util) | `false` |
 
 ---
 
@@ -52,7 +52,7 @@ React.Dom
 
 | 属性 | 说明 | 类型 | 默认值 | 必填 |
 | --- | --- | --- | --- | --- |
-| time | active 动画持续时长（TransitionWrap） | `number` | [transitionTime](#/document/variable) | `false` |
+| time | active 动画持续时长（TransitionWrap） | `number` | [transitionTime](#/document/_util) | `false` |
 | noCover | 是否展示遮罩 | `boolean` | `false` | `false` |
 | [`...Toast`](#/document/Toast) |  |  |  |  |
 | [time](#/document/TransitionWrap) | 持续时间（0 表示不自动关闭） | `number` | `0` | `false` |

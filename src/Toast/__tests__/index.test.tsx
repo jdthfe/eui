@@ -2,7 +2,8 @@ import { Toast } from '@src/index';
 import React from 'react';
 import { render, waitForElement, waitForElementToBeRemoved, fireEvent, cleanup } from 'react-testing-library';
 
-import prefix from '../../_util/prefix';
+import { prefix } from '../../_util/';
+
 const fadeCls = `.${prefix}-fade-entry-done`;
 const prefixCls = `.${prefix}-toast`;
 
@@ -22,7 +23,6 @@ describe('Toast', () => {
         await waitForElement(() => baseElement.querySelector(`${fadeCls}${prefixCls}-alert`));
         const success1 = Toast.success();
         await waitForElement(() => baseElement.querySelector(`${fadeCls}${prefixCls}-success`));
-        console.log(`${fadeCls}${prefixCls}-success`);
 
         //  排除 svg 文件干扰
         baseElement.querySelector('svg')!.remove();

@@ -4,7 +4,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import StyleLintPluginfrom from 'stylelint-webpack-plugin';
 
 import getStyleLoader from './getStyleLoader';
-import babelrc from '../babelrc';
+import babelrc from '../babelrc.js';
 import { getProjectUrl } from '../helpers';
 
 interface EnvMap {
@@ -78,7 +78,7 @@ const config: webpack.Configuration = {
 
     plugins: [
         new StyleLintPluginfrom({
-            configFile: getProjectUrl('stylelint.config.js'),
+            configFile: getProjectUrl('.stylelintrc.js'),
             context: getProjectUrl(),
             files: ['**/*.scss'],
             failOnError: false,

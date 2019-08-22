@@ -1,7 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect, useRef } from 'react';
 import { TabsProps } from './PropsType';
 import classnames from 'classnames';
-import prefix from '../_util/prefix';
+import { prefix } from '../_util/';
 const prefixCls = `${prefix}-tabs`;
 
 function setTransitionDuration(element: any, times: number): void {

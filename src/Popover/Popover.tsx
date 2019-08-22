@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import Portal from '../Portal';
 import TransitionWrap from '../TransitionWrap';
 import { PopoverPropsType } from './PropsType';
-import prefix from '../_util/prefix';
+import { prefix } from '../_util/';
 const prefixCls = `${prefix}-popover`;
 
 export const Popover = (props: PopoverPropsType) => {

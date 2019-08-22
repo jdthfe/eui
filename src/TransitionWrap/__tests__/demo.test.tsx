@@ -3,7 +3,6 @@ webDemoTest('TransitionWrap');
 
 import React from 'react';
 import Demo from '../demo';
-// import { transitionFade } from '../../_util/variable';
 import { render, fireEvent, waitForElement, waitForElementToBeRemoved } from 'react-testing-library';
 
 describe('TransitionWrapDemo', () => {

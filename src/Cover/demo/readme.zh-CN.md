@@ -22,4 +22,4 @@
 | --- | --- | --- | --- | --- |
 | [`...Cover`](#/document/Cover) |  |  |  |  |
 | [`...TransitionWrap`](#/document/TransitionWrap) |  |  |  |  |
-| [transitionClassName](#/document/TransitionWrap) | 动画属性 | `string` | [`transitionFade`](#/document/variable) | `false` |
+| [transitionClassName](#/document/TransitionWrap) | 动画属性 | `string` | [`transitionFade`](#/document/_util) | `false` |

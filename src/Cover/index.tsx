@@ -1,11 +1,11 @@
 import React from 'react';
 import classnames from 'classnames';
 import { CoverProps, CoverWithTransitionWrap } from './PropsType';
-import prefix from '../_util/prefix';
+import { prefix } from '../_util/';
 
 import TransitionWrap from '../TransitionWrap';
-import variable from '../_util/variable';
-const { transitionFade, transitionTime } = variable;
+import { Variable } from '../_util/';
+const { transitionFade, transitionTime } = Variable;
 
 const prefixCls = `${prefix}-Cover`;
 

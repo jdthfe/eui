@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import MessageBox from './MessageBox';
 import { MessageBoxPropsWithModel, MessageBoxAlert, MessageBoxConfirm } from './PropsType';
-import prefix from '../_util/prefix';
+import { prefix, removeNode } from '../_util/';
 
 const prefixCls = `${prefix}-messagebox`;
 
@@ -33,7 +33,7 @@ const model = (props: MessageBoxPropsWithModel) => {
         }));
 
     const div = document.createElement('div');
-    document.body.append(div);
+    document.body.appendChild(div);
     const CoverProps: typeof coverProps = {
         ...coverProps,
         onClick: e => {
@@ -60,7 +60,7 @@ const model = (props: MessageBoxPropsWithModel) => {
             coverProps={CoverProps}
             onExitDone={() => {
                 ReactDOM.unmountComponentAtNode(div);
-                div.remove();
+                removeNode(div);
                 onExitDone();
             }}
             time={time}

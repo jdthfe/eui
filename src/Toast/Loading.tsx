@@ -6,11 +6,10 @@ import { ToastPropsWithModel } from './PropsType';
 import Icon from '../Icon';
 import WhiteSpace from '../WhiteSpace';
 
-import variable from '../_util/variable';
-import prefix from '../_util/prefix';
+import { Variable, prefix, removeNode } from '../_util/';
 import classNames from 'classnames';
 const prefixCls = `${prefix}-toast`;
-const { transitionTime } = variable;
+const { transitionTime } = Variable;
 
 const div = document.createElement('div');
 let close = () => {};
@@ -27,7 +26,7 @@ const model = (props: ToastPropsWithModel) => {
         ...restProps
     } = props;
     const cls = classNames(className, `${prefixCls}-loading`);
-    document.body.append(div);
+    document.body.appendChild(div);
     const CoverProps: typeof coverProps = {
         ...coverProps,
     };
@@ -42,7 +41,7 @@ const model = (props: ToastPropsWithModel) => {
             onExitDone={() => {
                 onExitDone();
                 ReactDOM.unmountComponentAtNode(div);
-                div.remove();
+                removeNode(div);
             }}
             time={time}
             mountNode={div}
