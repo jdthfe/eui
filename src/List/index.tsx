@@ -1,6 +1,6 @@
 import React from 'react';
 import { ListProps } from './PropsType';
-import prefix from '../_util/prefix';
+import { prefix } from '../_util/';
 import ListItem from './ListItem';
 import classnames from 'classnames';
 const prefixCls = `${prefix}-list`;
