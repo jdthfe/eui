@@ -29,3 +29,4 @@ export { default as WhiteSpace } from './WhiteSpace';
 export { default as Toast } from './Toast';
 export { default as MessageBox } from './MessageBox';
 export { default as Cover } from './Cover';
+export { default as List } from './List';
