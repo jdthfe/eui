@@ -12,11 +12,15 @@ export default [
         browsers,
     }),
     pxtorem({
-        // todo change value
-        // rootValue: 16,
+        // ! 二选一
         /**
-         * [*]  转换
-         * [ ]  不转换
+         * 移动端 - REM
+         */
+        // rootValue: 16,
+        // propList: ['*'],
+
+        /**
+         * PC 端 - PX
          */
         propList: [],
     }),
