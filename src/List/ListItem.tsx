@@ -1,8 +1,8 @@
 import React from 'react';
 import { ListItemPropsType, BriefProps } from './PropsType';
 import classnames from 'classnames';
-import Icon from '../Icon';
 import TouchFeedback from '../TouchFeedback';
+import Icon from '../Icon';
 import { prefix } from '../_util';
 const prefixCls = `${prefix}-list`;
 
