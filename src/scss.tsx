@@ -17,3 +17,4 @@ import './Toast/style';
 import './MessageBox/style';
 import './Cover/style';
 import './List/style';
+import './Input/style';

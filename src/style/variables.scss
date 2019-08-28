@@ -110,3 +110,11 @@ $msgbox-color: $font-gray !default;
 $msgbox-mutiline-padding: 0 $msgbox-px-m !default;
 $msgbox-mutiline-single-padding-bottom: $msgbox-px-m !default;
 // $msgbox-padding-s: hd(10) !default;
+
+// Input
+// ---
+// $input-max-width: hd(300) !default;
+$input-wrap-padding: hd(16) hd(12) hd(12) !default;
+$input-tag-padding: hd(4) !default;
+$input-icon-padding: hd(12) !default;
+$input-gray: rgba(132, 132, 132, 0.4) !default;
