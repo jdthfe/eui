@@ -16,13 +16,13 @@ export default [
         /**
          * 移动端 - REM
          */
-        // rootValue: 16,
-        // propList: ['*'],
+        rootValue: 16,
+        propList: ['*'],
 
         /**
          * PC 端 - PX
          */
-        propList: [],
+        // propList: [],
     }),
     cssnano({
         preset: 'default',
