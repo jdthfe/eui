@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
-import { TransitionWrap, Button, WingBlank } from '@src/index';
-// import './index.scss';
+import { TransitionWrap, Button, WingBlank, WhiteSpace } from '@src/index';
+import './index.scss';
 const Demo = () => {
-    const [visible, setvisible] = useState(false);
+    const [visible, setVisible] = useState(false);
+    const [visible2, setVisible2] = useState(false);
     return (
         <WingBlank className="TransitionWrap">
-            <Button theme="primary" onClick={() => setvisible(!visible)}>
-                click to {visible ? 'hide' : 'show'} text
+            <Button ghost onClick={() => setVisible(!visible)}>
+                keepOnExit = false
+            </Button>
+            <WhiteSpace />
+            <Button ghost onClick={() => setVisible2(!visible2)}>
+                keepOnExit = true
             </Button>
             <TransitionWrap
                 onExitDone={() => console.log('hello')}
@@ -16,7 +21,7 @@ const Demo = () => {
             >
                 <h1 className="hello">hello</h1>
             </TransitionWrap>
-            <TransitionWrap transitionClassName="world" keepOnExit visible={visible} time={500}>
+            <TransitionWrap transitionClassName="world" keepOnExit visible={visible2} time={500}>
                 <h1 className="world">world</h1>
             </TransitionWrap>
         </WingBlank>

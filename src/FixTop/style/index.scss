@@ -17,7 +17,7 @@ $fixtop-prefix: $preifx + '-fixtop';
 }
 
 .#{$fixtop-prefix}-icon {
-    .edm-icon-middle {
+    .eui-icon-middle {
         width: 1.5em;
         height: 1.5em;
         margin-right: 10px;
@@ -26,7 +26,7 @@ $fixtop-prefix: $preifx + '-fixtop';
 }
 
 .#{$fixtop-prefix}-close {
-    .edm-icon-middle {
+    .eui-icon-middle {
         width: 1.5em;
         height: 1.5em;
         flex-shrink: 0;

@@ -1,10 +1,11 @@
 import React from 'react';
 import classnames from 'classnames';
 import { CoverProps, CoverWithTransitionWrap } from './PropsType';
-import prefix from '../_util/prefix';
+import { prefix } from '../_util/';
 
 import TransitionWrap from '../TransitionWrap';
-import { transitionFade } from '../_util/variable';
+import { Variable } from '../_util/';
+const { transitionFade, transitionTime } = Variable;
 
 const prefixCls = `${prefix}-Cover`;
 
@@ -27,7 +28,7 @@ const Transition = (props: CoverWithTransitionWrap) => {
         children,
         visible,
         keepOnExit,
-        time,
+        time = transitionTime,
         onExitDone,
         transitionClassName = transitionFade,
         ...restProps

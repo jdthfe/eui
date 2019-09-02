@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import classnames from 'classnames';
-import prefix from '../_util/prefix';
+import { prefix } from '../_util/';
 const prefixCls = `${prefix}-countdown`;
 import { CountDownProps } from './PropsType';
 

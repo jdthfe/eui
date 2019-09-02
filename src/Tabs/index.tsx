@@ -1,7 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect, useRef } from 'react';
 import { TabsProps } from './PropsType';
 import classnames from 'classnames';
-import prefix from '../_util/prefix';
+import { prefix } from '../_util/';
 const prefixCls = `${prefix}-tabs`;
 
 function setTransitionDuration(element: any, times: number): void {
@@ -17,8 +18,8 @@ function getLineOffset(index: any, tabWrapNode?: any) {
         left = 0,
         top = 0;
     if (tabWrapNode) {
-        const tabs = tabWrapNode.querySelectorAll('.edm-tabs-nav');
-        console.log(tabs);
+        const tabs = tabWrapNode.querySelectorAll('.eui-tabs-nav');
+        // console.log(tabs);
         for (let i = 0; i < tabs.length; i++) {
             if (i < index) {
                 left += tabs[i].offsetWidth;
@@ -220,15 +221,15 @@ export default (props: TabsProps) => {
     const styleClass = classnames(prefixCls, `${prefixCls}-${position}`, className);
     return (
         <div className={styleClass} {...restProps}>
-            <div ref={tabNavWrapNode} className={`edm-tabs-nav-box ` + boxCls} {...restProps}>
-                <div className={`edm-tabs-nav-wrapper`} style={tabsStyle} ref={tabWrapNode}>
+            <div ref={tabNavWrapNode} className={`eui-tabs-nav-box ` + boxCls} {...restProps}>
+                <div className={`eui-tabs-nav-wrapper`} style={tabsStyle} ref={tabWrapNode}>
                     {navChildren}
-                    <div className="edm-tabs-nav-underline" style={lineStyle} ref={lineNode} />
+                    <div className="eui-tabs-nav-underline" style={lineStyle} ref={lineNode} />
                 </div>
             </div>
 
-            <div className="edm-tabs-con-box" ref={containerEle}>
-                <div className="edm-tabs-con-wrapper" style={wrapperStyles}>
+            <div className="eui-tabs-con-box" ref={containerEle}>
+                <div className="eui-tabs-con-wrapper" style={wrapperStyles}>
                     {containerChildren}
                 </div>
             </div>

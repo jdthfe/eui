@@ -1,13 +1,18 @@
-this is a button!
+Buttons allow users to take actions, and make choices, with a single tap.
 
 ## Demo
 
 ## API
 
-| Properties | Descrition                         | Type                                    | Default       | Required |
-| ---------- | ---------------------------------- | --------------------------------------- | ------------- | -------- |
-| theme      | 按钮主题。自定义按钮颜色时请勿传值 | `'primary' | 'secondary' | 'customize'` | `'customize'` | `false`  |
-| size       | 尺寸                               | `'s' | 'm' | 'l'`                       | `'l'`         | `false`  |
-| ghost      | 幽灵按钮                           | `boolean`                               | `false`       | `false`  |
-| inline     | 行内按钮                           | `boolean`                               | `false`       | `false`  |
-| rectangle  | 矩形按钮                           | `boolean`                               | `false`       | `false`  |
+Extends [`button`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
+
+-   `disabled` This Boolean attribute indicates that the user cannot interact with the button
+
+| Properties | Descrition | Type | Default | Required |
+| --- | --- | --- | --- | --- |
+| theme | The theme of the component. Do not define when using custom colors | `'primary' | 'secondary' | 'customize'` | `'customize'` | `false` |
+| size | The size of the button | `'s' | 'm' | 'l'` | `'l'` | `false` |
+| ghost | ghost style | `boolean` | `false` | `false` |
+| inline | whether set as an inline button | `boolean` | `false` | `false` |
+| rectangle | Rectangular button | `boolean` | `false` | `false` |
+| [`...TouchFeedback`](#/document/TouchFeedback) |  |  |  |  |

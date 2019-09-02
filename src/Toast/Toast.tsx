@@ -1,13 +1,13 @@
 import React from 'react';
 import classnames from 'classnames';
 import { ToastProps } from './PropsType';
-import prefix from '../_util/prefix';
+import { prefix, Variable } from '../_util/';
 const prefixCls = `${prefix}-toast`;
 
-import { transitionFade } from '../_util/variable';
 import Portal from '../Portal';
 import TransitionWrap from '../TransitionWrap';
 import Cover from '../Cover';
+const { transitionFade } = Variable;
 
 const Toast = (props: ToastProps) => {
     const {
@@ -33,7 +33,6 @@ const Toast = (props: ToastProps) => {
                 transparent
                 visible={newVisible}
                 keepOnExit={keepOnExit}
-                time={time}
                 onExitDone={onExitDone}
                 transitionClassName={transitionClassName}
                 {...coverProps}

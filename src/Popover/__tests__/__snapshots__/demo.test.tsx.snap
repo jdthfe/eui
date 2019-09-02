@@ -4,7 +4,7 @@ exports[`renders Popover correctly 1`] = `
 <div>
   <div>
     <button
-      class="edm-button edm-button-s edm-button-customize"
+      class="eui-button eui-button-s eui-button-customize"
       role="button"
     >
       test

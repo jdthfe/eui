@@ -1,12 +1,13 @@
 .Icon {
     &-value {
-        display: grid;
-        justify-items: center;
+        display: flex;
+        flex-wrap: wrap;
         align-items: center;
-        grid-template-columns: 33% 33% 33%;
-        grid-template-rows: 100px 100px 100px 100px;
         &-item {
+            width: 33%;
+            padding: 10px 0;
             text-align: center;
+            box-sizing: border-box;
         }
     }
     &-size {

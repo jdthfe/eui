@@ -1,1 +1,7 @@
+@mixin border($dir: 'to top', $color: $gray) {
+    background-image: linear-gradient(unquote(#{$dir}), #fff, $color);
+    background-repeat: no-repeat;
+    background-size: auto px(1);
+}
+
 @import './variables';

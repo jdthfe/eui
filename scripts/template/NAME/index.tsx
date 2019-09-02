@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import { NAMEProps } from './PropsType';
-import prefix from '../_util/prefix';
+import { prefix } from '../_util/';
 const prefixCls = `${prefix}-NAME`;
 
 const NAME = (props: NAMEProps) => {

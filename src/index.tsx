@@ -9,10 +9,11 @@ if (
     typeof window !== 'undefined'
 ) {
     console.warn(
-        'You are using a whole package of EDM, ' +
+        'You are using a whole package of EUI, ' +
             'please use https://www.npmjs.com/package/babel-plugin-import to reduce app bundle size.',
     );
 }
+export { default as _util } from './_util';
 export { default as Button } from './Button';
 export { default as Icon } from './Icon';
 export { default as TouchFeedback } from './TouchFeedback';
@@ -28,3 +29,5 @@ export { default as WhiteSpace } from './WhiteSpace';
 export { default as Toast } from './Toast';
 export { default as MessageBox } from './MessageBox';
 export { default as Cover } from './Cover';
+export { default as List } from './List';
+export { default as Input } from './Input';

@@ -6,13 +6,18 @@ import { ToastPropsWithModel } from './PropsType';
 import Icon from '../Icon';
 import WhiteSpace from '../WhiteSpace';
 
-import { transitionTime } from '../_util/variable';
+import { Variable, prefix, removeNode } from '../_util/';
+import classNames from 'classnames';
+const prefixCls = `${prefix}-toast`;
+const { transitionTime } = Variable;
+
 const div = document.createElement('div');
 let close = () => {};
 let timer: number;
 
 const model = (props: ToastPropsWithModel) => {
     const {
+        className,
         coverProps = {},
         onExitDone = () => {},
         time = transitionTime,
@@ -20,7 +25,8 @@ const model = (props: ToastPropsWithModel) => {
         noCover = false,
         ...restProps
     } = props;
-    document.body.append(div);
+    const cls = classNames(className, `${prefixCls}-loading`);
+    document.body.appendChild(div);
     const CoverProps: typeof coverProps = {
         ...coverProps,
     };
@@ -29,12 +35,13 @@ const model = (props: ToastPropsWithModel) => {
     }
     const component = (
         <Toast
+            className={cls}
             coverProps={CoverProps}
             {...restProps}
             onExitDone={() => {
                 onExitDone();
                 ReactDOM.unmountComponentAtNode(div);
-                div.remove();
+                removeNode(div);
             }}
             time={time}
             mountNode={div}
@@ -66,7 +73,7 @@ export default {
             ...props,
             children: (
                 <Fragment>
-                    <Icon value="loading" fill="#fff" />
+                    <Icon size="xl" value="loading" fill="#fff" />
                     {props.children ? <WhiteSpace size="l" /> : null}
                     {props.children}
                 </Fragment>

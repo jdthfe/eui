@@ -1,26 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TransitionWrapDemo animation: visible=false 1`] = `
+exports[`TransitionWrapDemo keepOnExit: visible=false 1`] = `
 <body>
   <div>
     <div
-      class="edm-wingblank TransitionWrap edm-wingblank-m"
+      class="eui-wingblank TransitionWrap eui-wingblank-m"
     >
       <button
-        class="edm-button edm-button-l edm-button-primary"
+        class="eui-button eui-button-l eui-button-customize eui-button-ghost"
         role="button"
       >
-        click to 
-        show
-         text
+        keepOnExit = false
+      </button>
+      <div
+        class="eui-whitespace eui-whitespace-m"
+      />
+      <button
+        class="eui-button eui-button-l eui-button-customize eui-button-ghost"
+        role="button"
+      >
+        keepOnExit = true
       </button>
       <h1
-        class="hello hello-exit-active"
-      >
-        hello
-      </h1>
-      <h1
-        class="world world-exit-active"
+        class="world world-exit-done"
       >
         world
       </h1>
@@ -29,19 +31,88 @@ exports[`TransitionWrapDemo animation: visible=false 1`] = `
 </body>
 `;
 
-exports[`TransitionWrapDemo animation: visible=true 1`] = `
+exports[`TransitionWrapDemo keepOnExit: visible=true 1`] = `
 <body>
   <div>
     <div
-      class="edm-wingblank TransitionWrap edm-wingblank-m"
+      class="eui-wingblank TransitionWrap eui-wingblank-m"
     >
       <button
-        class="edm-button edm-button-l edm-button-primary"
+        class="eui-button eui-button-l eui-button-customize eui-button-ghost"
         role="button"
       >
-        click to 
-        hide
-         text
+        keepOnExit = false
+      </button>
+      <div
+        class="eui-whitespace eui-whitespace-m"
+      />
+      <button
+        class="eui-button eui-button-l eui-button-customize eui-button-ghost"
+        role="button"
+      >
+        keepOnExit = true
+      </button>
+      <h1
+        class="world world-entry-done"
+      >
+        world
+      </h1>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`TransitionWrapDemo unmontOnExit: visible=false 1`] = `
+<body>
+  <div>
+    <div
+      class="eui-wingblank TransitionWrap eui-wingblank-m"
+    >
+      <button
+        class="eui-button eui-button-l eui-button-customize eui-button-ghost"
+        role="button"
+      >
+        keepOnExit = false
+      </button>
+      <div
+        class="eui-whitespace eui-whitespace-m"
+      />
+      <button
+        class="eui-button eui-button-l eui-button-customize eui-button-ghost"
+        role="button"
+      >
+        keepOnExit = true
+      </button>
+      <h1
+        class="world world-exit-done"
+      >
+        world
+      </h1>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`TransitionWrapDemo unmontOnExit: visible=true 1`] = `
+<body>
+  <div>
+    <div
+      class="eui-wingblank TransitionWrap eui-wingblank-m"
+    >
+      <button
+        class="eui-button eui-button-l eui-button-customize eui-button-ghost"
+        role="button"
+      >
+        keepOnExit = false
+      </button>
+      <div
+        class="eui-whitespace eui-whitespace-m"
+      />
+      <button
+        class="eui-button eui-button-l eui-button-customize eui-button-ghost"
+        role="button"
+      >
+        keepOnExit = true
       </button>
       <h1
         class="hello hello-entry-done"
@@ -49,7 +120,7 @@ exports[`TransitionWrapDemo animation: visible=true 1`] = `
         hello
       </h1>
       <h1
-        class="world world-entry-done"
+        class="world world-exit-done"
       >
         world
       </h1>
@@ -61,15 +132,22 @@ exports[`TransitionWrapDemo animation: visible=true 1`] = `
 exports[`renders TransitionWrap correctly 1`] = `
 <div>
   <div
-    class="edm-wingblank TransitionWrap edm-wingblank-m"
+    class="eui-wingblank TransitionWrap eui-wingblank-m"
   >
     <button
-      class="edm-button edm-button-l edm-button-primary"
+      class="eui-button eui-button-l eui-button-customize eui-button-ghost"
       role="button"
     >
-      click to 
-      show
-       text
+      keepOnExit = false
+    </button>
+    <div
+      class="eui-whitespace eui-whitespace-m"
+    />
+    <button
+      class="eui-button eui-button-l eui-button-customize eui-button-ghost"
+      role="button"
+    >
+      keepOnExit = true
     </button>
     <h1
       class="world world-exit-done"

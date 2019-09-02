@@ -11,12 +11,9 @@ import rimraf from 'rimraf';
 import babel from 'gulp-babel';
 import debug from 'gulp-debug';
 import postcss from 'gulp-postcss';
-import autoprefixer from 'autoprefixer';
-import cssnano from 'cssnano';
-import pxtorem from 'postcss-pxtorem';
-
-import babelrc from '../babelrc';
+import babelrc from '../babelrc.js';
 import { getProjectUrl } from '../helpers';
+import postcssOptions from '../postcssOptions';
 
 const libDir = getProjectUrl('compiled', 'lib');
 const esDir = getProjectUrl('compiled', 'es');
@@ -41,7 +38,7 @@ const source = [
     // getProjectUrl('typings/**/*.ts'),
 ];
 function convertTstoJs(output: string, modules?: boolean) {
-    const title = modules !== false ? 'ts -> lib' : 'ts -> es';
+    const title = modules !== false ? 'lib: [tsx ] -> [ js ]' : 'es : [tsx ] -> [ js ]';
     return new Promise((res, rej) => {
         src([getProjectUrl('src/index.tsx')])
             .pipe(replace(/false &&/g, modules !== false ? '' : 'false &&'))
@@ -54,7 +51,9 @@ function convertTstoJs(output: string, modules?: boolean) {
     });
 }
 function convertTstoDts() {
-    console.log('[es] convert Ts to Dts By Typescript...');
+    console.log();
+    console.log('Convert Ts to Dts By Typescript...');
+    console.log();
     const tsc = spawn('tsc', ['-pretty', '--emitDeclarationOnly', '-p', '../../tsconfig.dts.json'], {
         stdio: 'inherit',
         shell: process.platform === 'win32',
@@ -72,7 +71,9 @@ function convertTstoDts() {
 }
 
 function copyDts() {
-    console.log('[lib]  convert Ts to Dts By Typescript...');
+    console.log();
+    console.log('Convert Ts to Dts By Typescript...');
+    console.log();
     const dtsFile = [getProjectUrl('compiled/es/**/*.d.ts')];
     return new Promise((res, rej) => {
         src(dtsFile)
@@ -84,7 +85,7 @@ function copyDts() {
 
 const scssSource = [getProjectUrl('src/**/style/*.scss')];
 function copyScss(modules?: boolean) {
-    const title = modules !== false ? 'scss -> lib' : 'scss -> es';
+    const title = modules !== false ? 'lib: [scss] -> [scss]' : 'es : [scss] -> [scss]';
     return new Promise((res, rej) => {
         src(scssSource)
             .pipe(debug({ title }))
@@ -95,27 +96,12 @@ function copyScss(modules?: boolean) {
 }
 
 function convertScssToCss(modules?: boolean) {
-    const title = modules !== false ? 'css -> lib' : 'css -> es';
+    const title = modules !== false ? 'lib: [scss] -> [ css]' : 'es : [scss] -> [ css]';
     return new Promise((res, rej) => {
         src(scssSource)
             .pipe(debug({ title }))
             .pipe(scss())
-            .pipe(
-                postcss([
-                    //   postcssFlexbugsFixes,
-                    autoprefixer({
-                        browsers: ['last 2 versions', 'Firefox ESR', '> 1%', 'ie >= 9', 'iOS >= 8', 'Android >= 4'],
-                    }),
-                    pxtorem({
-                        // todo change value
-                        rootValue: 16,
-                        propWhiteList: ['*'],
-                    }),
-                    cssnano({
-                        preset: 'default',
-                    }),
-                ]),
-            )
+            .pipe(postcss(postcssOptions))
             .on('error', rej)
             .pipe(dest(modules !== false ? libDir : esDir))
             .on('end', res);
@@ -124,10 +110,13 @@ function convertScssToCss(modules?: boolean) {
 
 const styleIndexSource = [getProjectUrl('src/**/style/index.tsx')];
 function buildCssJs(modules?: boolean) {
+    const title = modules !== false ? 'lib: [tsx ] -> [ js ]' : 'es : [tsx ] -> [ js ]';
     return new Promise((res, rej) => {
         src(styleIndexSource)
+            .pipe(debug({ title }))
             .pipe(replace(/\/style\/?'/g, "/style/css'"))
             .pipe(replace(/\.scss/g, '.css'))
+            .pipe(babel(babelrc(modules)))
             .pipe(
                 rename({
                     basename: 'css',

@@ -6,7 +6,7 @@ const Demo = () => {
         console.log('onClick');
         setVisible(false);
     };
-    const leftIcon = <Icon fill="#F00" value="alipay" />;
+    const leftIcon = <Icon fill="#F00" value="close" />;
     const closeIcon = <Icon fill="#F00" value="selected" />;
     let props: any;
     let obj: any = {};

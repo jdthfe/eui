@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { MessageBox, Button, WhiteSpace, WingBlank, Icon } from '@src/index';
+import { _util } from '@src/index';
+const { Variable } = _util;
+
 const Demo = () => {
     const [visible, setVisible] = useState(false);
     function changeVisible() {
@@ -8,7 +11,7 @@ const Demo = () => {
     return (
         <WingBlank className="MessageBox">
             <h4>Dom</h4>
-            <Button onClick={changeVisible} theme="primary">
+            <Button onClick={changeVisible} ghost>
                 MessageBox
             </Button>
             <MessageBox
@@ -26,20 +29,16 @@ const Demo = () => {
                 <br />
                 Children
             </MessageBox>
-
             <WhiteSpace />
             <h4>Method</h4>
             <Button
-                theme="primary"
+                ghost
                 onClick={() =>
                     MessageBox.model({
-                        onClickCloseIcon: () => {
-                            console.log('onClickCloseIcon');
-                        },
-                        onClickCover: () => true,
+                        onClickCloseIcon: true,
+                        onClickCover: false,
                         title: 'title',
                         children: 'children',
-                        noCover: true,
                         buttons: [
                             {
                                 children: 'right',
@@ -47,7 +46,7 @@ const Demo = () => {
                                 rectangle: true,
                                 onClick: () => {
                                     console.log('right');
-                                    return true;
+                                    return false;
                                 },
                             },
                             {
@@ -63,9 +62,8 @@ const Demo = () => {
                 Model | noCover
             </Button>
             <WhiteSpace />
-
             <Button
-                theme="primary"
+                ghost
                 onClick={() =>
                     MessageBox.alert({
                         confirmChildren: 'Alert | MultiLineButtons',
@@ -77,19 +75,19 @@ const Demo = () => {
                                 title: 'MultiLineButtons',
                                 children: 'children',
                             });
-                            return true;
+                            return false;
                         },
                     })
                 }
             >
                 Alert
             </Button>
-
             <WhiteSpace />
             <Button
-                theme="primary"
+                ghost
                 onClick={() =>
                     MessageBox.confirm({
+                        onClickCover: () => false,
                         title: 'Confirm',
                         children: 'children',
                         confirmCallback: () => console.log('confirmCallback'),
@@ -99,14 +97,14 @@ const Demo = () => {
                 Confirm
             </Button>
             <WhiteSpace />
-
             <Button
-                theme="primary"
+                ghost
                 onClick={() =>
                     MessageBox.confirm({
                         multiLineButtons: true,
                         title: 'Confirm',
                         children: 'children',
+                        transitionClassName: Variable.transitionZoom,
                     })
                 }
             >

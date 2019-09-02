@@ -1,16 +1,18 @@
 import React from 'react';
 import classnames from 'classnames';
 import { MessageBoxProps } from './PropsType';
-import prefix from '../_util/prefix';
+import { prefix } from '../_util/';
 const prefixCls = `${prefix}-messagebox`;
 
-import { transitionFade } from '../_util/variable';
 import Icon from '../Icon';
 import Button from '../Button';
 import Cover from '../Cover';
-const { Transition } = Cover;
 import Portal from '../Portal';
 import TransitionWrap from '../TransitionWrap';
+import { Variable } from '../_util/';
+const { transitionFade } = Variable;
+
+const { Transition } = Cover;
 
 const MessageBox = (props: MessageBoxProps) => {
     const {
@@ -20,7 +22,7 @@ const MessageBox = (props: MessageBoxProps) => {
         buttons = [],
         multiLineButtons = false,
         hiddenline,
-        onClickCloseIcon,
+        onClickCloseIcon = false,
         // TransitionWrap
         visible,
         keepOnExit,
@@ -38,14 +40,7 @@ const MessageBox = (props: MessageBoxProps) => {
     const btnCls = classnames(`${prefixCls}-buttons`, { [`${prefixCls}-buttons-multiline`]: multiLineButtons });
     return (
         <Portal mountNode={mountNode}>
-            <Transition
-                visible={visible}
-                keepOnExit={keepOnExit}
-                time={time}
-                onExitDone={onExitDone}
-                transitionClassName={transitionClassName}
-                {...coverProps}
-            />
+            <Transition visible={visible} time={time} keepOnExit={keepOnExit} onExitDone={onExitDone} {...coverProps} />
 
             <TransitionWrap
                 visible={visible}
@@ -56,7 +51,11 @@ const MessageBox = (props: MessageBoxProps) => {
             >
                 <div {...restProps} className={cls}>
                     {onClickCloseIcon ? (
-                        <Icon className={`${prefixCls}-close`} onClick={onClickCloseIcon} value="close" />
+                        <Icon
+                            className={`${prefixCls}-close`}
+                            onClick={onClickCloseIcon === true ? () => {} : onClickCloseIcon}
+                            value="close"
+                        />
                     ) : null}
                     {/* Title */}
                     {title ? <p className={`${prefixCls}-title`}>{title}</p> : null}

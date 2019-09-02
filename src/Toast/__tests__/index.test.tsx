@@ -1,6 +1,11 @@
 import { Toast } from '@src/index';
 import React from 'react';
-import { render, waitForElement, waitForElementToBeRemoved, fireEvent, wait, cleanup } from 'react-testing-library';
+import { render, waitForElement, waitForElementToBeRemoved, fireEvent, cleanup } from 'react-testing-library';
+
+import { prefix } from '../../_util/';
+
+const fadeCls = `.${prefix}-fade-entry-done`;
+const prefixCls = `.${prefix}-toast`;
 
 afterEach(cleanup);
 describe('Toast', () => {
@@ -8,57 +13,54 @@ describe('Toast', () => {
     const duration = 1000;
     const time = 200;
 
-    it('snapshots', async () => {
-        let flag = false;
-        const { baseElement } = render(<div />);
-        const model = Toast.model({ children: 'normal', duration: 0, time });
-        const alert = Toast.alert({ children: 'alert', duration: 0, time });
-        const success = Toast.success({ children: 'success', duration: 0, time });
-        const model2 = Toast.model();
-        const alert2 = Toast.alert();
-        const success2 = Toast.success();
-        Toast.loading();
-        setTimeout(() => {
-            flag = true;
-        }, 500);
-        await wait(() => {
-            if (!flag) throw flag;
-        });
+    it('base snapshot about show and close', async () => {
+        const { baseElement, getByText } = render(<div />);
+        // 1
+        // model 不传值自动阻止
+        Toast.model();
+
+        const alert1 = Toast.alert();
+        await waitForElement(() => baseElement.querySelector(`${fadeCls}${prefixCls}-alert`));
+        const success1 = Toast.success();
+        await waitForElement(() => baseElement.querySelector(`${fadeCls}${prefixCls}-success`));
 
         //  排除 svg 文件干扰
         baseElement.querySelector('svg')!.remove();
-        expect(baseElement).toMatchSnapshot('show');
+        expect(baseElement).toMatchSnapshot('show: object = default');
+        alert1();
+        await waitForElementToBeRemoved(() => baseElement.querySelector(`${prefixCls}-alert`));
+        success1();
+        await waitForElementToBeRemoved(() => baseElement.querySelector(`${prefixCls}-success`));
+        expect(baseElement).toMatchSnapshot('close: object = default');
+
+        // 2
+        // duration = 0 Toast 会一直持续，只能手动关闭
+        const model = Toast.model({ children: 'model', duration: 0, time });
+        await waitForElement(() => baseElement.querySelector(`${fadeCls}${prefixCls}`));
+
+        const success = Toast.success({ children: 'success', duration: 0, time });
+        await waitForElement(() => baseElement.querySelector(`${fadeCls}${prefixCls}-success`));
+        const alert = Toast.alert({ children: 'alert', duration: 0, time });
+        await waitForElement(() => baseElement.querySelector(`${fadeCls}${prefixCls}-alert`));
+        Toast.loading();
+        await waitForElement(() => baseElement.querySelector(`${fadeCls}${prefixCls}-loading`));
+        //  排除 svg 文件干扰
+        baseElement.querySelector('svg')!.remove();
+        expect(baseElement).toMatchSnapshot('show: object has value');
 
         model();
-        alert();
+        await waitForElementToBeRemoved(() => getByText('model'));
         success();
-        model2();
-        alert2();
-        success2();
+        await waitForElementToBeRemoved(() => baseElement.querySelector(`${prefixCls}-success`));
+        alert();
+        await waitForElementToBeRemoved(() => baseElement.querySelector(`${prefixCls}-alert`));
         Toast.closeLoading();
+        await waitForElementToBeRemoved(() => baseElement.querySelector(`${prefixCls}-loading`));
 
-        flag = false;
-        setTimeout(() => {
-            flag = true;
-        }, 500);
-        await wait(() => {
-            if (!flag) throw flag;
-        });
-
-        expect(baseElement).toMatchSnapshot('close');
+        expect(baseElement.querySelectorAll(prefixCls).length).toEqual(0);
     });
     const timeDeviation = 200;
-    // 误差允许
-    // it('Toast lasted for the specified time', async () => {
-    //     const { getByText } = render(<div />);
-    //     Toast.normal({ children: toastTxt, duration, time });
 
-    //     const showTime = new Date().getTime();
-    //     await waitForElement(() => getByText(toastTxt));
-    //     await waitForElementToBeRemoved(() => getByText(toastTxt));
-    //     const realDuration = new Date().getTime() - showTime;
-    //     expect(realDuration >= duration && realDuration < duration + time + timeDeviation).toEqual(true);
-    // });
     it('closed successfully', async () => {
         const { getByText } = render(<div />);
         const close = Toast.model({ children: toastTxt, duration });
@@ -111,6 +113,6 @@ describe('Toast', () => {
 
     it('base', async () => {
         const { baseElement } = render(<Toast visible>{toastTxt}</Toast>);
-        expect(baseElement).toMatchSnapshot('show');
+        expect(baseElement).toMatchSnapshot('show base');
     });
 });

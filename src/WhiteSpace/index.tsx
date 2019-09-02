@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import { WhiteSpaceProps } from './PropsType';
-import prefix from '../_util/prefix';
+import { prefix } from '../_util/';
 const prefixCls = `${prefix}-whitespace`;
 
 const WhiteSpace = (props: WhiteSpaceProps) => {

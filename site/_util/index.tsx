@@ -1,4 +1,5 @@
 import componentIndexNoType from './componentIndex';
+import markdownOnlyNoType from './markdownOnly';
 import { languages } from './language';
 
 export interface Docs {
@@ -9,6 +10,7 @@ export interface Docs {
 }
 
 export const componentIndex: ComponentIndex[] = componentIndexNoType;
+export const markdownOnly: ComponentIndex[] = markdownOnlyNoType;
 
 export const sortComponentIndex = (componentIndex: ComponentIndex[]) => {
     const newStructure: { [propName: string]: ComponentIndex[] } = {};

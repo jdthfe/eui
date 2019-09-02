@@ -3,14 +3,14 @@ import { TouchFeedbackProps } from '../TouchFeedback/PropsType';
 export interface ButtonProps
     extends TouchFeedbackProps,
         React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
-    /** 按钮主题。自定义按钮颜色时请勿传值 */
+    /** The theme of the component. Do not define when using custom colors */
     theme?: 'primary' | 'secondary' | 'customize';
-    /** 尺寸 */
+    /** The size of the button */
     size?: 's' | 'm' | 'l';
-    /** 幽灵按钮 */
+    /** ghost style */
     ghost?: boolean;
-    /** 行内按钮 */
+    /** whether set as an inline button */
     inline?: boolean;
-    /** 矩形按钮 */
+    /** Rectangular button  */
     rectangle?: boolean;
 }

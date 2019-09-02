@@ -3,38 +3,58 @@
  * 最多使用五种尺寸缩写 [ xs, s, m, l, xl ] = [x small, small, middle, large, x large]
  */
 
-$hd: 1px;
-$preifx: 'edm';
+$hd: 1px !default;
+
+@function hd($num) {
+    @return $num * $hd;
+}
+
+/* prettier-ignore */
+@function px($px) {
+    @return $px + PX;
+}
+
+$preifx: 'eui' !default;
 // -------------------------------------------------
-$fontFamily: roboto, helvetica neue light, helvetica neue, helvetica, arial, lucida grande, sans-serif;
+$fontFamily: roboto, helvetica neue light, helvetica neue, helvetica, arial, lucida grande, sans-serif !default;
 
 // 主题色
-$dark: #2e2d2d;
-$gray: #e5e5e5;
-$light: #ffffff;
-$primary: hsl(10, 100%, 55%);
-$secondary: hsl(43, 100%, 65%);
-$customize: hsl(0, 1%, 18%);
-$cover: hsla(0, 0%, 0%, 0.3);
+$dark: #2e2d2d !default;
+$gray: #e5e5e5 !default;
+$light: #ffffff !default;
+$font-gray: #666 !default;
+$primary: hsl(10, 100%, 55%) !default;
+$secondary: hsl(43, 100%, 65%) !default;
+$customize: hsl(0, 1%, 18%) !default;
+$cover: hsla(0, 0%, 0%, 0.3) !default;
+$radius-l: 999px !default;
+$radius-s: hd(4) !default;
 // font size
-$radius-l: 999px;
-$font-l: 16 * $hd;
-$font-m: 14 * $hd;
-$font-s: 12 * $hd;
-$font-xs: 12 * $hd;
+$font-l: hd(16) !default;
+$font-m: hd(14) !default;
+$font-s: hd(12) !default;
+$font-xs: hd(12) !default;
+// line-height
+$line-height-l: 1.6 !default;
+$line-height-m: normal !default;
+// $line-height-s: hd(12) !default;
+// $line-height-xs: hd(12) !default;
 // 间距
 // ---
 // 水平间距
-$h-spacing-s: 5 * $hd;
-$h-spacing-m: 8 * $hd;
-$h-spacing-l: 15 * $hd;
+$h-spacing-s: hd(5) !default;
+$h-spacing-m: hd(8) !default;
+$h-spacing-l: hd(15) !default;
 
 // 垂直间距
-$v-spacing-xs: 3 * $hd;
-$v-spacing-s: 6 * $hd;
-$v-spacing-m: 9 * $hd;
-$v-spacing-l: 15 * $hd;
-$v-spacing-xl: 21 * $hd;
+$v-spacing-xs: hd(3) !default;
+$v-spacing-s: hd(6) !default;
+$v-spacing-m: hd(9) !default;
+$v-spacing-l: hd(15) !default;
+$v-spacing-xl: hd(21) !default;
+
+//Time
+$transitionTime: 0.16s !default;
 
 // Button
 // ---
@@ -47,25 +67,54 @@ $v-spacing-xl: 21 * $hd;
 @function getColorGradient($color, $direction: right) {
     @return linear-gradient(to $direction, getGradientLight($color), getGradientDark($color));
 }
-$button-l: 44 * $hd;
-$button-m: 30 * $hd;
-$button-s: 25 * $hd;
-$button-radius: $radius-l;
+$button-l: hd(44) !default;
+$button-m: hd(30) !default;
+$button-s: hd(25) !default;
+$button-radius: $radius-l !default;
+$button-shadow: 0 hd(10) hd(20) hd(-10) currentColor !default; // Button shadow
+$button-tap: inset 0 0 0 hd(100) rgba(0, 0, 0, 0.1) !default;
+$button-disabled: 0.4;
 
 // ICON
 // ---
-$icon-size-xs: 15 * $hd;
-$icon-size-s: 18 * $hd;
-$icon-size-m: 20 * $hd;
-$icon-size-l: 22 * $hd; // 导航条上的图标、grid的图标大小
-$icon-size-xl: 36 * $hd;
+$icon-size-xs: hd(15) !default;
+$icon-size-s: hd(18) !default;
+$icon-size-m: hd(20) !default;
+$icon-size-l: hd(22) !default; // 导航条上的图标、grid的图标大小
+$icon-size-xl: hd(36) !default;
 
-/* prettier-ignore */
-@function px($px) {
-  @return $px + PX;
-}
-@mixin border($dir: top, $color: $gray) {
-    background-image: linear-gradient(unquote(#{$dir}), $color, #fff);
-    background-repeat: no-repeat;
-    background-size: auto px(1);
-}
+// Toast
+// ---
+$toast-max-width: hd(300) !default;
+$toast-padding: hd(15) hd(20) !default;
+$toast-font: $font-m !default;
+$toast-line-height: $line-height-m !default;
+$toast-background: rgba(0, 0, 0, 0.7) !default;
+$toast-radius: $radius-s !default;
+
+// MessageBox
+// ---
+$msgbox-min-width: hd(300) !default;
+$msgbox-max-width: hd(300) !default;
+$msgbox-font-title: $font-l !default;
+$msgbox-font: $font-m !default;
+$msgbox-line-height-title: $line-height-l !default;
+$msgbox-line-height: $line-height-m !default;
+$msgbox-radius: $radius-s !default;
+$msgbox-px-s: hd(10) !default;
+$msgbox-px-m: hd(20) !default;
+$msgbox-margin: $msgbox-px-m !default;
+$msgbox-maxheight: 55vh !default;
+$msgbox-maxheight: 55vh !default;
+$msgbox-color: $font-gray !default;
+$msgbox-mutiline-padding: 0 $msgbox-px-m !default;
+$msgbox-mutiline-single-padding-bottom: $msgbox-px-m !default;
+// $msgbox-padding-s: hd(10) !default;
+
+// Input
+// ---
+// $input-max-width: hd(300) !default;
+$input-wrap-padding: hd(16) hd(12) hd(12) !default;
+$input-tag-padding: hd(4) !default;
+$input-icon-padding: hd(12) !default;
+$input-gray: rgba(132, 132, 132, 0.4) !default;

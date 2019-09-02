@@ -1,5 +1,5 @@
-import React from 'react';
-import { componentIndex, sortComponentIndex } from '../_util';
+import React, { useEffect, useState } from 'react';
+import { componentIndex, markdownOnly, sortComponentIndex } from '../_util';
 import { Route, RouteComponentProps } from 'react-router-dom';
 
 import Nav from './component/Nav';
@@ -12,17 +12,15 @@ import Preface from './Preface';
 
 const Document: React.FC<RouteComponentProps> = props => {
     const { match, location } = props;
-
+    const [preOffsetTop, setPreOffsetTop] = useState<number>(0);
     /**
      * 添加纯文本页面
      * @type 类型必须为 markdownOnly
      * @name 请创建 [name].md 在对应文件夹中 site\document\markdown
-     * 在 site\document\markdown\index.ts 中创建对应的 import 和 export
      */
-    const markdownOnly: ComponentIndex[] = [
-        { name: 'introduce', type: 'markdownOnly', 'zh-CN': '介绍' },
-        { name: 'variable', type: 'markdownOnly', 'zh-CN': '变量' },
-    ];
+    const disableIframe = `|${Object.values(markdownOnly)
+        .map(item => item.name.toLocaleLowerCase())
+        .join('|')}|`;
     const newDirectoryStructure = markdownOnly.concat(componentIndex);
     function isMarkdownOnly(markdownOnly: ComponentIndex[]) {
         const name = location.pathname.split('/').pop();
@@ -33,8 +31,18 @@ const Document: React.FC<RouteComponentProps> = props => {
         console.log(key);
     }
 
+    let src = `#${location.pathname.replace('document', 'instance')}`;
+    useEffect(() => {
+        const tPre = document.querySelector<HTMLPreElement>('.markdown-body pre');
+        if (!tPre) {
+            return;
+        }
+        setPreOffsetTop(tPre.offsetTop);
+        return;
+    }, [src]);
+
     return (
-        <div>
+        <div className="document">
             <Nav />
             {match.isExact ? (
                 <Preface />
@@ -49,10 +57,13 @@ const Document: React.FC<RouteComponentProps> = props => {
                         />
                     ))}
 
-                    <Iframe
-                        className={isMarkdownOnly(markdownOnly) ? 'hide' : ''}
-                        src={`#${location.pathname.replace('document', 'instance')}`}
-                    />
+                    {disableIframe.includes(`|${(src.split('/').pop() || '').toLocaleLowerCase()}|`) ? null : (
+                        <Iframe
+                            offsetTop={preOffsetTop || 0}
+                            className={isMarkdownOnly(markdownOnly) ? 'hide' : ''}
+                            src={src}
+                        />
+                    )}
                 </main>
             )}
             <Footer />

@@ -3,7 +3,9 @@
 exports[`renders Portal correctly 1`] = `
 <div>
   <div
-    class="Portal"
-  />
+    class="eui-wingblank Portal eui-wingblank-m"
+  >
+    <div />
+  </div>
 </div>
 `;

@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import { WingBlankProps } from './PropsType';
-import prefix from '../_util/prefix';
+import { prefix } from '../_util/';
 const prefixCls = `${prefix}-wingblank`;
 
 const WingBlank = (props: WingBlankProps) => {

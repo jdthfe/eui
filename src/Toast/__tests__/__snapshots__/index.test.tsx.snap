@@ -1,28 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Toast base: show 1`] = `
+exports[`Toast base snapshot about show and close: close: object = default 1`] = `
 <body>
   
   
   
 
-  
-  
-  
-
+  <div>
+    <div />
+  </div>
   <div />
-  <div
-    class="edm-Cover edm-Cover-transparent edm-fade-entry-done edm-fade"
-  />
-  <div
-    class="edm-toast edm-fade-entry-done edm-fade"
-  >
-    toastTxt
-  </div>
 </body>
 `;
 
-exports[`Toast snapshots: close 1`] = `
+exports[`Toast base snapshot about show and close: show: object = default 1`] = `
 <body>
   
   
@@ -31,38 +22,102 @@ exports[`Toast snapshots: close 1`] = `
   <div>
     <div />
   </div>
-</body>
-`;
-
-exports[`Toast snapshots: show 1`] = `
-<body>
-  
-  
-  
-
-  <div>
-    <div />
-  </div>
+  <div />
   <div>
     <div
-      class="edm-Cover edm-Cover-transparent edm-fade-entry-done edm-fade"
+      class="eui-Cover eui-Cover-transparent eui-fade-entry-done eui-fade"
     />
     <div
-      class="edm-toast edm-fade-entry-done edm-fade"
+      class="eui-toast eui-toast-alert eui-fade-entry-done eui-fade"
     >
-      normal
+      <svg
+        aria-hidden="true"
+        class="eui-icon eui-icon-xl"
+        fill="#fff"
+      >
+        <use
+          xlink:href="#alert"
+        />
+      </svg>
     </div>
   </div>
   <div>
     <div
-      class="edm-Cover edm-Cover-transparent edm-fade-entry-done edm-fade"
+      class="eui-Cover eui-Cover-transparent eui-fade-entry-done eui-fade"
     />
     <div
-      class="edm-toast edm-fade-entry-done edm-fade"
+      class="eui-toast eui-toast-success eui-fade-entry-done eui-fade"
     >
       <svg
         aria-hidden="true"
-        class="edm-icon edm-icon-l"
+        class="eui-icon eui-icon-xl"
+        fill="#fff"
+      >
+        <use
+          xlink:href="#successful"
+        />
+      </svg>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`Toast base snapshot about show and close: show: object has value 1`] = `
+<body>
+  
+  
+  
+
+  
+  
+  
+
+  <div>
+    <div />
+  </div>
+  <div />
+  <div>
+    <div
+      class="eui-Cover eui-Cover-transparent eui-fade-entry-done eui-fade"
+    />
+    <div
+      class="eui-toast eui-fade-entry-done eui-fade"
+    >
+      model
+    </div>
+  </div>
+  <div>
+    <div
+      class="eui-Cover eui-Cover-transparent eui-fade-entry-done eui-fade"
+    />
+    <div
+      class="eui-toast eui-toast-success eui-fade-entry-done eui-fade"
+    >
+      <svg
+        aria-hidden="true"
+        class="eui-icon eui-icon-xl"
+        fill="#fff"
+      >
+        <use
+          xlink:href="#successful"
+        />
+      </svg>
+      <div
+        class="eui-whitespace eui-whitespace-l"
+      />
+      success
+    </div>
+  </div>
+  <div>
+    <div
+      class="eui-Cover eui-Cover-transparent eui-fade-entry-done eui-fade"
+    />
+    <div
+      class="eui-toast eui-toast-alert eui-fade-entry-done eui-fade"
+    >
+      <svg
+        aria-hidden="true"
+        class="eui-icon eui-icon-xl"
         fill="#fff"
       >
         <use
@@ -70,80 +125,21 @@ exports[`Toast snapshots: show 1`] = `
         />
       </svg>
       <div
-        class="edm-whitespace edm-whitespace-l"
+        class="eui-whitespace eui-whitespace-l"
       />
       alert
     </div>
   </div>
   <div>
     <div
-      class="edm-Cover edm-Cover-transparent edm-fade-entry-done edm-fade"
+      class="eui-Cover eui-Cover-transparent eui-fade-entry-done eui-fade"
     />
     <div
-      class="edm-toast edm-fade-entry-done edm-fade"
+      class="eui-toast eui-toast-loading eui-fade-entry-done eui-fade"
     >
       <svg
         aria-hidden="true"
-        class="edm-icon edm-icon-l"
-        fill="#fff"
-      >
-        <use
-          xlink:href="#successful"
-        />
-      </svg>
-      <div
-        class="edm-whitespace edm-whitespace-l"
-      />
-      success
-    </div>
-  </div>
-  <div />
-  <div>
-    <div
-      class="edm-Cover edm-Cover-transparent edm-fade-entry-done edm-fade"
-    />
-    <div
-      class="edm-toast edm-fade-entry-done edm-fade"
-    >
-      <svg
-        aria-hidden="true"
-        class="edm-icon edm-icon-l"
-        fill="#fff"
-      >
-        <use
-          xlink:href="#alert"
-        />
-      </svg>
-    </div>
-  </div>
-  <div>
-    <div
-      class="edm-Cover edm-Cover-transparent edm-fade-entry-done edm-fade"
-    />
-    <div
-      class="edm-toast edm-fade-entry-done edm-fade"
-    >
-      <svg
-        aria-hidden="true"
-        class="edm-icon edm-icon-l"
-        fill="#fff"
-      >
-        <use
-          xlink:href="#successful"
-        />
-      </svg>
-    </div>
-  </div>
-  <div>
-    <div
-      class="edm-Cover edm-Cover-transparent edm-fade-entry-done edm-fade"
-    />
-    <div
-      class="edm-toast edm-fade-entry-done edm-fade"
-    >
-      <svg
-        aria-hidden="true"
-        class="edm-icon edm-icon-l edm-icon-loading"
+        class="eui-icon eui-icon-xl eui-icon-loading"
         fill="#fff"
       >
         <use
@@ -151,6 +147,32 @@ exports[`Toast snapshots: show 1`] = `
         />
       </svg>
     </div>
+  </div>
+</body>
+`;
+
+exports[`Toast base: show base 1`] = `
+<body>
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  <div />
+  <div
+    class="eui-Cover eui-Cover-transparent eui-fade-entry-done eui-fade"
+  />
+  <div
+    class="eui-toast eui-fade-entry-done eui-fade"
+  >
+    toastTxt
   </div>
 </body>
 `;

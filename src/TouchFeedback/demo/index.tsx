@@ -1,8 +1,8 @@
 import React from 'react';
-import { TouchFeedback } from '@src/index';
+import { TouchFeedback, WingBlank } from '@src/index';
 const Demo = () => {
     return (
-        <div className="TouchFeedback">
+        <WingBlank className="TouchFeedback">
             <TouchFeedback activeStyle={{ background: 'yellow' }} activeClassName="touchFeedback-active">
                 <p>TouchFeedback</p>
             </TouchFeedback>
@@ -10,7 +10,7 @@ const Demo = () => {
             <TouchFeedback disabled activeStyle={{ background: 'yellow' }} activeClassName="touchFeedback-active">
                 <p>TouchFeedback disabled</p>
             </TouchFeedback>
-        </div>
+        </WingBlank>
     );
 };
 

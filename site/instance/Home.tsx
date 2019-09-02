@@ -15,9 +15,7 @@ const Home = (props: HomeProps) => {
                     <p>{key}</p>
                     {structure[key].map(item => (
                         <Link to={`/instance/${item.name}`} key={item.name}>
-                            <Button theme="primary" ghost={true}>
-                                {item.name}
-                            </Button>
+                            <Button ghost>{item.name}</Button>
                             <WhiteSpace />
                         </Link>
                     ))}

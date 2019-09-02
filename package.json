@@ -1,42 +1,44 @@
 {
-    "name": "eled-mobile",
+    "name": "@jdthfe/eui",
     "keywords": [
+        "eui",
+        "typescript",
         "react",
         "ui",
         "mobile"
     ],
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "",
-    "main": "compiled/lib",
-    "module": "compiled/es",
     "files": [
         "compiled"
     ],
+    "main": "compiled/lib/index.js",
+    "module": "compiled/es/index.js",
     "scripts": {
-        "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./scripts/config/webpack.config.dev.ts --open 'Google Chrome'",
+        "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./scripts/config/webpack.config.dev.ts",
         "build": "cross-env NODE_ENV=build webpack -p --config ./scripts/config/webpack.config.build.ts",
         "test": "cross-env NODE_ENV=test jest --config=./jest.config.js --runInBand",
         "rm": "ts-node scripts/template/remove.ts && eslint ./site/_util/componentIndex.tsx --fix",
         "api": "ts-node scripts/template/api.ts",
         "new": "ts-node scripts/template/new.ts && eslint ./site/_util/componentIndex.tsx --fix",
-        "svg": "ts-node scripts/template/svg.ts && eslint ./src/Icon/svgs.tsx --fix",
+        "svg": "ts-node scripts/template/svg.ts && eslint ./src/Icon/svgs.tsx ./src/Icon/PropsType.tsx ./src/Icon/demo/index.tsx --fix",
         "dist": "cross-env NODE_ENV=dist webpack -p --config ./scripts/config/webpack.config.dist.ts",
         "compile": "gulp -f ./scripts/gulp/gulpfile.ts compile",
-        "likk": "yarn dist && yarn compile && cp -avR /Users/likeke3/Desktop/jd-component/edm/compiled /Users/likeke3/Desktop/jd-global/mitem/project/common/",
-        "prod": "yarn dist && yarn compile"
+        "prod": "yarn dist && yarn compile",
+        "eslint": "eslint"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/jdthfe/edm.git"
+        "url": "git+https://github.com/jdthfe/eui.git"
     },
     "author": "qqqqqcy",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/jdthfe/edm/issues"
+        "url": "https://github.com/jdthfe/eui/issues"
     },
-    "homepage": "https://github.com/jdthfe/edm#readme",
+    "homepage": "https://github.com/jdthfe/eui#readme",
     "dependencies": {
-        "@babel/runtime": "^7.4.3",
+        "@babel/runtime-corejs2": "^7.5.5",
         "classnames": "^2.2.6"
     },
     "devDependencies": {
@@ -89,6 +91,7 @@
         "eslint-loader": "^2.1.2",
         "eslint-plugin-prettier": "^3.0.1",
         "eslint-plugin-react-hooks": "^1.6.0",
+        "file-loader": "^3.0.1",
         "fork-ts-checker-webpack-plugin": "^1.0.0",
         "gulp": "^4.0.0",
         "gulp-babel": "^8.0.0",
@@ -104,7 +107,7 @@
         "jest": "^24.5.0",
         "merge2": "^1.2.3",
         "mini-css-extract-plugin": "^0.5.0",
-        "node-sass": "^4.11.0",
+        "node-sass": "^4.12.0",
         "postcss-loader": "^3.0.0",
         "postcss-pxtorem": "^4.0.1",
         "prettier": "^1.16.4",
@@ -130,6 +133,7 @@
         "through2": "^3.0.1",
         "ts-node": "^8.0.2",
         "typescript": "^3.3.3333",
+        "url-loader": "^1.1.2",
         "webpack": "^4.29.5",
         "webpack-cli": "^3.2.3",
         "webpack-dev-server": "^3.2.1",

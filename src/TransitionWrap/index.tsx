@@ -2,6 +2,9 @@ import React, { useEffect } from 'react';
 import classnames from 'classnames';
 import { TransitionStatus, TransitionWrapPropsWithChildren } from './PropsType';
 
+import { Variable } from '../_util/';
+const { transitionTime } = Variable;
+
 const statusCase: { [propName: string]: TransitionStatus } = {
     entry: 'entry',
     entryActive: 'entry-active',
@@ -14,7 +17,7 @@ const statusCase: { [propName: string]: TransitionStatus } = {
 const TransitionWrap = (props: TransitionWrapPropsWithChildren) => {
     const {
         children,
-        time = 0,
+        time = transitionTime,
         visible = false,
         keepOnExit = false,
         transitionClassName = 'transition',
@@ -71,11 +74,9 @@ const TransitionWrap = (props: TransitionWrapPropsWithChildren) => {
             <React.Fragment>
                 {React.Children.map(children, child => {
                     let { className } = child.props;
-                    if (transitionClassName) {
-                        className = classnames(className, `${transitionClassName}-${status}`, {
-                            [transitionClassName]: transitionClassName !== className,
-                        });
-                    }
+                    className = classnames(className, `${transitionClassName}-${status}`, {
+                        [transitionClassName]: transitionClassName !== className,
+                    });
                     return React.cloneElement(child, { className });
                 })}
             </React.Fragment>

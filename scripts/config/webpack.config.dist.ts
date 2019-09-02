@@ -9,9 +9,16 @@ const config: webpack.Configuration = {
         index: ['./src/index.tsx', './src/scss.tsx'],
     },
     mode: 'production',
+    stats: {
+        colors: true, //增加控制台颜色开关stats
+        modules: false, // 不增加内置模块信息
+        children: false, // 不增加子级信息 If you are using ts-loader, setting this to true will make TypeScript errors show up during build.
+        chunks: false, // 允许较少的输出
+        chunkModules: false, // 不将内置模块的信息加到包信息
+    },
     output: {
         path: getProjectUrl('compiled', 'dist'),
-        library: 'eled-mobile',
+        library: 'eui',
         libraryTarget: 'umd',
         globalObject: 'this',
     },

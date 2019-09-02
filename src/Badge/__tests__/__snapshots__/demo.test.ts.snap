@@ -6,24 +6,24 @@ exports[`renders Badge correctly 1`] = `
     class="Badge"
   >
     <span
-      class="edm-badge"
+      class="eui-badge"
     >
       <span
         style="width: 26px; height: 26px; background: rgb(221, 221, 221); display: inline-block;"
       />
       <sup
-        class="edm-badge-dot"
+        class="eui-badge-dot"
       />
     </span>
     <div>
       <span
-        class="edm-badge"
+        class="eui-badge"
       >
         <span
           style="width: 26px; height: 26px; background: rgb(221, 221, 221); display: inline-block;"
         />
         <sup
-          class="edm-badge-text"
+          class="eui-badge-text"
         >
           10+
         </sup>
@@ -31,13 +31,13 @@ exports[`renders Badge correctly 1`] = `
     </div>
     <div>
       <span
-        class="edm-badge"
+        class="eui-badge"
       >
         <span
           style="width: 26px; height: 26px; background: rgb(221, 221, 221); display: inline-block;"
         />
         <sup
-          class="edm-badge-text"
+          class="eui-badge-text"
         >
           9
         </sup>
@@ -45,7 +45,7 @@ exports[`renders Badge correctly 1`] = `
     </div>
     <div>
       <span
-        class="edm-badge"
+        class="eui-badge"
       >
         <span
           style="width: 26px; height: 26px; background: rgb(221, 221, 221); display: inline-block;"
@@ -54,7 +54,7 @@ exports[`renders Badge correctly 1`] = `
     </div>
     <div>
       <span
-        class="edm-badge my-corner edm-badge-corner-wrapper"
+        class="eui-badge my-corner eui-badge-corner-wrapper"
       >
         <div
           class="corner-badge"
@@ -63,7 +63,7 @@ exports[`renders Badge correctly 1`] = `
           Use corner prop
         </div>
         <sup
-          class="edm-badge-corner"
+          class="eui-badge-corner"
         >
           คูปองใหม่
         </sup>

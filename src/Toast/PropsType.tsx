@@ -11,8 +11,8 @@ export interface ToastProps
 }
 
 export interface ToastPropsWithModel extends ToastProps {
-    /** Cover will block page clicks */
+    /** Whether to hide toast's transparent cover, which will prevent touch event of the whole page */
     noCover?: boolean;
-    /** duration */
+    /** Delay time to close, which units is second ( If set duration = 0, toast will not auto hide, you have to manually do it ) */
     duration?: number;
 }

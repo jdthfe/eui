@@ -1,19 +1,16 @@
 export interface IconProps extends React.SVGProps<SVGSVGElement> {
     /** Select the icon you want to show */
     value:
-        | 'addcart'
         | 'alert'
-        | 'alipay'
+        | 'arrow'
         | 'close'
-        | 'closeFilled'
+        | 'eyeClose'
+        | 'eyeOpen'
         | 'loading'
-        | 'pwd'
-        | 'pwdOpen'
+        | 'more'
         | 'remind'
         | 'selected'
-        | 'successful'
-        | 'test'
-        | string;
+        | 'successful';
     /** Ionc's Size */
     size?: 'xs' | 's' | 'm' | 'l' | 'xl';
 }

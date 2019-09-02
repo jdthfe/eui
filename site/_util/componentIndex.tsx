@@ -14,4 +14,6 @@ export default [
     { name: 'Badge', type: 'Data Display', 'zh-CN': '微标徽' },
     { name: 'Tabs', type: 'Data Display', 'zh-CN': '标签页' },
     { name: 'WhiteSpace', type: 'Layout', 'zh-CN': '上下留白' },
+    { name: 'List', type: 'Data Display', 'zh-CN': '列表' },
+    { name: 'Input', type: 'Data Entry', 'zh-CN': '文本输入' },
 ];
