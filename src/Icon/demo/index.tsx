@@ -4,9 +4,12 @@ import { IconProps } from '@src/Icon/PropsType';
 import './index.scss';
 
 const iconList: IconProps['value'][] = [
+    'addCircle',
     'alert',
     'arrow',
     'close',
+    'delete',
+    'edit',
     'eyeClose',
     'eyeOpen',
     'loading',
