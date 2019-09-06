@@ -19,6 +19,21 @@ exports[`renders Icon correctly 1`] = `
           class="eui-icon eui-icon-l"
         >
           <use
+            xlink:href="#addCircle"
+          />
+        </svg>
+        <p>
+          addCircle
+        </p>
+      </div>
+      <div
+        class="Icon-value-item"
+      >
+        <svg
+          aria-hidden="true"
+          class="eui-icon eui-icon-l"
+        >
+          <use
             xlink:href="#alert"
           />
         </svg>
@@ -54,6 +69,36 @@ exports[`renders Icon correctly 1`] = `
         </svg>
         <p>
           close
+        </p>
+      </div>
+      <div
+        class="Icon-value-item"
+      >
+        <svg
+          aria-hidden="true"
+          class="eui-icon eui-icon-l"
+        >
+          <use
+            xlink:href="#delete"
+          />
+        </svg>
+        <p>
+          delete
+        </p>
+      </div>
+      <div
+        class="Icon-value-item"
+      >
+        <svg
+          aria-hidden="true"
+          class="eui-icon eui-icon-l"
+        >
+          <use
+            xlink:href="#edit"
+          />
+        </svg>
+        <p>
+          edit
         </p>
       </div>
       <div
@@ -176,7 +221,7 @@ exports[`renders Icon correctly 1`] = `
           class="eui-icon eui-icon-xs"
         >
           <use
-            xlink:href="#alert"
+            xlink:href="#addCircle"
           />
         </svg>
         <p>
@@ -191,7 +236,7 @@ exports[`renders Icon correctly 1`] = `
           class="eui-icon eui-icon-s"
         >
           <use
-            xlink:href="#alert"
+            xlink:href="#addCircle"
           />
         </svg>
         <p>
@@ -206,7 +251,7 @@ exports[`renders Icon correctly 1`] = `
           class="eui-icon eui-icon-m"
         >
           <use
-            xlink:href="#alert"
+            xlink:href="#addCircle"
           />
         </svg>
         <p>
@@ -221,7 +266,7 @@ exports[`renders Icon correctly 1`] = `
           class="eui-icon eui-icon-l"
         >
           <use
-            xlink:href="#alert"
+            xlink:href="#addCircle"
           />
         </svg>
         <p>
@@ -236,7 +281,7 @@ exports[`renders Icon correctly 1`] = `
           class="eui-icon eui-icon-xl"
         >
           <use
-            xlink:href="#alert"
+            xlink:href="#addCircle"
           />
         </svg>
         <p>
