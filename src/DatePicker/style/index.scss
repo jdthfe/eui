@@ -1,0 +1,6 @@
+@import '../../style/mixin';
+$datepicker-prefix: $preifx + '-datepicker';
+
+.#{$datepicker-prefix} {
+    text-decoration: underline;
+}

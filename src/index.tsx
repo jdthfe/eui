@@ -31,3 +31,4 @@ export { default as MessageBox } from './MessageBox';
 export { default as Cover } from './Cover';
 export { default as List } from './List';
 export { default as Input } from './Input';
+export { default as DatePicker } from './DatePicker';
