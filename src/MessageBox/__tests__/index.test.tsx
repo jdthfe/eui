@@ -3,11 +3,20 @@ import React from 'react';
 import { render, waitForElement, waitForElementToBeRemoved, fireEvent } from 'react-testing-library';
 import { prefix } from '../../_util/';
 
+function clearSvg(baseElement: HTMLElement) {
+    //  排除 svg 文件干扰
+    const svg = baseElement.querySelector('svg');
+    if (svg) {
+        svg.remove();
+    }
+}
+
 describe('MessageBox', () => {
     const MessageBoxText = 'MessageBoxText';
+    const testDiv = <div className="testDiv" />;
+    const { baseElement, getByText } = render(testDiv);
 
     it('snapshots model', async () => {
-        const { baseElement, getByText } = render(<div />);
         const close = MessageBox.model({ children: MessageBoxText });
         await waitForElement(() => getByText(MessageBoxText));
         expect(baseElement).toMatchSnapshot('model show');
@@ -18,7 +27,7 @@ describe('MessageBox', () => {
 
     it('default model onClickCloseIcon', async () => {
         const onClick = jest.fn();
-        const { baseElement, getByText } = render(<div />);
+
         MessageBox.model({ children: MessageBoxText, onClickCloseIcon: onClick });
 
         await waitForElement(() => getByText(MessageBoxText));
@@ -32,7 +41,7 @@ describe('MessageBox', () => {
         const confirmChildren = 'confirmChildren';
         const coverClassName = 'coverClassName';
         const onClick = jest.fn();
-        const { baseElement, getByText } = render(<div />);
+
         const close = MessageBox.model({
             onClickCover: () => false,
             children: MessageBoxText,
@@ -55,14 +64,13 @@ describe('MessageBox', () => {
         await waitForElement(() => getByText(MessageBoxText));
         close();
         await waitForElementToBeRemoved(() => getByText(MessageBoxText));
-
         expect(onClick).toBeCalled();
     });
 
     it('default model onClickCover', async () => {
         const onClick = jest.fn();
         const coverClassName = 'coverClassName';
-        const { baseElement, getByText } = render(<div />);
+
         MessageBox.model({ children: MessageBoxText, coverProps: { onClick, className: coverClassName } });
 
         await waitForElement(() => getByText(MessageBoxText));
@@ -76,7 +84,7 @@ describe('MessageBox', () => {
         const confirmCallback = jest.fn();
         const onClick = jest.fn();
         const confirmChildren = 'confirmChildren';
-        const { baseElement, getByText } = render(<div />);
+
         MessageBox.alert({
             multiLineButtons: true,
             title: 'title',
@@ -86,6 +94,7 @@ describe('MessageBox', () => {
             confirmCallback,
         });
         await waitForElement(() => getByText(confirmChildren));
+        clearSvg(baseElement);
         expect(baseElement).toMatchSnapshot('alert show');
         fireEvent.click(getByText(confirmChildren));
         await waitForElementToBeRemoved(() => getByText(MessageBoxText));
@@ -96,7 +105,6 @@ describe('MessageBox', () => {
 
     it('default alert', async () => {
         const confirmChildren = 'confirm';
-        const { getByText } = render(<div />);
         MessageBox.alert();
         await waitForElement(() => getByText(confirmChildren));
         fireEvent.click(getByText(confirmChildren));
@@ -107,7 +115,7 @@ describe('MessageBox', () => {
         const confirmCallback = jest.fn();
         const onClick = jest.fn();
         const confirmChildren = 'confirmChildren';
-        const { baseElement, getByText } = render(<div />);
+
         MessageBox.confirm({
             multiLineButtons: true,
             title: 'title',
@@ -127,7 +135,6 @@ describe('MessageBox', () => {
 
     it('default confirm', async () => {
         const cancelChildren = 'cancel';
-        const { getByText } = render(<div />);
         MessageBox.confirm();
         await waitForElement(() => getByText(cancelChildren));
         fireEvent.click(getByText(cancelChildren));
@@ -138,7 +145,6 @@ describe('MessageBox', () => {
         const onClick = jest.fn();
         const cancelChildren = 'cancel';
         const coverClassName = 'coverClassName';
-        const { getByText, baseElement } = render(<div />);
         MessageBox.confirm({
             onClickCover: false,
             cancelButton: { onClick },
