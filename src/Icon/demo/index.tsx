@@ -6,14 +6,24 @@ import './index.scss';
 const iconList: IconProps['value'][] = [
     'alert',
     'arrow',
+    'check',
     'close',
+    'closeFilled',
+    'current',
     'eyeClose',
     'eyeOpen',
     'loading',
     'more',
+    'plus',
+    'pwd',
+    'pwdOpen',
+    'rarrow',
     'remind',
     'selected',
     'successful',
+    'time',
+    'tip',
+    'uncheck',
 ];
 const sizeList: IconProps['size'][] = ['xs', 's', 'm', 'l', 'xl'];
 const fillList: string[] = ['red', 'orange', 'yellow', 'green', 'blue'];

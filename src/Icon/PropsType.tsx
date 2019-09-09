@@ -3,14 +3,24 @@ export interface IconProps extends React.SVGProps<SVGSVGElement> {
     value:
         | 'alert'
         | 'arrow'
+        | 'check'
         | 'close'
+        | 'closeFilled'
+        | 'current'
         | 'eyeClose'
         | 'eyeOpen'
         | 'loading'
         | 'more'
+        | 'plus'
+        | 'pwd'
+        | 'pwdOpen'
+        | 'rarrow'
         | 'remind'
         | 'selected'
-        | 'successful';
+        | 'successful'
+        | 'time'
+        | 'tip'
+        | 'uncheck';
     /** Ionc's Size */
     size?: 'xs' | 's' | 'm' | 'l' | 'xl';
 }
