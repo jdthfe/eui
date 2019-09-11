@@ -2,13 +2,15 @@
 
 ## Demo
 
-jd-compensation 中切换语言、切换国别码的实例
-
 ## API
+
+继承 `div`
 
 | 属性 | 说明 | 类型 | 默认值 | 必填 |
 | --- | --- | --- | --- | --- |
-| anchorEl | 展示 popover 的元素 | `any` | - | `true` |
-| dir | dir ：popover 的展示方向；包括 上左、上中、上右、下左、下中、下右 | `'top-left' | 'top-center' | 'top-right' | 'bottom-left' | 'bottom-center' | 'bottom-right'` | - | `true` |
-| onClose | popover 消失的时候回调函数 | `() => void` | - | `false` |
-| hasArrow | 是否包含箭头 默认是 false（箭头左右位置用外部样式控制） | `boolean` | - | `false` |
+| anchorEl | Popover 定位的锚元素 | `HTMLElement | null` | - | `true` |
+| dir | Popover 相对锚元素的方向 | `'top-left' | 'top-center' | 'top-right' | 'bottom-left' | 'bottom-center' | 'bottom-right'` | - | `true` |
+| onClickCover | 值为 false 或者 undefined 时，隐藏遮罩。点击遮罩时触发的函数。**返回 `false` 时阻止 Popover 关闭** | `(() => void | boolean) | boolean` | `false` | `false` |
+| hasArrow | 是否存在箭头指向锚元素 | `boolean` | `false` | `false` |
+| coverProps | Popover 中，Cover 的 props | [`CoverWithTransitionWrap`](#/document/Cover) | - | `false` |
+| [`...TransitionWrap`](#/document/TransitionWrap) |  |  |  |  |

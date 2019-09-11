@@ -2,7 +2,7 @@
 $toast-prefix: $preifx + '-toast';
 
 .#{$toast-prefix} {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     max-width: $toast-max-width;

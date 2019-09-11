@@ -1,12 +1,15 @@
 export interface IconProps extends React.SVGProps<SVGSVGElement> {
     /** Select the icon you want to show */
     value:
+        | 'addCircle'
         | 'alert'
         | 'arrow'
         | 'check'
         | 'close'
         | 'closeFilled'
         | 'current'
+        | 'delete'
+        | 'edit'
         | 'eyeClose'
         | 'eyeOpen'
         | 'loading'
