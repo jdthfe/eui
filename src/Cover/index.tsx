@@ -7,7 +7,7 @@ import TransitionWrap from '../TransitionWrap';
 import { Variable } from '../_util/';
 const { transitionFade, transitionTime } = Variable;
 
-const prefixCls = `${prefix}-Cover`;
+const prefixCls = `${prefix}-cover`;
 
 const Cover: ((props: CoverProps) => JSX.Element) & {
     Transition: (props: CoverWithTransitionWrap) => JSX.Element;

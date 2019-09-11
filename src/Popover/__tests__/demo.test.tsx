@@ -12,12 +12,12 @@ describe('PopoverDemo', () => {
         fireEvent.click(btn);
         await waitForElement(() => baseElement.querySelector(`.eui-popover.eui-fade-entry-done.eui-fade`));
         await waitForElement(() =>
-            baseElement.querySelector(`.eui-Cover.eui-Cover-transparent.eui-fade-entry-done.eui-fade`),
+            baseElement.querySelector(`.eui-cover.eui-cover-transparent.eui-fade-entry-done.eui-fade`),
         );
 
         expect(baseElement).toMatchSnapshot('visible = true');
 
-        const cover = baseElement.querySelector('.eui-Cover');
+        const cover = baseElement.querySelector('.eui-cover');
         if (cover) {
             fireEvent.click(cover);
         }
@@ -33,12 +33,12 @@ describe('PopoverDemo', () => {
         fireEvent.click(btn);
         await waitForElement(() => baseElement.querySelector(`.eui-popover.eui-fade-entry-done.eui-fade`));
         await waitForElement(() =>
-            baseElement.querySelector(`.eui-Cover.eui-Cover-transparent.eui-fade-entry-done.eui-fade`),
+            baseElement.querySelector(`.eui-cover.eui-cover-transparent.eui-fade-entry-done.eui-fade`),
         );
 
         expect(baseElement).toMatchSnapshot('visible = true');
 
-        const cover = baseElement.querySelector('.eui-Cover');
+        const cover = baseElement.querySelector('.eui-cover');
         if (cover) {
             fireEvent.click(cover);
         }

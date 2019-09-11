@@ -25,7 +25,7 @@ exports[`Toast base snapshot about show and close: show: object = default 1`] = 
   <div />
   <div>
     <div
-      class="eui-Cover eui-Cover-transparent eui-fade-entry-done eui-fade"
+      class="eui-cover eui-cover-transparent eui-fade-entry-done eui-fade"
     />
     <div
       class="eui-toast eui-toast-alert eui-fade-entry-done eui-fade"
@@ -43,7 +43,7 @@ exports[`Toast base snapshot about show and close: show: object = default 1`] = 
   </div>
   <div>
     <div
-      class="eui-Cover eui-Cover-transparent eui-fade-entry-done eui-fade"
+      class="eui-cover eui-cover-transparent eui-fade-entry-done eui-fade"
     />
     <div
       class="eui-toast eui-toast-success eui-fade-entry-done eui-fade"
@@ -78,7 +78,7 @@ exports[`Toast base snapshot about show and close: show: object has value 1`] = 
   <div />
   <div>
     <div
-      class="eui-Cover eui-Cover-transparent eui-fade-entry-done eui-fade"
+      class="eui-cover eui-cover-transparent eui-fade-entry-done eui-fade"
     />
     <div
       class="eui-toast eui-fade-entry-done eui-fade"
@@ -88,7 +88,7 @@ exports[`Toast base snapshot about show and close: show: object has value 1`] = 
   </div>
   <div>
     <div
-      class="eui-Cover eui-Cover-transparent eui-fade-entry-done eui-fade"
+      class="eui-cover eui-cover-transparent eui-fade-entry-done eui-fade"
     />
     <div
       class="eui-toast eui-toast-success eui-fade-entry-done eui-fade"
@@ -110,7 +110,7 @@ exports[`Toast base snapshot about show and close: show: object has value 1`] = 
   </div>
   <div>
     <div
-      class="eui-Cover eui-Cover-transparent eui-fade-entry-done eui-fade"
+      class="eui-cover eui-cover-transparent eui-fade-entry-done eui-fade"
     />
     <div
       class="eui-toast eui-toast-alert eui-fade-entry-done eui-fade"
@@ -132,7 +132,7 @@ exports[`Toast base snapshot about show and close: show: object has value 1`] = 
   </div>
   <div>
     <div
-      class="eui-Cover eui-Cover-transparent eui-fade-entry-done eui-fade"
+      class="eui-cover eui-cover-transparent eui-fade-entry-done eui-fade"
     />
     <div
       class="eui-toast eui-toast-loading eui-fade-entry-done eui-fade"
@@ -167,7 +167,7 @@ exports[`Toast base: show base 1`] = `
 
   <div />
   <div
-    class="eui-Cover eui-Cover-transparent eui-fade-entry-done eui-fade"
+    class="eui-cover eui-cover-transparent eui-fade-entry-done eui-fade"
   />
   <div
     class="eui-toast eui-fade-entry-done eui-fade"

@@ -58,7 +58,7 @@ exports[`PopoverDemo Show Popover bottom-center: visible = true 1`] = `
     </div>
   </div>
   <div
-    class="eui-Cover eui-Cover-transparent eui-fade-entry-done eui-fade"
+    class="eui-cover eui-cover-transparent eui-fade-entry-done eui-fade"
   />
   <div
     class="eui-popover eui-fade-entry-done eui-fade"
@@ -160,7 +160,7 @@ exports[`PopoverDemo Show Popover top-center: visible = true 1`] = `
     </div>
   </div>
   <div
-    class="eui-Cover eui-Cover-transparent eui-fade-entry-done eui-fade"
+    class="eui-cover eui-cover-transparent eui-fade-entry-done eui-fade"
   />
   <div
     class="eui-popover eui-fade-entry-done eui-fade"

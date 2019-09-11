@@ -24,7 +24,6 @@ $popover-prefix: $preifx + '-popover';
         width: $popover-arrow-size;
         height: $popover-arrow-size;
         background-color: $light;
-        border-radius: $popover-size2;
         transform: rotate(45deg);
     }
     .#{$popover-prefix}-arrow-top {

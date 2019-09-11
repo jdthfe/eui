@@ -27,7 +27,7 @@ exports[`MessageBox snapshots alert: alert show 1`] = `
   </div>
   <div>
     <div
-      class="eui-Cover eui-fade-entry-active eui-fade"
+      class="eui-cover eui-fade-entry-active eui-fade"
     />
     <div
       class="eui-messagebox undefined eui-messagebox-buttons-multiline-single eui-fade-entry-active eui-fade"
@@ -84,7 +84,7 @@ exports[`MessageBox snapshots confirm: confirm show 1`] = `
   </div>
   <div>
     <div
-      class="eui-Cover eui-fade-entry-active eui-fade"
+      class="eui-cover eui-fade-entry-active eui-fade"
     />
     <div
       class="eui-messagebox eui-fade-entry-active eui-fade"
@@ -139,7 +139,7 @@ exports[`MessageBox snapshots model: model show 1`] = `
   </div>
   <div>
     <div
-      class="eui-Cover eui-fade-entry-active eui-fade"
+      class="eui-cover eui-fade-entry-active eui-fade"
     />
     <div
       class="eui-messagebox eui-fade-entry-active eui-fade"
