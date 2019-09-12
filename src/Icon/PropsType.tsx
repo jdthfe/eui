@@ -6,6 +6,7 @@ export interface IconProps extends React.SVGProps<SVGSVGElement> {
         | 'arrow'
         | 'close'
         | 'delete'
+        | 'download'
         | 'edit'
         | 'eyeClose'
         | 'eyeOpen'
@@ -13,6 +14,7 @@ export interface IconProps extends React.SVGProps<SVGSVGElement> {
         | 'more'
         | 'remind'
         | 'selected'
+        | 'share'
         | 'successful';
     /** Ionc's Size */
     size?: 'xs' | 's' | 'm' | 'l' | 'xl';
