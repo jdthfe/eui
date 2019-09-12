@@ -1,7 +1,7 @@
 import { TransitionWrapProps } from '../TransitionWrap/PropsType';
 import { PortalProps } from '../Portal/PropsType';
 import { CoverWithTransitionWrap } from '../Cover/PropsType';
-export interface SlideProps
+export interface PopupProps
     extends PortalProps,
         TransitionWrapProps,
         React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {

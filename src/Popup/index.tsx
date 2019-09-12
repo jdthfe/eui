@@ -1,8 +1,8 @@
 import React from 'react';
 import classnames from 'classnames';
-import { SlideProps } from './PropsType';
+import { PopupProps } from './PropsType';
 import { prefix } from '../_util/';
-const prefixCls = `${prefix}-slide`;
+const prefixCls = `${prefix}-popup`;
 
 import Cover from '../Cover';
 import Portal from '../Portal';
@@ -10,7 +10,7 @@ import TransitionWrap from '../TransitionWrap';
 import { Variable } from '../_util/';
 const { transitionFade } = Variable;
 const { Transition } = Cover;
-const Slide = (props: SlideProps) => {
+const Popup = (props: PopupProps) => {
     const {
         className,
         children,
@@ -27,6 +27,7 @@ const Slide = (props: SlideProps) => {
         ...restProps
     } = props;
     const cls = classnames(prefixCls, className);
+    const popupBodyCls = classnames(`${prefixCls}-body`, className);
     return (
         <Portal mountNode={mountNode}>
             <Transition visible={visible} time={time} keepOnExit={keepOnExit} onExitDone={onExitDone} {...coverProps} />
@@ -39,11 +40,11 @@ const Slide = (props: SlideProps) => {
                 transitionClassName={transitionClassName}
             >
                 <div className={cls} {...restProps}>
-                    {children}
+                    <div className={popupBodyCls}>{children}</div>
                 </div>
             </TransitionWrap>
         </Portal>
     );
 };
 
-export default Slide;
+export default Popup;

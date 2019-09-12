@@ -94,6 +94,21 @@ exports[`renders Icon correctly 1`] = `
           class="eui-icon eui-icon-l"
         >
           <use
+            xlink:href="#download"
+          />
+        </svg>
+        <p>
+          download
+        </p>
+      </div>
+      <div
+        class="Icon-value-item"
+      >
+        <svg
+          aria-hidden="true"
+          class="eui-icon eui-icon-l"
+        >
+          <use
             xlink:href="#edit"
           />
         </svg>
@@ -189,6 +204,21 @@ exports[`renders Icon correctly 1`] = `
         </svg>
         <p>
           selected
+        </p>
+      </div>
+      <div
+        class="Icon-value-item"
+      >
+        <svg
+          aria-hidden="true"
+          class="eui-icon eui-icon-l"
+        >
+          <use
+            xlink:href="#share"
+          />
+        </svg>
+        <p>
+          share
         </p>
       </div>
       <div

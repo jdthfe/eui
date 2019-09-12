@@ -9,6 +9,7 @@ export interface IconProps extends React.SVGProps<SVGSVGElement> {
         | 'closeFilled'
         | 'current'
         | 'delete'
+        | 'download'
         | 'edit'
         | 'eyeClose'
         | 'eyeOpen'
@@ -23,7 +24,9 @@ export interface IconProps extends React.SVGProps<SVGSVGElement> {
         | 'successful'
         | 'time'
         | 'tip'
-        | 'uncheck';
+        | 'uncheck'
+        | 'share'
+        | 'successful';
     /** Ionc's Size */
     size?: 'xs' | 's' | 'm' | 'l' | 'xl';
 }
