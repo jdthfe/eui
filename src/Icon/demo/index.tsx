@@ -17,6 +17,7 @@ const iconList: IconProps['value'][] = [
     'dadActive',
     'dadDefault',
     'delete',
+    'download',
     'edit',
     'eyeClose',
     'eyeOpen',
@@ -31,6 +32,7 @@ const iconList: IconProps['value'][] = [
     'more',
     'remind',
     'selected',
+    'share',
     'successful',
 ];
 const sizeList: IconProps['size'][] = ['xs', 's', 'm', 'l', 'xl'];
