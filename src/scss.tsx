@@ -19,3 +19,4 @@ import './Cover/style';
 import './List/style';
 import './Input/style';
 import './Popup/style';
+import './Radio/style';
