@@ -7,7 +7,10 @@ const iconList: IconProps['value'][] = [
     'addCircle',
     'alert',
     'arrow',
+    'check',
     'close',
+    'closeFilled',
+    'current',
     'delete',
     'download',
     'edit',
@@ -15,10 +18,17 @@ const iconList: IconProps['value'][] = [
     'eyeOpen',
     'loading',
     'more',
+    'plus',
+    'pwd',
+    'pwdOpen',
+    'rarrow',
     'remind',
     'selected',
     'share',
     'successful',
+    'time',
+    'tip',
+    'uncheck',
 ];
 const sizeList: IconProps['size'][] = ['xs', 's', 'm', 'l', 'xl'];
 const fillList: string[] = ['red', 'orange', 'yellow', 'green', 'blue'];
