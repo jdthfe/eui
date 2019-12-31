@@ -2,19 +2,21 @@ import { useState, useCallback } from 'react';
 import { UseRadioOption } from './PropsType';
 
 export const useRadio = (opt: UseRadioOption = {}) => {
-    const { initialValue = '' } = opt;
-    const [value, setValue] = useState(initialValue);
+    const { setValue, initLabel = '' } = opt;
+    const [label, setLabel] = useState(initLabel);
 
-    const _onChange = useCallback(e => {
-        const val = e.currentTarget.value;
-        setValue(val);
-    }, []);
+    const _onChange = useCallback(
+        e => {
+            const val = e.currentTarget.value;
+            setValue(val);
+        },
+        [setValue],
+    );
 
     return {
-        value,
-        setValue,
+        label,
+        setLabel,
         bind: {
-            value,
             _onChange,
         },
     };

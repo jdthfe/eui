@@ -1,18 +1,19 @@
-import { UseRadioReturn } from './use';
-
 export interface RadioProps
     extends React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
-    /** checked */
-    checked?: boolean;
+    /** binding value */
+    value?: string | string[] | number;
     /** radio value */
     label?: string | string[] | number;
     /** change value for useState */
-    _onChange?: UseRadioReturn['bind']['_onChange'];
+    onChange?: (e: any) => void;
+    _onChange?: (e: any) => void;
     /** whether disabled */
     disabled?: boolean;
 }
 
 export interface UseRadioOption {
+    /** set binding value function */
+    setValue?: any;
     /** initial value */
-    initialValue?: RadioProps['value'];
+    initLabel?: RadioProps['value'];
 }
