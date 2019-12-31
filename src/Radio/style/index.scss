@@ -45,6 +45,7 @@ $radio-prefix: $preifx + '-radio';
     display: inline-block;
     line-height: 1;
     white-space: nowrap;
+    vertical-align: middle;
     cursor: pointer;
     outline: none;
 }
@@ -72,5 +73,6 @@ $radio-prefix: $preifx + '-radio';
     display: inline-block;
     padding-left: 10px;
     line-height: 1;
+    vertical-align: middle;
     cursor: pointer;
 }

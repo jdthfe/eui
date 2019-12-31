@@ -17,5 +17,5 @@ export default [
     { name: 'List', type: 'Data Display', 'zh-CN': '列表' },
     { name: 'Input', type: 'Data Entry', 'zh-CN': '文本输入' },
     { name: 'Popup', type: 'Data Display', 'zh-CN': '向上弹窗' },
-    { name: 'Radio', type: 'Data Entry', 'zh-CN': '待输入_中文名' },
+    { name: 'Radio', type: 'Data Entry', 'zh-CN': '单选框' },
 ];

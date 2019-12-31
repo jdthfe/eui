@@ -29,6 +29,7 @@ const ListItem = (props: ListItemPropsType) => {
     });
     const itemCls = classnames(`${prefixCls}-item`, className, {
         [`${prefixCls}-align-${align}`]: align,
+        [`${prefixCls}-item-disabled`]: disabled,
     });
     const content = (
         <div
