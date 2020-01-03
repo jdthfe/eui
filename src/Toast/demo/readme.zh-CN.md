@@ -40,7 +40,7 @@ React.Dom
 | time | active 动画持续时长（TransitionWrap） | `number` | [transitionTime](#/document/_util) | `false` |
 | noCover | 是否展示遮罩 | `boolean` | `false` | `false` |
 | [`...Toast`](#/document/Toast) |  |  |  |  |
-| [time](#/document/TransitionWrap) | 持续时间（0 表示不自动关闭） | `number` | [defaultDuration](#/document/_util) | `false` |
+| [duration](#/document/TransitionWrap) | 持续时间（0 表示不自动关闭） | `number` | [defaultDuration](#/document/_util) | `false` |
 
 ---
 

@@ -4,6 +4,12 @@ exports[`renders CountDown correctly 1`] = `
 <div>
   <div>
     <div>
+      <button
+        class="eui-button eui-button-l eui-button-primary"
+        role="button"
+      >
+        Go
+      </button>
       <h5>
         倒计时5秒
       </h5>

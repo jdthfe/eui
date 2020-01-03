@@ -112,6 +112,7 @@
         "postcss-loader": "^3.0.0",
         "postcss-pxtorem": "^4.0.1",
         "prettier": "^1.16.4",
+        "prettier-stylelint": "^0.4.2",
         "raw-loader": "^2.0.0",
         "react": "^16.9.0-alpha.0",
         "react-dom": "^16.9.0-alpha.0",
