@@ -26,7 +26,7 @@
         "compile": "gulp -f ./scripts/gulp/gulpfile.ts compile",
         "prod": "yarn dist && yarn compile",
         "eslint": "eslint",
-        "likk": "yarn prod && node ./scripts/config/likk.js"
+        "likk": "node ./scripts/config/likk.ts"
     },
     "repository": {
         "type": "git",
