@@ -1,40 +1,70 @@
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import { UseInputOption } from './PropsType';
 
 export const useInput = (opt: UseInputOption = {}) => {
-    const { initialValue = '', validationRules } = opt;
+    const { initialValue = '', validationRules, validationTrigger } = opt;
     const [value, setValue] = useState(initialValue);
-
-    const [validated, setValidated] = useState(true);
     const [message, setMessage] = useState<React.ReactNode>();
+    const [validated, setValidated] = useState(true);
+    const validationObj = useRef({
+        validated: false,
+        message,
+    });
 
-    const _onChange = useCallback(e => {
-        const val = e.currentTarget.value;
-        setValue(val);
-    }, []);
+    const _onChange = useCallback(
+        e => {
+            const val = e.currentTarget.value;
+            setValue(val);
+            if (validationTrigger === 'change') {
+                setValidated(validationObj.current.validated);
+                setMessage(validationObj.current.message);
+            }
+        },
+        [validationTrigger],
+    );
 
     useEffect(() => {
         if (validationRules) {
             const obj = validationRules.find(item => item.reg.test(String(value)));
-            const { validated: findValidated, message: findMessage } = obj || {
-                validated: false,
-                message: '',
-            };
-            setValidated(findValidated);
-            setMessage(findMessage);
+            if (obj) {
+                validationObj.current.message = obj.message;
+                validationObj.current.validated = obj.validated;
+            }
+            if (!validationTrigger) {
+                setValidated(validationObj.current.validated);
+                setMessage(validationObj.current.message);
+            }
         }
-    }, [validationRules, value]);
+    }, [validationRules, validationTrigger, value]);
+
+    const [focus, setFocus] = useState(false);
+    const _onFocus = useCallback(() => {
+        setFocus(true);
+    }, []);
+    const _onBlur = useCallback(() => {
+        setFocus(false);
+        if (validationTrigger === 'blur') {
+            setValidated(validationObj.current.validated);
+            setMessage(validationObj.current.message);
+        }
+    }, [validationTrigger]);
 
     return {
         value,
+        focus,
+        setFocus,
+
         message,
         setValue,
         validated,
         bind: {
             value,
+            _focus: focus,
             _setValue: setValue,
-            _onChange,
             _validated: validated,
+            _onChange,
+            _onFocus,
+            _onBlur,
         },
     };
 };

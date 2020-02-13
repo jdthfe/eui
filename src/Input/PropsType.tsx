@@ -18,11 +18,16 @@ export interface InputProps
     _onChange?: UseInputReturn['bind']['_onChange'];
     /** Set value for useState */
     _setValue?: UseInputReturn['bind']['_setValue'];
+    _focus?: UseInputReturn['bind']['_focus'];
+    _onBlur?: UseInputReturn['bind']['_onBlur'];
+    _onFocus?: UseInputReturn['bind']['_onFocus'];
 }
 
 export interface UseInputOption {
     /** initial value */
     initialValue?: InputProps['value'];
+    /** validation trigger*/
+    validationTrigger?: 'change' | 'blur';
     /** validation rules */
     validationRules?: {
         /** RegExp */
