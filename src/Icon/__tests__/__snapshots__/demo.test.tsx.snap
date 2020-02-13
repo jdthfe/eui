@@ -64,11 +64,56 @@ exports[`renders Icon correctly 1`] = `
           class="eui-icon eui-icon-l"
         >
           <use
+            xlink:href="#check"
+          />
+        </svg>
+        <p>
+          check
+        </p>
+      </div>
+      <div
+        class="Icon-value-item"
+      >
+        <svg
+          aria-hidden="true"
+          class="eui-icon eui-icon-l"
+        >
+          <use
             xlink:href="#close"
           />
         </svg>
         <p>
           close
+        </p>
+      </div>
+      <div
+        class="Icon-value-item"
+      >
+        <svg
+          aria-hidden="true"
+          class="eui-icon eui-icon-l"
+        >
+          <use
+            xlink:href="#closeFilled"
+          />
+        </svg>
+        <p>
+          closeFilled
+        </p>
+      </div>
+      <div
+        class="Icon-value-item"
+      >
+        <svg
+          aria-hidden="true"
+          class="eui-icon eui-icon-l"
+        >
+          <use
+            xlink:href="#current"
+          />
+        </svg>
+        <p>
+          current
         </p>
       </div>
       <div
@@ -184,6 +229,66 @@ exports[`renders Icon correctly 1`] = `
           class="eui-icon eui-icon-l"
         >
           <use
+            xlink:href="#plus"
+          />
+        </svg>
+        <p>
+          plus
+        </p>
+      </div>
+      <div
+        class="Icon-value-item"
+      >
+        <svg
+          aria-hidden="true"
+          class="eui-icon eui-icon-l"
+        >
+          <use
+            xlink:href="#pwd"
+          />
+        </svg>
+        <p>
+          pwd
+        </p>
+      </div>
+      <div
+        class="Icon-value-item"
+      >
+        <svg
+          aria-hidden="true"
+          class="eui-icon eui-icon-l"
+        >
+          <use
+            xlink:href="#pwdOpen"
+          />
+        </svg>
+        <p>
+          pwdOpen
+        </p>
+      </div>
+      <div
+        class="Icon-value-item"
+      >
+        <svg
+          aria-hidden="true"
+          class="eui-icon eui-icon-l"
+        >
+          <use
+            xlink:href="#rarrow"
+          />
+        </svg>
+        <p>
+          rarrow
+        </p>
+      </div>
+      <div
+        class="Icon-value-item"
+      >
+        <svg
+          aria-hidden="true"
+          class="eui-icon eui-icon-l"
+        >
+          <use
             xlink:href="#remind"
           />
         </svg>
@@ -234,6 +339,51 @@ exports[`renders Icon correctly 1`] = `
         </svg>
         <p>
           successful
+        </p>
+      </div>
+      <div
+        class="Icon-value-item"
+      >
+        <svg
+          aria-hidden="true"
+          class="eui-icon eui-icon-l"
+        >
+          <use
+            xlink:href="#time"
+          />
+        </svg>
+        <p>
+          time
+        </p>
+      </div>
+      <div
+        class="Icon-value-item"
+      >
+        <svg
+          aria-hidden="true"
+          class="eui-icon eui-icon-l"
+        >
+          <use
+            xlink:href="#tip"
+          />
+        </svg>
+        <p>
+          tip
+        </p>
+      </div>
+      <div
+        class="Icon-value-item"
+      >
+        <svg
+          aria-hidden="true"
+          class="eui-icon eui-icon-l"
+        >
+          <use
+            xlink:href="#uncheck"
+          />
+        </svg>
+        <p>
+          uncheck
         </p>
       </div>
     </div>

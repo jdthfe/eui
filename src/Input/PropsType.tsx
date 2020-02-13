@@ -21,6 +21,8 @@ export interface InputProps
     _focus?: UseInputReturn['bind']['_focus'];
     _onBlur?: UseInputReturn['bind']['_onBlur'];
     _onFocus?: UseInputReturn['bind']['_onFocus'];
+    /** Callback with touch view password icon */
+    viewPasswordCb?: () => void;
 }
 
 export interface UseInputOption {

@@ -24,6 +24,7 @@ const Input = (props: InputProps) => {
         _validated = true,
         afterInput = null,
         beforeInput = null,
+        viewPasswordCb,
         ...restProps
     } = props;
     const ref = useRef<HTMLInputElement>(document.createElement('input'));
@@ -40,8 +41,9 @@ const Input = (props: InputProps) => {
         e => {
             e.preventDefault();
             setEyeClose(!eyeClose);
+            viewPasswordCb && viewPasswordCb();
         },
-        [eyeClose],
+        [eyeClose, viewPasswordCb],
     );
     const processedType = useMemo(() => (!eyeClose ? 'text' : type), [eyeClose, type]);
     const showEye = useMemo(() => !hideEye && type && type.toLocaleLowerCase() === 'password', [type, hideEye]);
