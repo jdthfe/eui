@@ -5,7 +5,7 @@ import { prefix } from '../_util/';
 import { useJoinFn } from './use';
 const prefixCls = `${prefix}-radio`;
 
-const Radio = (props: RadioProps) => {
+const Radio = function<T>(props: RadioProps<T>) {
     const { className, style, beforeRadio, label, value, children, _onChange, disabled = false, ...restProps } = props;
     const wrapCls = classnames(prefixCls, className, {
         'is-disabled': disabled,

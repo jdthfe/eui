@@ -1,9 +1,10 @@
 import { useState, useCallback } from 'react';
 import { UseRadioOption } from './PropsType';
+// useState<S>(initialState: S | (() => S)): [S, Dispatch<SetStateAction<S>>];
 
-export const useRadio = (opt: UseRadioOption = {}) => {
+export const useRadio = function<T>(opt: UseRadioOption<T>) {
     const { setValue, initLabel = '', value } = opt;
-    const [label, setLabel] = useState(initLabel);
+    const [label, setLabel] = useState<T>(initLabel);
 
     const _onChange = useCallback(
         e => {

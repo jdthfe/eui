@@ -1,10 +1,10 @@
 type RadioValue = any;
-export interface RadioProps
+export interface RadioProps<T>
     extends React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
     /** binding value */
     value?: RadioValue;
     /** radio value */
-    label?: RadioValue;
+    label?: T;
     /** before radio*/
     beforeRadio?: React.ReactNode;
     /** change value for useState */
@@ -14,11 +14,11 @@ export interface RadioProps
     disabled?: boolean;
 }
 
-export interface UseRadioOption {
+export interface UseRadioOption<T> {
     /** set binding value function */
-    value?: any;
+    value: T;
     /** set binding value function */
-    setValue?: any;
+    setValue: React.Dispatch<React.SetStateAction<T>>;
     /** initial value */
-    initLabel?: RadioProps['value'];
+    initLabel?: RadioProps<T>['value'];
 }
