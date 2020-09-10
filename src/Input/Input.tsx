@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import Icon from '../Icon';
 import { prefix } from '../_util';
 import { InputProps } from './PropsType';
-import { useFocus, useJoinFn } from './use';
+import { useJoinFn } from './use';
 
 const prefixCls = `${prefix}-input`;
 
@@ -17,14 +17,18 @@ const Input = (props: InputProps) => {
         hideClear = false,
         className,
         _onChange,
+        _focus,
+        _onBlur,
+        _onFocus,
         _setValue,
         _validated = true,
         afterInput = null,
         beforeInput = null,
+        viewPasswordCb,
         ...restProps
     } = props;
     const ref = useRef<HTMLInputElement>(document.createElement('input'));
-    const { focus, _onBlur, _onFocus } = useFocus();
+    // const { focus, _onBlur, _onFocus } = useFocus();
     const onMouseDownClear = useCallback(
         e => {
             e.preventDefault();
@@ -37,8 +41,9 @@ const Input = (props: InputProps) => {
         e => {
             e.preventDefault();
             setEyeClose(!eyeClose);
+            viewPasswordCb && viewPasswordCb();
         },
-        [eyeClose],
+        [eyeClose, viewPasswordCb],
     );
     const processedType = useMemo(() => (!eyeClose ? 'text' : type), [eyeClose, type]);
     const showEye = useMemo(() => !hideEye && type && type.toLocaleLowerCase() === 'password', [type, hideEye]);
@@ -53,11 +58,11 @@ const Input = (props: InputProps) => {
     const cls = useMemo(
         () =>
             classnames(prefixCls, className, {
-                [`${prefixCls}-focus`]: focus,
+                [`${prefixCls}-focus`]: _focus,
                 [`${prefixCls}-notEmpty`]: notEmpty,
                 [`${prefixCls}-validated`]: _validated,
             }),
-        [_validated, className, focus, notEmpty],
+        [_validated, className, _focus, notEmpty],
     );
     const tagCls = useMemo(() => classnames(`${prefixCls}-tag`), []);
     return (

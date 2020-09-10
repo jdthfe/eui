@@ -14,7 +14,6 @@ const Popup = (props: PopupProps) => {
     const {
         className,
         children,
-        // TransitionWrap
         visible,
         keepOnExit,
         time,
@@ -24,6 +23,7 @@ const Popup = (props: PopupProps) => {
         mountNode,
         // Cover
         coverProps = {},
+        afterChild,
         ...restProps
     } = props;
     const cls = classnames(prefixCls, className);
@@ -41,6 +41,7 @@ const Popup = (props: PopupProps) => {
             >
                 <div className={cls} {...restProps}>
                     <div className={popupBodyCls}>{children}</div>
+                    {afterChild ? afterChild : null}
                 </div>
             </TransitionWrap>
         </Portal>

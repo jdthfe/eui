@@ -12,7 +12,9 @@ const Demo = () => {
                 <Button theme="primary" onClick={changeShow}>
                     show Popup
                 </Button>
+                <div style={{ height: '800px' }} />
                 <Popup visible={showPopup} coverProps={{ onClick: changeShow }} time={200}>
+                    <div style={{ height: '1000px', background: '#f00' }} />
                     <List>
                         <Item>Title</Item>
                         <Item

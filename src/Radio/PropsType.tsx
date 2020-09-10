@@ -1,9 +1,12 @@
-export interface RadioProps
+type RadioValue = any;
+export interface RadioProps<T>
     extends React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
     /** binding value */
-    value?: string | string[] | number;
+    value?: RadioValue;
     /** radio value */
-    label?: string | string[] | number;
+    label?: T;
+    /** before radio*/
+    beforeRadio?: React.ReactNode;
     /** change value for useState */
     onChange?: (e: any) => void;
     _onChange?: (e: any) => void;
@@ -11,9 +14,11 @@ export interface RadioProps
     disabled?: boolean;
 }
 
-export interface UseRadioOption {
+export interface UseRadioOption<T> {
     /** set binding value function */
-    setValue?: any;
+    value: T;
+    /** set binding value function */
+    setValue: React.Dispatch<React.SetStateAction<T>>;
     /** initial value */
-    initLabel?: RadioProps['value'];
+    initLabel?: RadioProps<T>['value'];
 }

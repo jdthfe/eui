@@ -4,14 +4,16 @@ import { Radio, WingBlank } from '@src/index';
 const { useRadio } = Radio;
 
 const Demo = () => {
-    const [value, setValue] = useState('1');
-    const { bind: children1Bind, label: children1Label } = useRadio({
+    const [value, setValue] = useState<number>(1);
+    const { bind: children1Bind, label: children1Label } = useRadio<number>({
         setValue: setValue,
-        initLabel: '1',
+        value: value,
+        initLabel: 1,
     });
-    const { bind: children2Bind, label: children2Label } = useRadio({
+    const { bind: children2Bind, label: children2Label } = useRadio<number>({
         setValue: setValue,
-        initLabel: '2',
+        value: value,
+        initLabel: 2,
     });
 
     return (

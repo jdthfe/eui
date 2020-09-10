@@ -1,22 +1,25 @@
 import { useState, useCallback } from 'react';
 import { UseRadioOption } from './PropsType';
+// useState<S>(initialState: S | (() => S)): [S, Dispatch<SetStateAction<S>>];
 
-export const useRadio = (opt: UseRadioOption = {}) => {
-    const { setValue, initLabel = '' } = opt;
-    const [label, setLabel] = useState(initLabel);
+export const useRadio = function<T>(opt: UseRadioOption<T>) {
+    const { setValue, initLabel = '', value } = opt;
+    const [label, setLabel] = useState<T>(initLabel);
 
     const _onChange = useCallback(
         e => {
-            const val = e.currentTarget.value;
+            const val = label || e.currentTarget.value;
             setValue(val);
         },
-        [setValue],
+        [label, setValue],
     );
 
     return {
         label,
         setLabel,
         bind: {
+            label,
+            value,
             _onChange,
         },
     };
@@ -47,9 +50,9 @@ export const useJoinFn = (...args: any[]) => {
             if (args.length) {
                 args.map(fn => {
                     try {
-                        fn(e);
+                        fn && fn(e);
                     } catch (err) {
-                        // console.log(err);
+                        console.log(err);
                     }
                 });
             }

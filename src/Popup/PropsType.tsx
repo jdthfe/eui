@@ -8,4 +8,5 @@ export interface PopupProps
     /** description */
     /** CoverProps */
     coverProps?: CoverWithTransitionWrap;
+    afterChild?: JSX.Element;
 }
