@@ -16,7 +16,7 @@ exports[`CoverDemo Cover change visible 1`] = `
         Cover
       </button>
       <div
-        class="eui-Cover"
+        class="eui-cover"
       />
       <div
         class="eui-whitespace eui-whitespace-m"
@@ -28,7 +28,7 @@ exports[`CoverDemo Cover change visible 1`] = `
         Cover | transparent
       </button>
       <div
-        class="eui-Cover eui-Cover-transparent"
+        class="eui-cover eui-cover-transparent"
       />
       <div
         class="eui-whitespace eui-whitespace-m"
@@ -45,7 +45,7 @@ exports[`CoverDemo Cover change visible 1`] = `
     </div>
   </div>
   <div
-    class="eui-Cover eui-fade-entry-done eui-fade"
+    class="eui-cover eui-fade-entry-done eui-fade"
   />
 </body>
 `;

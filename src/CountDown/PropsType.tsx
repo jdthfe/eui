@@ -10,4 +10,7 @@ export interface CountDownProps extends React.DetailedHTMLProps<React.HTMLAttrib
 
     /** callback, when the left time is 0 */
     timeUp?: (() => void) | undefined;
+
+    /** the CountDown to start */
+    go?: boolean;
 }

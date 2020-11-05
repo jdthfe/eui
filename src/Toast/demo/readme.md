@@ -40,7 +40,7 @@ Call `const close = Toast.alert()` to show, call `close()` to turn it off immedi
 | noCover | Whether to hide toast's transparent cover, which will prevent touch event of the whole page | `boolean` | - | `false` |
 | duration | Delay time to close, which units is second ( If set duration = 0, toast will not auto hide, you have to manually do it ) | `number` | [defaultDuration](#/document/_util) | `false` |
 | [`...Toast`](#/document/Toast) |  |  |  |  |
-| [time](#/document/TransitionWrap) | The duration of the transition, in milliseconds. | `number` | [transitionTime](#/document/_util) | `false` |
+| [duration](#/document/TransitionWrap) | The duration of the transition, in milliseconds. | `number` | [transitionTime](#/document/_util) | `false` |
 
 ---
 

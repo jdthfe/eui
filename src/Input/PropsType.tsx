@@ -18,6 +18,8 @@ export interface InputProps
     _onChange?: UseInputReturn['bind']['_onChange'];
     /** Set value for useState */
     _setValue?: UseInputReturn['bind']['_setValue'];
+    /** Callback with touch view password icon */
+    viewPasswordCb?: () => void;
 }
 
 export interface UseInputOption {

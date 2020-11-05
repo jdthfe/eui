@@ -5,8 +5,9 @@ const prefixCls = `${prefix}-countdown`;
 import { CountDownProps } from './PropsType';
 
 const CountDown = (props: CountDownProps) => {
-    const { type = 1, unit = [''], endDate = 0, timeUp = () => {}, className, ...restProps } = props;
+    const { go = false, type = 1, unit = [''], endDate = 0, timeUp = () => {}, className, ...restProps } = props;
     const endDateConst: any = useRef();
+    const costTime = useRef<number>(0);
     // 计算剩余时间
     const leftTime: any = endDate instanceof Date ? (endDate.getTime() - new Date().getTime()) / 1000 : endDate;
 
@@ -53,13 +54,14 @@ const CountDown = (props: CountDownProps) => {
     const [timeArray, setTimeArray] = useState(initialValue);
     const cls = classnames(prefixCls, className);
     function tick() {
-        const id = setInterval(() => {
+        const id = window.setInterval(() => {
             let currentTime: any = Math.floor(new Date().getTime() / 1000);
+            costTime.current += 1;
             if (endDateConst.current - currentTime >= 0) {
                 let timeD: any = getTimeData(endDateConst.current - currentTime);
                 setTimeArray(timeD as any);
             } else {
-                clearInterval(id);
+                window.clearInterval(id);
                 timeUp();
             }
         }, 1000);
@@ -67,14 +69,19 @@ const CountDown = (props: CountDownProps) => {
     }
 
     useEffect(() => {
+        if (!go) return;
         const currentTime: any = Math.floor(new Date().getTime() / 1000);
-        const leftTime = endDate instanceof Date ? (endDate.getTime() - new Date().getTime()) / 1000 : endDate;
+        const leftTime =
+            endDate instanceof Date ? (endDate.getTime() - new Date().getTime()) / 1000 : endDate - costTime.current;
         endDateConst.current = leftTime + currentTime;
-    }, [endDate]);
+    }, [endDate, go]);
 
     useEffect(() => {
-        let id = tick();
-        return () => clearInterval(id);
+        let id: number;
+        if (go) {
+            id = tick();
+        }
+        return () => window.clearInterval(id);
     });
 
     return (

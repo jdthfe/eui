@@ -2,13 +2,15 @@ After clicking on a control or an area, a Popover menu appears for doing more. I
 
 ## Demo
 
-jd-compensation 中切换语言、切换国别码的实例
-
 ## API
 
-| 属性 | 说明 | 类型 | 默认值 | 必填 |
+Extends `div`
+
+| Properties | Descrition | Type | Default | Required |
 | --- | --- | --- | --- | --- |
-| anchorEl | 展示 popover 的元素 | `any` | - | `true` |
-| dir | dir ：popover 的展示方向；包括 上左、上中、上右、下左、下中、下右 | `'top-left' | 'top-center' | 'top-right' | 'bottom-left' | 'bottom-center' | 'bottom-right'` | - | `true` |
-| onClose | popover 消失的时候回调函数 | `() => void` | - | `false` |
-| hasArrow | 是否包含箭头 默认是 false（箭头左右位置用外部样式控制） | `boolean` | - | `false` |
+| anchorEl | Anchor element of Popover | `HTMLElement | null` | - | `true` |
+| dir | The direction of Popover relative to the anchor element | `'top-left' | 'top-center' | 'top-right' | 'bottom-left' | 'bottom-center' | 'bottom-right'` | - | `true` |
+| onClickCover | When the value is empty or false, the cover is not displayed. On click cover, **return `false` to prvent Popover's close** | `(() => void | boolean) | boolean` | `true` | `false` |
+| hasArrow | Whether the arrow is included or not | `boolean` | `false` | `false` |
+| coverProps | cover's props | [`CoverWithTransitionWrap`](#/document/Cover) | - | `false` |
+| [`...TransitionWrap`](#/document/TransitionWrap) |  |  |  |  |
