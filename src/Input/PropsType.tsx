@@ -23,6 +23,7 @@ export interface InputProps
     _onFocus?: UseInputReturn['bind']['_onFocus'];
     /** Callback with touch view password icon */
     viewPasswordCb?: () => void;
+    value?: HTMLInputElement['value'];
 }
 
 export interface UseInputOption {

@@ -40,7 +40,8 @@
     "homepage": "https://github.com/jdthfe/eui#readme",
     "dependencies": {
         "@babel/runtime-corejs2": "^7.5.5",
-        "classnames": "^2.2.6"
+        "classnames": "^2.2.6",
+        "vfile-message": "^2.0.4"
     },
     "devDependencies": {
         "@babel/core": "^7.3.4",
@@ -134,7 +135,7 @@
         "svgo": "^1.2.1",
         "through2": "^3.0.1",
         "ts-node": "^8.0.2",
-        "typescript": "^3.3.3333",
+        "typescript": "3.5.3",
         "url-loader": "^1.1.2",
         "webpack": "^4.29.5",
         "webpack-cli": "^3.2.3",
