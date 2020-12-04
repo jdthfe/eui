@@ -85,3 +85,8 @@ Project
 -   配合 TS 使用属性继承，方便对组件进行二次封装
 -   使用 React Hooks 开发，性能优异
 -   [测试覆盖率 80% 以上](https://codecov.io/gh/jdthfe/eui/)
+
+## 0.0.3
+
+-   新增了 Input 校验的触发方式
+-   Radio 更新
