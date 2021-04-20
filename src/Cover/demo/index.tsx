@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { Cover, Button, WhiteSpace, WingBlank, Portal } from '@src/index';
+import { Cover, Button, WhiteSpace, WingBlank } from '@src/index';
+import usePortal from '../../Portal/index3';
 const Demo = () => {
+    const { Portal } = usePortal();
     const [visible, setVisible] = useState(false);
     function changeVisible() {
         setVisible(!visible);
@@ -40,8 +42,25 @@ const Demo = () => {
                 Cover.Transition | Portal
             </Button>
             <Portal>
-                <Cover.Transition time={200} onClick={changeVisible3} visible={visible3} />
+                <Cover.Transition
+                    onExitDone={() => {
+                        console.log('hide cover');
+                    }}
+                    time={200}
+                    onClick={changeVisible3}
+                    visible={visible3}
+                />
             </Portal>
+            {/* <Portal>
+                <Cover.Transition
+                    onExitDone={() => {
+                        console.log('hide cover');
+                    }}
+                    time={200}
+                    onClick={changeVisible3}
+                    visible={visible3}
+                />
+            </Portal> */}
         </WingBlank>
     );
 };

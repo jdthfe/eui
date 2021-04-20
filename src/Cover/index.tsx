@@ -30,16 +30,20 @@ const Transition = (props: CoverWithTransitionWrap) => {
         keepOnExit,
         time = transitionTime,
         onExitDone,
+        onEntryDone,
         transitionClassName = transitionFade,
         ...restProps
     } = props;
+
     const cls = classnames(prefixCls, className, { [`${prefixCls}-transparent`]: transparent });
+
     return (
         <TransitionWrap
+            time={time}
             visible={visible}
             keepOnExit={keepOnExit}
-            time={time}
             onExitDone={onExitDone}
+            onEntryDone={onEntryDone}
             transitionClassName={transitionClassName}
         >
             <div {...restProps} className={cls}>

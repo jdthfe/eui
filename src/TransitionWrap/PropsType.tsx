@@ -9,6 +9,8 @@ export interface TransitionWrapProps {
     keepOnExit?: boolean;
     /** Callback fired after the ‘[transitionClassName]-exit-done’ status is applied.  */
     onExitDone?: () => void;
+    /** Callback fired after the ‘[transitionClassName]-entry-done’ status is applied.  */
+    onEntryDone?: () => void;
 }
 
 export interface TransitionWrapPropsWithChildren extends TransitionWrapProps {

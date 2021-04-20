@@ -27,6 +27,7 @@ const Toast = (props: ToastProps) => {
     } = props;
     const cls = classnames(prefixCls, className);
     const newVisible = children === undefined ? false : visible;
+
     return (
         <Portal mountNode={mountNode}>
             <Cover.Transition
